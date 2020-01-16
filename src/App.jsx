@@ -1,8 +1,13 @@
 import React, { Component } from 'react'
 
+let loggedIn = true
+
 class App extends Component {
     render = () => {
-        return "Hello world!"
+        if(!loggedIn){
+            return <div>Login Page</div>
+        }
+        return <div>Main Page</div>
     }
 }
 
