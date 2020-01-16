@@ -1,13 +1,15 @@
 import React, { Component } from 'react'
+import LoginPage from './LoginPage.jsx'
+import MainPage from './MainPage.jsx'
 
-let loggedIn = true
+let loggedIn = !true
 
 class App extends Component {
     render = () => {
         if(!loggedIn){
-            return <div>Login Page</div>
+            return <LoginPage/>
         }
-        return <div>Main Page</div>
+        return <MainPage/>
     }
 }
 
