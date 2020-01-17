@@ -1,7 +1,6 @@
 let express = require('express')
 let app = express()
 let reloadMagic = require('./reload-magic.js')
-let sha1 = require("/sha1") //--used to hash passwords
 
 reloadMagic(app)
 
