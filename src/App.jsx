@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import {connect} from 'react-redux'
 import LoginPage from './LoginPage.jsx'
 import MainPage from './MainPage.jsx'
 import './main.css'
@@ -15,4 +16,4 @@ class App extends Component {
 }
 
 
-export default App
+export default connect()(App)
