@@ -6,10 +6,10 @@ let loggedIn = !true
 
 class App extends Component {
     render = () => {
-        if(!loggedIn){
-            return <LoginPage/>
+        if(loggedIn){
+            return <MainPage/>
         }
-        return <MainPage/>
+        return <LoginPage/>
     }
 }
 
