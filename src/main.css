@@ -2,3 +2,17 @@ body {
     background-color: #bbb;
     margin: 0;
 }
+
+.desktopnav {
+    display:none;
+}
+
+/* CSS applies to 968px and above */
+@media screen and (min-width: 968px) {
+.mobilenav {
+    display: none
+}
+.desktopnav {
+    display: block
+}
+  }
