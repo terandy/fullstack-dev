@@ -4,7 +4,7 @@ body {
 }
 
 .desktopnav {
-    display:none;
+    display:block;
 }
 
 /* CSS applies to 968px and above */

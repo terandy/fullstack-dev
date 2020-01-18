@@ -3,16 +3,18 @@ import { Route, BrowserRouter, Link } from 'react-router-dom'
 import {connect} from 'react-redux'
 
 
-class MainPage extends Component{
+class Navigation extends Component{
     render = () => {    
-        return (<BrowserRouter>
-        <nav class="desktopnav">
+        return (
+        <div className="desktopnav">
+            <div>Navigation</div>
             <ul>
-                <Link to="/">Home</Link>
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/login">Login</Link></li>
+                <li><Link to="/register">Register</Link></li>
             </ul>
-        </nav>
-                </BrowserRouter>)
-    }
+        </div>)
+    }     
 }
 
 
