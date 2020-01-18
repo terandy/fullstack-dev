@@ -28721,6 +28721,111 @@ module.exports = function(originalModule) {
 
 /***/ }),
 
+/***/ "./src/AddItem.jsx":
+/*!*************************!*\
+  !*** ./src/AddItem.jsx ***!
+  \*************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+class AddItem extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  constructor(props) {
+    super(props);
+
+    _defineProperty(this, "descChangeHandler", e => {
+      this.setState({
+        description: e.target.value
+      });
+    });
+
+    _defineProperty(this, "itemChangeHandler", e => {
+      this.setState({
+        item: e.target.value
+      });
+    });
+
+    _defineProperty(this, "usernameChangeHandler", e => {
+      this.setState({
+        username: e.target.value
+      });
+    });
+
+    _defineProperty(this, "fileChangeHandler", e => {
+      this.setState({
+        files: [...e.target.files]
+      });
+    });
+
+    _defineProperty(this, "submitHandler", evt => {
+      evt.preventDefault();
+      let data = new FormData();
+      this.state.files.forEach(file => data.append('images', file));
+      console.log('data', data);
+      console.log('state', this.state);
+      data.append('item', this.state.item);
+      data.append('description', this.state.description);
+      data.append('seller', this.state.seller);
+      fetch('/add-item', {
+        method: 'POST',
+        body: data
+      });
+    });
+
+    _defineProperty(this, "render", () => {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+        onSubmit: this.submitHandler
+      }, "images ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "file",
+        multiple: true,
+        onChange: this.fileChangeHandler
+      }), "seller", ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "text",
+        value: this.state.seller,
+        onChange: this.usernameChangeHandler
+      }), "item", ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "text",
+        value: this.state.item,
+        onChange: this.itemChangeHandler
+      }), "description", ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "text",
+        value: this.state.description,
+        onChange: this.descChangeHandler
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "submit",
+        value: "add item"
+      }));
+    });
+
+    this.state = {
+      files: [],
+      description: '',
+      seller: this.props.seller,
+      item: ''
+    };
+  }
+
+}
+
+let mapStateToProps = state => {
+  return {
+    seller: state.username
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps)(AddItem));
+
+/***/ }),
+
 /***/ "./src/App.jsx":
 /*!*********************!*\
   !*** ./src/App.jsx ***!
@@ -28738,7 +28843,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _MainPage_jsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./MainPage.jsx */ "./src/MainPage.jsx");
 /* harmony import */ var _Login_jsx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Login.jsx */ "./src/Login.jsx");
 /* harmony import */ var _register_jsx__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./register.jsx */ "./src/register.jsx");
+/* harmony import */ var _AddItem_jsx__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./AddItem.jsx */ "./src/AddItem.jsx");
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 
@@ -28764,6 +28871,10 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_register_jsx__WEBPACK_IMPORTED_MODULE_6__["default"], null);
     });
 
+    _defineProperty(this, "renderAddItem", () => {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AddItem_jsx__WEBPACK_IMPORTED_MODULE_7__["default"], null);
+    });
+
     _defineProperty(this, "render", () => {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["BrowserRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         exact: true,
@@ -28783,6 +28894,10 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         render: this.renderCart
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         exact: true,
+        path: "/add-item/",
+        render: this.renderAddItem
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+        exact: true,
         path: "/checkout/",
         render: this.renderCheckout
       })));
@@ -28792,6 +28907,62 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (App);
+
+/***/ }),
+
+/***/ "./src/Items.jsx":
+/*!***********************!*\
+  !*** ./src/Items.jsx ***!
+  \***********************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _OneItem_jsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./OneItem.jsx */ "./src/OneItem.jsx");
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+class Items extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  constructor(props) {
+    super(props);
+
+    _defineProperty(this, "updateItems", async () => {
+      let responseBody = await fetch('/all-items', {
+        method: 'POST'
+      });
+      let responseText = await responseBody.text();
+      console.log('response Text', responseText);
+      let itemsArray = JSON.parse(responseText);
+      this.setState({
+        items: itemsArray
+      });
+    });
+
+    _defineProperty(this, "render", () => {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        onClick: this.updateItems
+      }, "Reload items"), this.state.items.map((item, index) => {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          key: index
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_OneItem_jsx__WEBPACK_IMPORTED_MODULE_1__["default"], {
+          item: item
+        }));
+      }));
+    });
+
+    this.state = {
+      items: []
+    };
+  }
+
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Items);
 
 /***/ }),
 
@@ -28891,7 +29062,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _Items_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Items.jsx */ "./src/Items.jsx");
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 
@@ -28901,7 +29074,7 @@ class MainPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     super(...args);
 
     _defineProperty(this, "render", () => {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Main Page");
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Main Page", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Items_jsx__WEBPACK_IMPORTED_MODULE_2__["default"], null));
     });
   }
 
@@ -28950,6 +29123,39 @@ class Navigation extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (Navigation);
+
+/***/ }),
+
+/***/ "./src/OneItem.jsx":
+/*!*************************!*\
+  !*** ./src/OneItem.jsx ***!
+  \*************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+class OneItem extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  constructor(props) {
+    super(props);
+
+    _defineProperty(this, "render", () => {
+      console.log('props item', this.props.item);
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "title: ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.props.item.item), "description: ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.props.item.description), "images:", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: '..' + this.props.item.imgPaths[0]
+      }), ";");
+    });
+  }
+
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (OneItem);
 
 /***/ }),
 
@@ -29187,8 +29393,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let reducer = (state, action) => {
-  if (action.type === "login-sucess") {
-    console.log("action.content", action.content);
+  if (action.type === 'login-sucess') {
+    console.log('action.content', action.content);
     return { ...state,
       username: action.content
     };
@@ -29198,7 +29404,8 @@ let reducer = (state, action) => {
 };
 
 const store = Object(redux__WEBPACK_IMPORTED_MODULE_0__["createStore"])(reducer, {
-  username: undefined
+  username: undefined,
+  items: []
 }, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 /* harmony default export */ __webpack_exports__["default"] = (store);
 
