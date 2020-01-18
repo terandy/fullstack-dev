@@ -11,7 +11,7 @@ class OneItem extends Component {
         </div>
         <div className="one-item-text">
           <h1>{this.props.item.item}</h1>
-          <p>{this.props.item.price}</p>
+          <p>${this.props.item.price}</p>
         </div>
       </div>
     );

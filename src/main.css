@@ -11,20 +11,24 @@ a {
 .nav ul {
   list-style-type: none;
   text-transform: uppercase;
-  padding: 0px
+  padding: 0px;
+}
+.nav ul li a {
+  text-decoration: none;
 }
 /*Items display*/
 .all-item-display {
   display: flex;
   justify-content: flex-start;
-  padding-left: 100px;
-  padding-right: 100px;
+  margin-left: 6%;
+  width: 80vp;
+  flex-wrap: wrap;
 }
 /* individual item */
 .one-item {
   color: black;
   padding: 0;
-  margin: 20px;
+  margin: 10px;
   height: 460px;
   width: 260px;
 }
@@ -63,7 +67,7 @@ a {
 /* CSS applies to 968px and above */
 @media screen and (min-width: 968px) {
   .nav {
-    display:flex;
+    display: flex;
     align-items: center;
     height: 4em;
     background-color: lightgray;
@@ -77,10 +81,7 @@ a {
   }
 
   .nav ul li {
-    margin: 0 1em 0 1em
-  }
-  .nav ul li a {
-    text-decoration: none;
+    margin: 0 1em 0 1em;
   }
   .navRight {
     display: flex;
