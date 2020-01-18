@@ -57,6 +57,16 @@ app.post('/register', upload.none(), (req, res) => {
     let pwd = req.body.password 
     dbo.collection('users').insertOne({ username: name ,password: sha1(pwd)}) 
     res.send(JSON.stringify({ success: true })) 
+})
+
+app.post('/new-item', upload.fields([{name:'img'}]), (req, res) => { 
+    let description = req.body.description 
+    let seller = req.body.seller
+    let file = req.files['img']
+    let imgPaths = []
+    file.forEach(frontendPath.push('/uploads/' + file.filename ))
+    dbo.collection('posts').insertOne({ description: description, seller:seller,imgPaths: imgPaths }) 
+    res.send(JSON.stringify({ success: true })) 
 }) 
 
 // Your endpoints go before this line
