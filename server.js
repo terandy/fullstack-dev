@@ -96,6 +96,21 @@ app.post('/all-items', upload.none(), (req, res) => {
       res.send(JSON.stringify(items));
     });
 });
+app.post('/one-item', upload.none(), (req, res) => {
+  console.log('request to /one-items');
+  dbo
+    .collection('items')
+    .find({ _id: ObjectID(req.body.itemId) })
+    .toArray((err, item) => {
+      if (err) {
+        console.log('error', err);
+        res.send(JSON.stringify({ success: false }));
+        return;
+      }
+      console.log('item', item);
+      res.send(JSON.stringify(item));
+    });
+});
 
 // Your endpoints go before this line
 

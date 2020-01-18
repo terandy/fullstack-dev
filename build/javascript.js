@@ -28969,11 +28969,29 @@ class ItemDetail extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   constructor(props) {
     super(props);
 
-    _defineProperty(this, "render", () => {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Item detail", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "id ", this.props.itemId));
+    _defineProperty(this, "componentDidMount", async () => {
+      let data = new FormData();
+      data.append('itemId', this.props.itemId);
+      let responseBody = await fetch('/one-item', {
+        method: 'POST',
+        body: data
+      });
+      let responseText = await responseBody.text();
+      let itemObject = JSON.parse(responseText);
+      console.log('itemObject', itemObject);
+      this.setState({
+        item: itemObject
+      });
     });
 
-    this.state = {};
+    _defineProperty(this, "render", () => {
+      console.log(this.state.item);
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Item detail", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "id ", this.props.itemId), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Description"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.state.item.description), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Add to Cart"));
+    });
+
+    this.state = {
+      item: []
+    };
   }
 
 }
