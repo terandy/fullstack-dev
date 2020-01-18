@@ -11,7 +11,6 @@ class App extends Component{
 
     renderHomePage = () => {
         return <div>
-            <Navigation/>
             <MainPage/>
             </div>
     }
@@ -30,13 +29,11 @@ class App extends Component{
     renderWomenItems = () => {
         return <WomenItems/>
     }
-    renderAddItem = () => {
-        return <WomenItems/>
-    }
 
     render = () => {    
         return (<BrowserRouter>
         <div>
+        <Navigation/>
             <Route exact={true} path='/' render={this.renderHomePage}></Route>
             <Route exact={true} path='/men' render={this.renderMenItems}></Route>
             <Route exact={true} path='/women' render={this.renderWomenItems}></Route>
