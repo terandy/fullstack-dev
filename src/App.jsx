@@ -1,13 +1,40 @@
-import React, {Component} from 'react'
-import { Route, BrowserRouter, Link } from 'react-router-dom'
-import {connect} from 'react-redux'
-import Navigation from './Navigation.jsx'
-import MainPage from './MainPage.jsx'
-import Login from './Login.jsx'
-import Register from './register.jsx'
-import AddItem from './AddItem.jsx'
+import React, { Component } from 'react';
+import { Route, BrowserRouter, Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import Navigation from './Navigation.jsx';
+import MainPage from './MainPage.jsx';
+import Login from './Login.jsx';
+import Register from './register.jsx';
+import AddItem from './AddItem.jsx';
+import ItemDetail from './ItemDetail.jsx';
 
-class App extends Component{
+class App extends Component {
+  renderHomePage = () => {
+    return (
+      <div>
+        <Navigation />
+        <MainPage />
+      </div>
+    );
+  };
+  renderLoginPage = () => {
+    return <Login />;
+  };
+  renderSignupPage = () => {
+    return <Register />;
+  };
+  renderItemDetail = renderdata => {
+    return <ItemDetail itemId={renderdata.match.params.itemId} />;
+  };
+  renderAddItem = () => {
+    return <AddItem />;
+  };
+  renderMenItems = () => {
+    return <MenItems />;
+  };
+  renderWomenItems = () => {
+    return <WomenItems />;
+  };
 
     renderHomePage = () => {
         return <div>
@@ -43,9 +70,9 @@ class App extends Component{
             <Route exact={true} path='/add-item/' render={this.renderAddItem}></Route>
             <Route exact={true} path='/checkout/' render={this.renderCheckout}></Route>
         </div>
-        </BrowserRouter>)
-    }
+      </BrowserRouter>
+    );
+  };
 }
 
-
-export default App
+export default App;

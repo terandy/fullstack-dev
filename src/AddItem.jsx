@@ -8,7 +8,8 @@ class AddItem extends Component {
       files: [],
       description: '',
       seller: this.props.seller,
-      item: ''
+      item: '',
+      price: ''
     };
   }
   descChangeHandler = e => {
@@ -19,6 +20,9 @@ class AddItem extends Component {
   };
   usernameChangeHandler = e => {
     this.setState({ username: e.target.value });
+  };
+  priceChangeHandler = e => {
+    this.setState({ price: e.target.value });
   };
   fileChangeHandler = e => {
     this.setState({ files: [...e.target.files] });
@@ -31,6 +35,7 @@ class AddItem extends Component {
     console.log('state', this.state);
     data.append('item', this.state.item);
     data.append('description', this.state.description);
+    data.append('price', this.state.price);
     data.append('seller', this.state.seller);
     fetch('/add-item', { method: 'POST', body: data });
   };
@@ -55,6 +60,12 @@ class AddItem extends Component {
           type="text"
           value={this.state.description}
           onChange={this.descChangeHandler}
+        />
+        price{' '}
+        <input
+          type="text"
+          value={this.state.price}
+          onChange={this.priceChangeHandler}
         />
         <input type="submit" value="add item" />
       </form>
