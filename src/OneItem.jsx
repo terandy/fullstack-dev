@@ -4,7 +4,6 @@ class OneItem extends Component {
     super(props);
   }
   render = () => {
-    console.log('props item', this.props.item);
     return (
       <div className="one-item">
         <img src={'..' + this.props.item.imgPaths[0]} />;

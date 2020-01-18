@@ -5,7 +5,7 @@
 
 # production
 /dist
-
+/build
 
 
 # misc

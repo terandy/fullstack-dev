@@ -10,7 +10,6 @@ class Items extends Component {
   updateItems = async () => {
     let responseBody = await fetch('/all-items', { method: 'POST' });
     let responseText = await responseBody.text();
-    console.log('response Text', responseText);
     let itemsArray = JSON.parse(responseText);
     this.setState({ items: itemsArray });
   };
