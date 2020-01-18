@@ -207,7 +207,7 @@ module.exports = _inheritsLoose;
 
 exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "body {\n  background-color: white;\n  margin: 0;\n}\n\n.desktopnav {\n  display: block;\n}\n\n/* individual item */\n.one-item {\n  color: blue;\n  border: solid 2px red;\n  padding: 0;\n  margin: 0;\n}\n.one-item > img {\n  height: 100px;\n}\n.one-item > h1 {\n  padding: 0;\n  margin: 0;\n}\n.one-item > p {\n  padding: 0;\n  margin: 0;\n}\n\n/* CSS applies to 968px and above */\n@media screen and (min-width: 968px) {\n  .mobilenav {\n    display: none;\n  }\n  .desktopnav {\n    display: block;\n  }\n}\n", ""]);
+exports.push([module.i, "body {\n  background-color: white;\n  margin: 0;\n}\n\n.desktopnav {\n  display: block;\n}\n/*Items display*/\n.all-item-display {\n  display: flex;\n  justify-content: flex-start;\n  padding-left: 100px;\n  padding-right: 100px;\n}\n/* individual item */\n.one-item {\n  color: black;\n  padding: 0;\n  margin: 20px;\n  height: 460px;\n  width: 260px;\n}\n.one-item-image {\n  height: 85%;\n  width: 100%;\n  background: lightgrey;\n}\n.one-item-image > img {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  overflow: hidden;\n}\n.one-item-text {\n  padding: 0;\n  margin: 0;\n  margin-top: 10px;\n  font-family: 'Helvetica';\n}\n.one-item-text > h1 {\n  padding: 0;\n  margin: 0;\n  padding-bottom: 5px;\n  font-size: 25px;\n  border-bottom: 2px black solid;\n  width: 20%;\n}\n.one-item-text > p {\n  padding: 0;\n  margin-top: 5px;\n  font-size: 80%;\n  font-style: lighter;\n}\n\n/* CSS applies to 968px and above */\n@media screen and (min-width: 968px) {\n  .mobilenav {\n    display: none;\n  }\n  .desktopnav {\n    display: block;\n  }\n}\n", ""]);
 
 
 
@@ -28760,6 +28760,12 @@ class AddItem extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       });
     });
 
+    _defineProperty(this, "priceChangeHandler", e => {
+      this.setState({
+        price: e.target.value
+      });
+    });
+
     _defineProperty(this, "fileChangeHandler", e => {
       this.setState({
         files: [...e.target.files]
@@ -28774,6 +28780,7 @@ class AddItem extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       console.log('state', this.state);
       data.append('item', this.state.item);
       data.append('description', this.state.description);
+      data.append('price', this.state.price);
       data.append('seller', this.state.seller);
       fetch('/add-item', {
         method: 'POST',
@@ -28800,6 +28807,10 @@ class AddItem extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         type: "text",
         value: this.state.description,
         onChange: this.descChangeHandler
+      }), "price", ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "text",
+        value: this.state.price,
+        onChange: this.priceChangeHandler
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "submit",
         value: "add item"
@@ -28810,7 +28821,8 @@ class AddItem extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       files: [],
       description: '',
       seller: this.props.seller,
-      item: ''
+      item: '',
+      price: ''
     };
   }
 
@@ -28945,13 +28957,15 @@ class Items extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     _defineProperty(this, "render", () => {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         onClick: this.updateItems
-      }, "Reload items"), this.state.items.map((item, index) => {
+      }, "Reload items"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "all-item-display"
+      }, this.state.items.map((item, index) => {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           key: index
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_OneItem_jsx__WEBPACK_IMPORTED_MODULE_1__["default"], {
           item: item
         }));
-      }));
+      })));
     });
 
     this.state = {
@@ -29149,9 +29163,13 @@ class OneItem extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     _defineProperty(this, "render", () => {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "one-item"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "one-item-image"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: '..' + this.props.item.imgPaths[0]
-      }), ";", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, this.props.item.item), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, this.props.item.description));
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "one-item-text"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, this.props.item.item), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, this.props.item.price)));
     });
   }
 
