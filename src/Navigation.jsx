@@ -32,19 +32,20 @@ class Navigation extends Component{
                 </span>
                 </button> 
             </div>
-
-            <ul style={this.state.toggleNav}>
-                <div className="navLeft">
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/men">Men</Link></li>
-                    <li><Link to="/women">Women</Link></li>
-                    <li><Link to="/add-item">Sell</Link></li>
-                </div>
-                <div className="navRight">
-                    <li><Link to="/login">Login</Link></li>
-                    <li><Link to="/register">Register</Link></li>
-                </div>
-            </ul>
+            {/* <div style={this.state.toggleNav}> */}
+                <ul>
+                    <div className="navLeft">
+                        <li><Link to="/">Home</Link></li>
+                        <li><Link to="/men">Men</Link></li>
+                        <li><Link to="/women">Women</Link></li>
+                        <li><Link to="/add-item">Sell</Link></li>
+                    </div>
+                    <div className="navRight">
+                        <li><Link to="/login">Login</Link></li>
+                        <li><Link to="/register">Register</Link></li>
+                    </div>
+                </ul>
+            {/* </div> */}
         </div>)
     }     
 }

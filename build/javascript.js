@@ -222,11 +222,7 @@ exports.push([module.i, "/*!\r\n * Hamburgers\r\n * @description Tasty CSS-anima
 
 exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-<<<<<<< HEAD
-exports.push([module.i, "body {\r\n  background-color: white;\r\n  margin: 0;\r\n}\r\n\r\n.hidden {\r\n  display: none;\r\n}\r\n\r\n\r\na {\r\n  color: black;\r\n  font-family: sans-serif;\r\n}\r\n\r\n.nav ul {\r\n  list-style-type: none;\r\n  text-transform: uppercase;\r\n  padding: 0px;\r\n  line-height: 2em;\r\n  display:flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n  text-align: center;\r\n}\r\na {\r\n  text-decoration: none;\r\n}\r\n\r\n\r\n/* individual item */\r\n.one-item {\r\n  color: blue;\r\n  border: solid 2px red;\r\n  padding: 0;\r\n  margin: 0;\r\n}\r\n.one-item > img {\r\n  height: 100px;\r\n}\r\n.one-item > h1 {\r\n  padding: 0;\r\n  margin: 0;\r\n}\r\n.one-item > p {\r\n  padding: 0;\r\n  margin: 0;\r\n}\r\n\r\n/* CSS applies to 968px and above */\r\n@media screen and (min-width: 968px) {\r\n  .hideBurger {\r\n    display:none;\r\n  }\r\n  .nav {\r\n    display:flex;\r\n    align-items: center;\r\n    height: 4em;\r\n    background-color: lightgray;\r\n  }\r\n  .nav ul {\r\n    display: flex;\r\n    flex-direction: row;\r\n    list-style-type: none;\r\n    text-transform: uppercase;\r\n    width: 100vw;\r\n    justify-content: space-between;\r\n  }\r\n\r\n  .nav ul li {\r\n    margin: 0 1em 0 1em\r\n  }\r\n  .navRight {\r\n    display: flex;\r\n  }\r\n  .navLeft {\r\n    display: flex;\r\n  }\r\n}", ""]);
-=======
-exports.push([module.i, "body {\n  background-color: white;\n  margin: 0;\n}\n\na {\n  color: black;\n  font-family: sans-serif;\n}\n\n.nav ul {\n  list-style-type: none;\n  text-transform: uppercase;\n  padding: 0px;\n}\na {\n  text-decoration: none;\n}\n\n/*Items display*/\n.all-item-display {\n  display: flex;\n  justify-content: center;\n  width: 100vp;\n  flex-wrap: wrap;\n}\n/* individual item */\n.one-item {\n  color: black;\n  padding: 0;\n  margin: 10px;\n  height: 460px;\n  width: 260px;\n}\n.one-item-image {\n  height: 85%;\n  width: 100%;\n  background: lightgrey;\n}\n.one-item-image > img {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  overflow: hidden;\n}\n.one-item-text {\n  padding: 0;\n  margin: 0;\n  margin-top: 10px;\n  font-family: 'Helvetica';\n}\n.one-item-text > h1 {\n  padding: 0;\n  margin: 0;\n  padding-bottom: 5px;\n  font-size: 25px;\n  border-bottom: 2px black solid;\n  width: 20%;\n}\n.one-item-text > p {\n  padding: 0;\n  margin-top: 5px;\n  font-size: 80%;\n  font-style: lighter;\n}\n\n/* CSS applies to 968px and above */\n@media screen and (min-width: 968px) {\n  .nav {\n    display: flex;\n    align-items: center;\n    height: 4em;\n    background-color: lightgray;\n  }\n  .nav ul {\n    display: flex;\n    list-style-type: none;\n    text-transform: uppercase;\n    width: 100vw;\n    justify-content: space-between;\n  }\n\n  .nav ul li {\n    margin: 0 1em 0 1em;\n  }\n  .navRight {\n    display: flex;\n  }\n  .navLeft {\n    display: flex;\n  }\n}\n", ""]);
->>>>>>> ea544c444af746d5799ad12035cfe68fb79ea89f
+exports.push([module.i, "body {\r\n  background-color: white;\r\n  margin: 0;\r\n}\r\n\r\n\r\n\r\na {\r\n  color: black;\r\n  font-family: sans-serif;\r\n}\r\n\r\n.nav ul {\r\n  list-style-type: none;\r\n  text-transform: uppercase;\r\n  padding: 0px;\r\n  line-height: 2em;\r\n  display:flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n  text-align: center;\r\n}\r\na {\r\n  text-decoration: none;\r\n}\r\n\r\n/* individual item */\r\n.one-item {\r\n  color: black;\r\n  padding: 0;\r\n  margin: 10px;\r\n  height: 460px;\r\n  width: 260px;\r\n}\r\n.one-item-image {\r\n  height: 85%;\r\n  width: 100%;\r\n  background: lightgrey;\r\n}\r\n.one-item-image > img {\r\n  width: 100%;\r\n  height: 100%;\r\n  object-fit: cover;\r\n  overflow: hidden;\r\n}\r\n.one-item-text {\r\n  padding: 0;\r\n  margin: 0;\r\n  margin-top: 10px;\r\n  font-family: 'Helvetica';\r\n}\r\n.one-item-text > h1 {\r\n  padding: 0;\r\n  margin: 0;\r\n  padding-bottom: 5px;\r\n  font-size: 25px;\r\n  border-bottom: 2px black solid;\r\n  width: 20%;\r\n}\r\n.one-item-text > p {\r\n  padding: 0;\r\n  margin-top: 5px;\r\n  font-size: 80%;\r\n  font-style: lighter;\r\n}\r\n\r\n@media (max-width: 968px) {\r\n\r\n}\r\n\r\n/* CSS applies to 968px and above */\r\n@media screen and (min-width: 968px) {\r\n\r\n  .hideBurger {\r\n    display:none;\r\n  }\r\n  .nav {\r\n    display: flex;\r\n    align-items: center;\r\n    height: 4em;\r\n    background-color: lightgray;\r\n  }\r\n  .nav ul {\r\n    display: flex;\r\n    flex-direction: row;\r\n    list-style-type: none;\r\n    text-transform: uppercase;\r\n    width: 100vw;\r\n    justify-content: space-between;\r\n  }\r\n\r\n  .nav ul li {\r\n    margin: 0 1em 0 1em;\r\n  }\r\n  .navRight {\r\n    display: flex;\r\n  }\r\n  .navLeft {\r\n    display: flex;\r\n  }\r\n}", ""]);
 
 
 
@@ -28893,7 +28889,7 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     super(...args);
 
     _defineProperty(this, "renderHomePage", () => {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_MainPage_jsx__WEBPACK_IMPORTED_MODULE_4__["default"], null));
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Navigation_jsx__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_MainPage_jsx__WEBPACK_IMPORTED_MODULE_4__["default"], null));
     });
 
     _defineProperty(this, "renderLoginPage", () => {
@@ -28908,6 +28904,30 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ItemDetail_jsx__WEBPACK_IMPORTED_MODULE_8__["default"], {
         itemId: renderdata.match.params.itemId
       });
+    });
+
+    _defineProperty(this, "renderAddItem", () => {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AddItem_jsx__WEBPACK_IMPORTED_MODULE_7__["default"], null);
+    });
+
+    _defineProperty(this, "renderMenItems", () => {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MenItems, null);
+    });
+
+    _defineProperty(this, "renderWomenItems", () => {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(WomenItems, null);
+    });
+
+    _defineProperty(this, "renderHomePage", () => {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_MainPage_jsx__WEBPACK_IMPORTED_MODULE_4__["default"], null));
+    });
+
+    _defineProperty(this, "renderLoginPage", () => {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Login_jsx__WEBPACK_IMPORTED_MODULE_5__["default"], null);
+    });
+
+    _defineProperty(this, "renderSignupPage", () => {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_register_jsx__WEBPACK_IMPORTED_MODULE_6__["default"], null);
     });
 
     _defineProperty(this, "renderAddItem", () => {
@@ -28951,10 +28971,6 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         exact: true,
         path: "/add-item/",
         render: this.renderAddItem
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
-        exact: true,
-        path: "/item-detail/:itemId",
-        render: this.renderItemDetail
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         exact: true,
         path: "/checkout/",
@@ -29239,9 +29255,7 @@ class Navigation extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         className: "hamburger-box"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         className: "hamburger-inner"
-      })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-        style: this.state.toggleNav
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "navLeft"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         to: "/"

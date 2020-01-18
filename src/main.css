@@ -3,9 +3,6 @@ body {
   margin: 0;
 }
 
-.hidden {
-  display: none;
-}
 
 
 a {
@@ -67,8 +64,13 @@ a {
   font-style: lighter;
 }
 
+@media (max-width: 968px) {
+
+}
+
 /* CSS applies to 968px and above */
 @media screen and (min-width: 968px) {
+
   .hideBurger {
     display:none;
   }
