@@ -28936,7 +28936,6 @@ class Items extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         method: 'POST'
       });
       let responseText = await responseBody.text();
-      console.log('response Text', responseText);
       let itemsArray = JSON.parse(responseText);
       this.setState({
         items: itemsArray
@@ -29116,7 +29115,9 @@ class Navigation extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         to: "/login"
       }, "Login")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         to: "/register"
-      }, "Register"))));
+      }, "Register")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/add-item"
+      }, "Add item"))));
     });
   }
 
@@ -29146,7 +29147,6 @@ class OneItem extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     super(props);
 
     _defineProperty(this, "render", () => {
-      console.log('props item', this.props.item);
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "one-item"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
