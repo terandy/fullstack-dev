@@ -1,18 +1,37 @@
 body {
-    background-color: #bbb;
-    margin: 0;
+  background-color: white;
+  margin: 0;
 }
 
 .desktopnav {
-    display:block;
+  display: block;
+}
+
+/* individual item */
+.one-item {
+  color: blue;
+  border: solid 2px red;
+  padding: 0;
+  margin: 0;
+}
+.one-item > img {
+  height: 100px;
+}
+.one-item > h1 {
+  padding: 0;
+  margin: 0;
+}
+.one-item > p {
+  padding: 0;
+  margin: 0;
 }
 
 /* CSS applies to 968px and above */
 @media screen and (min-width: 968px) {
-.mobilenav {
-    display: none
-}
-.desktopnav {
-    display: block
-}
+  .mobilenav {
+    display: none;
   }
+  .desktopnav {
+    display: block;
+  }
+}

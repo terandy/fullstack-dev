@@ -207,7 +207,7 @@ module.exports = _inheritsLoose;
 
 exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "body {\n    background-color: #bbb;\n    margin: 0;\n}\n\n.desktopnav {\n    display:block;\n}\n\n/* CSS applies to 968px and above */\n@media screen and (min-width: 968px) {\n.mobilenav {\n    display: none\n}\n.desktopnav {\n    display: block\n}\n  }", ""]);
+exports.push([module.i, "body {\n  background-color: white;\n  margin: 0;\n}\n\n.desktopnav {\n  display: block;\n}\n\n/* individual item */\n.one-item {\n  color: blue;\n  border: solid 2px red;\n  padding: 0;\n  margin: 0;\n}\n.one-item > img {\n  height: 100px;\n}\n.one-item > h1 {\n  padding: 0;\n  margin: 0;\n}\n.one-item > p {\n  padding: 0;\n  margin: 0;\n}\n\n/* CSS applies to 968px and above */\n@media screen and (min-width: 968px) {\n  .mobilenav {\n    display: none;\n  }\n  .desktopnav {\n    display: block;\n  }\n}\n", ""]);
 
 
 
@@ -29147,9 +29147,11 @@ class OneItem extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
     _defineProperty(this, "render", () => {
       console.log('props item', this.props.item);
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "title: ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.props.item.item), "description: ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.props.item.description), "images:", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "one-item"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: '..' + this.props.item.imgPaths[0]
-      }), ";");
+      }), ";", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, this.props.item.item), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, this.props.item.description));
     });
   }
 
