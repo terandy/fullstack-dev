@@ -30,7 +30,7 @@ class App extends Component{
     renderWomenItems = () => {
         return <WomenItems/>
     }
-    renderSellPage = () => {
+    renderAddItem = () => {
         return <WomenItems/>
     }
 
@@ -40,7 +40,6 @@ class App extends Component{
             <Route exact={true} path='/' render={this.renderHomePage}></Route>
             <Route exact={true} path='/men' render={this.renderMenItems}></Route>
             <Route exact={true} path='/women' render={this.renderWomenItems}></Route>
-            <Route exact={true} path='/sell' render={this.renderSellPage}></Route>
             <Route exact={true} path='/login' render={this.renderLoginPage}></Route>
             <Route exact={true} path='/register' render={this.renderSignupPage}></Route>
             <Route exact={true} path='/cart/' render={this.renderCart}></Route>

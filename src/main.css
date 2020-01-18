@@ -11,7 +11,10 @@ a {
 .nav ul {
   list-style-type: none;
   text-transform: uppercase;
-  padding: 0px
+  padding: 0px;
+}
+.nav ul li a {
+  text-decoration: none;
 }
 
 /* individual item */
@@ -51,9 +54,6 @@ a {
 
   .nav ul li {
     margin: 0 1em 0 1em
-  }
-  .nav ul li a {
-    text-decoration: none;
   }
   .navRight {
     display: flex;
