@@ -3,8 +3,15 @@ body {
   margin: 0;
 }
 
-.desktopnav {
-  display: block;
+a {
+  color: black;
+  font-family: sans-serif;
+}
+
+.nav ul {
+  list-style-type: none;
+  text-transform: uppercase;
+  padding: 0px
 }
 
 /* individual item */
@@ -28,10 +35,30 @@ body {
 
 /* CSS applies to 968px and above */
 @media screen and (min-width: 968px) {
-  .mobilenav {
-    display: none;
+  .nav {
+    display:flex;
+    align-items: center;
+    height: 4em;
+    background-color: lightgray;
   }
-  .desktopnav {
-    display: block;
+  .nav ul {
+    display: flex;
+    list-style-type: none;
+    text-transform: uppercase;
+    width: 100vw;
+    justify-content: space-between;
+  }
+
+  .nav ul li {
+    margin: 0 1em 0 1em
+  }
+  .nav ul li a {
+    text-decoration: none;
+  }
+  .navRight {
+    display: flex;
+  }
+  .navLeft {
+    display: flex;
   }
 }

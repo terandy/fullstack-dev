@@ -12,7 +12,6 @@ class App extends Component{
     renderHomePage = () => {
         return <div>
             <Navigation/>
-            {/* <MobileNavigation/> */}
             <MainPage/>
             </div>
     }
@@ -25,11 +24,23 @@ class App extends Component{
     renderAddItem = () => {
         return <AddItem/>
     }
+    renderMenItems = () => {
+        return <MenItems/>
+    }
+    renderWomenItems = () => {
+        return <WomenItems/>
+    }
+    renderSellPage = () => {
+        return <WomenItems/>
+    }
 
     render = () => {    
         return (<BrowserRouter>
         <div>
             <Route exact={true} path='/' render={this.renderHomePage}></Route>
+            <Route exact={true} path='/men' render={this.renderMenItems}></Route>
+            <Route exact={true} path='/women' render={this.renderWomenItems}></Route>
+            <Route exact={true} path='/sell' render={this.renderSellPage}></Route>
             <Route exact={true} path='/login' render={this.renderLoginPage}></Route>
             <Route exact={true} path='/register' render={this.renderSignupPage}></Route>
             <Route exact={true} path='/cart/' render={this.renderCart}></Route>

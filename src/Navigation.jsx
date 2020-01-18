@@ -6,12 +6,18 @@ import {connect} from 'react-redux'
 class Navigation extends Component{
     render = () => {    
         return (
-        <div className="desktopnav">
-            <div>Navigation</div>
+        <div className="nav">
             <ul>
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/login">Login</Link></li>
-                <li><Link to="/register">Register</Link></li>
+                <div className="navLeft">
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/">Men</Link></li>
+                    <li><Link to="/">Women</Link></li>
+                    <li><Link to="/">Sell</Link></li>
+                </div>
+                <div className="navRight">
+                    <li><Link to="/login">Login</Link></li>
+                    <li><Link to="/register">Register</Link></li>
+                </div>
             </ul>
         </div>)
     }     

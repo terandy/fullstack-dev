@@ -207,7 +207,7 @@ module.exports = _inheritsLoose;
 
 exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "body {\n  background-color: white;\n  margin: 0;\n}\n\n.desktopnav {\n  display: block;\n}\n\n/* individual item */\n.one-item {\n  color: blue;\n  border: solid 2px red;\n  padding: 0;\n  margin: 0;\n}\n.one-item > img {\n  height: 100px;\n}\n.one-item > h1 {\n  padding: 0;\n  margin: 0;\n}\n.one-item > p {\n  padding: 0;\n  margin: 0;\n}\n\n/* CSS applies to 968px and above */\n@media screen and (min-width: 968px) {\n  .mobilenav {\n    display: none;\n  }\n  .desktopnav {\n    display: block;\n  }\n}\n", ""]);
+exports.push([module.i, "body {\r\n  background-color: white;\r\n  margin: 0;\r\n}\r\n\r\na {\r\n  color: black;\r\n  font-family: sans-serif;\r\n}\r\n\r\n.nav ul {\r\n  list-style-type: none;\r\n  text-transform: uppercase;\r\n  padding: 0px\r\n}\r\n\r\n/* individual item */\r\n.one-item {\r\n  color: blue;\r\n  border: solid 2px red;\r\n  padding: 0;\r\n  margin: 0;\r\n}\r\n.one-item > img {\r\n  height: 100px;\r\n}\r\n.one-item > h1 {\r\n  padding: 0;\r\n  margin: 0;\r\n}\r\n.one-item > p {\r\n  padding: 0;\r\n  margin: 0;\r\n}\r\n\r\n/* CSS applies to 968px and above */\r\n@media screen and (min-width: 968px) {\r\n  .nav {\r\n    display:flex;\r\n    align-items: center;\r\n    height: 4em;\r\n    background-color: lightgray;\r\n  }\r\n  .nav ul {\r\n    display: flex;\r\n    list-style-type: none;\r\n    text-transform: uppercase;\r\n    width: 100vw;\r\n    justify-content: space-between;\r\n  }\r\n\r\n  .nav ul li {\r\n    margin: 0 1em 0 1em\r\n  }\r\n  .nav ul li a {\r\n    text-decoration: none;\r\n  }\r\n  .navRight {\r\n    display: flex;\r\n  }\r\n  .navLeft {\r\n    display: flex;\r\n  }\r\n}\r\n", ""]);
 
 
 
@@ -28875,11 +28875,35 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AddItem_jsx__WEBPACK_IMPORTED_MODULE_7__["default"], null);
     });
 
+    _defineProperty(this, "renderMenItems", () => {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MenItems, null);
+    });
+
+    _defineProperty(this, "renderWomenItems", () => {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(WomenItems, null);
+    });
+
+    _defineProperty(this, "renderSellPage", () => {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(WomenItems, null);
+    });
+
     _defineProperty(this, "render", () => {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["BrowserRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         exact: true,
         path: "/",
         render: this.renderHomePage
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+        exact: true,
+        path: "/men",
+        render: this.renderMenItems
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+        exact: true,
+        path: "/women",
+        render: this.renderWomenItems
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+        exact: true,
+        path: "/sell",
+        render: this.renderSellPage
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         exact: true,
         path: "/login",
@@ -29109,14 +29133,24 @@ class Navigation extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
     _defineProperty(this, "render", () => {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "desktopnav"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Navigation"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        className: "nav"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "navLeft"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         to: "/"
       }, "Home")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/"
+      }, "Men")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/"
+      }, "Women")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/"
+      }, "Sell"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "navRight"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         to: "/login"
       }, "Login")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         to: "/register"
-      }, "Register"))));
+      }, "Register")))));
     });
   }
 
