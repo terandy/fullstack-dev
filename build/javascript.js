@@ -207,7 +207,7 @@ module.exports = _inheritsLoose;
 
 exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "body {\n  background-color: white;\n  margin: 0;\n}\n\n.desktopnav {\n  display: block;\n}\n/*Items display*/\n.all-item-display {\n  display: flex;\n  justify-content: flex-start;\n  padding-left: 100px;\n  padding-right: 100px;\n}\n/* individual item */\n.one-item {\n  color: black;\n  padding: 0;\n  margin: 20px;\n  height: 460px;\n  width: 260px;\n}\n.one-item-image {\n  height: 85%;\n  width: 100%;\n  background: lightgrey;\n}\n.one-item-image > img {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  overflow: hidden;\n}\n.one-item-text {\n  padding: 0;\n  margin: 0;\n  margin-top: 10px;\n  font-family: 'Helvetica';\n}\n.one-item-text > h1 {\n  padding: 0;\n  margin: 0;\n  padding-bottom: 5px;\n  font-size: 25px;\n  border-bottom: 2px black solid;\n  width: 20%;\n}\n.one-item-text > p {\n  padding: 0;\n  margin-top: 5px;\n  font-size: 80%;\n  font-style: lighter;\n}\n\n/* CSS applies to 968px and above */\n@media screen and (min-width: 968px) {\n  .mobilenav {\n    display: none;\n  }\n  .desktopnav {\n    display: block;\n  }\n}\n", ""]);
+exports.push([module.i, "body {\n  background-color: white;\n  margin: 0;\n}\n\na {\n  color: black;\n  font-family: sans-serif;\n}\n\n.nav ul {\n  list-style-type: none;\n  text-transform: uppercase;\n  padding: 0px\n}\n/*Items display*/\n.all-item-display {\n  display: flex;\n  justify-content: flex-start;\n  padding-left: 100px;\n  padding-right: 100px;\n}\n/* individual item */\n.one-item {\n  color: black;\n  padding: 0;\n  margin: 20px;\n  height: 460px;\n  width: 260px;\n}\n.one-item-image {\n  height: 85%;\n  width: 100%;\n  background: lightgrey;\n}\n.one-item-image > img {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  overflow: hidden;\n}\n.one-item-text {\n  padding: 0;\n  margin: 0;\n  margin-top: 10px;\n  font-family: 'Helvetica';\n}\n.one-item-text > h1 {\n  padding: 0;\n  margin: 0;\n  padding-bottom: 5px;\n  font-size: 25px;\n  border-bottom: 2px black solid;\n  width: 20%;\n}\n.one-item-text > p {\n  padding: 0;\n  margin-top: 5px;\n  font-size: 80%;\n  font-style: lighter;\n}\n\n/* CSS applies to 968px and above */\n@media screen and (min-width: 968px) {\n  .nav {\n    display:flex;\n    align-items: center;\n    height: 4em;\n    background-color: lightgray;\n  }\n  .nav ul {\n    display: flex;\n    list-style-type: none;\n    text-transform: uppercase;\n    width: 100vw;\n    justify-content: space-between;\n  }\n\n  .nav ul li {\n    margin: 0 1em 0 1em\n  }\n  .nav ul li a {\n    text-decoration: none;\n  }\n  .navRight {\n    display: flex;\n  }\n  .navLeft {\n    display: flex;\n  }\n}\n", ""]);
 
 
 
@@ -28887,11 +28887,35 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AddItem_jsx__WEBPACK_IMPORTED_MODULE_7__["default"], null);
     });
 
+    _defineProperty(this, "renderMenItems", () => {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MenItems, null);
+    });
+
+    _defineProperty(this, "renderWomenItems", () => {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(WomenItems, null);
+    });
+
+    _defineProperty(this, "renderSellPage", () => {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(WomenItems, null);
+    });
+
     _defineProperty(this, "render", () => {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["BrowserRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         exact: true,
         path: "/",
         render: this.renderHomePage
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+        exact: true,
+        path: "/men",
+        render: this.renderMenItems
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+        exact: true,
+        path: "/women",
+        render: this.renderWomenItems
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+        exact: true,
+        path: "/sell",
+        render: this.renderSellPage
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         exact: true,
         path: "/login",
@@ -29122,16 +29146,24 @@ class Navigation extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
     _defineProperty(this, "render", () => {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "desktopnav"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Navigation"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        className: "nav"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "navLeft"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         to: "/"
       }, "Home")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/"
+      }, "Men")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/"
+      }, "Women")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/"
+      }, "Sell"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "navRight"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         to: "/login"
       }, "Login")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         to: "/register"
-      }, "Register")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: "/add-item"
-      }, "Add item"))));
+      }, "Register")))));
     });
   }
 

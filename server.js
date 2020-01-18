@@ -66,6 +66,7 @@ app.post('/register', upload.none(), (req, res) => {
 app.post('/add-item', upload.array('images'), (req, res) => {
   let description = req.body.description;
   let seller = req.body.seller;
+  let price = req.body.price;
   let item = req.body.item;
   let files = req.files;
   let imgPaths = files.map(file => '/uploads/' + file.filename);
@@ -74,7 +75,8 @@ app.post('/add-item', upload.array('images'), (req, res) => {
     description: description,
     item: item,
     seller: seller,
-    imgPaths: imgPaths
+    imgPaths: imgPaths,
+    price: price
   });
   res.send(JSON.stringify({ success: true }));
 });
