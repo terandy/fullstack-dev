@@ -13,15 +13,15 @@ a {
   text-transform: uppercase;
   padding: 0px;
 }
-.nav ul li a {
+a {
   text-decoration: none;
 }
+
 /*Items display*/
 .all-item-display {
   display: flex;
-  justify-content: flex-start;
-  margin-left: 6%;
-  width: 80vp;
+  justify-content: center;
+  width: 100vp;
   flex-wrap: wrap;
 }
 /* individual item */

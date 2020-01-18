@@ -207,7 +207,7 @@ module.exports = _inheritsLoose;
 
 exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "body {\n  background-color: white;\n  margin: 0;\n}\n\na {\n  color: black;\n  font-family: sans-serif;\n}\n\n.nav ul {\n  list-style-type: none;\n  text-transform: uppercase;\n  padding: 0px;\n}\n.nav ul li a {\n  text-decoration: none;\n}\n/*Items display*/\n.all-item-display {\n  display: flex;\n  justify-content: flex-start;\n  margin-left: 6%;\n  width: 80vp;\n  flex-wrap: wrap;\n}\n/* individual item */\n.one-item {\n  color: black;\n  padding: 0;\n  margin: 10px;\n  height: 460px;\n  width: 260px;\n}\n.one-item-image {\n  height: 85%;\n  width: 100%;\n  background: lightgrey;\n}\n.one-item-image > img {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  overflow: hidden;\n}\n.one-item-text {\n  padding: 0;\n  margin: 0;\n  margin-top: 10px;\n  font-family: 'Helvetica';\n}\n.one-item-text > h1 {\n  padding: 0;\n  margin: 0;\n  padding-bottom: 5px;\n  font-size: 25px;\n  border-bottom: 2px black solid;\n  width: 20%;\n}\n.one-item-text > p {\n  padding: 0;\n  margin-top: 5px;\n  font-size: 80%;\n  font-style: lighter;\n}\n\n/* CSS applies to 968px and above */\n@media screen and (min-width: 968px) {\n  .nav {\n    display: flex;\n    align-items: center;\n    height: 4em;\n    background-color: lightgray;\n  }\n  .nav ul {\n    display: flex;\n    list-style-type: none;\n    text-transform: uppercase;\n    width: 100vw;\n    justify-content: space-between;\n  }\n\n  .nav ul li {\n    margin: 0 1em 0 1em;\n  }\n  .navRight {\n    display: flex;\n  }\n  .navLeft {\n    display: flex;\n  }\n}\n", ""]);
+exports.push([module.i, "body {\n  background-color: white;\n  margin: 0;\n}\n\na {\n  color: black;\n  font-family: sans-serif;\n}\n\n.nav ul {\n  list-style-type: none;\n  text-transform: uppercase;\n  padding: 0px;\n}\na {\n  text-decoration: none;\n}\n\n/*Items display*/\n.all-item-display {\n  display: flex;\n  justify-content: center;\n  width: 100vp;\n  flex-wrap: wrap;\n}\n/* individual item */\n.one-item {\n  color: black;\n  padding: 0;\n  margin: 10px;\n  height: 460px;\n  width: 260px;\n}\n.one-item-image {\n  height: 85%;\n  width: 100%;\n  background: lightgrey;\n}\n.one-item-image > img {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  overflow: hidden;\n}\n.one-item-text {\n  padding: 0;\n  margin: 0;\n  margin-top: 10px;\n  font-family: 'Helvetica';\n}\n.one-item-text > h1 {\n  padding: 0;\n  margin: 0;\n  padding-bottom: 5px;\n  font-size: 25px;\n  border-bottom: 2px black solid;\n  width: 20%;\n}\n.one-item-text > p {\n  padding: 0;\n  margin-top: 5px;\n  font-size: 80%;\n  font-style: lighter;\n}\n\n/* CSS applies to 968px and above */\n@media screen and (min-width: 968px) {\n  .nav {\n    display: flex;\n    align-items: center;\n    height: 4em;\n    background-color: lightgray;\n  }\n  .nav ul {\n    display: flex;\n    list-style-type: none;\n    text-transform: uppercase;\n    width: 100vw;\n    justify-content: space-between;\n  }\n\n  .nav ul li {\n    margin: 0 1em 0 1em;\n  }\n  .navRight {\n    display: flex;\n  }\n  .navLeft {\n    display: flex;\n  }\n}\n", ""]);
 
 
 
@@ -28856,7 +28856,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Login_jsx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Login.jsx */ "./src/Login.jsx");
 /* harmony import */ var _register_jsx__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./register.jsx */ "./src/register.jsx");
 /* harmony import */ var _AddItem_jsx__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./AddItem.jsx */ "./src/AddItem.jsx");
+/* harmony import */ var _ItemDetail_jsx__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./ItemDetail.jsx */ "./src/ItemDetail.jsx");
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 
@@ -28881,6 +28883,12 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
     _defineProperty(this, "renderSignupPage", () => {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_register_jsx__WEBPACK_IMPORTED_MODULE_6__["default"], null);
+    });
+
+    _defineProperty(this, "renderItemDetail", renderdata => {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ItemDetail_jsx__WEBPACK_IMPORTED_MODULE_8__["default"], {
+        itemId: renderdata.match.params.itemId
+      });
     });
 
     _defineProperty(this, "renderAddItem", () => {
@@ -28926,6 +28934,10 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         render: this.renderAddItem
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         exact: true,
+        path: "/item-detail/:itemId",
+        render: this.renderItemDetail
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+        exact: true,
         path: "/checkout/",
         render: this.renderCheckout
       })));
@@ -28935,6 +28947,38 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (App);
+
+/***/ }),
+
+/***/ "./src/ItemDetail.jsx":
+/*!****************************!*\
+  !*** ./src/ItemDetail.jsx ***!
+  \****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+class ItemDetail extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  constructor(props) {
+    super(props);
+
+    _defineProperty(this, "render", () => {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Item detail", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "id ", this.props.itemId));
+    });
+
+    this.state = {};
+  }
+
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (ItemDetail);
 
 /***/ }),
 
@@ -29176,7 +29220,9 @@ class Navigation extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 
@@ -29185,7 +29231,9 @@ class OneItem extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     super(props);
 
     _defineProperty(this, "render", () => {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: '/item-detail/' + this.props.item._id
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "one-item"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "one-item-image"
@@ -29193,7 +29241,7 @@ class OneItem extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         src: '..' + this.props.item.imgPaths[0]
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "one-item-text"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, this.props.item.item), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "$", this.props.item.price)));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, this.props.item.item), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "$", this.props.item.price))));
     });
   }
 
@@ -29234,7 +29282,7 @@ Object(_reload_magic_client_js__WEBPACK_IMPORTED_MODULE_6__["default"])(); // au
 
 react_dom__WEBPACK_IMPORTED_MODULE_0___default.a.render(react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react_redux__WEBPACK_IMPORTED_MODULE_4__["Provider"], {
   store: _store_js__WEBPACK_IMPORTED_MODULE_5__["default"]
-}, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_App_jsx__WEBPACK_IMPORTED_MODULE_2__["default"], null)), document.getElementById("root"));
+}, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_App_jsx__WEBPACK_IMPORTED_MODULE_2__["default"], null)), document.getElementById('root'));
 
 /***/ }),
 

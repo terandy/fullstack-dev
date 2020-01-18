@@ -6,6 +6,7 @@ import MainPage from './MainPage.jsx';
 import Login from './Login.jsx';
 import Register from './register.jsx';
 import AddItem from './AddItem.jsx';
+import ItemDetail from './ItemDetail.jsx';
 
 class App extends Component {
   renderHomePage = () => {
@@ -21,6 +22,9 @@ class App extends Component {
   };
   renderSignupPage = () => {
     return <Register />;
+  };
+  renderItemDetail = renderdata => {
+    return <ItemDetail itemId={renderdata.match.params.itemId} />;
   };
   renderAddItem = () => {
     return <AddItem />;
@@ -58,6 +62,11 @@ class App extends Component {
             exact={true}
             path="/add-item/"
             render={this.renderAddItem}
+          ></Route>
+          <Route
+            exact={true}
+            path="/item-detail/:itemId"
+            render={this.renderItemDetail}
           ></Route>
           <Route
             exact={true}
