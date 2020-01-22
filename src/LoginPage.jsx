@@ -62,11 +62,15 @@ class LoginPage extends Component {
               />{' '}
             </div>
             <button className="registration-botton">Log in</button>
-            <Link to="/register">
-              <div className="registration-login-redirect">
-                Not a user? <span>Sign up</span>
-              </div>
-            </Link>
+            <div>
+              <Link to="/register" className="registration-login-redirect">
+                Create an account
+              </Link>
+              <span>|</span>
+              <a className="registration-login-redirect">
+                Forgot you password?
+              </a>
+            </div>
           </form>
         </div>
         <div className="registration-image1-container">

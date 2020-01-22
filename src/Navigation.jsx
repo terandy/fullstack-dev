@@ -47,7 +47,7 @@ class Navigation extends Component {
           <ul>
             <div className="navLeft">
               <li>
-                <Link to="/">Home</Link>
+                <Link to="/">AliBay</Link>
               </li>
               <li>
                 <Link to="/men">Men</Link>

@@ -41,7 +41,7 @@ class Register extends Component {
             <h1>
               <Link to="/">AliBay</Link>
             </h1>
-            <h2>Register</h2>
+            <h2>Sign up</h2>
             <div>
               <input
                 className="registration-form-input"
@@ -60,7 +60,7 @@ class Register extends Component {
                 placeholder="Password"
               />{' '}
             </div>
-            <button className="registration-botton">Sign up</button>
+            <button className="registration-botton">Create Account</button>
             <Link to="/login-page">
               <div className="registration-login-redirect">
                 Already a user? <span>Log in</span>

@@ -32,6 +32,7 @@ class Login extends Component {
     if (body.success) {
       console.log('logging in now..');
       this.props.dispatch({ type: 'login-sucess', content: name });
+      this.setState({ passwordLoginInput: '', usernameLoginInput: '' });
     }
   };
 
