@@ -2,6 +2,12 @@ body {
   background-color: white;
   margin: 0;
 }
+.toggle-nav-on {
+  display:block;
+}
+.toggle-nav {
+  display:none;
+}
 
 a {
   color: black;
@@ -73,6 +79,9 @@ a {
 
 /* CSS applies to 968px and above */
 @media screen and (min-width: 968px) {
+  .toggle-nav {
+    display:block;
+  }
   .hideBurger {
     display: none;
   }
