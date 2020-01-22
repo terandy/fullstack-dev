@@ -1,53 +1,54 @@
 import React, { Component } from 'react';
 import { Route, BrowserRouter, Link } from 'react-router-dom';
 
-class Register extends Component {
+class LoginPage extends Component {
   constructor() {
     super();
     this.state = {
-      usernameRegisterInput: '',
-      passwordRegisterInput: ''
+      usernameLoginInput: '',
+      passwordLoginInput: ''
     };
   }
-  usernameRegisterChange = evt => {
-    this.setState({ usernameRegisterInput: evt.target.value });
+
+  usernameLoginChange = evt => {
+    this.setState({ usernameLoginInput: evt.target.value });
   };
-  passwordRegisterChange = evt => {
-    this.setState({ passwordRegisterInput: evt.target.value });
+  passwordLoginChange = evt => {
+    this.setState({ passwordLoginInput: evt.target.value });
   };
 
-  submitRegisterHandler = async evt => {
+  submitLoginHandler = async evt => {
     evt.preventDefault();
-    let name = this.state.usernameRegisterInput;
+    console.log('password', this.state.passwordLoginInput);
+    let name = this.state.usernameLoginInput;
     let data = new FormData();
     data.append('username', name);
-    data.append('password', this.state.passwordRegisterInput);
-    let response = await fetch('/register', { method: 'POST', body: data });
+    data.append('password', this.state.passwordLoginInput);
+    let response = await fetch('/login', { method: 'POST', body: data });
     let body = await response.text();
-    console.log('/register response', body);
+    console.log('/login response', body);
     body = JSON.parse(body);
     if (body.success) {
-      this.setState({
-        usernameRegisterInput: '',
-        passwordRegisterInput: ''
-      });
+      console.log('logging in now..');
+      this.props.dispatch({ type: 'login-sucess', content: name });
     }
   };
+
   render = () => {
     return (
       <div className="registration-container">
         <div className="registration-form-container">
-          <form onSubmit={this.submitRegisterHandler}>
+          <form onSubmit={this.submitLoginHandler}>
             <h1>
               <Link to="/">AliBay</Link>
             </h1>
-            <h2>Register</h2>
+            <h2>Login</h2>
             <div>
               <input
                 className="registration-form-input"
                 type="text"
-                onChange={this.usernameRegisterChange}
-                value={this.state.usernameRegisterInput}
+                onChange={this.usernameLoginChange}
+                value={this.state.usernameLoginInput}
                 placeholder="Username"
               />{' '}
             </div>
@@ -55,15 +56,15 @@ class Register extends Component {
               <input
                 className="registration-form-input"
                 type="text"
-                onChange={this.passwordRegisterChange}
-                value={this.state.passwordRegisterInput}
+                onChange={this.passwordLoginChange}
+                value={this.state.passwordLoginInput}
                 placeholder="Password"
               />{' '}
             </div>
-            <button className="registration-botton">Sign up</button>
-            <Link to="/login-page">
+            <button className="registration-botton">Log in</button>
+            <Link to="/register">
               <div className="registration-login-redirect">
-                Already a user? <span>Log in</span>
+                Not a user? <span>Sign up</span>
               </div>
             </Link>
           </form>
@@ -79,4 +80,4 @@ class Register extends Component {
   };
 }
 
-export default Register;
+export default LoginPage;

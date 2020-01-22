@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Route, BrowserRouter, Link } from 'react-router-dom';
 
 class Login extends Component {
   constructor() {
@@ -36,16 +37,32 @@ class Login extends Component {
 
   render = () => {
     return (
-      <form onSubmit={this.submitLoginHandler}>
-        <h2>Log In</h2>
-        <div>
-          Username <input type="text" onChange={this.usernameLoginChange} />{' '}
-        </div>
-        <div>
-          Password <input type="text" onChange={this.passwordLoginChange} />{' '}
-        </div>
-        <input type="submit" value="login" />
-      </form>
+      <div className="login-form-container">
+        <form onSubmit={this.submitLoginHandler}>
+          <h2>Log in</h2>
+          <div>
+            <input
+              className="registration-form-input login"
+              type="text"
+              onChange={this.usernameLoginChange}
+              value={this.state.usernameLoginInput}
+              placeholder="Username"
+            />{' '}
+          </div>
+          <div>
+            <input
+              className="registration-form-input login"
+              type="text"
+              onChange={this.passwordLoginChange}
+              value={this.state.passwordLoginInput}
+              placeholder="Password"
+            />{' '}
+          </div>
+          <button className="registration-botton login-botton login">
+            Log in
+          </button>
+        </form>
+      </div>
     );
   };
 }
