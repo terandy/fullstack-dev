@@ -3,10 +3,10 @@ body {
   margin: 0;
 }
 .toggle-nav-on {
-  display:block;
+  display: block;
 }
 .toggle-nav {
-  display:none;
+  display: none;
 }
 
 a {
@@ -74,13 +74,99 @@ a {
   font-style: lighter;
 }
 
+/* registration Page */
+.registration-container {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+}
+
+.registration-form-container {
+  position: fixed;
+  z-index: 100;
+  height: 100%;
+  width: 350px;
+  padding: 3em;
+  background-color: white;
+  left: 0;
+  z-index: 100;
+}
+
+.registration-form-container > form {
+  width: 100%;
+  margin-top: 100px;
+  text-align: center;
+}
+.registration-form-container > form > h2 {
+  font-size: 1em;
+  margin-bottom: 2em;
+}
+.registration-form-input {
+  width: 99%;
+  height: 30px;
+  border: none;
+  font-size: 1em;
+  border-bottom: 1px lightgrey solid;
+  margin-bottom: 20px;
+}
+.registration-form-input:focus {
+  border-bottom: 1px grey solid;
+  outline: none;
+}
+.registration-botton {
+  background-color: #6a4caf;
+  border-radius: 25px;
+  width: 90%;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1em;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.registration-botton:hover {
+  background-color: #8d76c2;
+}
+.registration-botton:focus {
+  outline: none;
+  background-color: #8d76c2;
+}
+.registration-login-redirect {
+  font-size: 0.75em;
+  margin: 0.75em;
+}
+.registration-login-redirect:hover {
+  color: lightgrey;
+}
+.registration-login-redirect > span {
+  text-decoration: underline;
+}
+.registration-image1 {
+  max-width: auto;
+  min-height: 100vh;
+  z-index: 0;
+}
+.registration-image1-container {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  z-index: 0;
+}
+
 @media (max-width: 968px) {
 }
 
 /* CSS applies to 968px and above */
 @media screen and (min-width: 968px) {
   .toggle-nav {
-    display:block;
+    display: block;
   }
   .hideBurger {
     display: none;
