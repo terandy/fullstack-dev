@@ -10,18 +10,19 @@ class Navigation extends Component{
             this.state = {
                 checkToggle: false,
                 hamburgerClass: "hamburger hamburger--squeeze",
-                toggleNav: {display: "none"}
+                toggleNav: "toggle-nav"
             }
     }
     handleToggle = () => {
         if (this.state.checkToggle === false) {
-            this.setState({ hamburgerClass: "hamburger hamburger--squeeze", toggleNav: {display: "none"} })
+            this.setState({ hamburgerClass: "hamburger hamburger--squeeze", toggleNav: "toggle-nav"})
         }
         if (this.state.checkToggle === true) {
-            this.setState({ hamburgerClass: "hamburger hamburger--squeeze is-active",  toggleNav: {display: "block"} })
+            this.setState({ hamburgerClass: "hamburger hamburger--squeeze is-active", toggleNav: "toggle-nav-on"})
         }
         this.setState({ checkToggle: !this.state.checkToggle })
     }
+
     render = () => {
         return (
         <div className="nav">
@@ -32,7 +33,7 @@ class Navigation extends Component{
                 </span>
                 </button> 
             </div>
-            {/* <div style={this.state.toggleNav}> */}
+            <div id="navItems" className={this.state.toggleNav}>
                 <ul>
                     <div className="navLeft">
                         <li><Link to="/">Home</Link></li>
@@ -45,7 +46,7 @@ class Navigation extends Component{
                         <li><Link to="/register">Register</Link></li>
                     </div>
                 </ul>
-            {/* </div> */}
+            </div>
         </div>)
     }     
 }

@@ -2,6 +2,12 @@ body {
   background-color: white;
   margin: 0;
 }
+.toggle-nav-on {
+  display:block;
+}
+.toggle-nav {
+  display:none;
+}
 
 a {
   color: black;
@@ -13,7 +19,7 @@ a {
   text-transform: uppercase;
   padding: 0px;
   line-height: 2em;
-  display:flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
@@ -21,7 +27,13 @@ a {
 a {
   text-decoration: none;
 }
-
+/* all items container */
+.all-items-display {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100vp;
+}
 /* individual item */
 .one-item {
   color: black;
@@ -63,14 +75,15 @@ a {
 }
 
 @media (max-width: 968px) {
-
 }
 
 /* CSS applies to 968px and above */
 @media screen and (min-width: 968px) {
-
+  .toggle-nav {
+    display:block;
+  }
   .hideBurger {
-    display:none;
+    display: none;
   }
   .nav {
     display: flex;

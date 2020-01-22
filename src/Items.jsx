@@ -18,7 +18,7 @@ class Items extends Component {
     return (
       <div>
         <button onClick={this.updateItems}>Reload items</button>
-        <div className="all-item-display">
+        <div className="all-items-display">
           {this.state.items.map((item, index) => {
             return <div key={index}>{<OneItem item={item} />}</div>;
           })}

@@ -222,7 +222,7 @@ exports.push([module.i, "/*!\r\n * Hamburgers\r\n * @description Tasty CSS-anima
 
 exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "body {\r\n  background-color: white;\r\n  margin: 0;\r\n}\r\n\r\na {\r\n  color: black;\r\n  font-family: sans-serif;\r\n}\r\n\r\n.nav ul {\r\n  list-style-type: none;\r\n  text-transform: uppercase;\r\n  padding: 0px;\r\n  line-height: 2em;\r\n  display:flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n  text-align: center;\r\n}\r\na {\r\n  text-decoration: none;\r\n}\r\n\r\n/* individual item */\r\n.one-item {\r\n  color: black;\r\n  padding: 0;\r\n  margin: 10px;\r\n  height: 460px;\r\n  width: 260px;\r\n}\r\n.one-item-image {\r\n  height: 85%;\r\n  width: 100%;\r\n  background: lightgrey;\r\n}\r\n.one-item-image > img {\r\n  width: 100%;\r\n  height: 100%;\r\n  object-fit: cover;\r\n  overflow: hidden;\r\n}\r\n.one-item-text {\r\n  padding: 0;\r\n  margin: 0;\r\n  margin-top: 10px;\r\n  font-family: 'Helvetica';\r\n}\r\n.one-item-text > h1 {\r\n  padding: 0;\r\n  margin: 0;\r\n  padding-bottom: 5px;\r\n  font-size: 25px;\r\n  border-bottom: 2px black solid;\r\n  width: 20%;\r\n}\r\n.one-item-text > p {\r\n  padding: 0;\r\n  margin-top: 5px;\r\n  font-size: 80%;\r\n  font-style: lighter;\r\n}\r\n\r\n@media (max-width: 968px) {\r\n\r\n}\r\n\r\n/* CSS applies to 968px and above */\r\n@media screen and (min-width: 968px) {\r\n\r\n  .hideBurger {\r\n    display:none;\r\n  }\r\n  .nav {\r\n    display: flex;\r\n    align-items: center;\r\n    height: 4em;\r\n    background-color: lightgray;\r\n  }\r\n  .nav ul {\r\n    display: flex;\r\n    flex-direction: row;\r\n    list-style-type: none;\r\n    text-transform: uppercase;\r\n    width: 100vw;\r\n    justify-content: space-between;\r\n  }\r\n\r\n  .nav ul li {\r\n    margin: 0 1em 0 1em;\r\n  }\r\n  .navRight {\r\n    display: flex;\r\n  }\r\n  .navLeft {\r\n    display: flex;\r\n  }\r\n}", ""]);
+exports.push([module.i, "body {\r\n  background-color: white;\r\n  margin: 0;\r\n}\r\n.toggle-nav-on {\r\n  display:block;\r\n}\r\n.toggle-nav {\r\n  display:none;\r\n}\r\n\r\na {\r\n  color: black;\r\n  font-family: sans-serif;\r\n}\r\n\r\n.nav ul {\r\n  list-style-type: none;\r\n  text-transform: uppercase;\r\n  padding: 0px;\r\n  line-height: 2em;\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n  text-align: center;\r\n}\r\na {\r\n  text-decoration: none;\r\n}\r\n/* all items container */\r\n.all-items-display {\r\n  display: flex;\r\n  flex-wrap: wrap;\r\n  justify-content: center;\r\n  width: 100vp;\r\n}\r\n/* individual item */\r\n.one-item {\r\n  color: black;\r\n  padding: 0;\r\n  margin: 10px;\r\n  height: 460px;\r\n  width: 260px;\r\n}\r\n.one-item-image {\r\n  height: 85%;\r\n  width: 100%;\r\n  background: lightgrey;\r\n}\r\n.one-item-image > img {\r\n  width: 100%;\r\n  height: 100%;\r\n  object-fit: cover;\r\n  overflow: hidden;\r\n}\r\n.one-item-text {\r\n  padding: 0;\r\n  margin: 0;\r\n  margin-top: 10px;\r\n  font-family: 'Helvetica';\r\n}\r\n.one-item-text > h1 {\r\n  padding: 0;\r\n  margin: 0;\r\n  padding-bottom: 5px;\r\n  font-size: 25px;\r\n  border-bottom: 2px black solid;\r\n  width: 20%;\r\n}\r\n.one-item-text > p {\r\n  padding: 0;\r\n  margin-top: 5px;\r\n  font-size: 80%;\r\n  font-style: lighter;\r\n}\r\n\r\n@media (max-width: 968px) {\r\n}\r\n\r\n/* CSS applies to 968px and above */\r\n@media screen and (min-width: 968px) {\r\n  .toggle-nav {\r\n    display:block;\r\n  }\r\n  .hideBurger {\r\n    display: none;\r\n  }\r\n  .nav {\r\n    display: flex;\r\n    align-items: center;\r\n    height: 4em;\r\n    background-color: lightgray;\r\n  }\r\n  .nav ul {\r\n    display: flex;\r\n    flex-direction: row;\r\n    list-style-type: none;\r\n    text-transform: uppercase;\r\n    width: 100vw;\r\n    justify-content: space-between;\r\n  }\r\n\r\n  .nav ul li {\r\n    margin: 0 1em 0 1em;\r\n  }\r\n  .navRight {\r\n    display: flex;\r\n  }\r\n  .navLeft {\r\n    display: flex;\r\n  }\r\n}\r\n", ""]);
 
 
 
@@ -29004,11 +29004,29 @@ class ItemDetail extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   constructor(props) {
     super(props);
 
-    _defineProperty(this, "render", () => {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Item detail", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "id ", this.props.itemId));
+    _defineProperty(this, "componentDidMount", async () => {
+      let data = new FormData();
+      data.append('itemId', this.props.itemId);
+      let responseBody = await fetch('/one-item', {
+        method: 'POST',
+        body: data
+      });
+      let responseText = await responseBody.text();
+      let itemObject = JSON.parse(responseText);
+      console.log('itemObject', itemObject);
+      this.setState({
+        item: itemObject
+      });
     });
 
-    this.state = {};
+    _defineProperty(this, "render", () => {
+      console.log(this.state.item);
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Item detail", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "id ", this.props.itemId), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Description"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.state.item.description), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Add to Cart"));
+    });
+
+    this.state = {
+      item: []
+    };
   }
 
 }
@@ -29053,7 +29071,7 @@ class Items extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         onClick: this.updateItems
       }, "Reload items"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "all-item-display"
+        className: "all-items-display"
       }, this.state.items.map((item, index) => {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           key: index
@@ -29222,18 +29240,14 @@ class Navigation extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       if (this.state.checkToggle === false) {
         this.setState({
           hamburgerClass: "hamburger hamburger--squeeze",
-          toggleNav: {
-            display: "none"
-          }
+          toggleNav: "toggle-nav"
         });
       }
 
       if (this.state.checkToggle === true) {
         this.setState({
           hamburgerClass: "hamburger hamburger--squeeze is-active",
-          toggleNav: {
-            display: "block"
-          }
+          toggleNav: "toggle-nav-on"
         });
       }
 
@@ -29255,7 +29269,10 @@ class Navigation extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         className: "hamburger-box"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         className: "hamburger-inner"
-      })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "navItems",
+        className: this.state.toggleNav
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "navLeft"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         to: "/"
@@ -29271,15 +29288,13 @@ class Navigation extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         to: "/login"
       }, "Login")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         to: "/register"
-      }, "Register")))));
+      }, "Register"))))));
     });
 
     this.state = {
       checkToggle: false,
       hamburgerClass: "hamburger hamburger--squeeze",
-      toggleNav: {
-        display: "none"
-      }
+      toggleNav: "toggle-nav"
     };
   }
 
