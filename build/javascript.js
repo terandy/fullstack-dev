@@ -222,7 +222,7 @@ exports.push([module.i, "/*!\n * Hamburgers\n * @description Tasty CSS-animated 
 
 exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "body {\n  background-color: white;\n  margin: 0;\n}\n.toggle-nav-on {\n  display:block;\n}\n.toggle-nav {\n  display:none;\n}\n\na {\n  color: black;\n  font-family: sans-serif;\n}\n\n.nav ul {\n  list-style-type: none;\n  text-transform: uppercase;\n  padding: 0px;\n  line-height: 2em;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  text-align: center;\n}\na {\n  text-decoration: none;\n}\n/* all items container */\n.all-items-display {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n  width: 100vp;\n}\n/* individual item */\n.one-item {\n  color: black;\n  padding: 0;\n  margin: 10px;\n  height: 460px;\n  width: 260px;\n}\n.one-item-image {\n  height: 85%;\n  width: 100%;\n  background: lightgrey;\n}\n.one-item-image > img {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  overflow: hidden;\n}\n.one-item-text {\n  padding: 0;\n  margin: 0;\n  margin-top: 10px;\n  font-family: 'Helvetica';\n}\n.one-item-text > h1 {\n  padding: 0;\n  margin: 0;\n  padding-bottom: 5px;\n  font-size: 25px;\n  border-bottom: 2px black solid;\n  width: 20%;\n}\n.one-item-text > p {\n  padding: 0;\n  margin-top: 5px;\n  font-size: 80%;\n  font-style: lighter;\n}\n\n@media (max-width: 968px) {\n}\n\n/* CSS applies to 968px and above */\n@media screen and (min-width: 968px) {\n  .toggle-nav {\n    display:block;\n  }\n  .hideBurger {\n    display: none;\n  }\n  .nav {\n    display: flex;\n    align-items: center;\n    height: 4em;\n    background-color: lightgray;\n  }\n  .nav ul {\n    display: flex;\n    flex-direction: row;\n    list-style-type: none;\n    text-transform: uppercase;\n    width: 100vw;\n    justify-content: space-between;\n  }\n\n  .nav ul li {\n    margin: 0 1em 0 1em;\n  }\n  .navRight {\n    display: flex;\n  }\n  .navLeft {\n    display: flex;\n  }\n}\n", ""]);
+exports.push([module.i, "body {\n  background-color: white;\n  margin: 0;\n}\n.toggle-nav-on {\n  display: block;\n}\n.toggle-nav {\n  display: none;\n}\n\na {\n  color: black;\n  font-family: sans-serif;\n}\n\n.nav ul {\n  list-style-type: none;\n  text-transform: uppercase;\n  padding: 0px;\n  line-height: 2em;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  text-align: center;\n}\na {\n  text-decoration: none;\n}\n/* all items container */\n.all-items-display {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n  width: 100vp;\n}\n/* individual item */\n.one-item {\n  color: black;\n  padding: 0;\n  margin: 10px;\n  height: 460px;\n  width: 260px;\n}\n.one-item-image {\n  height: 85%;\n  width: 100%;\n  background: lightgrey;\n}\n.one-item-image > img {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  overflow: hidden;\n}\n.one-item-text {\n  padding: 0;\n  margin: 0;\n  margin-top: 10px;\n  font-family: 'Helvetica';\n}\n.one-item-text > h1 {\n  padding: 0;\n  margin: 0;\n  padding-bottom: 5px;\n  font-size: 25px;\n  border-bottom: 2px black solid;\n  width: 20%;\n}\n.one-item-text > p {\n  padding: 0;\n  margin-top: 5px;\n  font-size: 80%;\n  font-style: lighter;\n}\n\n/* registration Page */\n.registration-container {\n  position: fixed;\n  top: 0;\n  text-align: center;\n}\n\n.registration-form-container {\n  position: fixed;\n  z-index: 100;\n  height: 100%;\n  width: 33%;\n  min-width: 300px;\n  background-color: white;\n  left: 0;\n  z-index: 100;\n}\n\n.registration-form-container > form {\n  width: 85%;\n  margin: auto;\n  margin-top: 100px;\n  text-align: center;\n}\n.registration-form-container > form > h2 {\n  font-size: 1em;\n  margin-bottom: 2em;\n}\n.registration-form-input {\n  width: 99%;\n  height: 30px;\n  border: none;\n  font-size: 1em;\n  border-bottom: 1px lightgrey solid;\n  margin-bottom: 20px;\n}\n.registration-form-input:focus {\n  border-bottom: 1px grey solid;\n  outline: none;\n}\n.registration-botton {\n  background-color: #6a4caf;\n  border-radius: 25px;\n  width: 90%;\n  border: none;\n  color: white;\n  padding: 15px 32px;\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 1em;\n  margin: 4px 2px;\n  cursor: pointer;\n}\n.registration-botton:hover {\n  background-color: #8d76c2;\n}\n.registration-botton:focus {\n  outline: none;\n  background-color: #8d76c2;\n}\n.registration-login-redirect {\n  font-size: 0.75em;\n  margin: 0.75em;\n}\n.registration-login-redirect:hover {\n  color: lightgrey;\n}\n.registration-login-redirect > span {\n  text-decoration: underline;\n}\n.registration-image1 {\n  max-width: auto;\n  min-height: 100vh;\n  z-index: 0;\n  right: -600px;\n  position: absolute;\n}\n.registration-image1-container {\n  width: 100vw;\n  height: 100vh;\n  overflow: hidden;\n  position: fixed;\n  top: 0;\n  z-index: 0;\n}\n\n@media (max-width: 968px) {\n}\n\n/* CSS applies to 968px and above */\n@media screen and (min-width: 968px) {\n  .toggle-nav {\n    display: block;\n  }\n  .hideBurger {\n    display: none;\n  }\n  .nav {\n    display: flex;\n    align-items: center;\n    height: 4em;\n    background-color: lightgray;\n  }\n  .nav ul {\n    display: flex;\n    flex-direction: row;\n    list-style-type: none;\n    text-transform: uppercase;\n    width: 100vw;\n    justify-content: space-between;\n  }\n\n  .nav ul li {\n    margin: 0 1em 0 1em;\n  }\n  .navRight {\n    display: flex;\n  }\n  .navLeft {\n    display: flex;\n  }\n}\n", ""]);
 
 
 
@@ -29131,23 +29131,23 @@ class Login extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
     _defineProperty(this, "submitLoginHandler", async evt => {
       evt.preventDefault();
-      console.log("password", this.state.passwordLoginInput);
+      console.log('password', this.state.passwordLoginInput);
       let name = this.state.usernameLoginInput;
       let data = new FormData();
-      data.append("username", name);
-      data.append("password", this.state.passwordLoginInput);
+      data.append('username', name);
+      data.append('password', this.state.passwordLoginInput);
       let response = await fetch('/login', {
-        method: "POST",
+        method: 'POST',
         body: data
       });
       let body = await response.text();
-      console.log("/login response", body);
+      console.log('/login response', body);
       body = JSON.parse(body);
 
       if (body.success) {
         console.log('logging in now..');
         this.props.dispatch({
-          type: "login-sucess",
+          type: 'login-sucess',
           content: name
         });
       }
@@ -29159,18 +29159,18 @@ class Login extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Log In"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Username ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
         onChange: this.usernameLoginChange
-      }), " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Password ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }), ' '), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Password ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
         onChange: this.passwordLoginChange
-      }), " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }), ' '), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "submit",
         value: "login"
       }));
     });
 
     this.state = {
-      usernameLoginInput: "",
-      passwordLoginInput: ""
+      usernameLoginInput: '',
+      passwordLoginInput: ''
     };
   }
 
@@ -29456,7 +29456,9 @@ if(false) {}
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 
@@ -29480,44 +29482,62 @@ class Register extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       evt.preventDefault();
       let name = this.state.usernameRegisterInput;
       let data = new FormData();
-      data.append("username", name);
-      data.append("password", this.state.passwordRegisterInput);
+      data.append('username', name);
+      data.append('password', this.state.passwordRegisterInput);
       let response = await fetch('/register', {
-        method: "POST",
+        method: 'POST',
         body: data
       });
       let body = await response.text();
-      console.log("/register response", body);
+      console.log('/register response', body);
       body = JSON.parse(body);
 
       if (body.success) {
         this.setState({
-          usernameRegisterInput: "",
-          passwordRegisterInput: ""
+          usernameRegisterInput: '',
+          passwordRegisterInput: ''
         });
       }
     });
 
     _defineProperty(this, "render", () => {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "registration-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "registration-form-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "AliBay")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         onSubmit: this.submitRegisterHandler
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Register"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Username ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Register"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "registration-form-input",
         type: "text",
         onChange: this.usernameRegisterChange,
-        value: this.state.usernameRegisterInput
-      }), " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Password ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        value: this.state.usernameRegisterInput,
+        placeholder: "Username"
+      }), ' '), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "registration-form-input",
         type: "text",
         onChange: this.passwordRegisterChange,
-        value: this.state.passwordRegisterInput
-      }), " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "submit",
-        value: "register"
-      }));
+        value: this.state.passwordRegisterInput,
+        placeholder: "Password"
+      }), ' '), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "registration-botton"
+      }, "Sign up"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/login"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "registration-login-redirect"
+      }, "Already a user? ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Log in"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "registration-image1-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: "../uploads/register-image1.webp",
+        className: "registration-image1"
+      })));
     });
 
     this.state = {
-      usernameRegisterInput: "",
-      passwordRegisterInput: ""
+      usernameRegisterInput: '',
+      passwordRegisterInput: ''
     };
   }
 
