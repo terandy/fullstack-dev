@@ -28975,6 +28975,10 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         exact: true,
         path: "/checkout/",
         render: this.renderCheckout
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+        exact: true,
+        path: "/item-detail/:itemId",
+        render: this.renderItemDetail
       })));
     });
   }

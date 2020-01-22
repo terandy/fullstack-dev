@@ -100,8 +100,7 @@ app.post('/one-item', upload.none(), (req, res) => {
   console.log('request to /one-items');
   dbo
     .collection('items')
-    .find({ _id: ObjectID(req.body.itemId) })
-    .toArray((err, item) => {
+    .findOne({ _id: ObjectID(req.body.itemId) }, (err, item) => {
       if (err) {
         console.log('error', err);
         res.send(JSON.stringify({ success: false }));
