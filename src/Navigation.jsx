@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import Login from './Login.jsx';
+import LoginPopup from './LoginPopup.jsx';
 import { Route, BrowserRouter, Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import './dist/hamburgers.css';
+import Dropdown from './Dropdown.jsx';
 
 class Navigation extends Component {
   constructor() {
@@ -64,9 +66,7 @@ class Navigation extends Component {
                 {' '}
                 {this.props.user ? 'Welcome back ' + this.props.user : ''}
               </li>
-              <li className="login-link">
-                Login <Login />
-              </li>
+              <li>{Dropdown('Login', <Login />)}</li>
               <li>
                 <Link to="/register">Register</Link>
               </li>

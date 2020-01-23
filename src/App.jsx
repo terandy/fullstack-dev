@@ -5,7 +5,7 @@ import Navigation from './Navigation.jsx';
 import MainPage from './MainPage.jsx';
 import Login from './Login.jsx';
 import LoginPage from './LoginPage.jsx';
-import Register from './register.jsx';
+import RegisterPage from './RegisterPage.jsx';
 import AddItem from './AddItem.jsx';
 import ItemDetail from './ItemDetail.jsx';
 
@@ -48,7 +48,7 @@ class App extends Component {
     return <LoginPage />;
   };
   renderSignupPage = () => {
-    return <Register />;
+    return <RegisterPage />;
   };
   renderAddItem = () => {
     return <AddItem />;
@@ -74,7 +74,7 @@ class App extends Component {
           ></Route>
           <Route
             exact={true}
-            path="/login-page"
+            path="/login"
             render={this.renderLoginPage}
           ></Route>
           <Route

@@ -222,7 +222,22 @@ exports.push([module.i, "/*!\n * Hamburgers\n * @description Tasty CSS-animated 
 
 exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "body {\n  background-color: white;\n  margin: 0;\n}\n.toggle-nav-on {\n  display: block;\n}\n.toggle-nav {\n  display: none;\n}\n\na {\n  color: black;\n  font-family: sans-serif;\n}\n\n.nav ul {\n  list-style-type: none;\n  text-transform: uppercase;\n  padding: 0px;\n  line-height: 2em;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  text-align: center;\n}\na {\n  text-decoration: none;\n}\n/* all items container */\n.all-items-display {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n  width: 100vp;\n}\n/* individual item */\n.one-item {\n  color: black;\n  padding: 0;\n  margin: 10px;\n  height: 460px;\n  width: 260px;\n  z-index: 1;\n}\n.one-item-image {\n  height: 85%;\n  width: 100%;\n  background: lightgrey;\n}\n.one-item-image > img {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  overflow: hidden;\n}\n.one-item-text {\n  padding: 0;\n  margin: 0;\n  margin-top: 10px;\n  font-family: 'Helvetica';\n}\n.one-item-text > h1 {\n  padding: 0;\n  margin: 0;\n  padding-bottom: 5px;\n  font-size: 25px;\n  border-bottom: 2px black solid;\n  width: 20%;\n}\n.one-item-text > p {\n  padding: 0;\n  margin-top: 5px;\n  font-size: 80%;\n  font-style: lighter;\n}\n\n/* registration Page */\n.registration-container {\n  position: fixed;\n  top: 0;\n}\n.registration-form-container {\n  position: fixed;\n  z-index: 100;\n  height: 100%;\n  width: 33%;\n  min-width: 300px;\n  overflow: scroll;\n  background-color: white;\n  left: 0;\n  z-index: 100;\n  display: flex;\n}\n\n.registration-form-container > form {\n  width: 85%;\n  margin: auto;\n  text-align: center;\n}\n.registration-form-container > form > h1 {\n  font-size: 3em;\n  margin-top: 0;\n  margin-bottom: 2em;\n}\n\n.registration-form-container > form > h2 {\n  font-size: 1em;\n  margin-bottom: 1em;\n}\n.registration-form-input {\n  width: 99%;\n  height: 30px;\n  border: none;\n  font-size: 1em;\n  border-bottom: 1px lightgrey solid;\n  margin-bottom: 20px;\n}\n.registration-form-input:focus {\n  border-bottom: 1px grey solid;\n  outline: none;\n}\n.registration-botton {\n  background-color: #6a4caf;\n  border-radius: 25px;\n  width: 90%;\n  border: none;\n  color: white;\n  padding: 15px 32px;\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 1em;\n  margin: 5px;\n  cursor: pointer;\n}\n.registration-botton:hover {\n  background-color: #8d76c2;\n}\n.registration-botton:focus {\n  outline: none;\n  background-color: #8d76c2;\n}\n.registration-login-redirect {\n  font-size: 0.75em;\n  margin: 1em;\n}\n.registration-login-redirect:hover {\n  color: lightgrey;\n  cursor: pointer;\n}\n.registration-login-redirect > span {\n  text-decoration: underline;\n}\n.registration-image1 {\n  width: auto;\n  height: 120%;\n  z-index: 0;\n  position: absolute;\n  right: 0;\n}\n.registration-image1-container {\n  height: 100%;\n  width: 100%;\n  position: fixed;\n  top: 0;\n  z-index: 0;\n}\n.login-form-container {\n  position: fixed;\n  top: 10px;\n  right: 10px;\n  background-color: white;\n  width: max-content;\n  padding: 2em;\n  box-shadow: 1px 1px 5px lightgrey;\n  border-radius: 1em 0 1em 1em;\n  justify-content: center;\n  align-items: center;\n  display: none;\n  z-index: 999;\n}\n\n@media (max-width: 968px) {\n}\n\n/* CSS applies to 968px and above */\n@media screen and (min-width: 968px) {\n  .toggle-nav {\n    display: block;\n  }\n  .hideBurger {\n    display: none;\n  }\n  .nav {\n    display: flex;\n    align-items: center;\n    height: 4em;\n    background-color: lightgray;\n  }\n  .nav ul {\n    display: flex;\n    flex-direction: row;\n    list-style-type: none;\n    text-transform: uppercase;\n    width: 100vw;\n    justify-content: space-between;\n  }\n\n  .nav ul li {\n    margin: 0 1em 0 1em;\n  }\n  .navRight {\n    display: flex;\n  }\n  .navLeft {\n    display: flex;\n  }\n}\n.login-link {\n  position: relative;\n}\n.login-link:hover .login-form-container {\n  display: flex;\n  position: absolute;\n  top: 1.6em;\n  right: 0.3em;\n}\n", ""]);
+exports.push([module.i, "body {\n  background-color: white;\n  margin: 0;\n}\n.toggle-nav-on {\n  display: block;\n}\n.toggle-nav {\n  display: none;\n}\n\na {\n  color: black;\n  font-family: sans-serif;\n}\n\n.nav ul {\n  list-style-type: none;\n  text-transform: uppercase;\n  padding: 0px;\n  line-height: 2em;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  text-align: center;\n}\na {\n  text-decoration: none;\n}\n/* all items container */\n.all-items-display {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n  width: 100vp;\n}\n/* individual item */\n.one-item {\n  color: black;\n  padding: 0;\n  margin: 10px;\n  height: 460px;\n  width: 260px;\n  z-index: 1;\n}\n.one-item-image {\n  height: 85%;\n  width: 100%;\n  background: lightgrey;\n}\n.one-item-image > img {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  overflow: hidden;\n}\n.one-item-text {\n  padding: 0;\n  margin: 0;\n  margin-top: 10px;\n  font-family: 'Helvetica';\n}\n.one-item-text > h1 {\n  padding: 0;\n  margin: 0;\n  padding-bottom: 5px;\n  font-size: 25px;\n  border-bottom: 2px black solid;\n  width: 20%;\n}\n.one-item-text > p {\n  padding: 0;\n  margin-top: 5px;\n  font-size: 80%;\n  font-style: lighter;\n}\n\n.popup {\n  z-index: 1000;\n  width: 400px;\n  box-shadow: rgba(128, 128, 128, 0.479) 4px 4px 4px 4px 16px;\n  text-transform: none;\n}\n.popup-form-container {\n  background-color: white;\n  display: flex;\n}\n\n@media (max-width: 968px) {\n}\n\n/* CSS applies to 968px and above */\n@media screen and (min-width: 968px) {\n  /* navigation */\n  .toggle-nav {\n    display: block;\n  }\n  .hideBurger {\n    display: none;\n  }\n  .nav {\n    display: flex;\n    align-items: center;\n    height: 4em;\n    background-color: lightgray;\n  }\n  .nav ul {\n    display: flex;\n    flex-direction: row;\n    list-style-type: none;\n    text-transform: uppercase;\n    width: 100vw;\n    justify-content: space-between;\n  }\n\n  .nav ul li {\n    margin: 0 1em 0 1em;\n  }\n  .navRight {\n    display: flex;\n  }\n  .navLeft {\n    display: flex;\n  }\n  /* end navigation */\n\n  /* dropdown */\n  .dropdown-container {\n    position: relative;\n  }\n  .dropdown-button {\n  }\n  .dropdown-content {\n    display: none;\n    position: absolute;\n    right: 0;\n    min-width: max-content;\n    box-shadow: rgba(128, 128, 128, 0.479) 4px 4px 16px;\n    background-color: white;\n    padding: 1em;\n    z-index: 99;\n  }\n  .dropdown-container:hover .dropdown-content {\n    display: block;\n  }\n  .dropdown-button:hover {\n    color: purple;\n    cursor: pointer;\n  }\n  /* end of dropdown */\n}\n", ""]);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./src/page1.css":
+/*!*************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./src/page1.css ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
+// Module
+exports.push([module.i, "/* Registration and Login */\n.page1-container {\n  position: fixed;\n  top: 0;\n}\n/* image */\n.page1-image1-container {\n  z-index: 0;\n  position: fixed;\n  top: 0;\n  height: 100%;\n  width: 100%;\n}\n.page1-image1 {\n  z-index: 0;\n  position: absolute;\n  right: 0;\n  height: 120%;\n  width: auto;\n}\n\n/* form - containers */\n.page1-form-container {\n  z-index: 1;\n  position: fixed;\n  left: 0;\n  height: 100%;\n  width: 33%;\n  min-width: 300px;\n  overflow: scroll;\n  background-color: white;\n  display: flex;\n}\n.page1-form-subcontainer {\n  width: 85%;\n  margin: auto;\n  text-align: center;\n}\n\n/* form - titles */\n.page1-form-subcontainer > h1 {\n  font-size: 3em;\n  margin-top: 0;\n  margin-bottom: 2em;\n}\n.page1-form-subcontainer > h2 {\n  font-size: 1em;\n  margin-bottom: 1em;\n}\n/* form - text inputs */\n.page1-form-input {\n  width: 99%;\n  height: 30px;\n  border: none;\n  font-size: 1em;\n  border-bottom: 1px lightgrey solid;\n  margin-bottom: 20px;\n}\n.page1-form-input:focus {\n  border-bottom: 1px grey solid;\n  outline: none;\n}\n/* form - submit button */\n.page1-botton {\n  background-color: #6a4caf;\n  border-radius: 25px;\n  width: 90%;\n  border: none;\n  color: white;\n  padding: 15px 32px;\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 1em;\n  margin: 5px;\n  cursor: pointer;\n}\n.page1-botton:hover {\n  background-color: #8d76c2;\n}\n.page1-botton:focus {\n  outline: none;\n  background-color: #8d76c2;\n}\n/* form - links to other pages*/\n.page1-redirect {\n  font-size: 0.75em;\n  margin: 1em;\n}\n.page1-redirect:hover {\n  color: lightgrey;\n  cursor: pointer;\n}\n.page1-redirect > span {\n  text-decoration: underline;\n}\n", ""]);
 
 
 
@@ -28870,7 +28885,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _MainPage_jsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./MainPage.jsx */ "./src/MainPage.jsx");
 /* harmony import */ var _Login_jsx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Login.jsx */ "./src/Login.jsx");
 /* harmony import */ var _LoginPage_jsx__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./LoginPage.jsx */ "./src/LoginPage.jsx");
-/* harmony import */ var _register_jsx__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./register.jsx */ "./src/register.jsx");
+/* harmony import */ var _RegisterPage_jsx__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./RegisterPage.jsx */ "./src/RegisterPage.jsx");
 /* harmony import */ var _AddItem_jsx__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./AddItem.jsx */ "./src/AddItem.jsx");
 /* harmony import */ var _ItemDetail_jsx__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./ItemDetail.jsx */ "./src/ItemDetail.jsx");
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -28899,7 +28914,7 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     });
 
     _defineProperty(this, "renderSignupPage", () => {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_register_jsx__WEBPACK_IMPORTED_MODULE_7__["default"], null);
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Register, null);
     });
 
     _defineProperty(this, "renderItemDetail", renderdata => {
@@ -28929,7 +28944,7 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     });
 
     _defineProperty(this, "renderSignupPage", () => {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_register_jsx__WEBPACK_IMPORTED_MODULE_7__["default"], null);
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_RegisterPage_jsx__WEBPACK_IMPORTED_MODULE_7__["default"], null);
     });
 
     _defineProperty(this, "renderAddItem", () => {
@@ -28959,7 +28974,7 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         render: this.renderWomenItems
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         exact: true,
-        path: "/login-page",
+        path: "/login",
         render: this.renderLoginPage
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         exact: true,
@@ -28988,6 +29003,33 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (App);
+
+/***/ }),
+
+/***/ "./src/Dropdown.jsx":
+/*!**************************!*\
+  !*** ./src/Dropdown.jsx ***!
+  \**************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+let Dropdown = (navItem, dropdownElements) => {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "dropdown-container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "dropdown-button"
+  }, navItem), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "dropdown-content"
+  }, dropdownElements));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Dropdown);
 
 /***/ }),
 
@@ -29162,25 +29204,23 @@ class Login extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     });
 
     _defineProperty(this, "render", () => {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "login-form-container"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         onSubmit: this.submitLoginHandler
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Log in"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        className: "registration-form-input login",
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: this.props.inputClass,
         type: "text",
         onChange: this.usernameLoginChange,
         value: this.state.usernameLoginInput,
         placeholder: "Username"
       }), ' '), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        className: "registration-form-input login",
+        className: this.props.inputClass,
         type: "text",
         onChange: this.passwordLoginChange,
         value: this.state.passwordLoginInput,
         placeholder: "Password"
       }), ' '), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "registration-botton login-botton login"
-      }, "Log in")));
+        className: this.props.buttonClass
+      }, "Log in"));
     });
 
     this.state = {
@@ -29207,91 +29247,91 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _Login_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Login.jsx */ "./src/Login.jsx");
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
 
 
+
 class LoginPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
-  constructor() {
-    super();
-
-    _defineProperty(this, "usernameLoginChange", evt => {
-      this.setState({
-        usernameLoginInput: evt.target.value
-      });
-    });
-
-    _defineProperty(this, "passwordLoginChange", evt => {
-      this.setState({
-        passwordLoginInput: evt.target.value
-      });
-    });
-
-    _defineProperty(this, "submitLoginHandler", async evt => {
-      evt.preventDefault();
-      console.log('password', this.state.passwordLoginInput);
-      let name = this.state.usernameLoginInput;
-      let data = new FormData();
-      data.append('username', name);
-      data.append('password', this.state.passwordLoginInput);
-      let response = await fetch('/login', {
-        method: 'POST',
-        body: data
-      });
-      let body = await response.text();
-      console.log('/login response', body);
-      body = JSON.parse(body);
-
-      if (body.success) {
-        console.log('logging in now..');
-        this.props.dispatch({
-          type: 'login-sucess',
-          content: name
-        });
-      }
-    });
+  constructor(...args) {
+    super(...args);
 
     _defineProperty(this, "render", () => {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "registration-container"
+        className: "page1-container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "registration-form-container"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
-        onSubmit: this.submitLoginHandler
+        className: "page1-form-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "page1-form-subcontainer"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         to: "/"
-      }, "AliBay")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Login"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        className: "registration-form-input",
-        type: "text",
-        onChange: this.usernameLoginChange,
-        value: this.state.usernameLoginInput,
-        placeholder: "Username"
-      }), ' '), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        className: "registration-form-input",
-        type: "text",
-        onChange: this.passwordLoginChange,
-        value: this.state.passwordLoginInput,
-        placeholder: "Password"
-      }), ' '), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "registration-botton"
-      }, "Log in"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+      }, "AliBay")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Login"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Login_jsx__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        inputClass: "page1-form-input",
+        buttonClass: "page1-botton"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         to: "/register",
-        className: "registration-login-redirect"
+        className: "page1-redirect"
       }, "Create an account"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "|"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        className: "registration-login-redirect"
+        className: "page1-redirect"
       }, "Forgot you password?")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "registration-image1-container"
+        className: "page1-image1-container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: "../uploads/register-image1.webp",
-        className: "registration-image1"
+        className: "page1-image1"
       })));
     });
+  }
 
-    this.state = {
-      usernameLoginInput: '',
-      passwordLoginInput: ''
-    };
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (LoginPage);
+
+/***/ }),
+
+/***/ "./src/LoginPopup.jsx":
+/*!****************************!*\
+  !*** ./src/LoginPopup.jsx ***!
+  \****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _Login_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Login.jsx */ "./src/Login.jsx");
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+
+class LoginPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  constructor(...args) {
+    super(...args);
+
+    _defineProperty(this, "render", () => {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "popup"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "popup-form-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "page1-form-subcontainer"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/"
+      }, "AliBay")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Login"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Login_jsx__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        inputClass: "page1-form-input",
+        buttonClass: "page1-botton"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/register",
+        className: "page1-redirect"
+      }, "Create an account"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "|"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        className: "page1-redirect"
+      }, "Forgot you password?")))));
+    });
   }
 
 }
@@ -29324,7 +29364,7 @@ class MainPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     super(...args);
 
     _defineProperty(this, "render", () => {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Main Page", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Items_jsx__WEBPACK_IMPORTED_MODULE_2__["default"], null));
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Items_jsx__WEBPACK_IMPORTED_MODULE_2__["default"], null));
     });
   }
 
@@ -29346,11 +29386,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Login_jsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Login.jsx */ "./src/Login.jsx");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _dist_hamburgers_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./dist/hamburgers.css */ "./src/dist/hamburgers.css");
-/* harmony import */ var _dist_hamburgers_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_dist_hamburgers_css__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _LoginPopup_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./LoginPopup.jsx */ "./src/LoginPopup.jsx");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _dist_hamburgers_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./dist/hamburgers.css */ "./src/dist/hamburgers.css");
+/* harmony import */ var _dist_hamburgers_css__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_dist_hamburgers_css__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _Dropdown_jsx__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Dropdown.jsx */ "./src/Dropdown.jsx");
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
 
 
 
@@ -29400,19 +29444,17 @@ class Navigation extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         className: this.state.toggleNav
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "navLeft"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
         to: "/"
-      }, "AliBay")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+      }, "AliBay")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
         to: "/men"
-      }, "Men")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+      }, "Men")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
         to: "/women"
-      }, "Women")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+      }, "Women")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
         to: "/add-item"
       }, "Sell"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "navRight"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, ' ', this.props.user ? 'Welcome back ' + this.props.user : ''), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-        className: "login-link"
-      }, "Login ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Login_jsx__WEBPACK_IMPORTED_MODULE_1__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, ' ', this.props.user ? 'Welcome back ' + this.props.user : ''), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, Object(_Dropdown_jsx__WEBPACK_IMPORTED_MODULE_6__["default"])('Login', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Login_jsx__WEBPACK_IMPORTED_MODULE_1__["default"], null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
         to: "/register"
       }, "Register"))))));
     });
@@ -29432,7 +29474,7 @@ let mapStateToProps = state => {
   };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_3__["connect"])(mapStateToProps)(Navigation));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_4__["connect"])(mapStateToProps)(Navigation));
 
 /***/ }),
 
@@ -29478,105 +29520,10 @@ class OneItem extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
 /***/ }),
 
-/***/ "./src/dist/hamburgers.css":
-/*!*********************************!*\
-  !*** ./src/dist/hamburgers.css ***!
-  \*********************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!./hamburgers.css */ "./node_modules/css-loader/dist/cjs.js!./src/dist/hamburgers.css");
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {}
-
-/***/ }),
-
-/***/ "./src/index.jsx":
-/*!***********************!*\
-  !*** ./src/index.jsx ***!
-  \***********************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./main.css */ "./src/main.css");
-/* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_main_css__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _App_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./App.jsx */ "./src/App.jsx");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _store_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./store.js */ "./src/store.js");
-/* harmony import */ var _reload_magic_client_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./reload-magic-client.js */ "./src/reload-magic-client.js");
-
-
-
-
-
-
- // automatic reload
-
-Object(_reload_magic_client_js__WEBPACK_IMPORTED_MODULE_6__["default"])(); // automatic reload
-
-react_dom__WEBPACK_IMPORTED_MODULE_0___default.a.render(react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react_redux__WEBPACK_IMPORTED_MODULE_4__["Provider"], {
-  store: _store_js__WEBPACK_IMPORTED_MODULE_5__["default"]
-}, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_App_jsx__WEBPACK_IMPORTED_MODULE_2__["default"], null)), document.getElementById('root'));
-
-/***/ }),
-
-/***/ "./src/main.css":
-/*!**********************!*\
-  !*** ./src/main.css ***!
-  \**********************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(/*! !../node_modules/css-loader/dist/cjs.js!./main.css */ "./node_modules/css-loader/dist/cjs.js!./src/main.css");
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(/*! ../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {}
-
-/***/ }),
-
-/***/ "./src/register.jsx":
-/*!**************************!*\
-  !*** ./src/register.jsx ***!
-  \**************************/
+/***/ "./src/RegisterPage.jsx":
+/*!******************************!*\
+  !*** ./src/RegisterPage.jsx ***!
+  \******************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -29630,36 +29577,37 @@ class Register extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
     _defineProperty(this, "render", () => {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "registration-container"
+        className: "page1-container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "registration-form-container"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
-        onSubmit: this.submitRegisterHandler
+        className: "page1-form-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "page1-form-subcontainer"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         to: "/"
-      }, "AliBay")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Sign up"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        className: "registration-form-input",
+      }, "AliBay")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Sign up"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+        onSubmit: this.submitRegisterHandler
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "page1-form-input",
         type: "text",
         onChange: this.usernameRegisterChange,
         value: this.state.usernameRegisterInput,
         placeholder: "Username"
       }), ' '), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        className: "registration-form-input",
+        className: "page1-form-input",
         type: "text",
         onChange: this.passwordRegisterChange,
         value: this.state.passwordRegisterInput,
         placeholder: "Password"
       }), ' '), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "registration-botton"
-      }, "Create Account"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: "/login-page"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "registration-login-redirect"
-      }, "Already a user? ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Log in"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "registration-image1-container"
+        className: "page1-botton"
+      }, "Create Account")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/login",
+        className: "page1-redirect"
+      }, "Already a user? ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Log in")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "page1-image1-container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: "../uploads/register-image1.webp",
-        className: "registration-image1"
+        className: "page1-image1"
       })));
     });
 
@@ -29672,6 +29620,134 @@ class Register extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (Register);
+
+/***/ }),
+
+/***/ "./src/dist/hamburgers.css":
+/*!*********************************!*\
+  !*** ./src/dist/hamburgers.css ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!./hamburgers.css */ "./node_modules/css-loader/dist/cjs.js!./src/dist/hamburgers.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./src/index.jsx":
+/*!***********************!*\
+  !*** ./src/index.jsx ***!
+  \***********************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./main.css */ "./src/main.css");
+/* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_main_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _page1_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./page1.css */ "./src/page1.css");
+/* harmony import */ var _page1_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_page1_css__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _App_jsx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./App.jsx */ "./src/App.jsx");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _store_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./store.js */ "./src/store.js");
+/* harmony import */ var _reload_magic_client_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./reload-magic-client.js */ "./src/reload-magic-client.js");
+
+
+
+
+
+
+
+ // automatic reload
+
+Object(_reload_magic_client_js__WEBPACK_IMPORTED_MODULE_7__["default"])(); // automatic reload
+
+react_dom__WEBPACK_IMPORTED_MODULE_0___default.a.render(react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(react_redux__WEBPACK_IMPORTED_MODULE_5__["Provider"], {
+  store: _store_js__WEBPACK_IMPORTED_MODULE_6__["default"]
+}, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_App_jsx__WEBPACK_IMPORTED_MODULE_3__["default"], null)), document.getElementById('root'));
+
+/***/ }),
+
+/***/ "./src/main.css":
+/*!**********************!*\
+  !*** ./src/main.css ***!
+  \**********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../node_modules/css-loader/dist/cjs.js!./main.css */ "./node_modules/css-loader/dist/cjs.js!./src/main.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./src/page1.css":
+/*!***********************!*\
+  !*** ./src/page1.css ***!
+  \***********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../node_modules/css-loader/dist/cjs.js!./page1.css */ "./node_modules/css-loader/dist/cjs.js!./src/page1.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
 
 /***/ }),
 

@@ -35,44 +35,41 @@ class Register extends Component {
   };
   render = () => {
     return (
-      <div className="registration-container">
-        <div className="registration-form-container">
-          <form onSubmit={this.submitRegisterHandler}>
+      <div className="page1-container">
+        <div className="page1-form-container">
+          <div className="page1-form-subcontainer">
             <h1>
               <Link to="/">AliBay</Link>
             </h1>
             <h2>Sign up</h2>
-            <div>
-              <input
-                className="registration-form-input"
-                type="text"
-                onChange={this.usernameRegisterChange}
-                value={this.state.usernameRegisterInput}
-                placeholder="Username"
-              />{' '}
-            </div>
-            <div>
-              <input
-                className="registration-form-input"
-                type="text"
-                onChange={this.passwordRegisterChange}
-                value={this.state.passwordRegisterInput}
-                placeholder="Password"
-              />{' '}
-            </div>
-            <button className="registration-botton">Create Account</button>
-            <Link to="/login-page">
-              <div className="registration-login-redirect">
-                Already a user? <span>Log in</span>
+            <form onSubmit={this.submitRegisterHandler}>
+              <div>
+                <input
+                  className="page1-form-input"
+                  type="text"
+                  onChange={this.usernameRegisterChange}
+                  value={this.state.usernameRegisterInput}
+                  placeholder="Username"
+                />{' '}
               </div>
+              <div>
+                <input
+                  className="page1-form-input"
+                  type="text"
+                  onChange={this.passwordRegisterChange}
+                  value={this.state.passwordRegisterInput}
+                  placeholder="Password"
+                />{' '}
+              </div>
+              <button className="page1-botton">Create Account</button>
+            </form>
+            <Link to="/login" className="page1-redirect">
+              Already a user? <span>Log in</span>
             </Link>
-          </form>
+          </div>
         </div>
-        <div className="registration-image1-container">
-          <img
-            src="../uploads/register-image1.webp"
-            className="registration-image1"
-          />
+        <div className="page1-image1-container">
+          <img src="../uploads/register-image1.webp" className="page1-image1" />
         </div>
       </div>
     );

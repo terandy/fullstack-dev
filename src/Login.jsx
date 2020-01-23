@@ -38,32 +38,27 @@ class Login extends Component {
 
   render = () => {
     return (
-      <div className="login-form-container">
-        <form onSubmit={this.submitLoginHandler}>
-          <h2>Log in</h2>
-          <div>
-            <input
-              className="registration-form-input login"
-              type="text"
-              onChange={this.usernameLoginChange}
-              value={this.state.usernameLoginInput}
-              placeholder="Username"
-            />{' '}
-          </div>
-          <div>
-            <input
-              className="registration-form-input login"
-              type="text"
-              onChange={this.passwordLoginChange}
-              value={this.state.passwordLoginInput}
-              placeholder="Password"
-            />{' '}
-          </div>
-          <button className="registration-botton login-botton login">
-            Log in
-          </button>
-        </form>
-      </div>
+      <form onSubmit={this.submitLoginHandler}>
+        <div>
+          <input
+            className={this.props.inputClass}
+            type="text"
+            onChange={this.usernameLoginChange}
+            value={this.state.usernameLoginInput}
+            placeholder="Username"
+          />{' '}
+        </div>
+        <div>
+          <input
+            className={this.props.inputClass}
+            type="text"
+            onChange={this.passwordLoginChange}
+            value={this.state.passwordLoginInput}
+            placeholder="Password"
+          />{' '}
+        </div>
+        <button className={this.props.buttonClass}>Log in</button>
+      </form>
     );
   };
 }

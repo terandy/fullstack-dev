@@ -5,8 +5,8 @@ import Login from './Login.jsx';
 class LoginPage extends Component {
   render = () => {
     return (
-      <div className="page1-container">
-        <div className="page1-form-container">
+      <div className="popup">
+        <div className="popup-form-container">
           <div className="page1-form-subcontainer">
             <h1>
               <Link to="/">AliBay</Link>
@@ -21,9 +21,6 @@ class LoginPage extends Component {
               <a className="page1-redirect">Forgot you password?</a>
             </div>
           </div>
-        </div>
-        <div className="page1-image1-container">
-          <img src="../uploads/register-image1.webp" className="page1-image1" />
         </div>
       </div>
     );
