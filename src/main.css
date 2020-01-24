@@ -85,6 +85,9 @@ a {
   .hideBurger {
     display: none;
   }
+  #navItems {
+    width:100%;
+  }
   .nav {
     display: flex;
     align-items: center;
@@ -96,7 +99,6 @@ a {
     flex-direction: row;
     list-style-type: none;
     text-transform: uppercase;
-    width: 100vw;
     justify-content: space-between;
   }
 

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Route, BrowserRouter, Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import SearchBar from './SearchBar.jsx'
 import './dist/hamburgers.css'
 
 
@@ -42,6 +43,7 @@ class Navigation extends Component{
                         <li><Link to="/add-item">Sell</Link></li>
                     </div>
                     <div className="navRight">
+                        <SearchBar history={this.props.history}/>
                         <li><Link to="/login">Login</Link></li>
                         <li><Link to="/register">Register</Link></li>
                     </div>
