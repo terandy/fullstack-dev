@@ -29069,7 +29069,7 @@ class ItemDetail extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
     _defineProperty(this, "render", () => {
       console.log(this.state.item);
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Item detail", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "id ", this.props.itemId), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Description"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.state.item.description), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Add to Cart"));
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, this.state.item.item), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.state.item.price), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Product Details"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.state.item.description), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Add to Cart"));
     });
 
     this.state = {

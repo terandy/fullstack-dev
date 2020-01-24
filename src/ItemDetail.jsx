@@ -19,9 +19,14 @@ class ItemDetail extends Component {
     console.log(this.state.item);
     return (
       <div>
-        Item detail
-        <div>id {this.props.itemId}</div>
-        <div>Description</div>
+        {/* <div>
+          {this.state.item.imgPaths.map(img => {
+            return <img src={img} />;
+          })}
+        </div> */}
+        <h1>{this.state.item.item}</h1>
+        <div>{this.state.item.price}</div>
+        <h2>Product Details</h2>
         <div>{this.state.item.description}</div>
         <button>Add to Cart</button>
       </div>
