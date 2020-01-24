@@ -41776,7 +41776,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _OneItem_jsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./OneItem.jsx */ "./src/OneItem.jsx");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 
@@ -41786,22 +41788,31 @@ class Items extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     super(props);
 
     _defineProperty(this, "updateItems", async () => {
+      console.log(this.props.items);
       let responseBody = await fetch('/all-items', {
         method: 'POST'
       });
       let responseText = await responseBody.text();
       let itemsArray = JSON.parse(responseText);
+      this.props.dispatch({
+        type: "set-items",
+        content: itemsArray
+      });
       this.setState({
-        items: itemsArray
+        items: this.props.items
       });
     });
 
     _defineProperty(this, "render", () => {
+      let results = this.state.items.filter(item => {
+        if (this.state.items === '') return true;
+        return item.tag.includes(this.props.searchTag);
+      });
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         onClick: this.updateItems
       }, "Reload items"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "all-items-display"
-      }, this.state.items.map((item, index) => {
+      }, results.map((item, index) => {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           key: index
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_OneItem_jsx__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -41811,13 +41822,20 @@ class Items extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     });
 
     this.state = {
-      items: []
+      items: this.props.items
     };
   }
 
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (Items);
+let mapStateToProps = state => {
+  return {
+    items: state.items,
+    searchTag: state.searchTag
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(mapStateToProps)(Items));
 
 /***/ }),
 
@@ -42339,6 +42357,11 @@ class SearchBar extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     _defineProperty(this, "handleSubmit", async evt => {
       evt.preventDefault();
       if (this.state.searchInput === "") return;
+      let lowercased = this.state.searchInput.toLowerCase();
+      this.props.dispatch({
+        type: "filter",
+        content: lowercased
+      });
     });
 
     _defineProperty(this, "render", () => {
@@ -42353,20 +42376,13 @@ class SearchBar extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     });
 
     this.state = {
-      searchInput: "",
-      items: []
+      searchInput: ""
     };
   }
 
 }
 
-let mapStateToProps = state => {
-  return {
-    items: state.items
-  };
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(mapStateToProps)(SearchBar));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])()(SearchBar));
 
 /***/ }),
 
@@ -42586,9 +42602,23 @@ __webpack_require__.r(__webpack_exports__);
 
 let reducer = (state, action) => {
   if (action.type === 'login-sucess') {
-    console.log('action.content', action.content);
+    console.log('login content', action.content);
     return { ...state,
       username: action.content
+    };
+  }
+
+  if (action.type === 'set-items') {
+    console.log('set items content', action.content);
+    return { ...state,
+      items: action.content
+    };
+  }
+
+  if (action.type === 'filter') {
+    console.log('filter content', action.content);
+    return { ...state,
+      searchTag: action.content
     };
   }
 
@@ -42597,7 +42627,8 @@ let reducer = (state, action) => {
 
 const store = Object(redux__WEBPACK_IMPORTED_MODULE_0__["createStore"])(reducer, {
   username: undefined,
-  items: []
+  items: [],
+  searchTag: ''
 }, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 /* harmony default export */ __webpack_exports__["default"] = (store);
 
