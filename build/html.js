@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n\r\n<head>\r\n    <meta charset=\"utf-8\">\r\n    <title>Fullstack dev!</title>\r\n</head>\r\n\r\n<body>\r\n    <div id=\"root\">\r\n    </div>\r\n</body>\r\n\r\n</html>\r\n";
+module.exports = "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n  <head>\r\n    <meta charset=\"utf-8\" />\r\n    <title>Alibay</title>\r\n  </head>\r\n\r\n  <body>\r\n    <div id=\"root\"></div>\r\n  </body>\r\n</html>\r\n";
 
 /***/ })
 

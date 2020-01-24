@@ -4,7 +4,8 @@ import { connect } from 'react-redux';
 import Navigation from './Navigation.jsx';
 import MainPage from './MainPage.jsx';
 import Login from './Login.jsx';
-import Register from './register.jsx';
+import LoginPage from './LoginPage.jsx';
+import RegisterPage from './RegisterPage.jsx';
 import AddItem from './AddItem.jsx';
 import ItemDetail from './ItemDetail.jsx';
 
@@ -17,10 +18,10 @@ class App extends Component {
     );
   };
   renderLoginPage = () => {
-    return <Login />;
+    return <LoginPage />;
   };
   renderSignupPage = () => {
-    return <Register />;
+    return <RegisterPage />;
   };
   renderSearchPage = renderdata => {
     return <SearchPage tags={renderdata.match.params.tags} />;
