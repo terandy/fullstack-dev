@@ -6,8 +6,7 @@ class SearchBar extends Component{
     constructor() {
         super()
         this.state = {
-            searchInput: "",
-            items: []
+            searchInput: ""
         }
     }
     handleSearchInput = evt => {
@@ -17,6 +16,12 @@ class SearchBar extends Component{
     handleSubmit = async evt => {
         evt.preventDefault()
         if (this.state.searchInput === "") return
+
+        let lowercased = this.state.searchInput.toLowerCase()
+        this.props.dispatch({
+            type: "filter",
+            content: lowercased
+        })
     }
     render = () => {
         return (
@@ -30,9 +35,4 @@ class SearchBar extends Component{
         }
     }
 
-    let mapStateToProps = state => {
-        return {
-            items: state.items
-        }
-    }
-    export default connect(mapStateToProps)(SearchBar)
+    export default connect()(SearchBar)
