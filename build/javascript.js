@@ -964,7 +964,7 @@ exports.push([module.i, "/*!\n * Hamburgers\n * @description Tasty CSS-animated 
 
 exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "body {\n  background-color: white;\n  margin: 0;\n}\n.toggle-nav-on {\n  display: block;\n}\n.toggle-nav {\n  display: none;\n}\n\na {\n  color: black;\n  text-decoration: none;\n}\n\n.nav ul {\n  list-style-type: none;\n  text-transform: uppercase;\n  padding: 0px;\n  line-height: 2em;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  text-align: center;\n  font-family: sans-serif;\n}\n\n/* all items container */\n.all-items-display {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n  width: 100vp;\n}\n/* individual item */\n.one-item {\n  color: black;\n  padding: 0;\n  margin: 10px;\n  height: 460px;\n  width: 260px;\n  z-index: 1;\n}\n.one-item-image {\n  height: 85%;\n  width: 100%;\n  background: lightgrey;\n}\n.one-item-image > img {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  overflow: hidden;\n}\n.one-item-text {\n  padding: 0;\n  margin: 0;\n  margin-top: 10px;\n  font-family: 'Helvetica';\n}\n.one-item-text > h1 {\n  padding: 0;\n  margin: 0;\n  padding-bottom: 5px;\n  font-size: 25px;\n  border-bottom: 2px black solid;\n  width: 20%;\n}\n.one-item-text > p {\n  padding: 0;\n  margin-top: 5px;\n  font-size: 80%;\n  font-style: lighter;\n}\n\n.popup {\n  z-index: 1000;\n  width: 400px;\n  box-shadow: rgba(128, 128, 128, 0.479) 4px 4px 4px 4px 16px;\n  text-transform: none;\n}\n.popup-form-container {\n  background-color: white;\n  display: flex;\n}\n\n.detail-container {\n  display: grid;\n  grid-template-columns: 20% 1fr 30%;\n}\n\n.detail-left {\n  border: solid red 1px;\n}\n.detail-right {\n  border: solid red 1px;\n}\n.detail-image {\n  border: solid red 1px;\n}\n\n@media (max-width: 968px) {\n}\n\n/* CSS applies to 968px and above */\n@media screen and (min-width: 968px) {\n  /* navigation */\n  .toggle-nav {\n    display: block;\n  }\n  .hideBurger {\n    display: none;\n  }\n  #navItems {\n    width: 100%;\n  }\n  .nav {\n    display: flex;\n    align-items: center;\n    height: 4em;\n    background-color: lightgray;\n  }\n  .nav ul {\n    display: flex;\n    flex-direction: row;\n    list-style-type: none;\n    text-transform: uppercase;\n    justify-content: space-between;\n  }\n\n  .nav ul li {\n    margin: 0 1em 0 1em;\n  }\n  .navRight {\n    display: flex;\n  }\n  .navLeft {\n    display: flex;\n  }\n  /* end navigation */\n\n  /* dropdown */\n  .dropdown-container {\n    position: relative;\n  }\n\n  .dropdown-content {\n    display: none;\n    position: absolute;\n    right: 0;\n    min-width: max-content;\n    box-shadow: rgba(128, 128, 128, 0.479) 4px 4px 16px;\n    background-color: white;\n    padding: 1em;\n    z-index: 99;\n  }\n  .dropdown-container:hover .dropdown-content {\n    display: block;\n  }\n  .dropdown-button:hover {\n    color: purple;\n    cursor: pointer;\n  }\n  /* end of dropdown */\n}\n", ""]);
+exports.push([module.i, "body {\n  background-color: white;\n  margin: 0;\n}\n.toggle-nav-on {\n  display: block;\n}\n.toggle-nav {\n  display: none;\n}\n\na {\n  color: black;\n  text-decoration: none;\n}\n\n.nav ul {\n  list-style-type: none;\n  text-transform: uppercase;\n  padding: 0px;\n  line-height: 2em;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  text-align: center;\n  font-family: sans-serif;\n}\n\n/* all items container */\n.all-items-display {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n  width: 100vp;\n}\n/* individual item */\n.one-item {\n  color: black;\n  padding: 0;\n  margin: 10px;\n  height: 460px;\n  width: 260px;\n  z-index: 1;\n}\n.one-item-image {\n  height: 85%;\n  width: 100%;\n  background: lightgrey;\n}\n.one-item-image > img {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  overflow: hidden;\n}\n.one-item-text {\n  padding: 0;\n  margin: 0;\n  margin-top: 10px;\n  font-family: 'Helvetica';\n}\n.one-item-text > h1 {\n  padding: 0;\n  margin: 0;\n  padding-bottom: 5px;\n  font-size: 25px;\n  border-bottom: 2px black solid;\n  width: 20%;\n}\n.one-item-text > p {\n  padding: 0;\n  margin-top: 5px;\n  font-size: 80%;\n  font-style: lighter;\n}\n\n.popup {\n  z-index: 1000;\n  width: 400px;\n  box-shadow: rgba(128, 128, 128, 0.479) 4px 4px 4px 4px 16px;\n  text-transform: none;\n}\n.popup-form-container {\n  background-color: white;\n  display: flex;\n}\n\n.detail-container {\n  display: grid;\n  grid-template-columns: 20% 1fr 30%;\n  height: 100%;\n}\n\n.detail-left {\n  position: relative;\n  align-items: right;\n  height: 100%;\n}\n.detail-right {\n  display: grid;\n  grid-template-rows: 5em 2em 2em 1fr 3em;\n  padding: 2em;\n}\n.detail-image {\n  display: flex;\n  margin: auto;\n  align-items: center;\n  height: 100%;\n}\n\n@media (max-width: 968px) {\n}\n\n/* CSS applies to 968px and above */\n@media screen and (min-width: 968px) {\n  /* navigation */\n  .toggle-nav {\n    display: block;\n  }\n  .hideBurger {\n    display: none;\n  }\n  #navItems {\n    width: 100%;\n  }\n  .nav {\n    display: flex;\n    align-items: center;\n    height: 4em;\n    background-color: lightgray;\n  }\n  .nav ul {\n    display: flex;\n    flex-direction: row;\n    list-style-type: none;\n    text-transform: uppercase;\n    justify-content: space-between;\n  }\n\n  .nav ul li {\n    margin: 0 1em 0 1em;\n  }\n  .navRight {\n    display: flex;\n  }\n  .navLeft {\n    display: flex;\n  }\n  /* end navigation */\n\n  /* dropdown */\n  .dropdown-container {\n    position: relative;\n  }\n\n  .dropdown-content {\n    display: none;\n    position: absolute;\n    right: 0;\n    min-width: max-content;\n    box-shadow: rgba(128, 128, 128, 0.479) 4px 4px 16px;\n    background-color: white;\n    padding: 1em;\n    z-index: 99;\n  }\n  .dropdown-container:hover .dropdown-content {\n    display: block;\n  }\n  .dropdown-button:hover {\n    color: purple;\n    cursor: pointer;\n  }\n  /* end of dropdown */\n}\n", ""]);
 
 
 
@@ -41677,17 +41677,29 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 const ItemName = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].h1`
-  color: pink;
+  text-transform: Capitalize;
+  margin: 0;
+`;
+const H2 = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
+  position: relative;
+  border-bottom: solid 2px black;
+  margin: 0;
+  h2 {
+    text-transform: Capitalize;
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    font-size: 1em;
+  }
 `;
 const MainImg = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].img`
   height: 300px;
 `;
 const Description = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
-  border: blue 1px solid;
+  padding: 1em;
   width: 50%;
 `;
 const Price = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
-  color: red;
   &:before {
     content: '$';
   }
@@ -41695,13 +41707,18 @@ const Price = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
 const Button = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].button`
   color: white;
   background-color: black;
-  border: white 1px solid;
   width: 100%;
   padding: 1em;
+  &:hover {
+    background-color: darkgrey;
+    cursor: pointer;
+  }
 `;
 const Img = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].img`
-  height: 100px;
+  height: auto;
   margin: 1px;
+  right: 0;
+  width: 100%;
   &:hover {
     cursor: pointer;
   }
@@ -41748,7 +41765,7 @@ class ItemDetail extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         src: this.state.images[this.state.mainImage]
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "detail-right"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ItemName, null, this.state.item.item), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Price, null, this.state.item.price), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Product Details"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Description, null, this.state.item.description), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Button, null, "Add to Cart")));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ItemName, null, this.state.item.item), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Price, null, this.state.item.price), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(H2, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Product Details")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Description, null, this.state.item.description), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Button, null, "Add to Cart")));
     });
 
     this.state = {

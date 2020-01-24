@@ -88,16 +88,24 @@ a {
 .detail-container {
   display: grid;
   grid-template-columns: 20% 1fr 30%;
+  height: 100%;
 }
 
 .detail-left {
-  border: solid red 1px;
+  position: relative;
+  align-items: right;
+  height: 100%;
 }
 .detail-right {
-  border: solid red 1px;
+  display: grid;
+  grid-template-rows: 5em 2em 2em 1fr 3em;
+  padding: 2em;
 }
 .detail-image {
-  border: solid red 1px;
+  display: flex;
+  margin: auto;
+  align-items: center;
+  height: 100%;
 }
 
 @media (max-width: 968px) {
