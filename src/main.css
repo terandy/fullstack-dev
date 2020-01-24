@@ -11,7 +11,7 @@ body {
 
 a {
   color: black;
-  font-family: sans-serif;
+  text-decoration: none;
 }
 
 .nav ul {
@@ -23,10 +23,9 @@ a {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  font-family: sans-serif;
 }
-a {
-  text-decoration: none;
-}
+
 /* all items container */
 .all-items-display {
   display: flex;
@@ -86,6 +85,21 @@ a {
   display: flex;
 }
 
+.detail-container {
+  display: grid;
+  grid-template-columns: 20% 1fr 30%;
+}
+
+.detail-left {
+  border: solid red 1px;
+}
+.detail-right {
+  border: solid red 1px;
+}
+.detail-image {
+  border: solid red 1px;
+}
+
 @media (max-width: 968px) {
 }
 
@@ -98,6 +112,9 @@ a {
   .hideBurger {
     display: none;
   }
+  #navItems {
+    width: 100%;
+  }
   .nav {
     display: flex;
     align-items: center;
@@ -109,7 +126,6 @@ a {
     flex-direction: row;
     list-style-type: none;
     text-transform: uppercase;
-    width: 100vw;
     justify-content: space-between;
   }
 
@@ -128,8 +144,7 @@ a {
   .dropdown-container {
     position: relative;
   }
-  .dropdown-button {
-  }
+
   .dropdown-content {
     display: none;
     position: absolute;

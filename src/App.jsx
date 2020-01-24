@@ -10,34 +10,7 @@ import AddItem from './AddItem.jsx';
 import ItemDetail from './ItemDetail.jsx';
 
 class App extends Component {
-  renderHomePage = () => {
-    return (
-      <div>
-        <Navigation />
-        <MainPage />
-      </div>
-    );
-  };
-  renderLoginPage = () => {
-    return <Login />;
-  };
-  renderSignupPage = () => {
-    return <Register />;
-  };
-  renderItemDetail = renderdata => {
-    return <ItemDetail itemId={renderdata.match.params.itemId} />;
-  };
-  renderAddItem = () => {
-    return <AddItem />;
-  };
-  renderMenItems = () => {
-    return <MenItems />;
-  };
-  renderWomenItems = () => {
-    return <WomenItems />;
-  };
-
-  renderHomePage = () => {
+  renderHomePage = routerData => {
     return (
       <div>
         <MainPage />
@@ -49,6 +22,12 @@ class App extends Component {
   };
   renderSignupPage = () => {
     return <RegisterPage />;
+  };
+  renderSearchPage = renderdata => {
+    return <SearchPage tags={renderdata.match.params.tags} />;
+  };
+  renderItemDetail = renderdata => {
+    return <ItemDetail itemId={renderdata.match.params.itemId} />;
   };
   renderAddItem = () => {
     return <AddItem />;
@@ -64,7 +43,7 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div>
-          <Navigation />
+          <Navigation/>
           <Route exact={true} path="/" render={this.renderHomePage}></Route>
           <Route exact={true} path="/men" render={this.renderMenItems}></Route>
           <Route
@@ -97,6 +76,11 @@ class App extends Component {
             exact={true}
             path="/item-detail/:itemId"
             render={this.renderItemDetail}
+          ></Route>
+          <Route
+            exact={true}
+            path="/search/:tags"
+            render={this.renderSearchPage}
           ></Route>
         </div>
       </BrowserRouter>

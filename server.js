@@ -110,6 +110,12 @@ app.post('/one-item', upload.none(), (req, res) => {
       res.send(JSON.stringify(item));
     });
 });
+// app.post('/search-items', upload.none(), (req, res) => {
+//   console.log('request to /search-items')
+//   dbo
+//   .collection('items')
+//   .find({})
+// })
 
 // Your endpoints go before this line
 

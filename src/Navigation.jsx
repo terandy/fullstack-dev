@@ -3,6 +3,7 @@ import Login from './Login.jsx';
 import LoginPopup from './LoginPopup.jsx';
 import { Route, BrowserRouter, Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import SearchBar from './SearchBar.jsx'
 import './dist/hamburgers.css';
 import Dropdown from './Dropdown.jsx';
 
@@ -62,6 +63,7 @@ class Navigation extends Component {
               </li>
             </div>
             <div className="navRight">
+                <SearchBar/>
               <li>
                 {' '}
                 {this.props.user ? 'Welcome back ' + this.props.user : ''}
