@@ -18,7 +18,7 @@ const H2 = styled.div`
   }
 `;
 const MainImg = styled.img`
-  height: 300px;
+  width: 90%;
 `;
 const Description = styled.div`
   padding: 1em;
@@ -40,10 +40,12 @@ const Button = styled.button`
   }
 `;
 const Img = styled.img`
-  height: auto;
+  height: 40px;
+  object-fit: cover;
+  overflow: hidden;
   margin: 1px;
   right: 0;
-  width: 100%;
+  width: 40px;
   &:hover {
     cursor: pointer;
   }

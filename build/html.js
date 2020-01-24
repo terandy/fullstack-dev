@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <title>Alibay</title>\n  </head>\n\n  <body>\n    <div id=\"root\"></div>\n  </body>\n</html>\n";
+module.exports = "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    <title>Alibay</title>\n  </head>\n\n  <body>\n    <div id=\"root\"></div>\n  </body>\n</html>\n";
 
 /***/ })
 
