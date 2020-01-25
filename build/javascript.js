@@ -41726,18 +41726,17 @@ const RightArrow = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["defaul
   left: 60%;
   justify-content: flex-end;
 `;
-const ImgBall = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].img`
+const ImgBall = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
 position:relative;
   height: 10px;
   width: 10px;
-  object-fit: cover;
-  overflow: hidden;
   margin: 10px;
   right: 0;
   bottom:0;
   border-radius:1em;
   border:${props => props.border};
   z-index:3 ;
+  background-color:${props => props.bc};
   &:hover {
     cursor: pointer;
   }
@@ -41830,8 +41829,8 @@ class ImageSlider extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
           position: index
         }),
         key: index,
-        src: '..' + img,
-        border: index === this.state.position ? 'solid 5px white' : 'none'
+        border: index === this.state.position ? 'solid 5px white' : 'none',
+        bc: index === this.state.position ? 'teal' : 'grey'
       });
     })));
   }

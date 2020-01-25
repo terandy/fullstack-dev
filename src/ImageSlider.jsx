@@ -47,18 +47,17 @@ const RightArrow = styled(LeftArrow)`
   left: 60%;
   justify-content: flex-end;
 `;
-const ImgBall = styled.img`
+const ImgBall = styled.div`
 position:relative;
   height: 10px;
   width: 10px;
-  object-fit: cover;
-  overflow: hidden;
   margin: 10px;
   right: 0;
   bottom:0;
   border-radius:1em;
   border:${props => props.border};
   z-index:3 ;
+  background-color:${props => props.bc};
   &:hover {
     cursor: pointer;
   }
@@ -131,10 +130,10 @@ class ImageSlider extends Component {
               <ImgBall
                 onMouseEnter={() => this.setState({ position: index })}
                 key={index}
-                src={'..' + img}
                 border={
                   index === this.state.position ? 'solid 5px white' : 'none'
                 }
+                bc={index === this.state.position ? 'teal' : 'grey'}
               />
             );
           })}
