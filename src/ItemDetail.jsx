@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import ImageSlider from './ImageSlider.jsx';
 
 const ItemName = styled.h1`
   text-transform: Capitalize;
@@ -18,7 +19,10 @@ const H2 = styled.div`
   }
 `;
 const MainImg = styled.img`
-  width: 90%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
 `;
 const Description = styled.div`
   padding: 1em;
@@ -40,14 +44,18 @@ const Button = styled.button`
   }
 `;
 const Img = styled.img`
-  height: 40px;
+  height: auto;
+  width: 100%;
   object-fit: cover;
   overflow: hidden;
   margin: 1px;
   right: 0;
-  width: 40px;
   &:hover {
     cursor: pointer;
+  }
+  @media screen and (min-width: 960px) {
+    height: 10%
+    width: auto;
   }
 `;
 
@@ -75,7 +83,11 @@ class ItemDetail extends Component {
     console.log(this.state.item);
     return (
       <div className="detail-container">
-        <div className="detail-left">
+        <div className="detail-image">
+          {/* <MainImg src={this.state.images[this.state.mainImage]} /> */}
+          <ImageSlider />
+        </div>
+        <div className="detail-mini-images">
           {this.state.images.map((img, index) => {
             return (
               <Img
@@ -86,10 +98,7 @@ class ItemDetail extends Component {
             );
           })}
         </div>
-        <div className="detail-image">
-          <MainImg src={this.state.images[this.state.mainImage]} />
-        </div>
-        <div className="detail-right">
+        <div className="detail-description">
           <ItemName>{this.state.item.item}</ItemName>
           <Price>{this.state.item.price}</Price>
           <H2>
