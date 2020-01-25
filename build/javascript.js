@@ -41676,55 +41676,102 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-let arrowDisplayToggle = 'none';
 const SliderContainer = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
   position: relative;
-  border: red solid 2px;
   width: 100vw;
+  overflow: hidden;
 `;
-const ImgDiv = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div``;
+const ImgDiv = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
+  display: flex;
+  transition: ease-in-out 0.25s;
+  width: 500%;
+  height: 100%;
+  background-color: grey;
+  position: absolute;
+  left: ${props => props.position + '%'};
+  top: 0;
+  z-index: 1;
+  img {
+    width: 20%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+  }
+`;
 const LeftArrow = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
   height: 100%;
   width: 40%;
   left: 0;
   position: absolute;
-  border: solid blue 1px;
   justify-content: flex-start;
   align-items: center;
-  display: ${props => props.toggle};
+  display: flex;
+  z-index: 2;
   img {
     width: 20%;
-    border: red solid 1px;
+    display: ${props => props.toggle};
+  }
+  &:hover {
+    cursor: pointer;
   }
 `;
-const RightArrow = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
-  height: 100%;
-  width: 40%;
-  right: 0;
-  position: absolute;
-  border: solid blue 1px;
+const RightArrow = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(LeftArrow)`
+  left: 60%;
   justify-content: flex-end;
-  align-items: center;
-  display: ${props => props.toggle};
-  img {
-    width: 20%;
-    border: red solid 1px;
-  }
 `;
 
 class ImageSlider extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   constructor(props) {
     super(props);
 
+    _defineProperty(this, "componentDidMount", () => {
+      console.log('hovered');
+
+      if (this.props.mainImage) {
+        this.setState({
+          position: this.props.mainImage / 5
+        });
+      }
+    });
+
     _defineProperty(this, "displayArrows", () => {
-      console.log('enter');
       this.setState({
-        toggle: 'flex'
+        toggle: 'block'
+      });
+      setTimeout(() => {
+        this.setState({
+          toggle: 'none'
+        });
+      }, 1500);
+    });
+
+    _defineProperty(this, "shiftLeft", () => {
+      console.log('left');
+
+      if (this.state.position === 0) {
+        return;
+      }
+
+      this.setState({
+        position: this.state.position + 100
+      });
+    });
+
+    _defineProperty(this, "shiftRight", () => {
+      console.log('right');
+
+      if (this.state.position === -400) {
+        return;
+      }
+
+      this.setState({
+        position: this.state.position - 100
       });
     });
 
     this.state = {
-      toggle: 'none'
+      toggle: 'none',
+      position: 0
     };
   }
 
@@ -41732,11 +41779,20 @@ class ImageSlider extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SliderContainer, {
       onMouseEnter: this.displayArrows
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(LeftArrow, {
-      toggle: this.state.toggle
+      toggle: this.state.toggle,
+      onClick: this.shiftLeft
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
       src: "../uploads/left-arrow.png"
-    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ImgDiv, null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ImgDiv, null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ImgDiv, null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(RightArrow, {
-      toggle: this.state.toggle
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ImgDiv, {
+      position: this.state.position
+    }, this.props.imagesArray.map((imagePath, index) => {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        key: index,
+        src: '..' + imagePath
+      });
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(RightArrow, {
+      toggle: this.state.toggle,
+      onClick: this.shiftRight
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
       src: "../uploads/right-arrow.png"
     })));
@@ -41845,12 +41901,14 @@ class ItemDetail extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     });
 
     _defineProperty(this, "render", () => {
-      console.log(this.state.item);
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "detail-container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "detail-image"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ImageSlider_jsx__WEBPACK_IMPORTED_MODULE_2__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ImageSlider_jsx__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        imagesArray: this.state.images,
+        mainImage: this.state.mainImage
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "detail-mini-images"
       }, this.state.images.map((img, index) => {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Img, {

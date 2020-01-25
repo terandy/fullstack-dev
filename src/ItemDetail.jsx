@@ -80,12 +80,14 @@ class ItemDetail extends Component {
     this.setState({ item: itemObject, images: responseImages });
   };
   render = () => {
-    console.log(this.state.item);
     return (
       <div className="detail-container">
         <div className="detail-image">
           {/* <MainImg src={this.state.images[this.state.mainImage]} /> */}
-          <ImageSlider />
+          <ImageSlider
+            imagesArray={this.state.images}
+            mainImage={this.state.mainImage}
+          />
         </div>
         <div className="detail-mini-images">
           {this.state.images.map((img, index) => {
