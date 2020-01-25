@@ -94,7 +94,7 @@ a {
   margin: auto;
   display: flex;
   justify-content: center;
-  align-items: right;
+  align-items: bottom;
 }
 .detail-description {
   display: grid;

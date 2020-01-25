@@ -964,7 +964,7 @@ exports.push([module.i, "/*!\n * Hamburgers\n * @description Tasty CSS-animated 
 
 exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "body {\n  background-color: white;\n  margin: 0;\n}\n.toggle-nav-on {\n  display: block;\n}\n.toggle-nav {\n  display: none;\n}\n\na {\n  color: black;\n  text-decoration: none;\n}\n\n.nav ul {\n  list-style-type: none;\n  text-transform: uppercase;\n  padding: 0px;\n  line-height: 2em;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  text-align: center;\n  font-family: sans-serif;\n}\n\n/* all items container */\n.all-items-display {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n  width: 100vp;\n}\n/* individual item */\n.one-item {\n  color: black;\n  padding: 0;\n  margin: 10px;\n  height: 250px;\n  width: 140px;\n  z-index: 1;\n}\n.one-item-image {\n  height: 80%;\n  width: 100%;\n  background: lightgrey;\n}\n.one-item-image > img {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  overflow: hidden;\n}\n.one-item-text {\n  padding: 0;\n  margin: 0;\n  margin-top: 10px;\n  font-family: 'Helvetica';\n}\n.one-item-text > h1 {\n  padding: 0;\n  margin: 0;\n  padding-bottom: 5px;\n  font-size: 20px;\n  border-bottom: 2px black solid;\n  width: 20%;\n}\n.one-item-text > p {\n  padding: 0;\n  margin-top: 5px;\n  font-size: 80%;\n  font-style: lighter;\n}\n\n.popup {\n  z-index: 1000;\n  width: 400px;\n  box-shadow: rgba(128, 128, 128, 0.479) 4px 4px 4px 4px 16px;\n  text-transform: none;\n}\n.popup-form-container {\n  background-color: white;\n  display: flex;\n}\n.detail-container {\n  display: grid;\n  width: 100vw;\n}\n\n.detail-mini-images {\n  width: 90vw;\n  margin: auto;\n  display: flex;\n  justify-content: center;\n  align-items: right;\n}\n.detail-description {\n  display: grid;\n  grid-template-rows: 5em 2em 2em 1fr 3em;\n  padding: 2em;\n  height: 40vh;\n}\n.detail-image {\n  width: 90vw;\n  height: 60vh;\n  margin: auto;\n  display: flex;\n  justify-content: center;\n}\n\n@media (max-width: 968px) {\n}\n\n/* CSS applies to 968px and above */\n@media screen and (min-width: 960px) {\n  .one-item-text > h1 {\n    font-size: 25px;\n  }\n  .one-item {\n    height: 430px;\n    width: 230px;\n  }\n  /* navigation */\n  .toggle-nav {\n    display: block;\n  }\n  .hideBurger {\n    display: none;\n  }\n  #navItems {\n    width: 100%;\n  }\n  .nav {\n    display: flex;\n    align-items: center;\n    height: 4em;\n    background-color: lightgray;\n  }\n  .nav ul {\n    display: flex;\n    flex-direction: row;\n    list-style-type: none;\n    text-transform: uppercase;\n    justify-content: space-between;\n  }\n\n  .nav ul li {\n    margin: 0 1em 0 1em;\n  }\n  .navRight {\n    display: flex;\n  }\n  .navLeft {\n    display: flex;\n  }\n  /* end navigation */\n\n  /* dropdown */\n  .dropdown-container {\n    position: relative;\n  }\n\n  .dropdown-content {\n    display: none;\n    position: absolute;\n    right: 0;\n    min-width: max-content;\n    box-shadow: rgba(128, 128, 128, 0.479) 4px 4px 16px;\n    background-color: white;\n    padding: 1em;\n    z-index: 99;\n  }\n  .dropdown-container:hover .dropdown-content {\n    display: block;\n  }\n  .dropdown-button:hover {\n    color: purple;\n    cursor: pointer;\n  }\n  /* end of dropdown */\n  .detail-container {\n    grid-template-columns: 1fr 10% 30%;\n    width: 90vw;\n    margin: 2em;\n  }\n  .detail-description {\n    width: 90%;\n    height: 100%;\n    padding: 0;\n    margin: 1em;\n  }\n  .detail-mini-images {\n    width: 90%;\n    height: 80vh;\n    display: block;\n    padding: auto;\n  }\n  .detail-image {\n    justify-content: center;\n    display: flex;\n    align-items: center;\n    margin: auto;\n    width: 100%;\n    height: 80vh;\n  }\n}\n", ""]);
+exports.push([module.i, "body {\n  background-color: white;\n  margin: 0;\n}\n.toggle-nav-on {\n  display: block;\n}\n.toggle-nav {\n  display: none;\n}\n\na {\n  color: black;\n  text-decoration: none;\n}\n\n.nav ul {\n  list-style-type: none;\n  text-transform: uppercase;\n  padding: 0px;\n  line-height: 2em;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  text-align: center;\n  font-family: sans-serif;\n}\n\n/* all items container */\n.all-items-display {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n  width: 100vp;\n}\n/* individual item */\n.one-item {\n  color: black;\n  padding: 0;\n  margin: 10px;\n  height: 250px;\n  width: 140px;\n  z-index: 1;\n}\n.one-item-image {\n  height: 80%;\n  width: 100%;\n  background: lightgrey;\n}\n.one-item-image > img {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  overflow: hidden;\n}\n.one-item-text {\n  padding: 0;\n  margin: 0;\n  margin-top: 10px;\n  font-family: 'Helvetica';\n}\n.one-item-text > h1 {\n  padding: 0;\n  margin: 0;\n  padding-bottom: 5px;\n  font-size: 20px;\n  border-bottom: 2px black solid;\n  width: 20%;\n}\n.one-item-text > p {\n  padding: 0;\n  margin-top: 5px;\n  font-size: 80%;\n  font-style: lighter;\n}\n\n.popup {\n  z-index: 1000;\n  width: 400px;\n  box-shadow: rgba(128, 128, 128, 0.479) 4px 4px 4px 4px 16px;\n  text-transform: none;\n}\n.popup-form-container {\n  background-color: white;\n  display: flex;\n}\n.detail-container {\n  display: grid;\n  width: 100vw;\n}\n\n.detail-mini-images {\n  width: 90vw;\n  margin: auto;\n  display: flex;\n  justify-content: center;\n  align-items: bottom;\n}\n.detail-description {\n  display: grid;\n  grid-template-rows: 5em 2em 2em 1fr 3em;\n  padding: 2em;\n  height: 40vh;\n}\n.detail-image {\n  width: 90vw;\n  height: 60vh;\n  margin: auto;\n  display: flex;\n  justify-content: center;\n}\n\n@media (max-width: 968px) {\n}\n\n/* CSS applies to 968px and above */\n@media screen and (min-width: 960px) {\n  .one-item-text > h1 {\n    font-size: 25px;\n  }\n  .one-item {\n    height: 430px;\n    width: 230px;\n  }\n  /* navigation */\n  .toggle-nav {\n    display: block;\n  }\n  .hideBurger {\n    display: none;\n  }\n  #navItems {\n    width: 100%;\n  }\n  .nav {\n    display: flex;\n    align-items: center;\n    height: 4em;\n    background-color: lightgray;\n  }\n  .nav ul {\n    display: flex;\n    flex-direction: row;\n    list-style-type: none;\n    text-transform: uppercase;\n    justify-content: space-between;\n  }\n\n  .nav ul li {\n    margin: 0 1em 0 1em;\n  }\n  .navRight {\n    display: flex;\n  }\n  .navLeft {\n    display: flex;\n  }\n  /* end navigation */\n\n  /* dropdown */\n  .dropdown-container {\n    position: relative;\n  }\n\n  .dropdown-content {\n    display: none;\n    position: absolute;\n    right: 0;\n    min-width: max-content;\n    box-shadow: rgba(128, 128, 128, 0.479) 4px 4px 16px;\n    background-color: white;\n    padding: 1em;\n    z-index: 99;\n  }\n  .dropdown-container:hover .dropdown-content {\n    display: block;\n  }\n  .dropdown-button:hover {\n    color: purple;\n    cursor: pointer;\n  }\n  /* end of dropdown */\n  .detail-container {\n    grid-template-columns: 1fr 10% 30%;\n    width: 90vw;\n    margin: 2em;\n  }\n  .detail-description {\n    width: 90%;\n    height: 100%;\n    padding: 0;\n    margin: 1em;\n  }\n  .detail-mini-images {\n    width: 90%;\n    height: 80vh;\n    display: block;\n    padding: auto;\n  }\n  .detail-image {\n    justify-content: center;\n    display: flex;\n    align-items: center;\n    margin: auto;\n    width: 100%;\n    height: 80vh;\n  }\n}\n", ""]);
 
 
 
@@ -41680,20 +41680,24 @@ const SliderContainer = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"
   position: relative;
   width: 100vw;
   overflow: hidden;
+  @media screen and (min-width: 960px) {
+    width: 100%;
+    height: 80vh;
+  }
 `;
 const ImgDiv = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
   display: flex;
   transition: ease-in-out 0.25s;
   width: 500%;
-  height: 100%;
+  height: 90%;
   background-color: grey;
   position: absolute;
-  left: ${props => props.position + '%'};
+  left: ${props => props.position / 5 * 500 + '%'};
   top: 0;
   z-index: 1;
   img {
     width: 20%;
-    height: 100%;
+    height: 90%;
     object-fit: cover;
     overflow: hidden;
   }
@@ -41719,17 +41723,33 @@ const RightArrow = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["defaul
   left: 60%;
   justify-content: flex-end;
 `;
+const Img = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].img`
+  height: 10px;
+  width: 10px;
+  object-fit: cover;
+  overflow: hidden;
+  margin: 10px;
+  position:absolute;
+  bottom:0;
+  border-radius:1em;
+  border:${props => props.border};
+  &:hover {
+    cursor: pointer;
+  }
+  @media screen and (min-width: 960px) {
+    height: 100%
+    width: auto;
+  }
+`;
 
 class ImageSlider extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   constructor(props) {
     super(props);
 
-    _defineProperty(this, "componentDidMount", () => {
-      console.log('hovered');
-
-      if (this.props.mainImage) {
+    _defineProperty(this, "componentDidUpdate", prevProps => {
+      if (prevProps.mainImage !== this.props.mainImage) {
         this.setState({
-          position: this.props.mainImage / 5
+          position: this.state.position
         });
       }
     });
@@ -41746,26 +41766,22 @@ class ImageSlider extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     });
 
     _defineProperty(this, "shiftLeft", () => {
-      console.log('left');
-
       if (this.state.position === 0) {
         return;
       }
 
       this.setState({
-        position: this.state.position + 100
+        position: this.state.position - 1
       });
     });
 
     _defineProperty(this, "shiftRight", () => {
-      console.log('right');
-
-      if (this.state.position === -400) {
+      if (this.state.position === 4) {
         return;
       }
 
       this.setState({
-        position: this.state.position - 100
+        position: this.state.position + 1
       });
     });
 
@@ -41795,7 +41811,16 @@ class ImageSlider extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       onClick: this.shiftRight
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
       src: "../uploads/right-arrow.png"
-    })));
+    })), this.props.imagesArray.map((img, index) => {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Img, {
+        onMouseEnter: () => this.setState({
+          position: index
+        }),
+        key: index,
+        src: '..' + img,
+        border: index === this.state.position ? 'solid 5px white' : 'none'
+      });
+    }));
   }
 
 }
@@ -41864,17 +41889,19 @@ const Button = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].button`
   }
 `;
 const Img = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].img`
-  height: auto;
-  width: 100%;
+  height: 10px;
+  width: 10px;
   object-fit: cover;
   overflow: hidden;
-  margin: 1px;
+  margin: 10px;
   right: 0;
+  border-radius:1em;
+  border:${props => props.border};
   &:hover {
     cursor: pointer;
   }
   @media screen and (min-width: 960px) {
-    height: 10%
+    height: 100%
     width: auto;
   }
 `;
@@ -41910,15 +41937,7 @@ class ItemDetail extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         mainImage: this.state.mainImage
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "detail-mini-images"
-      }, this.state.images.map((img, index) => {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Img, {
-          onMouseEnter: () => this.setState({
-            mainImage: index
-          }),
-          key: index,
-          src: '..' + img
-        });
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "detail-description"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ItemName, null, this.state.item.item), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Price, null, this.state.item.price), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(H2, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Product Details")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Description, null, this.state.item.description), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Button, null, "Add to Cart")));
     });

@@ -44,17 +44,19 @@ const Button = styled.button`
   }
 `;
 const Img = styled.img`
-  height: auto;
-  width: 100%;
+  height: 10px;
+  width: 10px;
   object-fit: cover;
   overflow: hidden;
-  margin: 1px;
+  margin: 10px;
   right: 0;
+  border-radius:1em;
+  border:${props => props.border};
   &:hover {
     cursor: pointer;
   }
   @media screen and (min-width: 960px) {
-    height: 10%
+    height: 100%
     width: auto;
   }
 `;
@@ -90,15 +92,18 @@ class ItemDetail extends Component {
           />
         </div>
         <div className="detail-mini-images">
-          {this.state.images.map((img, index) => {
+          {/* {this.state.images.map((img, index) => {
             return (
               <Img
                 onMouseEnter={() => this.setState({ mainImage: index })}
                 key={index}
                 src={'..' + img}
+                border={
+                  index === this.state.mainImage ? 'solid 5px white' : 'none'
+                }
               />
             );
-          })}
+          })} */}
         </div>
         <div className="detail-description">
           <ItemName>{this.state.item.item}</ItemName>
