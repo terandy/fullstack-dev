@@ -41692,13 +41692,13 @@ const SliderContainer = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"
 const ImgDiv = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
   display: flex;
   transition: ease-in-out 0.25s;
-  width: 500%;
+  width: ${props => props.length * 100 + '%'};
   height: 100%;
   position: absolute;
-  left: ${props => -(props.position / 5) * 500 + '%'};
+  left: ${props => -(props.position / props.length) * props.length * 100 + '%'};
   top: 0;
   img {
-    width: 20%;
+    width: ${props => 100 / props.length + '%'};
     height: 90%;
     object-fit: cover;
     overflow: hidden;
@@ -41788,7 +41788,7 @@ class ImageSlider extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     });
 
     _defineProperty(this, "shiftRight", () => {
-      if (this.state.position === 4) {
+      if (this.state.position === this.props.imagesArray.length - 1) {
         return;
       }
 
@@ -41812,7 +41812,8 @@ class ImageSlider extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
       src: "../uploads/left-arrow.png"
     })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ImgDiv, {
-      position: this.state.position
+      position: this.state.position,
+      length: this.props.imagesArray.length
     }, this.props.imagesArray.map((imagePath, index) => {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         key: index,
