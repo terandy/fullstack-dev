@@ -41404,10 +41404,85 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
 
+ //---styles
+
+const Form = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].form`
+  display: grid;
+  max-width: 500px;
+  min-width: 300px;
+  font-family: 'Quicksand', sans-serif;
+  margin: auto;
+  box-shadow: 5px 5px 10px grey;
+  padding: 3em;
+`;
+const DetailsContent = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div`
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1.5em 5em 1em;
+  grid-column-gap: 0.5em;
+  grid-row-gap: 1.5em;
+  label {
+    display: flex;
+    justify-content: flex-end;
+    :after {
+      content: ':';
+    }
+  }
+`;
+const Title = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].h2`
+  font-size: 1.25em;
+  margin: 3.5em 0 2em 0;
+  div {
+    font-size: 50%;
+  }
+`;
+const Images = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div`
+  display: grid;
+  justify-items: center;
+`;
+const Tags = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div`
+  display: grid;
+  justify-items: center;
+  div input {
+    height: 2em;
+    border: none;
+    border-bottom: 1px lightgrey solid;
+    margin-right: 2em;
+    &:focus {
+      outline: 0;
+      border-bottom: black 1px solid;
+    }
+  }
+  div button {
+    height: 2em;
+    font-family: 'Quicksand', sans-serif;
+  }
+`;
+const SubmitButton = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].input`
+  background-color: purple;
+  width: 50%;
+  border-radius: 2em;
+  font-size: 1em;
+  color: white;
+  margin: 4em 25% 2em 25%;
+  padding: 0.75em;
+  border: none;
+`;
+const Button = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].button`
+  background-color: teal;
+  border-radius: 2em;
+  color: white;
+  border: none;
+  font-size: em;
+  &:focus {
+    outline: none;
+  }
+`; //------Component------
 
 class AddItem extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   constructor(props) {
@@ -41437,9 +41512,23 @@ class AddItem extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       });
     });
 
+    _defineProperty(this, "tagChangeHandler", e => {
+      this.setState({
+        tag: e.target.value
+      });
+    });
+
     _defineProperty(this, "fileChangeHandler", e => {
       this.setState({
         files: [...e.target.files]
+      });
+    });
+
+    _defineProperty(this, "addTagSubmit", e => {
+      e.preventDefault();
+      this.setState({
+        tags: this.state.tags.concat(this.state.tag),
+        tag: ''
       });
     });
 
@@ -41447,45 +41536,57 @@ class AddItem extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       evt.preventDefault();
       let data = new FormData();
       this.state.files.forEach(file => data.append('images', file));
-      console.log('data', data);
-      console.log('state', this.state);
       data.append('item', this.state.item);
       data.append('description', this.state.description);
       data.append('price', this.state.price);
       data.append('seller', this.state.seller);
+      data.append('tag', this.state.tags);
       fetch('/add-item', {
         method: 'POST',
         body: data
       });
+      this.setState({
+        files: [],
+        description: '',
+        seller: this.props.seller,
+        item: '',
+        price: '',
+        tag: '',
+        tags: ['']
+      });
     });
 
     _defineProperty(this, "render", () => {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Form, {
         onSubmit: this.submitHandler
-      }, "images ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "file",
-        multiple: true,
-        onChange: this.fileChangeHandler
-      }), "seller", ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "text",
-        value: this.state.seller,
-        onChange: this.usernameChangeHandler
-      }), "item", ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Title, null, "Step 1: Describe Item", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Include here all information related to your item.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(DetailsContent, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Title"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
         value: this.state.item,
         onChange: this.itemChangeHandler
-      }), "description", ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Description"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
         value: this.state.description,
         onChange: this.descChangeHandler
-      }), "price", ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Price"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
         value: this.state.price,
         onChange: this.priceChangeHandler
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Title, null, "Step 2: Upload Images", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Upload multiple images at once!")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Images, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "file",
+        multiple: true,
+        onChange: this.fileChangeHandler
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Title, null, "Step 3: Include Tags", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Tags help users find your item.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Tags, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "text",
+        value: this.state.tag,
+        onChange: this.tagChangeHandler
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Button, {
+        onClick: this.addTagSubmit
+      }, "Add Tag "), this.state.tags.map((tag, index) => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        key: index
+      }, tag)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SubmitButton, {
         type: "submit",
-        value: "add item"
-      }));
+        value: "Add Item"
+      })));
     });
 
     this.state = {
@@ -41493,7 +41594,9 @@ class AddItem extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       description: '',
       seller: this.props.seller,
       item: '',
-      price: ''
+      price: '',
+      tag: '',
+      tags: ['']
     };
   }
 
