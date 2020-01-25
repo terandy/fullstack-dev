@@ -72,6 +72,7 @@ class ItemDetail extends Component {
   }
 
   componentDidMount = async () => {
+    window.scrollTo(0, 0);
     let data = new FormData();
     data.append('itemId', this.props.itemId);
     let responseBody = await fetch('/one-item', { method: 'POST', body: data });
@@ -90,20 +91,6 @@ class ItemDetail extends Component {
             imagesArray={this.state.images}
             mainImage={this.state.mainImage}
           />
-        </div>
-        <div className="detail-mini-images">
-          {/* {this.state.images.map((img, index) => {
-            return (
-              <Img
-                onMouseEnter={() => this.setState({ mainImage: index })}
-                key={index}
-                src={'..' + img}
-                border={
-                  index === this.state.mainImage ? 'solid 5px white' : 'none'
-                }
-              />
-            );
-          })} */}
         </div>
         <div className="detail-description">
           <ItemName>{this.state.item.item}</ItemName>

@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import { Route, BrowserRouter, Link } from 'react-router-dom';
-import { connect } from 'react-redux';
 import Navigation from './Navigation.jsx';
 import MainPage from './MainPage.jsx';
-import Login from './Login.jsx';
 import LoginPage from './LoginPage.jsx';
 import RegisterPage from './RegisterPage.jsx';
 import AddItem from './AddItem.jsx';
@@ -43,7 +41,7 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div>
-          <Navigation/>
+          <Navigation />
           <Route exact={true} path="/" render={this.renderHomePage}></Route>
           <Route exact={true} path="/men" render={this.renderMenItems}></Route>
           <Route

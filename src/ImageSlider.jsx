@@ -13,18 +13,17 @@ const SliderContainer = styled.div`
 const ImgDiv = styled.div`
   display: flex;
   transition: ease-in-out 0.25s;
-  width: 500%;
-  height: 90%;
-  background-color: grey;
+  width: ${props => props.length * 100 + '%'};
+  height: 100%;
   position: absolute;
-  left: ${props => (props.position / 5) * 500 + '%'};
+  left: ${props => -(props.position / props.length) * props.length * 100 + '%'};
   top: 0;
-  z-index: 1;
   img {
-    width: 20%;
+    width: ${props => 100 / props.length + '%'};
     height: 90%;
     object-fit: cover;
     overflow: hidden;
+    z-index: 1;
   }
 `;
 const LeftArrow = styled.div`
@@ -48,16 +47,17 @@ const RightArrow = styled(LeftArrow)`
   left: 60%;
   justify-content: flex-end;
 `;
-const Img = styled.img`
+const ImgBall = styled.div`
+position:relative;
   height: 10px;
   width: 10px;
-  object-fit: cover;
-  overflow: hidden;
   margin: 10px;
   right: 0;
   bottom:0;
   border-radius:1em;
   border:${props => props.border};
+  z-index:3 ;
+  background-color:${props => props.bc};
   &:hover {
     cursor: pointer;
   }
@@ -65,6 +65,13 @@ const Img = styled.img`
     height: 100%
     width: auto;
   }
+`;
+const ImgBalls = styled.div`
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  justify-content: center;
+  display: flex;
 `;
 class ImageSlider extends Component {
   constructor(props) {
@@ -94,7 +101,7 @@ class ImageSlider extends Component {
   };
 
   shiftRight = () => {
-    if (this.state.position === 4) {
+    if (this.state.position === this.props.imagesArray.length - 1) {
       return;
     }
     this.setState({ position: this.state.position + 1 });
@@ -106,7 +113,10 @@ class ImageSlider extends Component {
         <LeftArrow toggle={this.state.toggle} onClick={this.shiftLeft}>
           <img src="../uploads/left-arrow.png" />
         </LeftArrow>
-        <ImgDiv position={this.state.position}>
+        <ImgDiv
+          position={this.state.position}
+          length={this.props.imagesArray.length}
+        >
           {this.props.imagesArray.map((imagePath, index) => {
             return <img key={index} src={'..' + imagePath} />;
           })}
@@ -114,18 +124,20 @@ class ImageSlider extends Component {
         <RightArrow toggle={this.state.toggle} onClick={this.shiftRight}>
           <img src="../uploads/right-arrow.png" />
         </RightArrow>
-        {this.props.imagesArray.map((img, index) => {
-          return (
-            <Img
-              onMouseEnter={() => this.setState({ position: index })}
-              key={index}
-              src={'..' + img}
-              border={
-                index === this.state.position ? 'solid 5px white' : 'none'
-              }
-            />
-          );
-        })}
+        <ImgBalls>
+          {this.props.imagesArray.map((img, index) => {
+            return (
+              <ImgBall
+                onMouseEnter={() => this.setState({ position: index })}
+                key={index}
+                border={
+                  index === this.state.position ? 'solid 5px white' : 'none'
+                }
+                bc={index === this.state.position ? 'teal' : 'grey'}
+              />
+            );
+          })}
+        </ImgBalls>
       </SliderContainer>
     );
   }
