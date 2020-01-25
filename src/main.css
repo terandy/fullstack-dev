@@ -38,12 +38,12 @@ a {
   color: black;
   padding: 0;
   margin: 10px;
-  height: 460px;
-  width: 260px;
+  height: 250px;
+  width: 140px;
   z-index: 1;
 }
 .one-item-image {
-  height: 85%;
+  height: 80%;
   width: 100%;
   background: lightgrey;
 }
@@ -63,7 +63,7 @@ a {
   padding: 0;
   margin: 0;
   padding-bottom: 5px;
-  font-size: 25px;
+  font-size: 20px;
   border-bottom: 2px black solid;
   width: 20%;
 }
@@ -84,27 +84,42 @@ a {
   background-color: white;
   display: flex;
 }
-
 .detail-container {
   display: grid;
-  grid-template-columns: 20% 1fr 30%;
+  grid-template-rows: 1 1;
+  width: 100vw;
 }
 
 .detail-left {
-  border: solid red 1px;
+  display: none;
+  position: relative;
+  align-items: right;
+  height: 95vh;
 }
 .detail-right {
-  border: solid red 1px;
+  display: grid;
+  grid-template-rows: 5em 2em 2em 1fr 3em;
+  padding: 2em;
+  height: 40vh;
 }
 .detail-image {
-  border: solid red 1px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
 }
 
 @media (max-width: 968px) {
 }
 
 /* CSS applies to 968px and above */
-@media screen and (min-width: 968px) {
+@media screen and (min-width: 960px) {
+  .one-item-text > h1 {
+    font-size: 25px;
+  }
+  .one-item {
+    height: 430px;
+    width: 230px;
+  }
   /* navigation */
   .toggle-nav {
     display: block;
@@ -163,4 +178,25 @@ a {
     cursor: pointer;
   }
   /* end of dropdown */
+  .detail-container {
+    grid-template-columns: 20% 1fr 30%;
+    grid-template-rows: none;
+  }
+
+  .detail-left {
+    display: block;
+  }
+  .detail-right {
+    width: 90%;
+    height: 90%;
+    padding: 0;
+    margin: 1em;
+  }
+  .detail-image {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+  }
 }

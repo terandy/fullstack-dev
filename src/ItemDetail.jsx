@@ -2,17 +2,29 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 const ItemName = styled.h1`
-  color: pink;
+  text-transform: Capitalize;
+  margin: 0;
+`;
+const H2 = styled.div`
+  position: relative;
+  border-bottom: solid 2px black;
+  margin: 0;
+  h2 {
+    text-transform: Capitalize;
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    font-size: 1em;
+  }
 `;
 const MainImg = styled.img`
-  height: 300px;
+  width: 90%;
 `;
 const Description = styled.div`
-  border: blue 1px solid;
+  padding: 1em;
   width: 50%;
 `;
 const Price = styled.div`
-  color: red;
   &:before {
     content: '$';
   }
@@ -20,13 +32,20 @@ const Price = styled.div`
 const Button = styled.button`
   color: white;
   background-color: black;
-  border: white 1px solid;
   width: 100%;
   padding: 1em;
+  &:hover {
+    background-color: darkgrey;
+    cursor: pointer;
+  }
 `;
 const Img = styled.img`
-  height: 100px;
+  height: 40px;
+  object-fit: cover;
+  overflow: hidden;
   margin: 1px;
+  right: 0;
+  width: 40px;
   &:hover {
     cursor: pointer;
   }
@@ -73,7 +92,9 @@ class ItemDetail extends Component {
         <div className="detail-right">
           <ItemName>{this.state.item.item}</ItemName>
           <Price>{this.state.item.price}</Price>
-          <h2>Product Details</h2>
+          <H2>
+            <h2>Product Details</h2>
+          </H2>
           <Description>{this.state.item.description}</Description>
           <Button>Add to Cart</Button>
         </div>

@@ -41677,17 +41677,29 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 const ItemName = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].h1`
-  color: pink;
+  text-transform: Capitalize;
+  margin: 0;
+`;
+const H2 = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
+  position: relative;
+  border-bottom: solid 2px black;
+  margin: 0;
+  h2 {
+    text-transform: Capitalize;
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    font-size: 1em;
+  }
 `;
 const MainImg = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].img`
-  height: 300px;
+  width: 90%;
 `;
 const Description = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
-  border: blue 1px solid;
+  padding: 1em;
   width: 50%;
 `;
 const Price = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
-  color: red;
   &:before {
     content: '$';
   }
@@ -41695,13 +41707,20 @@ const Price = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
 const Button = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].button`
   color: white;
   background-color: black;
-  border: white 1px solid;
   width: 100%;
   padding: 1em;
+  &:hover {
+    background-color: darkgrey;
+    cursor: pointer;
+  }
 `;
 const Img = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].img`
-  height: 100px;
+  height: 40px;
+  object-fit: cover;
+  overflow: hidden;
   margin: 1px;
+  right: 0;
+  width: 40px;
   &:hover {
     cursor: pointer;
   }
@@ -41748,7 +41767,7 @@ class ItemDetail extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         src: this.state.images[this.state.mainImage]
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "detail-right"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ItemName, null, this.state.item.item), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Price, null, this.state.item.price), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Product Details"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Description, null, this.state.item.description), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Button, null, "Add to Cart")));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ItemName, null, this.state.item.item), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Price, null, this.state.item.price), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(H2, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Product Details")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Description, null, this.state.item.description), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Button, null, "Add to Cart")));
     });
 
     this.state = {
