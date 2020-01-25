@@ -5,20 +5,24 @@ const SliderContainer = styled.div`
   position: relative;
   width: 100vw;
   overflow: hidden;
+  @media screen and (min-width: 960px) {
+    width: 100%;
+    height: 80vh;
+  }
 `;
 const ImgDiv = styled.div`
   display: flex;
   transition: ease-in-out 0.25s;
   width: 500%;
-  height: 100%;
+  height: 90%;
   background-color: grey;
   position: absolute;
-  left: ${props => props.position + '%'};
+  left: ${props => (props.position / 5) * 500 + '%'};
   top: 0;
   z-index: 1;
   img {
     width: 20%;
-    height: 100%;
+    height: 90%;
     object-fit: cover;
     overflow: hidden;
   }
@@ -44,7 +48,24 @@ const RightArrow = styled(LeftArrow)`
   left: 60%;
   justify-content: flex-end;
 `;
-
+const Img = styled.img`
+  height: 10px;
+  width: 10px;
+  object-fit: cover;
+  overflow: hidden;
+  margin: 10px;
+  right: 0;
+  bottom:0;
+  border-radius:1em;
+  border:${props => props.border};
+  &:hover {
+    cursor: pointer;
+  }
+  @media screen and (min-width: 960px) {
+    height: 100%
+    width: auto;
+  }
+`;
 class ImageSlider extends Component {
   constructor(props) {
     super(props);
@@ -53,10 +74,9 @@ class ImageSlider extends Component {
       position: 0
     };
   }
-  componentDidMount = () => {
-    console.log('hovered');
-    if (this.props.mainImage) {
-      this.setState({ position: this.props.mainImage / 5 });
+  componentDidUpdate = prevProps => {
+    if (prevProps.mainImage !== this.props.mainImage) {
+      this.setState({ position: this.state.position });
     }
   };
   displayArrows = () => {
@@ -67,19 +87,17 @@ class ImageSlider extends Component {
   };
 
   shiftLeft = () => {
-    console.log('left');
     if (this.state.position === 0) {
       return;
     }
-    this.setState({ position: this.state.position + 100 });
+    this.setState({ position: this.state.position - 1 });
   };
 
   shiftRight = () => {
-    console.log('right');
-    if (this.state.position === -400) {
+    if (this.state.position === 4) {
       return;
     }
-    this.setState({ position: this.state.position - 100 });
+    this.setState({ position: this.state.position + 1 });
   };
 
   render() {
@@ -96,6 +114,18 @@ class ImageSlider extends Component {
         <RightArrow toggle={this.state.toggle} onClick={this.shiftRight}>
           <img src="../uploads/right-arrow.png" />
         </RightArrow>
+        {this.props.imagesArray.map((img, index) => {
+          return (
+            <Img
+              onMouseEnter={() => this.setState({ position: index })}
+              key={index}
+              src={'..' + img}
+              border={
+                index === this.state.position ? 'solid 5px white' : 'none'
+              }
+            />
+          );
+        })}
       </SliderContainer>
     );
   }

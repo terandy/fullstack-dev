@@ -6,6 +6,22 @@ import { connect } from 'react-redux';
 import SearchBar from './SearchBar.jsx'
 import './dist/hamburgers.css';
 import Dropdown from './Dropdown.jsx';
+import styled from 'styled-components';
+
+var scrollPos = 0
+
+let NavDiv = styled.div`
+position: fixed;
+width:100%;
+z-index:50;
+top:${props => props.top};
+
+transition-duration: .5s;
+    -webkit-transition-duration: .5s;
+    -moz-transition-duration: .5s;
+    -o-transition-duration: .5s;
+    transition-timing-function: ease-in-out;
+`
 
 class Navigation extends Component {
   constructor() {
@@ -13,14 +29,20 @@ class Navigation extends Component {
     this.state = {
       checkToggle: false,
       hamburgerClass: 'hamburger hamburger--squeeze',
-      toggleNav: 'toggle-nav mobileNavList-off'
+      toggleNav: 'toggle-nav mobileNavList-off',
+      top: "0",
     };
+  }
+  componentDidMount = () => {
+    window.addEventListener('resize', this.setClass);
+    window.addEventListener('load', this.load);
+    window.addEventListener('scroll', this.navScroll)
   }
   handleToggle = () => {
     if (this.state.checkToggle === false) {
       this.setState({
         hamburgerClass: 'hamburger hamburger--squeeze is-active',
-        toggleNav: 'toggle-nav-on mobileNavList'
+        toggleNav: 'toggle-nav-on mobileNavList',
       });
     }
     if (this.state.checkToggle === true) {
@@ -51,12 +73,18 @@ class Navigation extends Component {
     }
   }
 
-  render = () => {
-    window.addEventListener('resize', this.setClass);
-    window.addEventListener('load', this.load);
+  navScroll = () => {
+    if ((document.body.getBoundingClientRect()).top > scrollPos || this.state.checkToggle === true) { // scrolling up show nav
+      this.setState({top: "0%"})
+    }
+     else this.setState({top: "-9%"}) //scrolling down hide nav
+	scrollPos = (document.body.getBoundingClientRect()).top;
+  }
 
+  render = () => {
+    var scrollPos = 0
     return (
-      <div className="nav">
+      <NavDiv top={this.state.top} className="nav">
         <div className="hideMobile mobileNav">
           <h1><Link to="/">AliBay</Link></h1>
           <button
@@ -98,10 +126,11 @@ class Navigation extends Component {
             </div>
           </ul>
         </div>
-      </div>
+      </NavDiv>
     );
   };
 }
+
 let mapStateToProps = state => {
   return { user: state.username };
 };
