@@ -72,6 +72,7 @@ class ItemDetail extends Component {
   }
 
   componentDidMount = async () => {
+    window.scrollTo(0, 0);
     let data = new FormData();
     data.append('itemId', this.props.itemId);
     let responseBody = await fetch('/one-item', { method: 'POST', body: data });

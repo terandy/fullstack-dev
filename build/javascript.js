@@ -41521,17 +41521,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _Navigation_jsx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Navigation.jsx */ "./src/Navigation.jsx");
-/* harmony import */ var _MainPage_jsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./MainPage.jsx */ "./src/MainPage.jsx");
-/* harmony import */ var _Login_jsx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Login.jsx */ "./src/Login.jsx");
-/* harmony import */ var _LoginPage_jsx__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./LoginPage.jsx */ "./src/LoginPage.jsx");
-/* harmony import */ var _RegisterPage_jsx__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./RegisterPage.jsx */ "./src/RegisterPage.jsx");
-/* harmony import */ var _AddItem_jsx__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./AddItem.jsx */ "./src/AddItem.jsx");
-/* harmony import */ var _ItemDetail_jsx__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./ItemDetail.jsx */ "./src/ItemDetail.jsx");
+/* harmony import */ var _Navigation_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Navigation.jsx */ "./src/Navigation.jsx");
+/* harmony import */ var _MainPage_jsx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./MainPage.jsx */ "./src/MainPage.jsx");
+/* harmony import */ var _LoginPage_jsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./LoginPage.jsx */ "./src/LoginPage.jsx");
+/* harmony import */ var _RegisterPage_jsx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./RegisterPage.jsx */ "./src/RegisterPage.jsx");
+/* harmony import */ var _AddItem_jsx__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./AddItem.jsx */ "./src/AddItem.jsx");
+/* harmony import */ var _ItemDetail_jsx__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./ItemDetail.jsx */ "./src/ItemDetail.jsx");
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-
 
 
 
@@ -41547,15 +41543,15 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     super(...args);
 
     _defineProperty(this, "renderHomePage", routerData => {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_MainPage_jsx__WEBPACK_IMPORTED_MODULE_4__["default"], null));
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_MainPage_jsx__WEBPACK_IMPORTED_MODULE_3__["default"], null));
     });
 
     _defineProperty(this, "renderLoginPage", () => {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_LoginPage_jsx__WEBPACK_IMPORTED_MODULE_6__["default"], null);
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_LoginPage_jsx__WEBPACK_IMPORTED_MODULE_4__["default"], null);
     });
 
     _defineProperty(this, "renderSignupPage", () => {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_RegisterPage_jsx__WEBPACK_IMPORTED_MODULE_7__["default"], null);
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_RegisterPage_jsx__WEBPACK_IMPORTED_MODULE_5__["default"], null);
     });
 
     _defineProperty(this, "renderSearchPage", renderdata => {
@@ -41565,13 +41561,13 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     });
 
     _defineProperty(this, "renderItemDetail", renderdata => {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ItemDetail_jsx__WEBPACK_IMPORTED_MODULE_9__["default"], {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ItemDetail_jsx__WEBPACK_IMPORTED_MODULE_7__["default"], {
         itemId: renderdata.match.params.itemId
       });
     });
 
     _defineProperty(this, "renderAddItem", () => {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AddItem_jsx__WEBPACK_IMPORTED_MODULE_8__["default"], null);
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AddItem_jsx__WEBPACK_IMPORTED_MODULE_6__["default"], null);
     });
 
     _defineProperty(this, "renderMenItems", () => {
@@ -41583,7 +41579,7 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     });
 
     _defineProperty(this, "render", () => {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["BrowserRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Navigation_jsx__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["BrowserRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Navigation_jsx__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         exact: true,
         path: "/",
         render: this.renderHomePage
@@ -41923,6 +41919,7 @@ class ItemDetail extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     super(props);
 
     _defineProperty(this, "componentDidMount", async () => {
+      window.scrollTo(0, 0);
       let data = new FormData();
       data.append('itemId', this.props.itemId);
       let responseBody = await fetch('/one-item', {
@@ -41996,7 +41993,7 @@ class Items extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       let responseText = await responseBody.text();
       let itemsArray = JSON.parse(responseText);
       this.props.dispatch({
-        type: "set-items",
+        type: 'set-items',
         content: itemsArray
       });
       this.setState({
@@ -42023,7 +42020,7 @@ class Items extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     });
 
     this.state = {
-      items: this.props.items
+      items: []
     };
   }
 
