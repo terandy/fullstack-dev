@@ -91,20 +91,6 @@ class ItemDetail extends Component {
             mainImage={this.state.mainImage}
           />
         </div>
-        <div className="detail-mini-images">
-          {/* {this.state.images.map((img, index) => {
-            return (
-              <Img
-                onMouseEnter={() => this.setState({ mainImage: index })}
-                key={index}
-                src={'..' + img}
-                border={
-                  index === this.state.mainImage ? 'solid 5px white' : 'none'
-                }
-              />
-            );
-          })} */}
-        </div>
         <div className="detail-description">
           <ItemName>{this.state.item.item}</ItemName>
           <Price>{this.state.item.price}</Price>

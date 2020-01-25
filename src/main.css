@@ -5,34 +5,34 @@ body {
 .toggle-nav-on {
   display: block;
   position: fixed;
-    width: 63%;
-    height: 100%;
-    right:0;
-    background-color: darkgrey;
-    padding-right:1em;
-    font-size:2em;
-    
-    transition-duration: .5s;
-    -webkit-transition-duration: .5s;
-    -moz-transition-duration: .5s;
-    -o-transition-duration: .5s;
-    transition-timing-function: ease-in-out;
+  width: 63%;
+  height: 100%;
+  right: 0;
+  background-color: darkgrey;
+  padding-right: 1em;
+  font-size: 2em;
+
+  transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
 }
 .toggle-nav {
   visibility: hidden;
   overflow: hidden;
-  right:-100%;
+  right: -100%;
   background-color: darkgrey;
-  padding-right:1em;
-  font-size:2em;
+  padding-right: 1em;
+  font-size: 2em;
   height: 100%;
   width: 63%;
-  position:fixed;
-      transition-duration: .25s;
-    -webkit-transition-duration: .25s;
-    -moz-transition-duration: .25s;
-    -o-transition-duration: .25s;
-    transition-timing-function: ease-in-out;
+  position: fixed;
+  transition-duration: 0.25s;
+  -webkit-transition-duration: 0.25s;
+  -moz-transition-duration: 0.25s;
+  -o-transition-duration: 0.25s;
+  transition-timing-function: ease-in-out;
 }
 
 .hideDesktop {
@@ -40,12 +40,12 @@ body {
 }
 
 .mobileNav {
-  display:flex;
+  display: flex;
   justify-content: space-between;
 }
 
 .mobileNav h1 {
-  margin-left:15px
+  margin-left: 15px;
 }
 
 a {
@@ -124,16 +124,10 @@ a {
 }
 .detail-container {
   display: grid;
+  grid-column-gap: 50px;
   width: 100vw;
 }
 
-.detail-mini-images {
-  width: 90vw;
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: bottom;
-}
 .detail-description {
   display: grid;
   grid-template-rows: 5em 2em 2em 1fr 3em;
@@ -142,7 +136,7 @@ a {
 }
 .detail-image {
   width: 90vw;
-  height: 60vh;
+  height: 70vh;
   margin: auto;
   display: flex;
   justify-content: center;
@@ -220,7 +214,7 @@ a {
   }
   /* end of dropdown */
   .detail-container {
-    grid-template-columns: 1fr 10% 30%;
+    grid-template-columns: 1fr 30%;
     width: 90vw;
     margin: 2em;
   }
@@ -229,12 +223,6 @@ a {
     height: 100%;
     padding: 0;
     margin: 1em;
-  }
-  .detail-mini-images {
-    width: 90%;
-    height: 80vh;
-    display: block;
-    padding: auto;
   }
   .detail-image {
     justify-content: center;

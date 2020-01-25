@@ -964,7 +964,7 @@ exports.push([module.i, "/*!\n * Hamburgers\n * @description Tasty CSS-animated 
 
 exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "body {\n  background-color: white;\n  margin: 0;\n}\n.toggle-nav-on {\n  display: block;\n  position: fixed;\n    width: 63%;\n    height: 100%;\n    right:0;\n    background-color: darkgrey;\n    padding-right:1em;\n    font-size:2em;\n    \n    transition-duration: .5s;\n    -webkit-transition-duration: .5s;\n    -moz-transition-duration: .5s;\n    -o-transition-duration: .5s;\n    transition-timing-function: ease-in-out;\n}\n.toggle-nav {\n  visibility: hidden;\n  overflow: hidden;\n  right:-100%;\n  background-color: darkgrey;\n  padding-right:1em;\n  font-size:2em;\n  height: 100%;\n  width: 63%;\n  position:fixed;\n      transition-duration: .25s;\n    -webkit-transition-duration: .25s;\n    -moz-transition-duration: .25s;\n    -o-transition-duration: .25s;\n    transition-timing-function: ease-in-out;\n}\n\n.hideDesktop {\n  display: none;\n}\n\n.mobileNav {\n  display:flex;\n  justify-content: space-between;\n}\n\n.mobileNav h1 {\n  margin-left:15px\n}\n\na {\n  color: black;\n  text-decoration: none;\n}\n\n.nav ul {\n  list-style-type: none;\n  text-transform: uppercase;\n  padding: 0px;\n  line-height: 2em;\n  display: flex;\n  flex-direction: column;\n  text-align: right;\n  font-family: sans-serif;\n}\n\n/* all items container */\n.all-items-display {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n  width: 100vp;\n}\n/* individual item */\n.one-item {\n  color: black;\n  padding: 0;\n  margin: 10px;\n  height: 250px;\n  width: 140px;\n  z-index: 1;\n}\n.one-item-image {\n  height: 80%;\n  width: 100%;\n  background: lightgrey;\n}\n.one-item-image > img {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  overflow: hidden;\n}\n.one-item-text {\n  padding: 0;\n  margin: 0;\n  margin-top: 10px;\n  font-family: 'Helvetica';\n}\n.one-item-text > h1 {\n  padding: 0;\n  margin: 0;\n  padding-bottom: 5px;\n  font-size: 20px;\n  border-bottom: 2px black solid;\n  width: 20%;\n}\n.one-item-text > p {\n  padding: 0;\n  margin-top: 5px;\n  font-size: 80%;\n  font-style: lighter;\n}\n\n.popup {\n  z-index: 1000;\n  width: 400px;\n  box-shadow: rgba(128, 128, 128, 0.479) 4px 4px 4px 4px 16px;\n  text-transform: none;\n}\n.popup-form-container {\n  background-color: white;\n  display: flex;\n}\n.detail-container {\n  display: grid;\n  width: 100vw;\n}\n\n.detail-mini-images {\n  width: 90vw;\n  margin: auto;\n  display: flex;\n  justify-content: center;\n  align-items: bottom;\n}\n.detail-description {\n  display: grid;\n  grid-template-rows: 5em 2em 2em 1fr 3em;\n  padding: 2em;\n  height: 40vh;\n}\n.detail-image {\n  width: 90vw;\n  height: 60vh;\n  margin: auto;\n  display: flex;\n  justify-content: center;\n}\n\n@media (max-width: 968px) {\n}\n\n/* CSS applies to 968px and above */\n@media screen and (min-width: 968px) {\n  .one-item-text > h1 {\n    font-size: 25px;\n  }\n  .one-item {\n    height: 430px;\n    width: 230px;\n  }\n  /* navigation */\n  .toggle-nav {\n    display: block;\n  }\n  .hideMobile {\n    display: none;\n  }\n  #navItems {\n    width: 100%;\n  }\n  .nav {\n    display: flex;\n    height: 4em;\n    border-bottom: 1px solid black;\n    margin-bottom: 0.5em;\n    box-shadow: 0px 0px 2px grey;\n  }\n  .nav ul {\n    display: flex;\n    flex-direction: row;\n    list-style-type: none;\n    text-transform: uppercase;\n    justify-content: space-between;\n  }\n\n  .nav ul li {\n    margin: 0 1em 0 1em;\n  }\n  .navRight {\n    display: flex;\n  }\n  .navLeft {\n    display: flex;\n  }\n  /* end navigation */\n\n  /* dropdown */\n  .dropdown-container {\n    position: relative;\n  }\n\n  .dropdown-content {\n    display: none;\n    position: absolute;\n    right: 0;\n    min-width: max-content;\n    box-shadow: rgba(128, 128, 128, 0.479) 4px 4px 16px;\n    background-color: white;\n    padding: 1em;\n    z-index: 99;\n  }\n  .dropdown-container:hover .dropdown-content {\n    display: block;\n  }\n  .dropdown-button:hover {\n    color: purple;\n    cursor: pointer;\n  }\n  /* end of dropdown */\n  .detail-container {\n    grid-template-columns: 1fr 10% 30%;\n    width: 90vw;\n    margin: 2em;\n  }\n  .detail-description {\n    width: 90%;\n    height: 100%;\n    padding: 0;\n    margin: 1em;\n  }\n  .detail-mini-images {\n    width: 90%;\n    height: 80vh;\n    display: block;\n    padding: auto;\n  }\n  .detail-image {\n    justify-content: center;\n    display: flex;\n    align-items: center;\n    margin: auto;\n    width: 100%;\n    height: 80vh;\n  }\n}\n", ""]);
+exports.push([module.i, "body {\n  background-color: white;\n  margin: 0;\n}\n.toggle-nav-on {\n  display: block;\n  position: fixed;\n  width: 63%;\n  height: 100%;\n  right: 0;\n  background-color: darkgrey;\n  padding-right: 1em;\n  font-size: 2em;\n\n  transition-duration: 0.5s;\n  -webkit-transition-duration: 0.5s;\n  -moz-transition-duration: 0.5s;\n  -o-transition-duration: 0.5s;\n  transition-timing-function: ease-in-out;\n}\n.toggle-nav {\n  visibility: hidden;\n  overflow: hidden;\n  right: -100%;\n  background-color: darkgrey;\n  padding-right: 1em;\n  font-size: 2em;\n  height: 100%;\n  width: 63%;\n  position: fixed;\n  transition-duration: 0.25s;\n  -webkit-transition-duration: 0.25s;\n  -moz-transition-duration: 0.25s;\n  -o-transition-duration: 0.25s;\n  transition-timing-function: ease-in-out;\n}\n\n.hideDesktop {\n  display: none;\n}\n\n.mobileNav {\n  display: flex;\n  justify-content: space-between;\n}\n\n.mobileNav h1 {\n  margin-left: 15px;\n}\n\na {\n  color: black;\n  text-decoration: none;\n}\n\n.nav ul {\n  list-style-type: none;\n  text-transform: uppercase;\n  padding: 0px;\n  line-height: 2em;\n  display: flex;\n  flex-direction: column;\n  text-align: right;\n  font-family: sans-serif;\n}\n\n/* all items container */\n.all-items-display {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n  width: 100vp;\n}\n/* individual item */\n.one-item {\n  color: black;\n  padding: 0;\n  margin: 10px;\n  height: 250px;\n  width: 140px;\n  z-index: 1;\n}\n.one-item-image {\n  height: 80%;\n  width: 100%;\n  background: lightgrey;\n}\n.one-item-image > img {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  overflow: hidden;\n}\n.one-item-text {\n  padding: 0;\n  margin: 0;\n  margin-top: 10px;\n  font-family: 'Helvetica';\n}\n.one-item-text > h1 {\n  padding: 0;\n  margin: 0;\n  padding-bottom: 5px;\n  font-size: 20px;\n  border-bottom: 2px black solid;\n  width: 20%;\n}\n.one-item-text > p {\n  padding: 0;\n  margin-top: 5px;\n  font-size: 80%;\n  font-style: lighter;\n}\n\n.popup {\n  z-index: 1000;\n  width: 400px;\n  box-shadow: rgba(128, 128, 128, 0.479) 4px 4px 4px 4px 16px;\n  text-transform: none;\n}\n.popup-form-container {\n  background-color: white;\n  display: flex;\n}\n.detail-container {\n  display: grid;\n  grid-column-gap: 50px;\n  width: 100vw;\n}\n\n.detail-description {\n  display: grid;\n  grid-template-rows: 5em 2em 2em 1fr 3em;\n  padding: 2em;\n  height: 40vh;\n}\n.detail-image {\n  width: 90vw;\n  height: 70vh;\n  margin: auto;\n  display: flex;\n  justify-content: center;\n}\n\n@media (max-width: 968px) {\n}\n\n/* CSS applies to 968px and above */\n@media screen and (min-width: 968px) {\n  .one-item-text > h1 {\n    font-size: 25px;\n  }\n  .one-item {\n    height: 430px;\n    width: 230px;\n  }\n  /* navigation */\n  .toggle-nav {\n    display: block;\n  }\n  .hideMobile {\n    display: none;\n  }\n  #navItems {\n    width: 100%;\n  }\n  .nav {\n    display: flex;\n    height: 4em;\n    border-bottom: 1px solid black;\n    margin-bottom: 0.5em;\n    box-shadow: 0px 0px 2px grey;\n  }\n  .nav ul {\n    display: flex;\n    flex-direction: row;\n    list-style-type: none;\n    text-transform: uppercase;\n    justify-content: space-between;\n  }\n\n  .nav ul li {\n    margin: 0 1em 0 1em;\n  }\n  .navRight {\n    display: flex;\n  }\n  .navLeft {\n    display: flex;\n  }\n  /* end navigation */\n\n  /* dropdown */\n  .dropdown-container {\n    position: relative;\n  }\n\n  .dropdown-content {\n    display: none;\n    position: absolute;\n    right: 0;\n    min-width: max-content;\n    box-shadow: rgba(128, 128, 128, 0.479) 4px 4px 16px;\n    background-color: white;\n    padding: 1em;\n    z-index: 99;\n  }\n  .dropdown-container:hover .dropdown-content {\n    display: block;\n  }\n  .dropdown-button:hover {\n    color: purple;\n    cursor: pointer;\n  }\n  /* end of dropdown */\n  .detail-container {\n    grid-template-columns: 1fr 30%;\n    width: 90vw;\n    margin: 2em;\n  }\n  .detail-description {\n    width: 90%;\n    height: 100%;\n    padding: 0;\n    margin: 1em;\n  }\n  .detail-image {\n    justify-content: center;\n    display: flex;\n    align-items: center;\n    margin: auto;\n    width: 100%;\n    height: 80vh;\n  }\n}\n", ""]);
 
 
 
@@ -41693,17 +41693,16 @@ const ImgDiv = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
   display: flex;
   transition: ease-in-out 0.25s;
   width: 500%;
-  height: 90%;
-  background-color: grey;
+  height: 100%;
   position: absolute;
-  left: ${props => props.position / 5 * 500 + '%'};
+  left: ${props => -(props.position / 5) * 500 + '%'};
   top: 0;
-  z-index: 1;
   img {
     width: 20%;
     height: 90%;
     object-fit: cover;
     overflow: hidden;
+    z-index: 1;
   }
 `;
 const LeftArrow = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
@@ -41727,7 +41726,8 @@ const RightArrow = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["defaul
   left: 60%;
   justify-content: flex-end;
 `;
-const Img = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].img`
+const ImgBall = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].img`
+position:relative;
   height: 10px;
   width: 10px;
   object-fit: cover;
@@ -41737,6 +41737,7 @@ const Img = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].img`
   bottom:0;
   border-radius:1em;
   border:${props => props.border};
+  z-index:3 ;
   &:hover {
     cursor: pointer;
   }
@@ -41744,6 +41745,13 @@ const Img = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].img`
     height: 100%
     width: auto;
   }
+`;
+const ImgBalls = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  justify-content: center;
+  display: flex;
 `;
 
 class ImageSlider extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
@@ -41815,8 +41823,8 @@ class ImageSlider extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       onClick: this.shiftRight
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
       src: "../uploads/right-arrow.png"
-    })), this.props.imagesArray.map((img, index) => {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Img, {
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ImgBalls, null, this.props.imagesArray.map((img, index) => {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ImgBall, {
         onMouseEnter: () => this.setState({
           position: index
         }),
@@ -41824,7 +41832,7 @@ class ImageSlider extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         src: '..' + img,
         border: index === this.state.position ? 'solid 5px white' : 'none'
       });
-    }));
+    })));
   }
 
 }
@@ -41940,8 +41948,6 @@ class ItemDetail extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         imagesArray: this.state.images,
         mainImage: this.state.mainImage
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "detail-mini-images"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "detail-description"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ItemName, null, this.state.item.item), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Price, null, this.state.item.price), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(H2, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Product Details")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Description, null, this.state.item.description), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Button, null, "Add to Cart")));
     });

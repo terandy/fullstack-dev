@@ -14,17 +14,16 @@ const ImgDiv = styled.div`
   display: flex;
   transition: ease-in-out 0.25s;
   width: 500%;
-  height: 90%;
-  background-color: grey;
+  height: 100%;
   position: absolute;
-  left: ${props => (props.position / 5) * 500 + '%'};
+  left: ${props => -(props.position / 5) * 500 + '%'};
   top: 0;
-  z-index: 1;
   img {
     width: 20%;
     height: 90%;
     object-fit: cover;
     overflow: hidden;
+    z-index: 1;
   }
 `;
 const LeftArrow = styled.div`
@@ -48,7 +47,8 @@ const RightArrow = styled(LeftArrow)`
   left: 60%;
   justify-content: flex-end;
 `;
-const Img = styled.img`
+const ImgBall = styled.img`
+position:relative;
   height: 10px;
   width: 10px;
   object-fit: cover;
@@ -58,6 +58,7 @@ const Img = styled.img`
   bottom:0;
   border-radius:1em;
   border:${props => props.border};
+  z-index:3 ;
   &:hover {
     cursor: pointer;
   }
@@ -65,6 +66,13 @@ const Img = styled.img`
     height: 100%
     width: auto;
   }
+`;
+const ImgBalls = styled.div`
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  justify-content: center;
+  display: flex;
 `;
 class ImageSlider extends Component {
   constructor(props) {
@@ -114,18 +122,20 @@ class ImageSlider extends Component {
         <RightArrow toggle={this.state.toggle} onClick={this.shiftRight}>
           <img src="../uploads/right-arrow.png" />
         </RightArrow>
-        {this.props.imagesArray.map((img, index) => {
-          return (
-            <Img
-              onMouseEnter={() => this.setState({ position: index })}
-              key={index}
-              src={'..' + img}
-              border={
-                index === this.state.position ? 'solid 5px white' : 'none'
-              }
-            />
-          );
-        })}
+        <ImgBalls>
+          {this.props.imagesArray.map((img, index) => {
+            return (
+              <ImgBall
+                onMouseEnter={() => this.setState({ position: index })}
+                key={index}
+                src={'..' + img}
+                border={
+                  index === this.state.position ? 'solid 5px white' : 'none'
+                }
+              />
+            );
+          })}
+        </ImgBalls>
       </SliderContainer>
     );
   }
