@@ -63,7 +63,7 @@ class Navigation extends Component {
               </li>
             </div>
             <div className="navRight">
-                <SearchBar/>
+                    <SearchBar/>
               <li>
                 {' '}
                 {this.props.user ? 'Welcome back ' + this.props.user : ''}
