@@ -4,9 +4,48 @@ body {
 }
 .toggle-nav-on {
   display: block;
+  position: fixed;
+    width: 63%;
+    height: 100%;
+    right:0;
+    background-color: darkgrey;
+    padding-right:1em;
+    font-size:2em;
+    
+    transition-duration: .5s;
+    -webkit-transition-duration: .5s;
+    -moz-transition-duration: .5s;
+    -o-transition-duration: .5s;
+    transition-timing-function: ease-in-out;
 }
 .toggle-nav {
+  visibility: hidden;
+  overflow: hidden;
+  right:-100%;
+  background-color: darkgrey;
+  padding-right:1em;
+  font-size:2em;
+  height: 100%;
+  width: 63%;
+  position:fixed;
+      transition-duration: .25s;
+    -webkit-transition-duration: .25s;
+    -moz-transition-duration: .25s;
+    -o-transition-duration: .25s;
+    transition-timing-function: ease-in-out;
+}
+
+.hideDesktop {
   display: none;
+}
+
+.mobileNav {
+  display:flex;
+  justify-content: space-between;
+}
+
+.mobileNav h1 {
+  margin-left:15px
 }
 
 a {
@@ -21,8 +60,7 @@ a {
   line-height: 2em;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  text-align: right;
   font-family: sans-serif;
 }
 
@@ -112,7 +150,7 @@ a {
 }
 
 /* CSS applies to 968px and above */
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 968px) {
   .one-item-text > h1 {
     font-size: 25px;
   }
@@ -124,7 +162,7 @@ a {
   .toggle-nav {
     display: block;
   }
-  .hideBurger {
+  .hideMobile {
     display: none;
   }
   #navItems {
@@ -132,9 +170,10 @@ a {
   }
   .nav {
     display: flex;
-    align-items: center;
     height: 4em;
-    background-color: lightgray;
+    border-bottom: 1px solid black;
+    margin-bottom: 0.5em;
+    box-shadow: 0px 0px 2px grey;
   }
   .nav ul {
     display: flex;

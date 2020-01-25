@@ -13,29 +13,52 @@ class Navigation extends Component {
     this.state = {
       checkToggle: false,
       hamburgerClass: 'hamburger hamburger--squeeze',
-      toggleNav: 'toggle-nav'
+      toggleNav: 'toggle-nav mobileNavList-off'
     };
   }
   handleToggle = () => {
     if (this.state.checkToggle === false) {
       this.setState({
-        hamburgerClass: 'hamburger hamburger--squeeze',
-        toggleNav: 'toggle-nav'
+        hamburgerClass: 'hamburger hamburger--squeeze is-active',
+        toggleNav: 'toggle-nav-on mobileNavList'
       });
     }
     if (this.state.checkToggle === true) {
       this.setState({
-        hamburgerClass: 'hamburger hamburger--squeeze is-active',
-        toggleNav: 'toggle-nav-on'
+        hamburgerClass: 'hamburger hamburger--squeeze',
+        toggleNav: 'toggle-nav mobileNavList-off'
       });
     }
     this.setState({ checkToggle: !this.state.checkToggle });
   };
 
+  load = () => {
+    if (window.innerWidth >= 968) {
+      this.setState({toggleNav: ''})
+    }
+  }
+
+  setClass = () => {
+    if (window.innerWidth >= 968) {
+      this.setState({toggleNav: ''})
+    }
+    if (window.innerWidth < 968) {
+      this.setState({toggleNav: 'toggle-nav mobileNavList-off'})
+      if (this.state.checkToggle === true) {
+        this.setState({toggleNav: 'toggle-nav-on mobileNavList'})
+
+      }
+    }
+  }
+
   render = () => {
+    window.addEventListener('resize', this.setClass);
+    window.addEventListener('load', this.load);
+
     return (
       <div className="nav">
-        <div className="hideBurger">
+        <div className="hideMobile mobileNav">
+          <h1><Link to="/">AliBay</Link></h1>
           <button
             className={this.state.hamburgerClass}
             type="button"

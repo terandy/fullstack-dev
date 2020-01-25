@@ -964,7 +964,7 @@ exports.push([module.i, "/*!\r\n * Hamburgers\r\n * @description Tasty CSS-anima
 
 exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "body {\r\n  background-color: white;\r\n  margin: 0;\r\n}\r\n.toggle-nav-on {\r\n  display: block;\r\n}\r\n.toggle-nav {\r\n  display: none;\r\n}\r\n\r\na {\r\n  color: black;\r\n  text-decoration: none;\r\n}\r\n\r\n.nav ul {\r\n  list-style-type: none;\r\n  text-transform: uppercase;\r\n  padding: 0px;\r\n  line-height: 2em;\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n  text-align: center;\r\n  font-family: sans-serif;\r\n}\r\n\r\n/* all items container */\r\n.all-items-display {\r\n  display: flex;\r\n  flex-wrap: wrap;\r\n  justify-content: center;\r\n  width: 100vp;\r\n}\r\n/* individual item */\r\n.one-item {\r\n  color: black;\r\n  padding: 0;\r\n  margin: 10px;\r\n  height: 460px;\r\n  width: 260px;\r\n  z-index: 1;\r\n}\r\n.one-item-image {\r\n  height: 85%;\r\n  width: 100%;\r\n  background: lightgrey;\r\n}\r\n.one-item-image > img {\r\n  width: 100%;\r\n  height: 100%;\r\n  object-fit: cover;\r\n  overflow: hidden;\r\n}\r\n.one-item-text {\r\n  padding: 0;\r\n  margin: 0;\r\n  margin-top: 10px;\r\n  font-family: 'Helvetica';\r\n}\r\n.one-item-text > h1 {\r\n  padding: 0;\r\n  margin: 0;\r\n  padding-bottom: 5px;\r\n  font-size: 25px;\r\n  border-bottom: 2px black solid;\r\n  width: 20%;\r\n}\r\n.one-item-text > p {\r\n  padding: 0;\r\n  margin-top: 5px;\r\n  font-size: 80%;\r\n  font-style: lighter;\r\n}\r\n\r\n.popup {\r\n  z-index: 1000;\r\n  width: 400px;\r\n  box-shadow: rgba(128, 128, 128, 0.479) 4px 4px 4px 4px 16px;\r\n  text-transform: none;\r\n}\r\n.popup-form-container {\r\n  background-color: white;\r\n  display: flex;\r\n}\r\n\r\n.detail-container {\r\n  display: grid;\r\n  grid-template-columns: 20% 1fr 30%;\r\n}\r\n\r\n.detail-left {\r\n  border: solid red 1px;\r\n}\r\n.detail-right {\r\n  border: solid red 1px;\r\n}\r\n.detail-image {\r\n  border: solid red 1px;\r\n}\r\n\r\n@media (max-width: 968px) {\r\n}\r\n\r\n/* CSS applies to 968px and above */\r\n@media screen and (min-width: 968px) {\r\n  /* navigation */\r\n  .toggle-nav {\r\n    display: block;\r\n  }\r\n  .hideBurger {\r\n    display: none;\r\n  }\r\n  #navItems {\r\n    width: 100%;\r\n  }\r\n  .nav {\r\n    display: flex;\r\n    align-items: center;\r\n    height: 4em;\r\n    background-color: lightgray;\r\n  }\r\n  .nav ul {\r\n    display: flex;\r\n    flex-direction: row;\r\n    list-style-type: none;\r\n    text-transform: uppercase;\r\n    justify-content: space-between;\r\n  }\r\n\r\n  .nav ul li {\r\n    margin: 0 1em 0 1em;\r\n  }\r\n  .navRight {\r\n    display: flex;\r\n  }\r\n  .navLeft {\r\n    display: flex;\r\n  }\r\n  /* end navigation */\r\n\r\n  /* dropdown */\r\n  .dropdown-container {\r\n    position: relative;\r\n  }\r\n\r\n  .dropdown-content {\r\n    display: none;\r\n    position: absolute;\r\n    right: 0;\r\n    min-width: max-content;\r\n    box-shadow: rgba(128, 128, 128, 0.479) 4px 4px 16px;\r\n    background-color: white;\r\n    padding: 1em;\r\n    z-index: 99;\r\n  }\r\n  .dropdown-container:hover .dropdown-content {\r\n    display: block;\r\n  }\r\n  .dropdown-button:hover {\r\n    color: purple;\r\n    cursor: pointer;\r\n  }\r\n  /* end of dropdown */\r\n}\r\n", ""]);
+exports.push([module.i, "body {\r\n  background-color: white;\r\n  margin: 0;\r\n}\r\n.toggle-nav-on {\r\n  display: block;\r\n  position: fixed;\r\n    width: 63%;\r\n    height: 100%;\r\n    right:0;\r\n    background-color: darkgrey;\r\n    padding-right:1em;\r\n    font-size:2em;\r\n    \r\n    transition-duration: .5s;\r\n    -webkit-transition-duration: .5s;\r\n    -moz-transition-duration: .5s;\r\n    -o-transition-duration: .5s;\r\n    transition-timing-function: ease-in-out;\r\n}\r\n.toggle-nav {\r\n  visibility: hidden;\r\n  overflow: hidden;\r\n  right:-100%;\r\n  background-color: darkgrey;\r\n  padding-right:1em;\r\n  font-size:2em;\r\n  height: 100%;\r\n  width: 63%;\r\n  position:fixed;\r\n      transition-duration: .25s;\r\n    -webkit-transition-duration: .25s;\r\n    -moz-transition-duration: .25s;\r\n    -o-transition-duration: .25s;\r\n    transition-timing-function: ease-in-out;\r\n}\r\n\r\n.hideDesktop {\r\n  display: none;\r\n}\r\n\r\n.mobileNav {\r\n  display:flex;\r\n  justify-content: space-between;\r\n}\r\n\r\n.mobileNav h1 {\r\n  margin-left:15px\r\n}\r\n\r\na {\r\n  color: black;\r\n  text-decoration: none;\r\n}\r\n\r\n.nav ul {\r\n  list-style-type: none;\r\n  text-transform: uppercase;\r\n  padding: 0px;\r\n  line-height: 2em;\r\n  display: flex;\r\n  flex-direction: column;\r\n  text-align: right;\r\n  font-family: sans-serif;\r\n}\r\n\r\n/* all items container */\r\n.all-items-display {\r\n  display: flex;\r\n  flex-wrap: wrap;\r\n  justify-content: center;\r\n  width: 100vp;\r\n}\r\n/* individual item */\r\n.one-item {\r\n  color: black;\r\n  padding: 0;\r\n  margin: 10px;\r\n  height: 250px;\r\n  width: 140px;\r\n  z-index: 1;\r\n}\r\n.one-item-image {\r\n  height: 80%;\r\n  width: 100%;\r\n  background: lightgrey;\r\n}\r\n.one-item-image > img {\r\n  width: 100%;\r\n  height: 100%;\r\n  object-fit: cover;\r\n  overflow: hidden;\r\n}\r\n.one-item-text {\r\n  padding: 0;\r\n  margin: 0;\r\n  margin-top: 10px;\r\n  font-family: 'Helvetica';\r\n}\r\n.one-item-text > h1 {\r\n  padding: 0;\r\n  margin: 0;\r\n  padding-bottom: 5px;\r\n  font-size: 20px;\r\n  border-bottom: 2px black solid;\r\n  width: 20%;\r\n}\r\n.one-item-text > p {\r\n  padding: 0;\r\n  margin-top: 5px;\r\n  font-size: 80%;\r\n  font-style: lighter;\r\n}\r\n\r\n.popup {\r\n  z-index: 1000;\r\n  width: 400px;\r\n  box-shadow: rgba(128, 128, 128, 0.479) 4px 4px 4px 4px 16px;\r\n  text-transform: none;\r\n}\r\n.popup-form-container {\r\n  background-color: white;\r\n  display: flex;\r\n}\r\n.detail-container {\r\n  display: grid;\r\n  grid-template-rows: 1 1;\r\n  width: 100vw;\r\n}\r\n\r\n.detail-left {\r\n  display: none;\r\n  position: relative;\r\n  align-items: right;\r\n  height: 95vh;\r\n}\r\n.detail-right {\r\n  display: grid;\r\n  grid-template-rows: 5em 2em 2em 1fr 3em;\r\n  padding: 2em;\r\n  height: 40vh;\r\n}\r\n.detail-image {\r\n  width: 100vw;\r\n  display: flex;\r\n  justify-content: center;\r\n}\r\n\r\n@media (max-width: 968px) {\r\n}\r\n\r\n/* CSS applies to 968px and above */\r\n@media screen and (min-width: 968px) {\r\n  .one-item-text > h1 {\r\n    font-size: 25px;\r\n  }\r\n  .one-item {\r\n    height: 430px;\r\n    width: 230px;\r\n  }\r\n  /* navigation */\r\n  .toggle-nav {\r\n    display: block;\r\n  }\r\n  .hideMobile {\r\n    display: none;\r\n  }\r\n  #navItems {\r\n    width: 100%;\r\n  }\r\n  .nav {\r\n    display: flex;\r\n    height: 4em;\r\n    border-bottom: 1px solid black;\r\n    margin-bottom: 0.5em;\r\n    box-shadow: 0px 0px 2px grey;\r\n  }\r\n  .nav ul {\r\n    display: flex;\r\n    flex-direction: row;\r\n    list-style-type: none;\r\n    text-transform: uppercase;\r\n    justify-content: space-between;\r\n  }\r\n\r\n  .nav ul li {\r\n    margin: 0 1em 0 1em;\r\n  }\r\n  .navRight {\r\n    display: flex;\r\n  }\r\n  .navLeft {\r\n    display: flex;\r\n  }\r\n  /* end navigation */\r\n\r\n  /* dropdown */\r\n  .dropdown-container {\r\n    position: relative;\r\n  }\r\n\r\n  .dropdown-content {\r\n    display: none;\r\n    position: absolute;\r\n    right: 0;\r\n    min-width: max-content;\r\n    box-shadow: rgba(128, 128, 128, 0.479) 4px 4px 16px;\r\n    background-color: white;\r\n    padding: 1em;\r\n    z-index: 99;\r\n  }\r\n  .dropdown-container:hover .dropdown-content {\r\n    display: block;\r\n  }\r\n  .dropdown-button:hover {\r\n    color: purple;\r\n    cursor: pointer;\r\n  }\r\n  /* end of dropdown */\r\n  .detail-container {\r\n    grid-template-columns: 20% 1fr 30%;\r\n    grid-template-rows: none;\r\n  }\r\n\r\n  .detail-left {\r\n    display: block;\r\n  }\r\n  .detail-right {\r\n    width: 90%;\r\n    height: 90%;\r\n    padding: 0;\r\n    margin: 1em;\r\n  }\r\n  .detail-image {\r\n    justify-content: center;\r\n    display: flex;\r\n    align-items: center;\r\n    margin: auto;\r\n    width: 100%;\r\n  }\r\n}\r\n", ""]);
 
 
 
@@ -41644,15 +41644,19 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+
 
 
 let Dropdown = (navItem, dropdownElements) => {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "dropdown-container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/login"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "dropdown-button"
-  }, navItem), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "dropdown-content"
+  }, navItem)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "dropdown-content hideDesktop"
   }, dropdownElements));
 };
 
@@ -42129,15 +42133,15 @@ class Navigation extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     _defineProperty(this, "handleToggle", () => {
       if (this.state.checkToggle === false) {
         this.setState({
-          hamburgerClass: 'hamburger hamburger--squeeze',
-          toggleNav: 'toggle-nav'
+          hamburgerClass: 'hamburger hamburger--squeeze is-active',
+          toggleNav: 'toggle-nav-on mobileNavList'
         });
       }
 
       if (this.state.checkToggle === true) {
         this.setState({
-          hamburgerClass: 'hamburger hamburger--squeeze is-active',
-          toggleNav: 'toggle-nav-on'
+          hamburgerClass: 'hamburger hamburger--squeeze',
+          toggleNav: 'toggle-nav mobileNavList-off'
         });
       }
 
@@ -42146,12 +42150,44 @@ class Navigation extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       });
     });
 
+    _defineProperty(this, "load", () => {
+      if (window.innerWidth >= 968) {
+        this.setState({
+          toggleNav: ''
+        });
+      }
+    });
+
+    _defineProperty(this, "setClass", () => {
+      if (window.innerWidth >= 968) {
+        this.setState({
+          toggleNav: ''
+        });
+      }
+
+      if (window.innerWidth < 968) {
+        this.setState({
+          toggleNav: 'toggle-nav mobileNavList-off'
+        });
+
+        if (this.state.checkToggle === true) {
+          this.setState({
+            toggleNav: 'toggle-nav-on mobileNavList'
+          });
+        }
+      }
+    });
+
     _defineProperty(this, "render", () => {
+      window.addEventListener('resize', this.setClass);
+      window.addEventListener('load', this.load);
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "nav"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "hideBurger"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "hideMobile mobileNav"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+        to: "/"
+      }, "AliBay")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: this.state.hamburgerClass,
         type: "button",
         onClick: this.handleToggle
@@ -42182,7 +42218,7 @@ class Navigation extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     this.state = {
       checkToggle: false,
       hamburgerClass: 'hamburger hamburger--squeeze',
-      toggleNav: 'toggle-nav'
+      toggleNav: 'toggle-nav mobileNavList-off'
     };
   }
 
@@ -42219,19 +42255,39 @@ class OneItem extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   constructor(props) {
     super(props);
 
+    _defineProperty(this, "toggleImage", () => {
+      if (this.state.imageIndex === 0) {
+        this.setState({
+          imageIndex: 1
+        });
+        return;
+      } else {
+        this.setState({
+          imageIndex: 0
+        });
+        return;
+      }
+    });
+
     _defineProperty(this, "render", () => {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         to: '/item-detail/' + this.props.item._id
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "one-item"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        onMouseEnter: this.toggleImage,
+        onMouseLeave: this.toggleImage,
         className: "one-item-image"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: '..' + this.props.item.imgPaths[0]
+        src: '..' + this.props.item.imgPaths[this.state.imageIndex]
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "one-item-text"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, this.props.item.item), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "$", this.props.item.price))));
     });
+
+    this.state = {
+      imageIndex: 0
+    };
   }
 
 }
