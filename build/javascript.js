@@ -964,7 +964,11 @@ exports.push([module.i, "/*!\r\n * Hamburgers\r\n * @description Tasty CSS-anima
 
 exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
+<<<<<<< HEAD
 exports.push([module.i, "body {\r\n  background-color: white;\r\n  margin: 0;\r\n}\r\n.toggle-nav-on {\r\n  display: block;\r\n  position: fixed;\r\n    width: 63%;\r\n    height: 100%;\r\n    right:0;\r\n    background-color: darkgrey;\r\n    padding-right:1em;\r\n    font-size:2em;\r\n    \r\n    transition-duration: .5s;\r\n    -webkit-transition-duration: .5s;\r\n    -moz-transition-duration: .5s;\r\n    -o-transition-duration: .5s;\r\n    transition-timing-function: ease-in-out;\r\n}\r\n.toggle-nav {\r\n  visibility: hidden;\r\n  overflow: hidden;\r\n  right:-100%;\r\n  background-color: darkgrey;\r\n  padding-right:1em;\r\n  font-size:2em;\r\n  height: 100%;\r\n  width: 63%;\r\n  position:fixed;\r\n      transition-duration: .25s;\r\n    -webkit-transition-duration: .25s;\r\n    -moz-transition-duration: .25s;\r\n    -o-transition-duration: .25s;\r\n    transition-timing-function: ease-in-out;\r\n}\r\n\r\n.hideDesktop {\r\n  display: none;\r\n}\r\n\r\n.mobileNav {\r\n  display:flex;\r\n  justify-content: space-between;\r\n}\r\n\r\n.mobileNav h1 {\r\n  margin-left:15px\r\n}\r\n\r\na {\r\n  color: black;\r\n  text-decoration: none;\r\n}\r\n\r\n.nav ul {\r\n  list-style-type: none;\r\n  text-transform: uppercase;\r\n  padding: 0px;\r\n  line-height: 2em;\r\n  display: flex;\r\n  flex-direction: column;\r\n  text-align: right;\r\n  font-family: sans-serif;\r\n}\r\n\r\n/* all items container */\r\n.all-items-display {\r\n  display: flex;\r\n  flex-wrap: wrap;\r\n  justify-content: center;\r\n  width: 100vp;\r\n}\r\n/* individual item */\r\n.one-item {\r\n  color: black;\r\n  padding: 0;\r\n  margin: 10px;\r\n  height: 250px;\r\n  width: 140px;\r\n  z-index: 1;\r\n}\r\n.one-item-image {\r\n  height: 80%;\r\n  width: 100%;\r\n  background: lightgrey;\r\n}\r\n.one-item-image > img {\r\n  width: 100%;\r\n  height: 100%;\r\n  object-fit: cover;\r\n  overflow: hidden;\r\n}\r\n.one-item-text {\r\n  padding: 0;\r\n  margin: 0;\r\n  margin-top: 10px;\r\n  font-family: 'Helvetica';\r\n}\r\n.one-item-text > h1 {\r\n  padding: 0;\r\n  margin: 0;\r\n  padding-bottom: 5px;\r\n  font-size: 20px;\r\n  border-bottom: 2px black solid;\r\n  width: 20%;\r\n}\r\n.one-item-text > p {\r\n  padding: 0;\r\n  margin-top: 5px;\r\n  font-size: 80%;\r\n  font-style: lighter;\r\n}\r\n\r\n.popup {\r\n  z-index: 1000;\r\n  width: 400px;\r\n  box-shadow: rgba(128, 128, 128, 0.479) 4px 4px 4px 4px 16px;\r\n  text-transform: none;\r\n}\r\n.popup-form-container {\r\n  background-color: white;\r\n  display: flex;\r\n}\r\n.detail-container {\r\n  display: grid;\r\n  grid-template-rows: 1 1;\r\n  width: 100vw;\r\n}\r\n\r\n.detail-left {\r\n  display: none;\r\n  position: relative;\r\n  align-items: right;\r\n  height: 95vh;\r\n}\r\n.detail-right {\r\n  display: grid;\r\n  grid-template-rows: 5em 2em 2em 1fr 3em;\r\n  padding: 2em;\r\n  height: 40vh;\r\n}\r\n.detail-image {\r\n  width: 100vw;\r\n  display: flex;\r\n  justify-content: center;\r\n}\r\n\r\n@media (max-width: 968px) {\r\n}\r\n\r\n/* CSS applies to 968px and above */\r\n@media screen and (min-width: 968px) {\r\n  .one-item-text > h1 {\r\n    font-size: 25px;\r\n  }\r\n  .one-item {\r\n    height: 430px;\r\n    width: 230px;\r\n  }\r\n  /* navigation */\r\n  .toggle-nav {\r\n    display: block;\r\n  }\r\n  .hideMobile {\r\n    display: none;\r\n  }\r\n  #navItems {\r\n    width: 100%;\r\n  }\r\n  .nav {\r\n    display: flex;\r\n    height: 4em;\r\n    border-bottom: 1px solid black;\r\n    margin-bottom: 0.5em;\r\n    box-shadow: 0px 0px 2px grey;\r\n  }\r\n  .nav ul {\r\n    display: flex;\r\n    flex-direction: row;\r\n    list-style-type: none;\r\n    text-transform: uppercase;\r\n    justify-content: space-between;\r\n  }\r\n\r\n  .nav ul li {\r\n    margin: 0 1em 0 1em;\r\n  }\r\n  .navRight {\r\n    display: flex;\r\n  }\r\n  .navLeft {\r\n    display: flex;\r\n  }\r\n  /* end navigation */\r\n\r\n  /* dropdown */\r\n  .dropdown-container {\r\n    position: relative;\r\n  }\r\n\r\n  .dropdown-content {\r\n    display: none;\r\n    position: absolute;\r\n    right: 0;\r\n    min-width: max-content;\r\n    box-shadow: rgba(128, 128, 128, 0.479) 4px 4px 16px;\r\n    background-color: white;\r\n    padding: 1em;\r\n    z-index: 99;\r\n  }\r\n  .dropdown-container:hover .dropdown-content {\r\n    display: block;\r\n  }\r\n  .dropdown-button:hover {\r\n    color: purple;\r\n    cursor: pointer;\r\n  }\r\n  /* end of dropdown */\r\n  .detail-container {\r\n    grid-template-columns: 20% 1fr 30%;\r\n    grid-template-rows: none;\r\n  }\r\n\r\n  .detail-left {\r\n    display: block;\r\n  }\r\n  .detail-right {\r\n    width: 90%;\r\n    height: 90%;\r\n    padding: 0;\r\n    margin: 1em;\r\n  }\r\n  .detail-image {\r\n    justify-content: center;\r\n    display: flex;\r\n    align-items: center;\r\n    margin: auto;\r\n    width: 100%;\r\n  }\r\n}\r\n", ""]);
+=======
+exports.push([module.i, "body {\n  background-color: white;\n  margin: 0;\n}\n.toggle-nav-on {\n  display: block;\n}\n.toggle-nav {\n  display: none;\n}\n\na {\n  color: black;\n  text-decoration: none;\n}\n\n.nav ul {\n  list-style-type: none;\n  text-transform: uppercase;\n  padding: 0px;\n  line-height: 2em;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  text-align: center;\n  font-family: sans-serif;\n}\n\n/* all items container */\n.all-items-display {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n  width: 100vp;\n}\n/* individual item */\n.one-item {\n  color: black;\n  padding: 0;\n  margin: 10px;\n  height: 250px;\n  width: 140px;\n  z-index: 1;\n}\n.one-item-image {\n  height: 80%;\n  width: 100%;\n  background: lightgrey;\n}\n.one-item-image > img {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  overflow: hidden;\n}\n.one-item-text {\n  padding: 0;\n  margin: 0;\n  margin-top: 10px;\n  font-family: 'Helvetica';\n}\n.one-item-text > h1 {\n  padding: 0;\n  margin: 0;\n  padding-bottom: 5px;\n  font-size: 20px;\n  border-bottom: 2px black solid;\n  width: 20%;\n}\n.one-item-text > p {\n  padding: 0;\n  margin-top: 5px;\n  font-size: 80%;\n  font-style: lighter;\n}\n\n.popup {\n  z-index: 1000;\n  width: 400px;\n  box-shadow: rgba(128, 128, 128, 0.479) 4px 4px 4px 4px 16px;\n  text-transform: none;\n}\n.popup-form-container {\n  background-color: white;\n  display: flex;\n}\n.detail-container {\n  display: grid;\n  width: 100vw;\n}\n\n.detail-mini-images {\n  width: 90vw;\n  margin: auto;\n  display: flex;\n  justify-content: center;\n  align-items: right;\n}\n.detail-description {\n  display: grid;\n  grid-template-rows: 5em 2em 2em 1fr 3em;\n  padding: 2em;\n  height: 40vh;\n}\n.detail-image {\n  width: 90vw;\n  height: 60vh;\n  margin: auto;\n  display: flex;\n  justify-content: center;\n}\n\n@media (max-width: 968px) {\n}\n\n/* CSS applies to 968px and above */\n@media screen and (min-width: 960px) {\n  .one-item-text > h1 {\n    font-size: 25px;\n  }\n  .one-item {\n    height: 430px;\n    width: 230px;\n  }\n  /* navigation */\n  .toggle-nav {\n    display: block;\n  }\n  .hideBurger {\n    display: none;\n  }\n  #navItems {\n    width: 100%;\n  }\n  .nav {\n    display: flex;\n    align-items: center;\n    height: 4em;\n    background-color: lightgray;\n  }\n  .nav ul {\n    display: flex;\n    flex-direction: row;\n    list-style-type: none;\n    text-transform: uppercase;\n    justify-content: space-between;\n  }\n\n  .nav ul li {\n    margin: 0 1em 0 1em;\n  }\n  .navRight {\n    display: flex;\n  }\n  .navLeft {\n    display: flex;\n  }\n  /* end navigation */\n\n  /* dropdown */\n  .dropdown-container {\n    position: relative;\n  }\n\n  .dropdown-content {\n    display: none;\n    position: absolute;\n    right: 0;\n    min-width: max-content;\n    box-shadow: rgba(128, 128, 128, 0.479) 4px 4px 16px;\n    background-color: white;\n    padding: 1em;\n    z-index: 99;\n  }\n  .dropdown-container:hover .dropdown-content {\n    display: block;\n  }\n  .dropdown-button:hover {\n    color: purple;\n    cursor: pointer;\n  }\n  /* end of dropdown */\n  .detail-container {\n    grid-template-columns: 1fr 10% 30%;\n    width: 90vw;\n    margin: 2em;\n  }\n  .detail-description {\n    width: 90%;\n    height: 100%;\n    padding: 0;\n    margin: 1em;\n  }\n  .detail-mini-images {\n    width: 90%;\n    height: 80vh;\n    display: block;\n    padding: auto;\n  }\n  .detail-image {\n    justify-content: center;\n    display: flex;\n    align-items: center;\n    margin: auto;\n    width: 100%;\n    height: 80vh;\n  }\n}\n", ""]);
+>>>>>>> da1951fd67b14e267b4138701d60550f0421e8e3
 
 
 
@@ -41664,6 +41668,150 @@ let Dropdown = (navItem, dropdownElements) => {
 
 /***/ }),
 
+/***/ "./src/ImageSlider.jsx":
+/*!*****************************!*\
+  !*** ./src/ImageSlider.jsx ***!
+  \*****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+const SliderContainer = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
+  position: relative;
+  width: 100vw;
+  overflow: hidden;
+`;
+const ImgDiv = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
+  display: flex;
+  transition: ease-in-out 0.25s;
+  width: 500%;
+  height: 100%;
+  background-color: grey;
+  position: absolute;
+  left: ${props => props.position + '%'};
+  top: 0;
+  z-index: 1;
+  img {
+    width: 20%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+  }
+`;
+const LeftArrow = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
+  height: 100%;
+  width: 40%;
+  left: 0;
+  position: absolute;
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+  z-index: 2;
+  img {
+    width: 20%;
+    display: ${props => props.toggle};
+  }
+  &:hover {
+    cursor: pointer;
+  }
+`;
+const RightArrow = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(LeftArrow)`
+  left: 60%;
+  justify-content: flex-end;
+`;
+
+class ImageSlider extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  constructor(props) {
+    super(props);
+
+    _defineProperty(this, "componentDidMount", () => {
+      console.log('hovered');
+
+      if (this.props.mainImage) {
+        this.setState({
+          position: this.props.mainImage / 5
+        });
+      }
+    });
+
+    _defineProperty(this, "displayArrows", () => {
+      this.setState({
+        toggle: 'block'
+      });
+      setTimeout(() => {
+        this.setState({
+          toggle: 'none'
+        });
+      }, 1500);
+    });
+
+    _defineProperty(this, "shiftLeft", () => {
+      console.log('left');
+
+      if (this.state.position === 0) {
+        return;
+      }
+
+      this.setState({
+        position: this.state.position + 100
+      });
+    });
+
+    _defineProperty(this, "shiftRight", () => {
+      console.log('right');
+
+      if (this.state.position === -400) {
+        return;
+      }
+
+      this.setState({
+        position: this.state.position - 100
+      });
+    });
+
+    this.state = {
+      toggle: 'none',
+      position: 0
+    };
+  }
+
+  render() {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SliderContainer, {
+      onMouseEnter: this.displayArrows
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(LeftArrow, {
+      toggle: this.state.toggle,
+      onClick: this.shiftLeft
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      src: "../uploads/left-arrow.png"
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ImgDiv, {
+      position: this.state.position
+    }, this.props.imagesArray.map((imagePath, index) => {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        key: index,
+        src: '..' + imagePath
+      });
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(RightArrow, {
+      toggle: this.state.toggle,
+      onClick: this.shiftRight
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      src: "../uploads/right-arrow.png"
+    })));
+  }
+
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (ImageSlider);
+
+/***/ }),
+
 /***/ "./src/ItemDetail.jsx":
 /*!****************************!*\
   !*** ./src/ItemDetail.jsx ***!
@@ -41676,7 +41824,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var _ImageSlider_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ImageSlider.jsx */ "./src/ImageSlider.jsx");
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 
@@ -41697,7 +41847,10 @@ const H2 = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
   }
 `;
 const MainImg = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].img`
-  width: 90%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
 `;
 const Description = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
   padding: 1em;
@@ -41719,14 +41872,18 @@ const Button = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].button`
   }
 `;
 const Img = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].img`
-  height: 40px;
+  height: auto;
+  width: 100%;
   object-fit: cover;
   overflow: hidden;
   margin: 1px;
   right: 0;
-  width: 40px;
   &:hover {
     cursor: pointer;
+  }
+  @media screen and (min-width: 960px) {
+    height: 10%
+    width: auto;
   }
 `;
 
@@ -41752,11 +41909,15 @@ class ItemDetail extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     });
 
     _defineProperty(this, "render", () => {
-      console.log(this.state.item);
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "detail-container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "detail-left"
+        className: "detail-image"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ImageSlider_jsx__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        imagesArray: this.state.images,
+        mainImage: this.state.mainImage
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "detail-mini-images"
       }, this.state.images.map((img, index) => {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Img, {
           onMouseEnter: () => this.setState({
@@ -41766,11 +41927,7 @@ class ItemDetail extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
           src: '..' + img
         });
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "detail-image"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MainImg, {
-        src: this.state.images[this.state.mainImage]
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "detail-right"
+        className: "detail-description"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ItemName, null, this.state.item.item), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Price, null, this.state.item.price), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(H2, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Product Details")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Description, null, this.state.item.description), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Button, null, "Add to Cart")));
     });
 
