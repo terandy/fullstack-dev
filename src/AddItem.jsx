@@ -6,12 +6,13 @@ const Form = styled.form`
   display: grid;
   max-width: 500px;
   min-width: 300px;
-  font-family: 'Quicksand', sans-serif;
+  font-family: sans-serif;
   margin: auto;
-  box-shadow: 5px 5px 10px grey;
+  border: lightgrey solid 1px;
   padding: 3em;
 `;
 const DetailsContent = styled.div`
+  font-family: 'sans-serif';
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: 1.5em 5em 1em;
@@ -28,8 +29,11 @@ const DetailsContent = styled.div`
 const Title = styled.h2`
   font-size: 1.25em;
   margin: 3.5em 0 2em 0;
+  font-weight: normal;
+  text-transform: uppercase;
   div {
     font-size: 50%;
+    font-weight: lighter;
   }
 `;
 const Images = styled.div`
@@ -37,8 +41,11 @@ const Images = styled.div`
   justify-items: center;
 `;
 const Tags = styled.div`
+  font-family: 'sans-serif';
   display: grid;
   justify-items: center;
+  border: solid lightgrey 1px;
+  padding: 2em;
   div input {
     height: 2em;
     border: none;
@@ -51,8 +58,14 @@ const Tags = styled.div`
   }
   div button {
     height: 2em;
-    font-family: 'Quicksand', sans-serif;
+    font-family: sans-serif;
   }
+`;
+const InputImages = styled.input`
+  font-family: 'sans-serif';
+  color: purple;
+  border: solid lightgrey 1px;
+  padding: 2em;
 `;
 const SubmitButton = styled.input`
   background-color: purple;
@@ -63,13 +76,16 @@ const SubmitButton = styled.input`
   margin: 4em 25% 2em 25%;
   padding: 0.75em;
   border: none;
+  text-transform: uppercase;
 `;
 const Button = styled.button`
-  background-color: teal;
-  border-radius: 2em;
-  color: white;
-  border: none;
-  font-size: em;
+  background-color: white;
+  color: black;
+  border: lightgrey solid 1px;
+  font-size: 0.75em;
+  border-radius: 0.5em;
+  font-family: times;
+  font-weight: lighter;
   &:focus {
     outline: none;
   }
@@ -164,7 +180,11 @@ class AddItem extends Component {
             Step 2: Upload Images<div>Upload multiple images at once!</div>
           </Title>
           <Images>
-            <input type="file" multiple onChange={this.fileChangeHandler} />
+            <InputImages
+              type="file"
+              multiple
+              onChange={this.fileChangeHandler}
+            />
           </Images>
           <Title>
             Step 3: Include Tags<div>Tags help users find your item.</div>

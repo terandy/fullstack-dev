@@ -18,12 +18,6 @@ const H2 = styled.div`
     font-size: 1em;
   }
 `;
-const MainImg = styled.img`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  overflow: hidden;
-`;
 const Description = styled.div`
   padding: 1em;
   width: 50%;

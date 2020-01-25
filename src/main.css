@@ -10,38 +10,37 @@ body {
 .toggle-nav-on {
   display: block;
   position: fixed;
-    width: 45%;
-    height: 100%;
-    right: 0;
-    top: 0;
-    padding: 2em 1em 0 0;
-    font-size:2em;
-    background-color: whitesmoke;
-    box-shadow: 0 0 3px grey;
-    
-    
-    transition-duration: .5s;
-    -webkit-transition-duration: .5s;
-    -moz-transition-duration: .5s;
-    -o-transition-duration: .5s;
-    transition-timing-function: ease-in-out;
+  width: 45%;
+  height: 100%;
+  right: 0;
+  top: 0;
+  padding: 2em 1em 0 0;
+  font-size: 2em;
+  background-color: whitesmoke;
+  box-shadow: 0 0 3px grey;
+
+  transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
 }
 .toggle-nav {
   visibility: hidden;
   overflow: hidden;
   top: 0;
   padding: 2em 1em 0 0;
-  right:-100%;
-  padding-right:1em;
-  font-size:2em;
+  right: -100%;
+  padding-right: 1em;
+  font-size: 2em;
   height: 100%;
   width: 45%;
-  position:fixed;
-      transition-duration: .25s;
-    -webkit-transition-duration: .25s;
-    -moz-transition-duration: .25s;
-    -o-transition-duration: .25s;
-    transition-timing-function: ease-in-out;
+  position: fixed;
+  transition-duration: 0.25s;
+  -webkit-transition-duration: 0.25s;
+  -moz-transition-duration: 0.25s;
+  -o-transition-duration: 0.25s;
+  transition-timing-function: ease-in-out;
 }
 
 .hideDesktop {
@@ -75,18 +74,19 @@ a {
 
 /* all items container */
 .all-items-display {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 100vp;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: auto;
+  width: 90vw;
 }
 /* individual item */
 .one-item {
+  font-family: 'sans-serif';
   color: black;
   padding: 0;
   margin: 10px;
-  height: 250px;
-  width: 140px;
+  height: 70vw;
+  width: 40vw;
   z-index: 1;
 }
 .one-item-image {
@@ -111,14 +111,16 @@ a {
   margin: 0;
   padding-bottom: 5px;
   font-size: 20px;
-  border-bottom: 2px black solid;
-  width: 20%;
+  border-bottom: 1px black solid;
+  width: 33%;
+  text-transform: capitalize;
+  font-weight: lighter;
 }
 .one-item-text > p {
   padding: 0;
   margin-top: 5px;
-  font-size: 80%;
-  font-style: lighter;
+  font-size: 70%;
+  font-weight: lighter;
 }
 
 .popup {
@@ -135,6 +137,7 @@ a {
   display: grid;
   grid-column-gap: 50px;
   width: 100vw;
+  margin-top: 5em;
 }
 
 .detail-description {
@@ -151,11 +154,31 @@ a {
   justify-content: center;
 }
 
-@media (max-width: 968px) {
+@media screen and (min-width: 650px) {
+  .all-items-display {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: auto;
+    width: 90vw;
+  }
+  .one-item-text > h1 {
+    font-size: 25px;
+  }
+  .one-item {
+    height: 430px;
+    width: 230px;
+  }
 }
 
 /* CSS applies to 968px and above */
 @media screen and (min-width: 968px) {
+  .all-items-display {
+    padding: 0 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    width: 90vw;
+  }
   .one-item-text > h1 {
     font-size: 25px;
   }
@@ -227,10 +250,11 @@ a {
     grid-template-columns: 1fr 30%;
     width: 90vw;
     margin: 2em;
+    margin-top: 5em;
   }
   .detail-description {
     width: 90%;
-    height: 100%;
+    height: 80vh;
     padding: 0;
     margin: 1em;
   }
@@ -240,6 +264,6 @@ a {
     align-items: center;
     margin: auto;
     width: 100%;
-    height: 80vh;
+    height: 90vh;
   }
 }
