@@ -54,7 +54,7 @@ const Img = styled.img`
   object-fit: cover;
   overflow: hidden;
   margin: 10px;
-  position:absolute;
+  right: 0;
   bottom:0;
   border-radius:1em;
   border:${props => props.border};
