@@ -203,7 +203,15 @@ class AddItem extends Component {
               ))}
             </div>
           </Tags>
-          <SubmitButton type="submit" value="Add Item" />
+          <Title>
+            <div>
+              <h3>Terms and Conditions</h3>
+              <input type="checkbox" label="I certify" />
+              By submitting this form I hereby accept the Conditions and
+              Responsabilities of our Policies of confidentiality.
+            </div>
+          </Title>
+          <SubmitButton type="submit" value="Submit" />
         </Form>
       </div>
     );

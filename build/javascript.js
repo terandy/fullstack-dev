@@ -41599,9 +41599,12 @@ class AddItem extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         onClick: this.addTagSubmit
       }, "Add Tag "), this.state.tags.map((tag, index) => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         key: index
-      }, tag)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SubmitButton, {
+      }, tag)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Title, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Terms and Conditions"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "checkbox",
+        label: "I certify"
+      }), "By submitting this form I hereby accept the Conditions and Responsabilities of our Policies of confidentiality.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SubmitButton, {
         type: "submit",
-        value: "Add Item"
+        value: "Submit"
       })));
     });
 
