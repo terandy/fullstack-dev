@@ -4,6 +4,10 @@ let reducer = (state, action) => {
     console.log('login content', action.content);
     return { ...state, username: action.content };
   }
+  if (action.type === 'logout') {
+    console.log('login content', action.content);
+    return { ...state, username: undefined };
+  }
   if (action.type === 'set-items') {
     console.log('set items content', action.content);
     return { ...state, items: action.content };

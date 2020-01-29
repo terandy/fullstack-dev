@@ -30,6 +30,18 @@ MongoClient.connect(
 let sessions = {};
 
 // Your endpoints go after this line
+app.post('/user', upload.none(), (req, res) => {
+  console.log('request to /user');
+  res.send(JSON.stringify({ user: sessions[req.cookies.sid] }));
+});
+app.post('/logout', upload.none(), (req, res) => {
+  if (req.cookies.sid) {
+    delete sessions[req.cookies.sid];
+    res.send(JSON.stringify({ success: true }));
+  } else {
+    res.send(JSON.stringify({ success: false }));
+  }
+});
 app.post('/login', upload.none(), (req, res) => {
   console.log('login', req.body);
   let name = req.body.username;
@@ -145,7 +157,7 @@ app.post('/one-item', upload.none(), (req, res) => {
         res.send(JSON.stringify({ success: false }));
         return;
       }
-      console.log('item', item);
+      // console.log('item', item);
       res.send(JSON.stringify(item));
     });
 });
