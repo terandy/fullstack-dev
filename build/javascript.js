@@ -964,7 +964,7 @@ exports.push([module.i, "/*!\n * Hamburgers\n * @description Tasty CSS-animated 
 
 exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "body {\n  background-color: white;\n  margin: 0;\n}\n\n.nav {\n  background-color: white;\n}\n\n.toggle-nav-on {\n  display: block;\n  position: fixed;\n  width: 45%;\n  height: 100%;\n  right: 0;\n  top: 0;\n  padding: 2em 1em 0 0;\n  font-size: 2em;\n  background-color: whitesmoke;\n  box-shadow: 0 0 3px grey;\n\n  transition-duration: 0.5s;\n  -webkit-transition-duration: 0.5s;\n  -moz-transition-duration: 0.5s;\n  -o-transition-duration: 0.5s;\n  transition-timing-function: ease-in-out;\n}\n.toggle-nav {\n  visibility: hidden;\n  overflow: hidden;\n  top: 0;\n  padding: 2em 1em 0 0;\n  right: -100%;\n  padding-right: 1em;\n  font-size: 2em;\n  height: 100%;\n  width: 45%;\n  position: fixed;\n  transition-duration: 0.25s;\n  -webkit-transition-duration: 0.25s;\n  -moz-transition-duration: 0.25s;\n  -o-transition-duration: 0.25s;\n  transition-timing-function: ease-in-out;\n}\n\n.hideDesktop {\n  display: none;\n}\n\n.mobileNav {\n  display: flex;\n  justify-content: space-between;\n}\n\n.mobileNav h1 {\n  margin-left: 15px;\n}\n\na {\n  color: black;\n  text-decoration: none;\n}\n\n.nav ul {\n  list-style-type: none;\n  text-transform: uppercase;\n  padding: 0px;\n  line-height: 2em;\n  display: flex;\n  flex-direction: column;\n  text-align: right;\n  font-family: sans-serif;\n}\n\n/* all items container */\n.all-items-display {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  margin: auto;\n  width: 90vw;\n}\n/* individual item */\n.one-item {\n  font-family: 'sans-serif';\n  color: black;\n  padding: 0;\n  margin: 10px;\n  height: 70vw;\n  width: 40vw;\n  z-index: 1;\n}\n.one-item-image {\n  height: 80%;\n  width: 100%;\n  background: lightgrey;\n}\n.one-item-image > img {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  overflow: hidden;\n}\n.one-item-text {\n  padding: 0;\n  margin: 0;\n  margin-top: 10px;\n  font-family: 'Helvetica';\n}\n.one-item-text > h1 {\n  padding: 0;\n  margin: 0;\n  padding-bottom: 5px;\n  font-size: 20px;\n  border-bottom: 1px black solid;\n  width: 33%;\n  text-transform: capitalize;\n  font-weight: lighter;\n}\n.one-item-text > p {\n  padding: 0;\n  margin-top: 5px;\n  font-size: 70%;\n  font-weight: lighter;\n}\n\n.popup {\n  z-index: 1000;\n  width: 400px;\n  box-shadow: rgba(128, 128, 128, 0.479) 4px 4px 4px 4px 16px;\n  text-transform: none;\n}\n.popup-form-container {\n  background-color: white;\n  display: flex;\n}\n.detail-container {\n  display: grid;\n  grid-column-gap: 50px;\n  width: 100vw;\n  margin-top: 5em;\n}\n\n.detail-description {\n  display: grid;\n  grid-template-rows: 5em 2em 2em 1fr 3em;\n  padding: 2em;\n  height: 40vh;\n}\n.detail-image {\n  width: 90vw;\n  height: 70vh;\n  margin: auto;\n  display: flex;\n  justify-content: center;\n}\n\n@media screen and (min-width: 650px) {\n  .all-items-display {\n    display: grid;\n    grid-template-columns: 1fr 1fr 1fr;\n    margin: auto;\n    width: 90vw;\n  }\n  .one-item-text > h1 {\n    font-size: 25px;\n  }\n  .one-item {\n    height: 430px;\n    width: 230px;\n  }\n}\n\n/* CSS applies to 968px and above */\n@media screen and (min-width: 968px) {\n  .all-items-display {\n    padding: 0 5%;\n    display: grid;\n    grid-template-columns: 1fr 1fr 1fr 1fr;\n    justify-content: center;\n    width: 90vw;\n  }\n  .one-item-text > h1 {\n    font-size: 25px;\n  }\n  .one-item {\n    height: 430px;\n    width: 230px;\n  }\n  /* navigation */\n  .toggle-nav {\n    display: block;\n  }\n  .hideMobile {\n    display: none;\n  }\n  #navItems {\n    width: 100%;\n  }\n  .nav {\n    display: flex;\n    height: 4em;\n    border-bottom: 1px solid black;\n    margin-bottom: 0.5em;\n    box-shadow: 0px 0px 2px grey;\n    background-color: white;\n  }\n  .nav ul {\n    display: flex;\n    flex-direction: row;\n    list-style-type: none;\n    text-transform: uppercase;\n    justify-content: space-between;\n  }\n\n  .nav ul li {\n    margin: 0 1em 0 1em;\n  }\n  .navRight {\n    display: flex;\n  }\n  .navLeft {\n    display: flex;\n  }\n  /* end navigation */\n\n  /* dropdown */\n  .dropdown-container {\n    position: relative;\n  }\n\n  .dropdown-content {\n    display: none;\n    position: absolute;\n    right: 0;\n    min-width: max-content;\n    box-shadow: rgba(128, 128, 128, 0.479) 4px 4px 16px;\n    background-color: white;\n    padding: 1em;\n    z-index: 99;\n  }\n  .dropdown-container:hover .dropdown-content {\n    display: block;\n  }\n  .dropdown-button:hover {\n    color: purple;\n    cursor: pointer;\n  }\n  /* end of dropdown */\n  .detail-container {\n    grid-template-columns: 1fr 30%;\n    width: 90vw;\n    margin: 2em;\n    margin-top: 5em;\n  }\n  .detail-description {\n    width: 90%;\n    height: 80vh;\n    padding: 0;\n    margin: 1em;\n  }\n  .detail-image {\n    justify-content: center;\n    display: flex;\n    align-items: center;\n    margin: auto;\n    width: 100%;\n    height: 90vh;\n  }\n}\n", ""]);
+exports.push([module.i, "body {\n  background-color: white;\n  margin: 0;\n}\n\n.nav {\n  background-color: white;\n}\n\n.toggle-nav-on {\n  display: block;\n  position: fixed;\n  width: 45%;\n  height: 100%;\n  right: 0;\n  top: 0;\n  padding: 2em 1em 0 0;\n  font-size: 2em;\n  background-color: whitesmoke;\n  box-shadow: 0 0 3px grey;\n\n  transition-duration: 0.5s;\n  -webkit-transition-duration: 0.5s;\n  -moz-transition-duration: 0.5s;\n  -o-transition-duration: 0.5s;\n  transition-timing-function: ease-in-out;\n}\n.toggle-nav {\n  visibility: hidden;\n  overflow: hidden;\n  top: 0;\n  padding: 2em 1em 0 0;\n  right: -100%;\n  padding-right: 1em;\n  font-size: 2em;\n  height: 100%;\n  width: 45%;\n  position: fixed;\n  transition-duration: 0.25s;\n  -webkit-transition-duration: 0.25s;\n  -moz-transition-duration: 0.25s;\n  -o-transition-duration: 0.25s;\n  transition-timing-function: ease-in-out;\n}\n\n.hideDesktop {\n  display: none;\n}\n\n.mobileNav {\n  display: flex;\n  justify-content: space-between;\n}\n\n.mobileNav h1 {\n  margin-left: 15px;\n}\n\na {\n  color: black;\n  text-decoration: none;\n}\n\n.nav ul {\n  list-style-type: none;\n  text-transform: uppercase;\n  padding: 0px;\n  line-height: 2em;\n  display: flex;\n  flex-direction: column;\n  text-align: right;\n  font-family: sans-serif;\n}\n\n/* all items container */\n.all-items-display {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  margin: auto;\n  width: 90vw;\n}\n/* individual item */\n.one-item {\n  font-family: 'sans-serif';\n  color: black;\n  padding: 0;\n  margin: 10px;\n  height: 70vw;\n  width: 40vw;\n  z-index: 1;\n}\n.one-item-image {\n  height: 80%;\n  width: 100%;\n  background: lightgrey;\n}\n.one-item-image > img {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  overflow: hidden;\n}\n.one-item-text {\n  padding: 0;\n  margin: 0;\n  margin-top: 10px;\n  font-family: 'Helvetica';\n}\n.one-item-text > h1 {\n  padding: 0;\n  margin: 0;\n  font-size: 20px;\n  width: 100%;\n  overflow: visible;\n  text-transform: capitalize;\n  font-weight: lighter;\n}\n.one-item-text > p {\n  padding-top: 5px;\n  font-size: 70%;\n  font-weight: lighter;\n  border-top: black solid 1px;\n  width: 33%;\n}\n\n.popup {\n  z-index: 1000;\n  width: 400px;\n  box-shadow: rgba(128, 128, 128, 0.479) 4px 4px 4px 4px 16px;\n  text-transform: none;\n}\n.popup-form-container {\n  background-color: white;\n  display: flex;\n}\n.detail-container {\n  display: grid;\n  grid-column-gap: 50px;\n  width: 100vw;\n  margin-top: 5em;\n}\n\n.detail-description {\n  display: grid;\n  grid-template-rows: 5em 2em 2em 1fr 3em;\n  padding: 2em;\n  height: 40vh;\n}\n.detail-image {\n  width: 90vw;\n  height: 70vh;\n  margin: auto;\n  display: flex;\n  justify-content: center;\n}\n\n@media screen and (min-width: 650px) {\n  .all-items-display {\n    display: grid;\n    grid-template-columns: 1fr 1fr 1fr;\n    margin: auto;\n    width: 90vw;\n  }\n  .one-item-text > h1 {\n    font-size: 25px;\n  }\n  .one-item {\n    height: 430px;\n    width: 230px;\n  }\n}\n\n/* CSS applies to 968px and above */\n@media screen and (min-width: 968px) {\n  .all-items-display {\n    padding: 0 5%;\n    display: grid;\n    grid-template-columns: 1fr 1fr 1fr 1fr;\n    justify-content: center;\n    width: 90vw;\n  }\n  .one-item-text > h1 {\n    font-size: 25px;\n  }\n  .one-item {\n    height: 430px;\n    width: 230px;\n  }\n  /* navigation */\n  .toggle-nav {\n    display: block;\n  }\n  .hideMobile {\n    display: none;\n  }\n  #navItems {\n    width: 100%;\n  }\n  .nav {\n    display: flex;\n    height: 4em;\n    border-bottom: 1px solid black;\n    margin-bottom: 0.5em;\n    box-shadow: 0px 0px 2px grey;\n    background-color: white;\n  }\n  .nav ul {\n    display: flex;\n    flex-direction: row;\n    list-style-type: none;\n    text-transform: uppercase;\n    justify-content: space-between;\n  }\n\n  .nav ul li {\n    margin: 0 1em 0 1em;\n  }\n  .navRight {\n    display: flex;\n  }\n  .navLeft {\n    display: flex;\n  }\n  /* end navigation */\n\n  /* dropdown */\n  .dropdown-container {\n    position: relative;\n  }\n\n  .dropdown-content {\n    display: none;\n    position: absolute;\n    right: 0;\n    min-width: max-content;\n    box-shadow: rgba(128, 128, 128, 0.479) 4px 4px 16px;\n    background-color: white;\n    padding: 1em;\n    z-index: 99;\n  }\n  .dropdown-container:hover .dropdown-content {\n    display: block;\n  }\n  .dropdown-button:hover {\n    color: purple;\n    cursor: pointer;\n  }\n  /* end of dropdown */\n  .detail-container {\n    grid-template-columns: 1fr 30%;\n    width: 90vw;\n    margin: 2em;\n    margin-top: 5em;\n  }\n  .detail-description {\n    width: 90%;\n    height: 80vh;\n    padding: 0;\n    margin: 1em;\n  }\n  .detail-image {\n    justify-content: center;\n    display: flex;\n    align-items: center;\n    margin: auto;\n    width: 100%;\n    height: 90vh;\n  }\n}\n", ""]);
 
 
 
@@ -41486,6 +41486,7 @@ const SubmitButton = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].i
   padding: 0.75em;
   border: none;
   text-transform: uppercase;
+  display: ${props => props.checked ? 'block' : 'none'};
 `;
 const Button = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].button`
   background-color: white;
@@ -41548,6 +41549,14 @@ class AddItem extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       });
     });
 
+    _defineProperty(this, "toggleSubmitButton", () => {
+      this.setState(this.state.submit ? {
+        submit: false
+      } : {
+        submit: true
+      });
+    });
+
     _defineProperty(this, "submitHandler", evt => {
       evt.preventDefault();
       let data = new FormData();
@@ -41578,7 +41587,8 @@ class AddItem extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Title, null, "Step 1: Describe Item", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Include here all information related to your item.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(DetailsContent, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Title"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
         value: this.state.item,
-        onChange: this.itemChangeHandler
+        onChange: this.itemChangeHandler,
+        maxlength: "15"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Description"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
         value: this.state.description,
@@ -41601,10 +41611,13 @@ class AddItem extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         key: index
       }, tag)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Title, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Terms and Conditions"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "checkbox",
-        label: "I certify"
+        label: "I certify",
+        onChange: this.toggleSubmitButton
       }), "By submitting this form I hereby accept the Conditions and Responsabilities of our Policies of confidentiality.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SubmitButton, {
         type: "submit",
-        value: "Submit"
+        value: "Submit",
+        checked: this.state.submit,
+        onChange: () => console.log('submited')
       })));
     });
 
@@ -41615,7 +41628,8 @@ class AddItem extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       item: '',
       price: '',
       tag: '',
-      tags: ['']
+      tags: [''],
+      submit: false
     };
   }
 
@@ -41668,12 +41682,16 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_MainPage_jsx__WEBPACK_IMPORTED_MODULE_3__["default"], null));
     });
 
-    _defineProperty(this, "renderLoginPage", () => {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_LoginPage_jsx__WEBPACK_IMPORTED_MODULE_4__["default"], null);
+    _defineProperty(this, "renderLoginPage", routerData => {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_LoginPage_jsx__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        history: routerData.history
+      });
     });
 
-    _defineProperty(this, "renderSignupPage", () => {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_RegisterPage_jsx__WEBPACK_IMPORTED_MODULE_5__["default"], null);
+    _defineProperty(this, "renderSignupPage", routerData => {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_RegisterPage_jsx__WEBPACK_IMPORTED_MODULE_5__["default"], {
+        history: routerData.history
+      });
     });
 
     _defineProperty(this, "renderSearchPage", renderdata => {
@@ -41990,12 +42008,13 @@ const H2 = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
     position: absolute;
     bottom: 0;
     margin: 0;
-    font-size: 1em;
+    text-align;justify;
   }
 `;
 const Description = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
   padding: 1em;
-  width: 50%;
+  width: 90%;
+  text-align: justify;
 `;
 const Price = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
   &:before {
@@ -42232,6 +42251,7 @@ class Login extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
           passwordLoginInput: '',
           usernameLoginInput: ''
         });
+        this.props.history.push('/');
       }
     });
 
@@ -42301,7 +42321,8 @@ class LoginPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         to: "/"
       }, "AliBay")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Login"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Login_jsx__WEBPACK_IMPORTED_MODULE_2__["default"], {
         inputClass: "page1-form-input",
-        buttonClass: "page1-botton"
+        buttonClass: "page1-botton",
+        history: this.props.history
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         to: "/register",
         className: "page1-redirect"
@@ -42580,7 +42601,7 @@ class OneItem extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         src: '..' + this.props.item.imgPaths[this.state.imageIndex]
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "one-item-text"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, this.props.item.item), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "$", this.props.item.price))));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, this.props.item.item), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, this.props.item.price))));
     });
 
     this.state = {
@@ -42605,8 +42626,10 @@ class OneItem extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 
@@ -42639,10 +42662,32 @@ class Register extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       });
       let body = await response.text();
       console.log('/register response', body);
-      body = JSON.parse(body);
+      let registerBody = JSON.parse(body);
 
-      if (body.success) {
+      if (registerBody.success) {
+        let loginResponse = await fetch('/login', {
+          method: 'POST',
+          body: data
+        });
+        let loginText = await loginResponse.text();
+        console.log('/login response', body);
+        let loginBody = JSON.parse(loginText); //now login
+
+        if (loginBody.success) {
+          console.log('logging in now..');
+          this.props.dispatch({
+            type: 'login-sucess',
+            content: name
+          });
+          this.setState({
+            usernameRegisterInput: '',
+            passwordRegisterInput: ''
+          });
+          this.props.history.push('/');
+        }
+      } else {
         this.setState({
+          message: 'Sorry username already taken. Try again!',
           usernameRegisterInput: '',
           passwordRegisterInput: ''
         });
@@ -42656,7 +42701,7 @@ class Register extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         className: "page1-form-container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "page1-form-subcontainer"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
         to: "/"
       }, "AliBay")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Sign up"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         onSubmit: this.submitRegisterHandler
@@ -42674,10 +42719,10 @@ class Register extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         placeholder: "Password"
       }), ' '), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "page1-botton"
-      }, "Create Account")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+      }, "Create Account")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
         to: "/login",
         className: "page1-redirect"
-      }, "Already a user? ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Log in")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "Already a user? ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Log in")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.state.message))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "page1-image1-container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: "../uploads/register-image1.webp",
@@ -42687,13 +42732,14 @@ class Register extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
     this.state = {
       usernameRegisterInput: '',
-      passwordRegisterInput: ''
+      passwordRegisterInput: '',
+      message: ''
     };
   }
 
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (Register);
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])()(Register));
 
 /***/ }),
 

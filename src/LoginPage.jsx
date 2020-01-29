@@ -12,7 +12,11 @@ class LoginPage extends Component {
               <Link to="/">AliBay</Link>
             </h1>
             <h2>Login</h2>
-            <Login inputClass="page1-form-input" buttonClass="page1-botton" />
+            <Login
+              inputClass="page1-form-input"
+              buttonClass="page1-botton"
+              history={this.props.history}
+            />
             <div>
               <Link to="/register" className="page1-redirect">
                 Create an account

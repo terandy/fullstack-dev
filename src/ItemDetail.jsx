@@ -15,12 +15,13 @@ const H2 = styled.div`
     position: absolute;
     bottom: 0;
     margin: 0;
-    font-size: 1em;
+    text-align;justify;
   }
 `;
 const Description = styled.div`
   padding: 1em;
-  width: 50%;
+  width: 90%;
+  text-align: justify;
 `;
 const Price = styled.div`
   &:before {

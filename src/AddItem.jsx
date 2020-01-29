@@ -77,6 +77,7 @@ const SubmitButton = styled.input`
   padding: 0.75em;
   border: none;
   text-transform: uppercase;
+  display: ${props => (props.checked ? 'block' : 'none')};
 `;
 const Button = styled.button`
   background-color: white;
@@ -102,7 +103,8 @@ class AddItem extends Component {
       item: '',
       price: '',
       tag: '',
-      tags: ['']
+      tags: [''],
+      submit: false
     };
   }
   descChangeHandler = e => {
@@ -126,6 +128,9 @@ class AddItem extends Component {
   addTagSubmit = e => {
     e.preventDefault();
     this.setState({ tags: this.state.tags.concat(this.state.tag), tag: '' });
+  };
+  toggleSubmitButton = () => {
+    this.setState(this.state.submit ? { submit: false } : { submit: true });
   };
 
   submitHandler = evt => {
@@ -162,6 +167,7 @@ class AddItem extends Component {
               type="text"
               value={this.state.item}
               onChange={this.itemChangeHandler}
+              maxlength="15"
             />
             <label>Description</label>
             <input
@@ -206,12 +212,21 @@ class AddItem extends Component {
           <Title>
             <div>
               <h3>Terms and Conditions</h3>
-              <input type="checkbox" label="I certify" />
+              <input
+                type="checkbox"
+                label="I certify"
+                onChange={this.toggleSubmitButton}
+              />
               By submitting this form I hereby accept the Conditions and
               Responsabilities of our Policies of confidentiality.
             </div>
           </Title>
-          <SubmitButton type="submit" value="Submit" />
+          <SubmitButton
+            type="submit"
+            value="Submit"
+            checked={this.state.submit}
+            onChange={() => console.log('submited')}
+          />
         </Form>
       </div>
     );

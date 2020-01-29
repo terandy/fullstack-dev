@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Route, BrowserRouter, Link } from 'react-router-dom';
-
 class OneItem extends Component {
   constructor(props) {
     super(props);
@@ -17,7 +16,6 @@ class OneItem extends Component {
       return;
     }
   };
-
   render = () => {
     return (
       <Link to={'/item-detail/' + this.props.item._id}>
@@ -31,7 +29,7 @@ class OneItem extends Component {
           </div>
           <div className="one-item-text">
             <h1>{this.props.item.item}</h1>
-            <p>${this.props.item.price}</p>
+            <p>{this.props.item.price}</p>
           </div>
         </div>
       </Link>

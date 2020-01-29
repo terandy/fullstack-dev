@@ -59,8 +59,17 @@ app.post('/register', upload.none(), (req, res) => {
   console.log('register', req.body);
   let name = req.body.username;
   let pwd = req.body.password;
-  dbo.collection('users').insertOne({ username: name, password: sha1(pwd) });
-  res.send(JSON.stringify({ success: true }));
+  console.log('dbo response register');
+  dbo.collection('users').findOne({ username: name }, (err, user) => {
+    if (user === null) {
+      dbo
+        .collection('users')
+        .insertOne({ username: name, password: sha1(pwd), cart: [] });
+      res.send(JSON.stringify({ success: true }));
+    } else {
+      res.send(JSON.stringify({ success: false }));
+    }
+  });
 });
 
 app.post('/add-item', upload.array('images'), (req, res) => {

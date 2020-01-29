@@ -15,11 +15,11 @@ class App extends Component {
       </div>
     );
   };
-  renderLoginPage = () => {
-    return <LoginPage />;
+  renderLoginPage = routerData => {
+    return <LoginPage history={routerData.history} />;
   };
-  renderSignupPage = () => {
-    return <RegisterPage />;
+  renderSignupPage = routerData => {
+    return <RegisterPage history={routerData.history} />;
   };
   renderSearchPage = renderdata => {
     return <SearchPage tags={renderdata.match.params.tags} />;

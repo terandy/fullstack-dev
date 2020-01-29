@@ -33,6 +33,7 @@ class Login extends Component {
       console.log('logging in now..');
       this.props.dispatch({ type: 'login-sucess', content: name });
       this.setState({ passwordLoginInput: '', usernameLoginInput: '' });
+      this.props.history.push('/');
     }
   };
 
