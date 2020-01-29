@@ -41608,7 +41608,7 @@ class AddItem extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         type: "text",
         value: this.state.item,
         onChange: this.itemChangeHandler,
-        maxlength: "15"
+        maxLength: "15"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Description"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
         value: this.state.description,

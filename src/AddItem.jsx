@@ -184,7 +184,7 @@ class AddItem extends Component {
               type="text"
               value={this.state.item}
               onChange={this.itemChangeHandler}
-              maxlength="15"
+              maxLength="15"
             />
             <label>Description</label>
             <input
