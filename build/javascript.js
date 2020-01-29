@@ -42960,7 +42960,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _store_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./store.js */ "./src/store.js");
-/* harmony import */ var _store_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_store_js__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var _reload_magic_client_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./reload-magic-client.js */ "./src/reload-magic-client.js");
 
 
@@ -42974,7 +42973,7 @@ __webpack_require__.r(__webpack_exports__);
 Object(_reload_magic_client_js__WEBPACK_IMPORTED_MODULE_7__["default"])(); // automatic reload
 
 react_dom__WEBPACK_IMPORTED_MODULE_0___default.a.render(react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(react_redux__WEBPACK_IMPORTED_MODULE_5__["Provider"], {
-  store: _store_js__WEBPACK_IMPORTED_MODULE_6___default.a
+  store: _store_js__WEBPACK_IMPORTED_MODULE_6__["default"]
 }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_App_jsx__WEBPACK_IMPORTED_MODULE_3__["default"], null)), document.getElementById('root'));
 
 /***/ }),
@@ -43117,10 +43116,60 @@ let __init_magic_reload = async () => {
 /*!**********************!*\
   !*** ./src/store.js ***!
   \**********************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /Users/teresalacroix/decode/fullstack-dev/src/store.js: Unexpected token (27:1)\n\n  25 | const store = createStore(\n  26 |   reducer,\n> 27 | <<<<<<< HEAD\n     |  ^\n  28 |   { username: undefined, items: [], searchTag: '' },\n  29 | =======\n  30 |   { username: undefined, items: [], searchTag: '', cart: []},\n    at Object.raise (/Users/teresalacroix/decode/fullstack-dev/node_modules/@babel/parser/lib/index.js:7013:17)\n    at Object.unexpected (/Users/teresalacroix/decode/fullstack-dev/node_modules/@babel/parser/lib/index.js:8384:16)\n    at Object.jsxParseIdentifier (/Users/teresalacroix/decode/fullstack-dev/node_modules/@babel/parser/lib/index.js:3890:12)\n    at Object.jsxParseNamespacedName (/Users/teresalacroix/decode/fullstack-dev/node_modules/@babel/parser/lib/index.js:3900:23)\n    at Object.jsxParseElementName (/Users/teresalacroix/decode/fullstack-dev/node_modules/@babel/parser/lib/index.js:3911:21)\n    at Object.jsxParseOpeningElementAt (/Users/teresalacroix/decode/fullstack-dev/node_modules/@babel/parser/lib/index.js:3997:22)\n    at Object.jsxParseElementAt (/Users/teresalacroix/decode/fullstack-dev/node_modules/@babel/parser/lib/index.js:4030:33)\n    at Object.jsxParseElement (/Users/teresalacroix/decode/fullstack-dev/node_modules/@babel/parser/lib/index.js:4104:17)\n    at Object.parseExprAtom (/Users/teresalacroix/decode/fullstack-dev/node_modules/@babel/parser/lib/index.js:4111:19)\n    at Object.parseExprSubscripts (/Users/teresalacroix/decode/fullstack-dev/node_modules/@babel/parser/lib/index.js:9219:23)\n    at Object.parseMaybeUnary (/Users/teresalacroix/decode/fullstack-dev/node_modules/@babel/parser/lib/index.js:9199:21)\n    at Object.parseExprOps (/Users/teresalacroix/decode/fullstack-dev/node_modules/@babel/parser/lib/index.js:9067:23)\n    at Object.parseMaybeConditional (/Users/teresalacroix/decode/fullstack-dev/node_modules/@babel/parser/lib/index.js:9040:23)\n    at Object.parseMaybeAssign (/Users/teresalacroix/decode/fullstack-dev/node_modules/@babel/parser/lib/index.js:9000:21)\n    at Object.parseExprListItem (/Users/teresalacroix/decode/fullstack-dev/node_modules/@babel/parser/lib/index.js:10295:18)\n    at Object.parseCallExpressionArguments (/Users/teresalacroix/decode/fullstack-dev/node_modules/@babel/parser/lib/index.js:9404:22)\n    at Object.parseSubscript (/Users/teresalacroix/decode/fullstack-dev/node_modules/@babel/parser/lib/index.js:9310:31)\n    at Object.parseSubscripts (/Users/teresalacroix/decode/fullstack-dev/node_modules/@babel/parser/lib/index.js:9240:19)\n    at Object.parseExprSubscripts (/Users/teresalacroix/decode/fullstack-dev/node_modules/@babel/parser/lib/index.js:9229:17)\n    at Object.parseMaybeUnary (/Users/teresalacroix/decode/fullstack-dev/node_modules/@babel/parser/lib/index.js:9199:21)\n    at Object.parseExprOps (/Users/teresalacroix/decode/fullstack-dev/node_modules/@babel/parser/lib/index.js:9067:23)\n    at Object.parseMaybeConditional (/Users/teresalacroix/decode/fullstack-dev/node_modules/@babel/parser/lib/index.js:9040:23)\n    at Object.parseMaybeAssign (/Users/teresalacroix/decode/fullstack-dev/node_modules/@babel/parser/lib/index.js:9000:21)\n    at Object.parseVar (/Users/teresalacroix/decode/fullstack-dev/node_modules/@babel/parser/lib/index.js:11309:26)\n    at Object.parseVarStatement (/Users/teresalacroix/decode/fullstack-dev/node_modules/@babel/parser/lib/index.js:11128:10)\n    at Object.parseStatementContent (/Users/teresalacroix/decode/fullstack-dev/node_modules/@babel/parser/lib/index.js:10725:21)\n    at Object.parseStatement (/Users/teresalacroix/decode/fullstack-dev/node_modules/@babel/parser/lib/index.js:10658:17)\n    at Object.parseBlockOrModuleBlockBody (/Users/teresalacroix/decode/fullstack-dev/node_modules/@babel/parser/lib/index.js:11234:25)\n    at Object.parseBlockBody (/Users/teresalacroix/decode/fullstack-dev/node_modules/@babel/parser/lib/index.js:11221:10)\n    at Object.parseTopLevel (/Users/teresalacroix/decode/fullstack-dev/node_modules/@babel/parser/lib/index.js:10589:10)");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
+
+
+let reducer = (state, action) => {
+  if (action.type === 'login-sucess') {
+    console.log('login content', action.content);
+    return { ...state,
+      username: action.content
+    };
+  }
+
+  if (action.type === 'logout') {
+    console.log('login content', action.content);
+    return { ...state,
+      username: undefined
+    };
+  }
+
+  if (action.type === 'set-items') {
+    console.log('set items content', action.content);
+    return { ...state,
+      items: action.content
+    };
+  }
+
+  if (action.type === 'filter') {
+    console.log('filter content', action.content);
+    return { ...state,
+      searchTag: action.content
+    };
+  }
+
+  if (action.type === 'add-to-cart') {
+    console.log('add to cart', action.content);
+    return { ...state,
+      cart: action.content
+    };
+  }
+
+  return state;
+};
+
+const store = Object(redux__WEBPACK_IMPORTED_MODULE_0__["createStore"])(reducer, {
+  username: undefined,
+  items: [],
+  searchTag: '',
+  cart: []
+}, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+/* harmony default export */ __webpack_exports__["default"] = (store);
 
 /***/ })
 

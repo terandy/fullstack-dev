@@ -24,11 +24,7 @@ let reducer = (state, action) => {
 };
 const store = createStore(
   reducer,
-<<<<<<< HEAD
-  { username: undefined, items: [], searchTag: '' },
-=======
-  { username: undefined, items: [], searchTag: '', cart: []},
->>>>>>> 5aa67745a8cc26820390cbc61d0dd2fa3382630c
+  { username: undefined, items: [], searchTag: '', cart: [] },
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 export default store;
