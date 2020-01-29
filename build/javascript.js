@@ -41482,11 +41482,18 @@ const SubmitButton = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].i
   border-radius: 2em;
   font-size: 1em;
   color: white;
-  margin: 4em 25% 2em 25%;
+  margin: 1em 25% 2em 25%;
   padding: 0.75em;
   border: none;
   text-transform: uppercase;
   display: ${props => props.checked ? 'block' : 'none'};
+  &:focus {
+    outline: 0;
+  }
+  &:hover {
+    cursor: pointer;
+    background-color: grey;
+  }
 `;
 const Button = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].button`
   background-color: white;
@@ -41557,7 +41564,7 @@ class AddItem extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       });
     });
 
-    _defineProperty(this, "submitHandler", evt => {
+    _defineProperty(this, "submitHandler", async evt => {
       evt.preventDefault();
       let data = new FormData();
       this.state.files.forEach(file => data.append('images', file));
@@ -41566,19 +41573,32 @@ class AddItem extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       data.append('price', this.state.price);
       data.append('seller', this.state.seller);
       data.append('tag', this.state.tags);
-      fetch('/add-item', {
+      let response = await fetch('/add-item', {
         method: 'POST',
         body: data
       });
-      this.setState({
-        files: [],
-        description: '',
-        seller: this.props.seller,
-        item: '',
-        price: '',
-        tag: '',
-        tags: ['']
-      });
+      let text = await response.text();
+      let body = JSON.parse(text);
+
+      if (body.success) {
+        console.log('added');
+        this.setState({
+          files: [],
+          description: '',
+          seller: this.props.seller,
+          item: '',
+          price: '',
+          tag: '',
+          tags: ['']
+        });
+      } else {
+        console.log('not added');
+        this.setState({
+          errorMessage: '***Must be logged in to sell items.'
+        });
+      }
+
+      alert('Your item was added to the Alibay!');
     });
 
     _defineProperty(this, "render", () => {
@@ -41613,7 +41633,12 @@ class AddItem extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         type: "checkbox",
         label: "I certify",
         onChange: this.toggleSubmitButton
-      }), "By submitting this form I hereby accept the Conditions and Responsabilities of our Policies of confidentiality.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SubmitButton, {
+      }), "By submitting this form I hereby accept the Conditions and Responsabilities of our Policies of confidentiality.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Title, {
+        style: {
+          color: 'red',
+          margin: 0
+        }
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.state.errorMessage)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SubmitButton, {
         type: "submit",
         value: "Submit",
         checked: this.state.submit,
@@ -41629,7 +41654,8 @@ class AddItem extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       price: '',
       tag: '',
       tags: [''],
-      submit: false
+      submit: false,
+      errorMessage: ''
     };
   }
 
@@ -41706,8 +41732,10 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       });
     });
 
-    _defineProperty(this, "renderAddItem", () => {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AddItem_jsx__WEBPACK_IMPORTED_MODULE_6__["default"], null);
+    _defineProperty(this, "renderAddItem", routerData => {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AddItem_jsx__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        history: routerData.history
+      });
     });
 
     _defineProperty(this, "renderMenItems", () => {
