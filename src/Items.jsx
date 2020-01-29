@@ -1,6 +1,25 @@
 import React, { Component } from 'react';
 import OneItem from './OneItem.jsx';
 import { connect } from 'react-redux';
+import styled from 'styled-components';
+
+let Button = styled.button`
+  border: 1px solid lightgrey;
+  padding: 1em 2em;
+  font-size: 1.5em;
+  font-family: helvetica;
+  text-transform: uppercase;
+  font-weight: lighter;
+  color: purple;
+  width: 100%;
+  &:hover {
+    cursor: pointer;
+    color: violet;
+  }
+  &:focus {
+    outline: 0;
+  }
+`;
 
 class Items extends Component {
   constructor(props) {
@@ -28,7 +47,7 @@ class Items extends Component {
     });
     return (
       <div>
-        <button onClick={this.updateItems}>Reload items</button>
+        <Button onClick={this.updateItems}>Shop All</Button>
         <div className="all-items-display">
           {results.map((item, index) => {
             return <div key={index}>{<OneItem item={item} />}</div>;

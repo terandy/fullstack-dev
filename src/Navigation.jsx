@@ -1,27 +1,26 @@
 import React, { Component } from 'react';
 import Login from './Login.jsx';
-import LoginPopup from './LoginPopup.jsx';
 import { Route, BrowserRouter, Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import SearchBar from './SearchBar.jsx'
+import SearchBar from './SearchBar.jsx';
 import './dist/hamburgers.css';
 import Dropdown from './Dropdown.jsx';
 import styled from 'styled-components';
 
-var scrollPos = 0
+var scrollPos = 0;
 
 let NavDiv = styled.div`
-position: fixed;
-width:100%;
-z-index:50;
-top:${props => props.top};
+  position: fixed;
+  width: 100%;
+  z-index: 50;
+  top: ${props => props.top};
 
-transition-duration: .5s;
-    -webkit-transition-duration: .5s;
-    -moz-transition-duration: .5s;
-    -o-transition-duration: .5s;
-    transition-timing-function: ease-in-out;
-`
+  transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+`;
 
 class Navigation extends Component {
   constructor() {
@@ -36,8 +35,8 @@ class Navigation extends Component {
   componentDidMount = () => {
     window.addEventListener('resize', this.setClass);
     window.addEventListener('load', this.load);
-    window.addEventListener('scroll', this.navScroll)
-  }
+    window.addEventListener('scroll', this.navScroll);
+  };
   handleToggle = () => {
     if (this.state.checkToggle === false) {
       this.setState({
@@ -56,13 +55,13 @@ class Navigation extends Component {
 
   load = () => {
     if (window.innerWidth >= 968) {
-      this.setState({toggleNav: ''})
+      this.setState({ toggleNav: '' });
     }
-  }
+  };
 
   setClass = () => {
     if (window.innerWidth >= 968) {
-      this.setState({toggleNav: ''})
+      this.setState({ toggleNav: '' });
     }
     if (window.innerWidth < 968) {
       this.setState({toggleNav: 'toggle-nav'})
@@ -71,22 +70,27 @@ class Navigation extends Component {
 
       }
     }
-  }
+  };
 
   navScroll = () => {
-    if ((document.body.getBoundingClientRect()).top > scrollPos || this.state.checkToggle === true) { // scrolling up show nav
-      this.setState({top: "0%"})
-    }
-     else this.setState({top: "-9%"}) //scrolling down hide nav
-	scrollPos = (document.body.getBoundingClientRect()).top;
-  }
+    if (
+      document.body.getBoundingClientRect().top > scrollPos ||
+      this.state.checkToggle === true
+    ) {
+      // scrolling up show nav
+      this.setState({ top: '0%' });
+    } else this.setState({ top: '-9%' }); //scrolling down hide nav
+    scrollPos = document.body.getBoundingClientRect().top;
+  };
 
   render = () => {
-    var scrollPos = 0
+    var scrollPos = 0;
     return (
       <NavDiv top={this.state.top} className="nav">
         <div className="hideMobile mobileNav">
-          <h1><Link to="/">AliBay</Link></h1>
+          <h1>
+            <Link to="/">AliBay</Link>
+          </h1>
           <button
             className={this.state.hamburgerClass}
             type="button"
@@ -114,7 +118,7 @@ class Navigation extends Component {
               </li>
             </div>
             <div className="navRight">
-                    <SearchBar/>
+              <SearchBar />
               <li>
                 {' '}
                 {this.props.user ? 'Welcome back ' + this.props.user : ''}

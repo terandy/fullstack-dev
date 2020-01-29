@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { Route, BrowserRouter, Link } from 'react-router-dom';
 
 class Register extends Component {
@@ -6,7 +7,8 @@ class Register extends Component {
     super();
     this.state = {
       usernameRegisterInput: '',
-      passwordRegisterInput: ''
+      passwordRegisterInput: '',
+      message: ''
     };
   }
   usernameRegisterChange = evt => {
@@ -25,14 +27,31 @@ class Register extends Component {
     let response = await fetch('/register', { method: 'POST', body: data });
     let body = await response.text();
     console.log('/register response', body);
-    body = JSON.parse(body);
-    if (body.success) {
+    let registerBody = JSON.parse(body);
+    if (registerBody.success) {
+      let loginResponse = await fetch('/login', { method: 'POST', body: data });
+      let loginText = await loginResponse.text();
+      console.log('/login response', body);
+      let loginBody = JSON.parse(loginText);
+      //now login
+      if (loginBody.success) {
+        console.log('logging in now..');
+        this.props.dispatch({ type: 'login-sucess', content: name });
+        this.setState({
+          usernameRegisterInput: '',
+          passwordRegisterInput: ''
+        });
+        this.props.history.push('/');
+      }
+    } else {
       this.setState({
+        message: 'Sorry username already taken. Try again!',
         usernameRegisterInput: '',
         passwordRegisterInput: ''
       });
     }
   };
+
   render = () => {
     return (
       <div className="page1-container">
@@ -66,6 +85,7 @@ class Register extends Component {
             <Link to="/login" className="page1-redirect">
               Already a user? <span>Log in</span>
             </Link>
+            <div>{this.state.message}</div>
           </div>
         </div>
         <div className="page1-image1-container">
@@ -76,4 +96,4 @@ class Register extends Component {
   };
 }
 
-export default Register;
+export default connect()(Register);
