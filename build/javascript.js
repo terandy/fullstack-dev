@@ -964,7 +964,7 @@ exports.push([module.i, "/*!\r\n * Hamburgers\r\n * @description Tasty CSS-anima
 
 exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "body {\r\n  background-color: white;\r\n  margin: 0;\r\n}\r\n\r\n.nav {\r\n  background-color: white;\r\n}\r\n\r\n.toggle-nav-on {\r\n  display: block;\r\n  position: fixed;\r\n    width: 45%;\r\n    height: 100%;\r\n    right: 0;\r\n    top: 0;\r\n    padding: 2em 1em 0 0;\r\n    font-size:2em;\r\n    background-color: whitesmoke;\r\n    box-shadow: 0 0 3px grey;\r\n    \r\n    \r\n    transition-duration: .5s;\r\n    -webkit-transition-duration: .5s;\r\n    -moz-transition-duration: .5s;\r\n    -o-transition-duration: .5s;\r\n    transition-timing-function: ease-in-out;\r\n}\r\n.toggle-nav {\r\n  visibility: hidden;\r\n  overflow: hidden;\r\n  top: 0;\r\n  padding: 2em 1em 0 0;\r\n  right:-100%;\r\n  padding-right:1em;\r\n  font-size:2em;\r\n  height: 100%;\r\n  width: 45%;\r\n  position:fixed;\r\n      transition-duration: .25s;\r\n    -webkit-transition-duration: .25s;\r\n    -moz-transition-duration: .25s;\r\n    -o-transition-duration: .25s;\r\n    transition-timing-function: ease-in-out;\r\n}\r\n\r\n.hideDesktop {\r\n  display: none;\r\n}\r\n\r\n.mobileNav {\r\n  display: flex;\r\n  justify-content: space-between;\r\n}\r\n\r\n.mobileNav h1 {\r\n  margin-left: 15px;\r\n}\r\n\r\na {\r\n  color: black;\r\n  text-decoration: none;\r\n}\r\n\r\n.nav ul {\r\n  list-style-type: none;\r\n  text-transform: uppercase;\r\n  padding: 0px;\r\n  line-height: 2em;\r\n  display: flex;\r\n  flex-direction: column;\r\n  text-align: right;\r\n  font-family: sans-serif;\r\n}\r\n\r\n/* all items container */\r\n.all-items-display {\r\n  display: flex;\r\n  flex-wrap: wrap;\r\n  justify-content: center;\r\n  width: 100vp;\r\n}\r\n/* individual item */\r\n.one-item {\r\n  color: black;\r\n  padding: 0;\r\n  margin: 10px;\r\n  height: 250px;\r\n  width: 140px;\r\n  z-index: 1;\r\n}\r\n.one-item-image {\r\n  height: 80%;\r\n  width: 100%;\r\n  background: lightgrey;\r\n}\r\n.one-item-image > img {\r\n  width: 100%;\r\n  height: 100%;\r\n  object-fit: cover;\r\n  overflow: hidden;\r\n}\r\n.one-item-text {\r\n  padding: 0;\r\n  margin: 0;\r\n  margin-top: 10px;\r\n  font-family: 'Helvetica';\r\n}\r\n.one-item-text > h1 {\r\n  padding: 0;\r\n  margin: 0;\r\n  padding-bottom: 5px;\r\n  font-size: 20px;\r\n  border-bottom: 2px black solid;\r\n  width: 20%;\r\n}\r\n.one-item-text > p {\r\n  padding: 0;\r\n  margin-top: 5px;\r\n  font-size: 80%;\r\n  font-style: lighter;\r\n}\r\n\r\n.popup {\r\n  z-index: 1000;\r\n  width: 400px;\r\n  box-shadow: rgba(128, 128, 128, 0.479) 4px 4px 4px 4px 16px;\r\n  text-transform: none;\r\n}\r\n.popup-form-container {\r\n  background-color: white;\r\n  display: flex;\r\n}\r\n.detail-container {\r\n  display: grid;\r\n  grid-column-gap: 50px;\r\n  width: 100vw;\r\n}\r\n\r\n.detail-description {\r\n  display: grid;\r\n  grid-template-rows: 5em 2em 2em 1fr 3em;\r\n  padding: 2em;\r\n  height: 40vh;\r\n}\r\n.detail-image {\r\n  width: 90vw;\r\n  height: 70vh;\r\n  margin: auto;\r\n  display: flex;\r\n  justify-content: center;\r\n}\r\n\r\n@media (max-width: 968px) {\r\n}\r\n\r\n/* CSS applies to 968px and above */\r\n@media screen and (min-width: 968px) {\r\n  .one-item-text > h1 {\r\n    font-size: 25px;\r\n  }\r\n  .one-item {\r\n    height: 430px;\r\n    width: 230px;\r\n  }\r\n  /* navigation */\r\n  .toggle-nav {\r\n    display: block;\r\n  }\r\n  .hideMobile {\r\n    display: none;\r\n  }\r\n  #navItems {\r\n    width: 100%;\r\n  }\r\n  .nav {\r\n    display: flex;\r\n    height: 4em;\r\n    border-bottom: 1px solid black;\r\n    margin-bottom: 0.5em;\r\n    box-shadow: 0px 0px 2px grey;\r\n    background-color: white;\r\n  }\r\n  .nav ul {\r\n    display: flex;\r\n    flex-direction: row;\r\n    list-style-type: none;\r\n    text-transform: uppercase;\r\n    justify-content: space-between;\r\n  }\r\n\r\n  .nav ul li {\r\n    margin: 0 1em 0 1em;\r\n  }\r\n  .navRight {\r\n    display: flex;\r\n  }\r\n  .navLeft {\r\n    display: flex;\r\n  }\r\n  /* end navigation */\r\n\r\n  /* dropdown */\r\n  .dropdown-container {\r\n    position: relative;\r\n  }\r\n\r\n  .dropdown-content {\r\n    display: none;\r\n    position: absolute;\r\n    right: 0;\r\n    min-width: max-content;\r\n    box-shadow: rgba(128, 128, 128, 0.479) 4px 4px 16px;\r\n    background-color: white;\r\n    padding: 1em;\r\n    z-index: 99;\r\n  }\r\n  .dropdown-container:hover .dropdown-content {\r\n    display: block;\r\n  }\r\n  .dropdown-button:hover {\r\n    color: purple;\r\n    cursor: pointer;\r\n  }\r\n  /* end of dropdown */\r\n  .detail-container {\r\n    grid-template-columns: 1fr 30%;\r\n    width: 90vw;\r\n    margin: 2em;\r\n  }\r\n  .detail-description {\r\n    width: 90%;\r\n    height: 100%;\r\n    padding: 0;\r\n    margin: 1em;\r\n  }\r\n  .detail-image {\r\n    justify-content: center;\r\n    display: flex;\r\n    align-items: center;\r\n    margin: auto;\r\n    width: 100%;\r\n    height: 80vh;\r\n  }\r\n}\r\n", ""]);
+exports.push([module.i, "body {\r\n  background-color: white;\r\n  margin: 0;\r\n}\r\n\r\n.nav {\r\n  background-color: white;\r\n}\r\n\r\n.toggle-nav-on {\r\n  display: block;\r\n  position: fixed;\r\n    width: 45%;\r\n    height: 100%;\r\n    right: 0;\r\n    top: 0;\r\n    padding: 2em 1em 0 0;\r\n    font-size:2em;\r\n    background-color: whitesmoke;\r\n    box-shadow: 0 0 3px grey;\r\n    \r\n    transition-property: right;\r\n    transition-duration: .5s;\r\n    -webkit-transition-duration: .5s;\r\n    -moz-transition-duration: .5s;\r\n    -o-transition-duration: .5s;\r\n    transition-timing-function: ease-in-out;\r\n}\r\n.toggle-nav {\r\n  visibility: hidden;\r\n  overflow: hidden;\r\n  top: 0;\r\n  padding: 2em 1em 0 0;\r\n  right:-100%;\r\n  padding-right:1em;\r\n  font-size:2em;\r\n  height: 100%;\r\n  width: 45%;\r\n  background-color: whitesmoke;\r\n  position:fixed;\r\n\r\n  transition-property: visibility, right;\r\n      transition-duration: .5s;\r\n    -webkit-transition-duration: .5s;\r\n    -moz-transition-duration: .5s;\r\n    -o-transition-duration: .5s;\r\n    transition-timing-function: ease-in-out;\r\n}\r\n\r\n.hideDesktop {\r\n  display: none;\r\n}\r\n\r\n.mobileNav {\r\n  display: flex;\r\n  justify-content: space-between;\r\n}\r\n\r\n.mobileNav h1 {\r\n  margin-left: 15px;\r\n}\r\n\r\na {\r\n  color: black;\r\n  text-decoration: none;\r\n}\r\n\r\n.nav ul {\r\n  list-style-type: none;\r\n  text-transform: uppercase;\r\n  padding: 0px;\r\n  line-height: 2em;\r\n  display: flex;\r\n  flex-direction: column;\r\n  text-align: right;\r\n  font-family: sans-serif;\r\n}\r\n\r\n/* all items container */\r\n.all-items-display {\r\n  display: flex;\r\n  flex-wrap: wrap;\r\n  justify-content: center;\r\n  width: 100vp;\r\n}\r\n/* individual item */\r\n.one-item {\r\n  color: black;\r\n  padding: 0;\r\n  margin: 10px;\r\n  height: 250px;\r\n  width: 140px;\r\n  z-index: 1;\r\n}\r\n.one-item-image {\r\n  height: 80%;\r\n  width: 100%;\r\n  background: lightgrey;\r\n}\r\n.one-item-image > img {\r\n  width: 100%;\r\n  height: 100%;\r\n  object-fit: cover;\r\n  overflow: hidden;\r\n}\r\n.one-item-text {\r\n  padding: 0;\r\n  margin: 0;\r\n  margin-top: 10px;\r\n  font-family: 'Helvetica';\r\n}\r\n.one-item-text > h1 {\r\n  padding: 0;\r\n  margin: 0;\r\n  padding-bottom: 5px;\r\n  font-size: 20px;\r\n  border-bottom: 2px black solid;\r\n  width: 20%;\r\n}\r\n.one-item-text > p {\r\n  padding: 0;\r\n  margin-top: 5px;\r\n  font-size: 80%;\r\n  font-style: lighter;\r\n}\r\n\r\n.popup {\r\n  z-index: 1000;\r\n  width: 400px;\r\n  box-shadow: rgba(128, 128, 128, 0.479) 4px 4px 4px 4px 16px;\r\n  text-transform: none;\r\n}\r\n.popup-form-container {\r\n  background-color: white;\r\n  display: flex;\r\n}\r\n.detail-container {\r\n  display: grid;\r\n  grid-column-gap: 50px;\r\n  width: 100vw;\r\n}\r\n\r\n.detail-description {\r\n  display: grid;\r\n  grid-template-rows: 5em 2em 2em 1fr 3em;\r\n  padding: 2em;\r\n  height: 40vh;\r\n}\r\n.detail-image {\r\n  width: 90vw;\r\n  height: 70vh;\r\n  margin: auto;\r\n  display: flex;\r\n  justify-content: center;\r\n}\r\n\r\n@media (max-width: 968px) {\r\n}\r\n\r\n/* CSS applies to 968px and above */\r\n@media screen and (min-width: 968px) {\r\n  .one-item-text > h1 {\r\n    font-size: 25px;\r\n  }\r\n  .one-item {\r\n    height: 430px;\r\n    width: 230px;\r\n  }\r\n  /* navigation */\r\n  .toggle-nav {\r\n    display: block;\r\n  }\r\n  .hideMobile {\r\n    display: none;\r\n  }\r\n  #navItems {\r\n    width: 100%;\r\n  }\r\n  .nav {\r\n    display: flex;\r\n    height: 4em;\r\n    border-bottom: 1px solid black;\r\n    margin-bottom: 0.5em;\r\n    box-shadow: 0px 0px 2px grey;\r\n    background-color: white;\r\n  }\r\n  .nav ul {\r\n    display: flex;\r\n    flex-direction: row;\r\n    list-style-type: none;\r\n    text-transform: uppercase;\r\n    justify-content: space-between;\r\n  }\r\n\r\n  .nav ul li {\r\n    margin: 0 1em 0 1em;\r\n  }\r\n  .navRight {\r\n    display: flex;\r\n  }\r\n  .navLeft {\r\n    display: flex;\r\n  }\r\n  /* end navigation */\r\n\r\n  /* dropdown */\r\n  .dropdown-container {\r\n    position: relative;\r\n  }\r\n\r\n  .dropdown-content {\r\n    display: none;\r\n    position: absolute;\r\n    right: 0;\r\n    min-width: max-content;\r\n    box-shadow: rgba(128, 128, 128, 0.479) 4px 4px 16px;\r\n    background-color: white;\r\n    padding: 1em;\r\n    z-index: 99;\r\n  }\r\n  .dropdown-container:hover .dropdown-content {\r\n    display: block;\r\n  }\r\n  .dropdown-button:hover {\r\n    color: purple;\r\n    cursor: pointer;\r\n  }\r\n  /* end of dropdown */\r\n  .detail-container {\r\n    grid-template-columns: 1fr 30%;\r\n    width: 90vw;\r\n    margin: 2em;\r\n  }\r\n  .detail-description {\r\n    width: 90%;\r\n    height: 100%;\r\n    padding: 0;\r\n    margin: 1em;\r\n  }\r\n  .detail-image {\r\n    justify-content: center;\r\n    display: flex;\r\n    align-items: center;\r\n    margin: auto;\r\n    width: 100%;\r\n    height: 80vh;\r\n  }\r\n}\r\n", ""]);
 
 
 
@@ -41850,7 +41850,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 /* harmony import */ var _ImageSlider_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ImageSlider.jsx */ "./src/ImageSlider.jsx");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 
@@ -41936,6 +41938,15 @@ class ItemDetail extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       });
     });
 
+    _defineProperty(this, "handleCart", evt => {
+      console.log("dispatching to cart: ", this.props.itemId);
+      this.props.dispatch({
+        type: "add-to-cart",
+        content: this.props.itemId
+      });
+      alert("Item added to cart!");
+    });
+
     _defineProperty(this, "render", () => {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "detail-container"
@@ -41946,7 +41957,9 @@ class ItemDetail extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         mainImage: this.state.mainImage
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "detail-description"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ItemName, null, this.state.item.item), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Price, null, this.state.item.price), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(H2, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Product Details")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Description, null, this.state.item.description), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Button, null, "Add to Cart")));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ItemName, null, this.state.item.item), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Price, null, this.state.item.price), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(H2, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Product Details")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Description, null, this.state.item.description), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Button, {
+        onClick: this.handleCart
+      }, "Add to Cart")));
     });
 
     this.state = {
@@ -41958,7 +41971,13 @@ class ItemDetail extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (ItemDetail);
+let mapStateToProps = state => {
+  return {
+    cart: state.cart
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_3__["connect"])(mapStateToProps)(ItemDetail));
 
 /***/ }),
 
@@ -42334,14 +42353,14 @@ class Navigation extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       if (this.state.checkToggle === false) {
         this.setState({
           hamburgerClass: 'hamburger hamburger--squeeze is-active',
-          toggleNav: 'toggle-nav-on mobileNavList'
+          toggleNav: 'toggle-nav-on'
         });
       }
 
       if (this.state.checkToggle === true) {
         this.setState({
           hamburgerClass: 'hamburger hamburger--squeeze',
-          toggleNav: 'toggle-nav mobileNavList-off'
+          toggleNav: 'toggle-nav'
         });
       }
 
@@ -42367,12 +42386,12 @@ class Navigation extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
       if (window.innerWidth < 968) {
         this.setState({
-          toggleNav: 'toggle-nav mobileNavList-off'
+          toggleNav: 'toggle-nav'
         });
 
         if (this.state.checkToggle === true) {
           this.setState({
-            toggleNav: 'toggle-nav-on mobileNavList'
+            toggleNav: 'toggle-nav-on'
           });
         }
       }
@@ -42432,7 +42451,7 @@ class Navigation extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     this.state = {
       checkToggle: false,
       hamburgerClass: 'hamburger hamburger--squeeze',
-      toggleNav: 'toggle-nav mobileNavList-off',
+      toggleNav: 'toggle-nav',
       top: "0"
     };
   }
@@ -42912,13 +42931,21 @@ let reducer = (state, action) => {
     };
   }
 
+  if (action.type === 'add-to-cart') {
+    console.log('add to cart', action.content);
+    return { ...state,
+      cart: action.content
+    };
+  }
+
   return state;
 };
 
 const store = Object(redux__WEBPACK_IMPORTED_MODULE_0__["createStore"])(reducer, {
   username: undefined,
   items: [],
-  searchTag: ''
+  searchTag: '',
+  cart: []
 }, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 /* harmony default export */ __webpack_exports__["default"] = (store);
 

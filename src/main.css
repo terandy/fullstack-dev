@@ -19,7 +19,7 @@ body {
     background-color: whitesmoke;
     box-shadow: 0 0 3px grey;
     
-    
+    transition-property: right;
     transition-duration: .5s;
     -webkit-transition-duration: .5s;
     -moz-transition-duration: .5s;
@@ -36,11 +36,14 @@ body {
   font-size:2em;
   height: 100%;
   width: 45%;
+  background-color: whitesmoke;
   position:fixed;
-      transition-duration: .25s;
-    -webkit-transition-duration: .25s;
-    -moz-transition-duration: .25s;
-    -o-transition-duration: .25s;
+
+  transition-property: visibility, right;
+      transition-duration: .5s;
+    -webkit-transition-duration: .5s;
+    -moz-transition-duration: .5s;
+    -o-transition-duration: .5s;
     transition-timing-function: ease-in-out;
 }
 

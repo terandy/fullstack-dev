@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import ImageSlider from './ImageSlider.jsx';
+import { connect } from 'react-redux';
 
 const ItemName = styled.h1`
   text-transform: Capitalize;
@@ -82,6 +83,14 @@ class ItemDetail extends Component {
     let responseImages = await itemObject.imgPaths;
     this.setState({ item: itemObject, images: responseImages });
   };
+  handleCart = evt => {
+    console.log("dispatching to cart: ", this.props.itemId)
+    this.props.dispatch({
+      type: "add-to-cart",
+      content: this.props.itemId
+    })
+    alert("Item added to cart!")
+  }
   render = () => {
     return (
       <div className="detail-container">
@@ -99,10 +108,17 @@ class ItemDetail extends Component {
             <h2>Product Details</h2>
           </H2>
           <Description>{this.state.item.description}</Description>
-          <Button>Add to Cart</Button>
+          <Button onClick={this.handleCart}>Add to Cart</Button>
         </div>
       </div>
     );
   };
 }
-export default ItemDetail;
+
+let mapStateToProps = state => {
+  return {
+    cart: state.cart
+  }
+}
+
+export default connect(mapStateToProps)(ItemDetail);
