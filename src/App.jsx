@@ -27,8 +27,8 @@ class App extends Component {
   renderItemDetail = renderdata => {
     return <ItemDetail itemId={renderdata.match.params.itemId} />;
   };
-  renderAddItem = () => {
-    return <AddItem />;
+  renderAddItem = routerData => {
+    return <AddItem history={routerData.history} />;
   };
   renderMenItems = () => {
     return <MenItems />;
