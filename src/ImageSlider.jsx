@@ -38,6 +38,8 @@ const LeftArrow = styled.div`
   img {
     width: 20%;
     display: ${props => props.toggle};
+    filter: invert(1);
+    opacity: 65%;
   }
   &:hover {
     cursor: pointer;

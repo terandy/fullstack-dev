@@ -24,6 +24,7 @@ class Register extends Component {
     let data = new FormData();
     data.append('username', name);
     data.append('password', this.state.passwordRegisterInput);
+    data.append('cart', this.props.cart)
     let response = await fetch('/register', { method: 'POST', body: data });
     let body = await response.text();
     console.log('/register response', body);
@@ -96,4 +97,10 @@ class Register extends Component {
   };
 }
 
-export default connect()(Register);
+let mapStateToProps = state => {
+  return {
+    cart: state.cart
+  }
+}
+
+export default connect(mapStateToProps)(Register);

@@ -59,12 +59,13 @@ app.post('/register', upload.none(), (req, res) => {
   console.log('register', req.body);
   let name = req.body.username;
   let pwd = req.body.password;
+  let cart = req.body.cart
   console.log('dbo response register');
   dbo.collection('users').findOne({ username: name }, (err, user) => {
     if (user === null) {
       dbo
         .collection('users')
-        .insertOne({ username: name, password: sha1(pwd), cart: [] });
+        .insertOne({ username: name, password: sha1(pwd), cart: cart });
       res.send(JSON.stringify({ success: true }));
     } else {
       res.send(JSON.stringify({ success: false }));
@@ -90,6 +91,22 @@ app.post('/add-item', upload.array('images'), (req, res) => {
     tag: tag
   });
   res.send(JSON.stringify({ success: true }));
+});
+
+app.post('/add-to-cart', upload.none(), (req, res) => {
+  let item = req.body.itemId
+  let sessionId = req.cookies.sid
+  let username = sessions[sessionId]
+
+  try {
+    dbo
+      .collection('users')
+      .update({ username }, {$push: {cart: item}})
+    res.send(JSON.stringify({ success: true }));
+  } catch (err) {
+    console.log('error', err);
+    res.send(JSON.stringify({ success: false }));
+  }
 });
 
 app.post('/all-items', upload.none(), (req, res) => {
