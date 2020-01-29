@@ -10,20 +10,21 @@ body {
 .toggle-nav-on {
   display: block;
   position: fixed;
-  width: 45%;
-  height: 100%;
-  right: 0;
-  top: 0;
-  padding: 2em 1em 0 0;
-  font-size: 2em;
-  background-color: whitesmoke;
-  box-shadow: 0 0 3px grey;
-
-  transition-duration: 0.5s;
-  -webkit-transition-duration: 0.5s;
-  -moz-transition-duration: 0.5s;
-  -o-transition-duration: 0.5s;
-  transition-timing-function: ease-in-out;
+    width: 45%;
+    height: 100%;
+    right: 0;
+    top: 0;
+    padding: 2em 1em 0 0;
+    font-size:2em;
+    background-color: whitesmoke;
+    box-shadow: 0 0 3px grey;
+    
+    transition-property: right;
+    transition-duration: .5s;
+    -webkit-transition-duration: .5s;
+    -moz-transition-duration: .5s;
+    -o-transition-duration: .5s;
+    transition-timing-function: ease-in-out;
 }
 .toggle-nav {
   visibility: hidden;
@@ -35,12 +36,15 @@ body {
   font-size: 2em;
   height: 100%;
   width: 45%;
-  position: fixed;
-  transition-duration: 0.25s;
-  -webkit-transition-duration: 0.25s;
-  -moz-transition-duration: 0.25s;
-  -o-transition-duration: 0.25s;
-  transition-timing-function: ease-in-out;
+  background-color: whitesmoke;
+  position:fixed;
+
+  transition-property: visibility, right;
+      transition-duration: .5s;
+    -webkit-transition-duration: .5s;
+    -moz-transition-duration: .5s;
+    -o-transition-duration: .5s;
+    transition-timing-function: ease-in-out;
 }
 
 .hideDesktop {

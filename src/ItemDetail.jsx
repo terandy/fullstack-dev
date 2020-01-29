@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import ImageSlider from './ImageSlider.jsx';
+import { connect } from 'react-redux';
 
 const ItemName = styled.h1`
   text-transform: Capitalize;
@@ -77,6 +78,26 @@ class ItemDetail extends Component {
     let responseImages = await itemObject.imgPaths;
     this.setState({ item: itemObject, images: responseImages });
   };
+  handleCart = async evt => {
+    console.log("dispatching to cart: ", this.props.itemId)
+    if (this.props.username === undefined) {
+      this.props.dispatch({
+        type: "add-to-cart",
+        content: this.props.itemId
+      })
+      alert('Added to cart!')
+    }
+    if (this.props.username !== undefined) {
+      let data = new FormData()
+      data.append('itemId', this.props.itemId)
+      let responseBody = await fetch('/add-to-cart', {method: 'POST', body: data})
+      let responseText = await responseBody.text()
+      let parsed = JSON.parse(responseText)
+      if (parsed.success) {
+        alert('Item added to your cart!')
+      }
+    }
+  }
   render = () => {
     return (
       <div className="detail-container">
@@ -94,10 +115,18 @@ class ItemDetail extends Component {
             <h2>Product Details</h2>
           </H2>
           <Description>{this.state.item.description}</Description>
-          <Button>Add to Cart</Button>
+          <Button onClick={this.handleCart}>Add to Cart</Button>
         </div>
       </div>
     );
   };
 }
-export default ItemDetail;
+
+let mapStateToProps = state => {
+  return {
+    cart: state.cart,
+    username: state.username
+  }
+}
+
+export default connect(mapStateToProps)(ItemDetail);

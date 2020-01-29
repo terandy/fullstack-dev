@@ -964,7 +964,7 @@ exports.push([module.i, "/*!\n * Hamburgers\n * @description Tasty CSS-animated 
 
 exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "body {\n  background-color: white;\n  margin: 0;\n}\n\n.nav {\n  background-color: white;\n}\n\n.toggle-nav-on {\n  display: block;\n  position: fixed;\n  width: 45%;\n  height: 100%;\n  right: 0;\n  top: 0;\n  padding: 2em 1em 0 0;\n  font-size: 2em;\n  background-color: whitesmoke;\n  box-shadow: 0 0 3px grey;\n\n  transition-duration: 0.5s;\n  -webkit-transition-duration: 0.5s;\n  -moz-transition-duration: 0.5s;\n  -o-transition-duration: 0.5s;\n  transition-timing-function: ease-in-out;\n}\n.toggle-nav {\n  visibility: hidden;\n  overflow: hidden;\n  top: 0;\n  padding: 2em 1em 0 0;\n  right: -100%;\n  padding-right: 1em;\n  font-size: 2em;\n  height: 100%;\n  width: 45%;\n  position: fixed;\n  transition-duration: 0.25s;\n  -webkit-transition-duration: 0.25s;\n  -moz-transition-duration: 0.25s;\n  -o-transition-duration: 0.25s;\n  transition-timing-function: ease-in-out;\n}\n\n.hideDesktop {\n  display: none;\n}\n\n.mobileNav {\n  display: flex;\n  justify-content: space-between;\n}\n\n.mobileNav h1 {\n  margin-left: 15px;\n}\n\na {\n  color: black;\n  text-decoration: none;\n}\n\n.nav ul {\n  list-style-type: none;\n  text-transform: uppercase;\n  padding: 0px;\n  line-height: 2em;\n  display: flex;\n  flex-direction: column;\n  text-align: right;\n  font-family: sans-serif;\n}\n\n/* all items container */\n.all-items-display {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  margin: auto;\n  width: 90vw;\n}\n/* individual item */\n.one-item {\n  font-family: 'sans-serif';\n  color: black;\n  padding: 0;\n  margin: 10px;\n  height: 70vw;\n  width: 40vw;\n  z-index: 1;\n}\n.one-item-image {\n  height: 80%;\n  width: 100%;\n  background: lightgrey;\n}\n.one-item-image > img {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  overflow: hidden;\n}\n.one-item-text {\n  padding: 0;\n  margin: 0;\n  margin-top: 10px;\n  font-family: 'Helvetica';\n}\n.one-item-text > h1 {\n  padding: 0;\n  margin: 0;\n  font-size: 20px;\n  width: 100%;\n  overflow: visible;\n  text-transform: capitalize;\n  font-weight: lighter;\n}\n.one-item-text > p {\n  padding-top: 5px;\n  font-size: 70%;\n  font-weight: lighter;\n  border-top: black solid 1px;\n  width: 33%;\n}\n\n.popup {\n  z-index: 1000;\n  width: 400px;\n  box-shadow: rgba(128, 128, 128, 0.479) 4px 4px 4px 4px 16px;\n  text-transform: none;\n}\n.popup-form-container {\n  background-color: white;\n  display: flex;\n}\n.detail-container {\n  display: grid;\n  grid-column-gap: 50px;\n  width: 100vw;\n  margin-top: 5em;\n}\n\n.detail-description {\n  display: grid;\n  grid-template-rows: 5em 2em 2em 1fr 3em;\n  padding: 2em;\n  height: 40vh;\n}\n.detail-image {\n  width: 90vw;\n  height: 70vh;\n  margin: auto;\n  display: flex;\n  justify-content: center;\n}\n\n@media screen and (min-width: 650px) {\n  .all-items-display {\n    display: grid;\n    grid-template-columns: 1fr 1fr 1fr;\n    margin: auto;\n    width: 90vw;\n  }\n  .one-item-text > h1 {\n    font-size: 25px;\n  }\n  .one-item {\n    height: 430px;\n    width: 230px;\n  }\n}\n\n/* CSS applies to 968px and above */\n@media screen and (min-width: 968px) {\n  .all-items-display {\n    padding: 0 5%;\n    display: grid;\n    grid-template-columns: 1fr 1fr 1fr 1fr;\n    justify-content: center;\n    width: 90vw;\n  }\n  .one-item-text > h1 {\n    font-size: 25px;\n  }\n  .one-item {\n    height: 430px;\n    width: 230px;\n  }\n  /* navigation */\n  .toggle-nav {\n    display: block;\n  }\n  .hideMobile {\n    display: none;\n  }\n  #navItems {\n    width: 100%;\n  }\n  .nav {\n    display: flex;\n    height: 4em;\n    border-bottom: 1px solid black;\n    margin-bottom: 0.5em;\n    box-shadow: 0px 0px 2px grey;\n    background-color: white;\n  }\n  .nav ul {\n    display: flex;\n    flex-direction: row;\n    list-style-type: none;\n    text-transform: uppercase;\n    justify-content: space-between;\n  }\n\n  .nav ul li {\n    margin: 0 1em 0 1em;\n  }\n  .navRight {\n    display: flex;\n  }\n  .navLeft {\n    display: flex;\n  }\n  /* end navigation */\n\n  /* dropdown */\n  .dropdown-container {\n    position: relative;\n  }\n\n  .dropdown-content {\n    display: none;\n    position: absolute;\n    right: 0;\n    min-width: max-content;\n    box-shadow: rgba(128, 128, 128, 0.479) 4px 4px 16px;\n    background-color: white;\n    padding: 1em;\n    z-index: 99;\n  }\n  .dropdown-container:hover .dropdown-content {\n    display: block;\n  }\n  .dropdown-button:hover {\n    color: purple;\n    cursor: pointer;\n  }\n  /* end of dropdown */\n  .detail-container {\n    grid-template-columns: 1fr 30%;\n    width: 90vw;\n    margin: 2em;\n    margin-top: 5em;\n  }\n  .detail-description {\n    width: 90%;\n    height: 80vh;\n    padding: 0;\n    margin: 1em;\n  }\n  .detail-image {\n    justify-content: center;\n    display: flex;\n    align-items: center;\n    margin: auto;\n    width: 100%;\n    height: 90vh;\n  }\n}\n", ""]);
+exports.push([module.i, "body {\n  background-color: white;\n  margin: 0;\n}\n\n.nav {\n  background-color: white;\n}\n\n.toggle-nav-on {\n  display: block;\n  position: fixed;\n    width: 45%;\n    height: 100%;\n    right: 0;\n    top: 0;\n    padding: 2em 1em 0 0;\n    font-size:2em;\n    background-color: whitesmoke;\n    box-shadow: 0 0 3px grey;\n    \n    transition-property: right;\n    transition-duration: .5s;\n    -webkit-transition-duration: .5s;\n    -moz-transition-duration: .5s;\n    -o-transition-duration: .5s;\n    transition-timing-function: ease-in-out;\n}\n.toggle-nav {\n  visibility: hidden;\n  overflow: hidden;\n  top: 0;\n  padding: 2em 1em 0 0;\n  right: -100%;\n  padding-right: 1em;\n  font-size: 2em;\n  height: 100%;\n  width: 45%;\n  background-color: whitesmoke;\n  position:fixed;\n\n  transition-property: visibility, right;\n      transition-duration: .5s;\n    -webkit-transition-duration: .5s;\n    -moz-transition-duration: .5s;\n    -o-transition-duration: .5s;\n    transition-timing-function: ease-in-out;\n}\n\n.hideDesktop {\n  display: none;\n}\n\n.mobileNav {\n  display: flex;\n  justify-content: space-between;\n}\n\n.mobileNav h1 {\n  margin-left: 15px;\n}\n\na {\n  color: black;\n  text-decoration: none;\n}\n\n.nav ul {\n  list-style-type: none;\n  text-transform: uppercase;\n  padding: 0px;\n  line-height: 2em;\n  display: flex;\n  flex-direction: column;\n  text-align: right;\n  font-family: sans-serif;\n}\n\n/* all items container */\n.all-items-display {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  margin: auto;\n  width: 90vw;\n}\n/* individual item */\n.one-item {\n  font-family: 'sans-serif';\n  color: black;\n  padding: 0;\n  margin: 10px;\n  height: 70vw;\n  width: 40vw;\n  z-index: 1;\n}\n.one-item-image {\n  height: 80%;\n  width: 100%;\n  background: lightgrey;\n}\n.one-item-image > img {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  overflow: hidden;\n}\n.one-item-text {\n  padding: 0;\n  margin: 0;\n  margin-top: 10px;\n  font-family: 'Helvetica';\n}\n.one-item-text > h1 {\n  padding: 0;\n  margin: 0;\n  font-size: 20px;\n  width: 100%;\n  overflow: visible;\n  text-transform: capitalize;\n  font-weight: lighter;\n}\n.one-item-text > p {\n  padding-top: 5px;\n  font-size: 70%;\n  font-weight: lighter;\n  border-top: black solid 1px;\n  width: 33%;\n}\n\n.popup {\n  z-index: 1000;\n  width: 400px;\n  box-shadow: rgba(128, 128, 128, 0.479) 4px 4px 4px 4px 16px;\n  text-transform: none;\n}\n.popup-form-container {\n  background-color: white;\n  display: flex;\n}\n.detail-container {\n  display: grid;\n  grid-column-gap: 50px;\n  width: 100vw;\n  margin-top: 5em;\n}\n\n.detail-description {\n  display: grid;\n  grid-template-rows: 5em 2em 2em 1fr 3em;\n  padding: 2em;\n  height: 40vh;\n}\n.detail-image {\n  width: 90vw;\n  height: 70vh;\n  margin: auto;\n  display: flex;\n  justify-content: center;\n}\n\n@media screen and (min-width: 650px) {\n  .all-items-display {\n    display: grid;\n    grid-template-columns: 1fr 1fr 1fr;\n    margin: auto;\n    width: 90vw;\n  }\n  .one-item-text > h1 {\n    font-size: 25px;\n  }\n  .one-item {\n    height: 430px;\n    width: 230px;\n  }\n}\n\n/* CSS applies to 968px and above */\n@media screen and (min-width: 968px) {\n  .all-items-display {\n    padding: 0 5%;\n    display: grid;\n    grid-template-columns: 1fr 1fr 1fr 1fr;\n    justify-content: center;\n    width: 90vw;\n  }\n  .one-item-text > h1 {\n    font-size: 25px;\n  }\n  .one-item {\n    height: 430px;\n    width: 230px;\n  }\n  /* navigation */\n  .toggle-nav {\n    display: block;\n  }\n  .hideMobile {\n    display: none;\n  }\n  #navItems {\n    width: 100%;\n  }\n  .nav {\n    display: flex;\n    height: 4em;\n    border-bottom: 1px solid black;\n    margin-bottom: 0.5em;\n    box-shadow: 0px 0px 2px grey;\n    background-color: white;\n  }\n  .nav ul {\n    display: flex;\n    flex-direction: row;\n    list-style-type: none;\n    text-transform: uppercase;\n    justify-content: space-between;\n  }\n\n  .nav ul li {\n    margin: 0 1em 0 1em;\n  }\n  .navRight {\n    display: flex;\n  }\n  .navLeft {\n    display: flex;\n  }\n  /* end navigation */\n\n  /* dropdown */\n  .dropdown-container {\n    position: relative;\n  }\n\n  .dropdown-content {\n    display: none;\n    position: absolute;\n    right: 0;\n    min-width: max-content;\n    box-shadow: rgba(128, 128, 128, 0.479) 4px 4px 16px;\n    background-color: white;\n    padding: 1em;\n    z-index: 99;\n  }\n  .dropdown-container:hover .dropdown-content {\n    display: block;\n  }\n  .dropdown-button:hover {\n    color: purple;\n    cursor: pointer;\n  }\n  /* end of dropdown */\n  .detail-container {\n    grid-template-columns: 1fr 30%;\n    width: 90vw;\n    margin: 2em;\n    margin-top: 5em;\n  }\n  .detail-description {\n    width: 90%;\n    height: 80vh;\n    padding: 0;\n    margin: 1em;\n  }\n  .detail-image {\n    justify-content: center;\n    display: flex;\n    align-items: center;\n    margin: auto;\n    width: 100%;\n    height: 90vh;\n  }\n}\n", ""]);
 
 
 
@@ -41881,6 +41881,8 @@ const LeftArrow = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
   img {
     width: 20%;
     display: ${props => props.toggle};
+    filter: invert(1);
+    opacity: 65%;
   }
   &:hover {
     cursor: pointer;
@@ -42018,7 +42020,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 /* harmony import */ var _ImageSlider_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ImageSlider.jsx */ "./src/ImageSlider.jsx");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 
@@ -42099,6 +42103,33 @@ class ItemDetail extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       });
     });
 
+    _defineProperty(this, "handleCart", async evt => {
+      console.log("dispatching to cart: ", this.props.itemId);
+
+      if (this.props.username === undefined) {
+        this.props.dispatch({
+          type: "add-to-cart",
+          content: this.props.itemId
+        });
+        alert('Added to cart!');
+      }
+
+      if (this.props.username !== undefined) {
+        let data = new FormData();
+        data.append('itemId', this.props.itemId);
+        let responseBody = await fetch('/add-to-cart', {
+          method: 'POST',
+          body: data
+        });
+        let responseText = await responseBody.text();
+        let parsed = JSON.parse(responseText);
+
+        if (parsed.success) {
+          alert('Item added to your cart!');
+        }
+      }
+    });
+
     _defineProperty(this, "render", () => {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "detail-container"
@@ -42109,7 +42140,9 @@ class ItemDetail extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         mainImage: this.state.mainImage
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "detail-description"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ItemName, null, this.state.item.item), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Price, null, this.state.item.price), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(H2, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Product Details")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Description, null, this.state.item.description), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Button, null, "Add to Cart")));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ItemName, null, this.state.item.item), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Price, null, this.state.item.price), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(H2, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Product Details")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Description, null, this.state.item.description), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Button, {
+        onClick: this.handleCart
+      }, "Add to Cart")));
     });
 
     this.state = {
@@ -42121,7 +42154,14 @@ class ItemDetail extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (ItemDetail);
+let mapStateToProps = state => {
+  return {
+    cart: state.cart,
+    username: state.username
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_3__["connect"])(mapStateToProps)(ItemDetail));
 
 /***/ }),
 
@@ -42492,14 +42532,14 @@ class Navigation extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       if (this.state.checkToggle === false) {
         this.setState({
           hamburgerClass: 'hamburger hamburger--squeeze is-active',
-          toggleNav: 'toggle-nav-on mobileNavList'
+          toggleNav: 'toggle-nav-on'
         });
       }
 
       if (this.state.checkToggle === true) {
         this.setState({
           hamburgerClass: 'hamburger hamburger--squeeze',
-          toggleNav: 'toggle-nav mobileNavList-off'
+          toggleNav: 'toggle-nav'
         });
       }
 
@@ -42525,12 +42565,12 @@ class Navigation extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
       if (window.innerWidth < 968) {
         this.setState({
-          toggleNav: 'toggle-nav mobileNavList-off'
+          toggleNav: 'toggle-nav'
         });
 
         if (this.state.checkToggle === true) {
           this.setState({
-            toggleNav: 'toggle-nav-on mobileNavList'
+            toggleNav: 'toggle-nav-on'
           });
         }
       }
@@ -42594,8 +42634,8 @@ class Navigation extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     this.state = {
       checkToggle: false,
       hamburgerClass: 'hamburger hamburger--squeeze',
-      toggleNav: 'toggle-nav mobileNavList-off',
-      top: '0'
+      toggleNav: 'toggle-nav',
+      top: "0"
     };
   }
 
@@ -42714,6 +42754,7 @@ class Register extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       let data = new FormData();
       data.append('username', name);
       data.append('password', this.state.passwordRegisterInput);
+      data.append('cart', this.props.cart);
       let response = await fetch('/register', {
         method: 'POST',
         body: data
@@ -42797,7 +42838,13 @@ class Register extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])()(Register));
+let mapStateToProps = state => {
+  return {
+    cart: state.cart
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps)(Register));
 
 /***/ }),
 
@@ -42913,6 +42960,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _store_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./store.js */ "./src/store.js");
+/* harmony import */ var _store_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_store_js__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var _reload_magic_client_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./reload-magic-client.js */ "./src/reload-magic-client.js");
 
 
@@ -42926,7 +42974,7 @@ __webpack_require__.r(__webpack_exports__);
 Object(_reload_magic_client_js__WEBPACK_IMPORTED_MODULE_7__["default"])(); // automatic reload
 
 react_dom__WEBPACK_IMPORTED_MODULE_0___default.a.render(react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(react_redux__WEBPACK_IMPORTED_MODULE_5__["Provider"], {
-  store: _store_js__WEBPACK_IMPORTED_MODULE_6__["default"]
+  store: _store_js__WEBPACK_IMPORTED_MODULE_6___default.a
 }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_App_jsx__WEBPACK_IMPORTED_MODULE_3__["default"], null)), document.getElementById('root'));
 
 /***/ }),
@@ -43069,52 +43117,10 @@ let __init_magic_reload = async () => {
 /*!**********************!*\
   !*** ./src/store.js ***!
   \**********************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
-
-
-let reducer = (state, action) => {
-  if (action.type === 'login-sucess') {
-    console.log('login content', action.content);
-    return { ...state,
-      username: action.content
-    };
-  }
-
-  if (action.type === 'logout') {
-    console.log('login content', action.content);
-    return { ...state,
-      username: undefined
-    };
-  }
-
-  if (action.type === 'set-items') {
-    console.log('set items content', action.content);
-    return { ...state,
-      items: action.content
-    };
-  }
-
-  if (action.type === 'filter') {
-    console.log('filter content', action.content);
-    return { ...state,
-      searchTag: action.content
-    };
-  }
-
-  return state;
-};
-
-const store = Object(redux__WEBPACK_IMPORTED_MODULE_0__["createStore"])(reducer, {
-  username: undefined,
-  items: [],
-  searchTag: ''
-}, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
-/* harmony default export */ __webpack_exports__["default"] = (store);
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /Users/teresalacroix/decode/fullstack-dev/src/store.js: Unexpected token (27:1)\n\n  25 | const store = createStore(\n  26 |   reducer,\n> 27 | <<<<<<< HEAD\n     |  ^\n  28 |   { username: undefined, items: [], searchTag: '' },\n  29 | =======\n  30 |   { username: undefined, items: [], searchTag: '', cart: []},\n    at Object.raise (/Users/teresalacroix/decode/fullstack-dev/node_modules/@babel/parser/lib/index.js:7013:17)\n    at Object.unexpected (/Users/teresalacroix/decode/fullstack-dev/node_modules/@babel/parser/lib/index.js:8384:16)\n    at Object.jsxParseIdentifier (/Users/teresalacroix/decode/fullstack-dev/node_modules/@babel/parser/lib/index.js:3890:12)\n    at Object.jsxParseNamespacedName (/Users/teresalacroix/decode/fullstack-dev/node_modules/@babel/parser/lib/index.js:3900:23)\n    at Object.jsxParseElementName (/Users/teresalacroix/decode/fullstack-dev/node_modules/@babel/parser/lib/index.js:3911:21)\n    at Object.jsxParseOpeningElementAt (/Users/teresalacroix/decode/fullstack-dev/node_modules/@babel/parser/lib/index.js:3997:22)\n    at Object.jsxParseElementAt (/Users/teresalacroix/decode/fullstack-dev/node_modules/@babel/parser/lib/index.js:4030:33)\n    at Object.jsxParseElement (/Users/teresalacroix/decode/fullstack-dev/node_modules/@babel/parser/lib/index.js:4104:17)\n    at Object.parseExprAtom (/Users/teresalacroix/decode/fullstack-dev/node_modules/@babel/parser/lib/index.js:4111:19)\n    at Object.parseExprSubscripts (/Users/teresalacroix/decode/fullstack-dev/node_modules/@babel/parser/lib/index.js:9219:23)\n    at Object.parseMaybeUnary (/Users/teresalacroix/decode/fullstack-dev/node_modules/@babel/parser/lib/index.js:9199:21)\n    at Object.parseExprOps (/Users/teresalacroix/decode/fullstack-dev/node_modules/@babel/parser/lib/index.js:9067:23)\n    at Object.parseMaybeConditional (/Users/teresalacroix/decode/fullstack-dev/node_modules/@babel/parser/lib/index.js:9040:23)\n    at Object.parseMaybeAssign (/Users/teresalacroix/decode/fullstack-dev/node_modules/@babel/parser/lib/index.js:9000:21)\n    at Object.parseExprListItem (/Users/teresalacroix/decode/fullstack-dev/node_modules/@babel/parser/lib/index.js:10295:18)\n    at Object.parseCallExpressionArguments (/Users/teresalacroix/decode/fullstack-dev/node_modules/@babel/parser/lib/index.js:9404:22)\n    at Object.parseSubscript (/Users/teresalacroix/decode/fullstack-dev/node_modules/@babel/parser/lib/index.js:9310:31)\n    at Object.parseSubscripts (/Users/teresalacroix/decode/fullstack-dev/node_modules/@babel/parser/lib/index.js:9240:19)\n    at Object.parseExprSubscripts (/Users/teresalacroix/decode/fullstack-dev/node_modules/@babel/parser/lib/index.js:9229:17)\n    at Object.parseMaybeUnary (/Users/teresalacroix/decode/fullstack-dev/node_modules/@babel/parser/lib/index.js:9199:21)\n    at Object.parseExprOps (/Users/teresalacroix/decode/fullstack-dev/node_modules/@babel/parser/lib/index.js:9067:23)\n    at Object.parseMaybeConditional (/Users/teresalacroix/decode/fullstack-dev/node_modules/@babel/parser/lib/index.js:9040:23)\n    at Object.parseMaybeAssign (/Users/teresalacroix/decode/fullstack-dev/node_modules/@babel/parser/lib/index.js:9000:21)\n    at Object.parseVar (/Users/teresalacroix/decode/fullstack-dev/node_modules/@babel/parser/lib/index.js:11309:26)\n    at Object.parseVarStatement (/Users/teresalacroix/decode/fullstack-dev/node_modules/@babel/parser/lib/index.js:11128:10)\n    at Object.parseStatementContent (/Users/teresalacroix/decode/fullstack-dev/node_modules/@babel/parser/lib/index.js:10725:21)\n    at Object.parseStatement (/Users/teresalacroix/decode/fullstack-dev/node_modules/@babel/parser/lib/index.js:10658:17)\n    at Object.parseBlockOrModuleBlockBody (/Users/teresalacroix/decode/fullstack-dev/node_modules/@babel/parser/lib/index.js:11234:25)\n    at Object.parseBlockBody (/Users/teresalacroix/decode/fullstack-dev/node_modules/@babel/parser/lib/index.js:11221:10)\n    at Object.parseTopLevel (/Users/teresalacroix/decode/fullstack-dev/node_modules/@babel/parser/lib/index.js:10589:10)");
 
 /***/ })
 

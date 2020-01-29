@@ -28,8 +28,8 @@ class Navigation extends Component {
     this.state = {
       checkToggle: false,
       hamburgerClass: 'hamburger hamburger--squeeze',
-      toggleNav: 'toggle-nav mobileNavList-off',
-      top: '0'
+      toggleNav: 'toggle-nav',
+      top: "0",
     };
   }
   componentDidMount = () => {
@@ -45,13 +45,13 @@ class Navigation extends Component {
     if (this.state.checkToggle === false) {
       this.setState({
         hamburgerClass: 'hamburger hamburger--squeeze is-active',
-        toggleNav: 'toggle-nav-on mobileNavList'
+        toggleNav: 'toggle-nav-on',
       });
     }
     if (this.state.checkToggle === true) {
       this.setState({
         hamburgerClass: 'hamburger hamburger--squeeze',
-        toggleNav: 'toggle-nav mobileNavList-off'
+        toggleNav: 'toggle-nav'
       });
     }
     this.setState({ checkToggle: !this.state.checkToggle });
@@ -68,9 +68,10 @@ class Navigation extends Component {
       this.setState({ toggleNav: '' });
     }
     if (window.innerWidth < 968) {
-      this.setState({ toggleNav: 'toggle-nav mobileNavList-off' });
+      this.setState({toggleNav: 'toggle-nav'})
       if (this.state.checkToggle === true) {
-        this.setState({ toggleNav: 'toggle-nav-on mobileNavList' });
+        this.setState({toggleNav: 'toggle-nav-on'})
+
       }
     }
   };

@@ -16,11 +16,19 @@ let reducer = (state, action) => {
     console.log('filter content', action.content);
     return { ...state, searchTag: action.content };
   }
+  if (action.type === 'add-to-cart') {
+    console.log('add to cart', action.content);
+    return { ...state, cart: action.content };
+  }
   return state;
 };
 const store = createStore(
   reducer,
+<<<<<<< HEAD
   { username: undefined, items: [], searchTag: '' },
+=======
+  { username: undefined, items: [], searchTag: '', cart: []},
+>>>>>>> 5aa67745a8cc26820390cbc61d0dd2fa3382630c
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 export default store;
