@@ -42167,8 +42167,25 @@ class Items extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   constructor(props) {
     super(props);
 
+    _defineProperty(this, "componentDidUpdate", () => {
+      let checkUser = async () => {
+        console.log('check if user is logged in');
+        let response = await fetch('/user', {
+          method: 'POST'
+        });
+        let text = await response.text();
+        let body = JSON.parse(text);
+        this.props.dispatch({
+          type: 'login-sucess',
+          content: body.user
+        });
+      };
+
+      checkUser();
+    });
+
     _defineProperty(this, "updateItems", async () => {
-      console.log(this.props.items);
+      // console.log(this.props.items);
       let responseBody = await fetch('/all-items', {
         method: 'POST'
       });
@@ -42397,7 +42414,7 @@ class MainPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     _defineProperty(this, "render", () => {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         style: {
-          margin: "5em 0 0 0"
+          margin: '5em 0 0 0'
         }
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Items_jsx__WEBPACK_IMPORTED_MODULE_2__["default"], null));
     });
@@ -42460,6 +42477,15 @@ class Navigation extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       window.addEventListener('resize', this.setClass);
       window.addEventListener('load', this.load);
       window.addEventListener('scroll', this.navScroll);
+    });
+
+    _defineProperty(this, "logoutHandler", () => {
+      fetch('/logout', {
+        method: 'POST'
+      });
+      this.props.dispatch({
+        type: 'logout'
+      });
     });
 
     _defineProperty(this, "handleToggle", () => {
@@ -42552,11 +42578,15 @@ class Navigation extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         to: "/men"
       }, "Men")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
         to: "/women"
-      }, "Women")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+      }, "Women")), this.props.user ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
         to: "/add-item"
-      }, "Sell"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "Sell")) : ''), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "navRight"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SearchBar_jsx__WEBPACK_IMPORTED_MODULE_4__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, ' ', this.props.user ? 'Welcome back ' + this.props.user : ''), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, Object(_Dropdown_jsx__WEBPACK_IMPORTED_MODULE_6__["default"])('Login', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Login_jsx__WEBPACK_IMPORTED_MODULE_1__["default"], null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SearchBar_jsx__WEBPACK_IMPORTED_MODULE_4__["default"], null), this.props.user ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, 'Welcome back ' + this.props.user, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        onClick: this.logoutHandler
+      }, "Logout"), ' ') : '', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+        to: "/login"
+      }, "Login")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
         to: "/register"
       }, "Register"))))));
     });
@@ -43052,6 +43082,13 @@ let reducer = (state, action) => {
     console.log('login content', action.content);
     return { ...state,
       username: action.content
+    };
+  }
+
+  if (action.type === 'logout') {
+    console.log('login content', action.content);
+    return { ...state,
+      username: undefined
     };
   }
 

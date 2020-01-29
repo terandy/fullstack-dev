@@ -37,6 +37,10 @@ class Navigation extends Component {
     window.addEventListener('load', this.load);
     window.addEventListener('scroll', this.navScroll);
   };
+  logoutHandler = () => {
+    fetch('/logout', { method: 'POST' });
+    this.props.dispatch({ type: 'logout' });
+  };
   handleToggle = () => {
     if (this.state.checkToggle === false) {
       this.setState({
@@ -112,17 +116,27 @@ class Navigation extends Component {
               <li>
                 <Link to="/women">Women</Link>
               </li>
-              <li>
-                <Link to="/add-item">Sell</Link>
-              </li>
+              {this.props.user ? (
+                <li>
+                  <Link to="/add-item">Sell</Link>
+                </li>
+              ) : (
+                ''
+              )}
             </div>
             <div className="navRight">
               <SearchBar />
+              {this.props.user ? (
+                <li>
+                  {'Welcome back ' + this.props.user}
+                  <button onClick={this.logoutHandler}>Logout</button>{' '}
+                </li>
+              ) : (
+                ''
+              )}
               <li>
-                {' '}
-                {this.props.user ? 'Welcome back ' + this.props.user : ''}
+                <Link to="/login">Login</Link>
               </li>
-              <li>{Dropdown('Login', <Login />)}</li>
               <li>
                 <Link to="/register">Register</Link>
               </li>

@@ -4,6 +4,10 @@ let reducer = (state, action) => {
     console.log('login content', action.content);
     return { ...state, username: action.content };
   }
+  if (action.type === 'logout') {
+    console.log('login content', action.content);
+    return { ...state, username: undefined };
+  }
   if (action.type === 'set-items') {
     console.log('set items content', action.content);
     return { ...state, items: action.content };
@@ -16,7 +20,7 @@ let reducer = (state, action) => {
 };
 const store = createStore(
   reducer,
-  { username: undefined, items: [], searchTag: ''},
+  { username: undefined, items: [], searchTag: '' },
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 export default store;

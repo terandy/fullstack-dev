@@ -28,8 +28,18 @@ class Items extends Component {
       items: []
     };
   }
+  componentDidUpdate = () => {
+    let checkUser = async () => {
+      console.log('check if user is logged in');
+      let response = await fetch('/user', { method: 'POST' });
+      let text = await response.text();
+      let body = JSON.parse(text);
+      this.props.dispatch({ type: 'login-sucess', content: body.user });
+    };
+    checkUser();
+  };
   updateItems = async () => {
-    console.log(this.props.items);
+    // console.log(this.props.items);
     let responseBody = await fetch('/all-items', { method: 'POST' });
     let responseText = await responseBody.text();
     let itemsArray = JSON.parse(responseText);
