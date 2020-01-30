@@ -41609,8 +41609,7 @@ class AddItem extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         value: this.state.item,
         onChange: this.itemChangeHandler,
         maxLength: "15"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Description"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "text",
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Description"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
         value: this.state.description,
         onChange: this.descChangeHandler
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Price"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -41812,16 +41811,16 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-let Dropdown = (navItem, dropdownElements) => {
+let Dropdown = props => {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "dropdown-container"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/login"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "dropdown-button"
-  }, navItem)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, props.name)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "dropdown-content hideDesktop"
-  }, dropdownElements));
+  }, props.children));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Dropdown);
@@ -42508,6 +42507,19 @@ let NavDiv = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div`
   -o-transition-duration: 0.5s;
   transition-timing-function: ease-in-out;
 `;
+let DropContent = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div`
+  width: 120px;
+  text-transform: none;
+  display: grid;
+  padding-bottom: 1em;
+  grid-template-rows: 1em 1em;
+  grid-row-gap: 1em;
+  text-align: left;
+  a:hover {
+    color: purple;
+    text-decoration: underline;
+  }
+`;
 
 class Navigation extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   constructor() {
@@ -42618,9 +42630,13 @@ class Navigation extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         to: "/men"
       }, "Men")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
         to: "/women"
-      }, "Women")), this.props.user ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+      }, "Women")), this.props.user ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Dropdown_jsx__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        name: "your products"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(DropContent, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
         to: "/add-item"
-      }, "Sell")) : ''), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Add new item")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+        to: "/seller-items"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "All my items"))))) : ''), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "navRight"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SearchBar_jsx__WEBPACK_IMPORTED_MODULE_4__["default"], null), this.props.user ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, 'Welcome back ' + this.props.user, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         onClick: this.logoutHandler
@@ -42635,7 +42651,7 @@ class Navigation extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       checkToggle: false,
       hamburgerClass: 'hamburger hamburger--squeeze',
       toggleNav: 'toggle-nav',
-      top: "0"
+      top: '0'
     };
   }
 
@@ -42879,11 +42895,11 @@ class SearchBar extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     });
 
     _defineProperty(this, "handleSubmit", async evt => {
-      evt.preventDefault();
-      if (this.state.searchInput === "") return;
+      evt.preventDefault(); // if (this.state.searchInput === "") return
+
       let lowercased = this.state.searchInput.toLowerCase();
       this.props.dispatch({
-        type: "filter",
+        type: 'filter',
         content: lowercased
       });
     });
@@ -42900,7 +42916,7 @@ class SearchBar extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     });
 
     this.state = {
-      searchInput: ""
+      searchInput: ''
     };
   }
 

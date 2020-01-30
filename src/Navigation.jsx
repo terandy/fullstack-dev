@@ -22,6 +22,20 @@ let NavDiv = styled.div`
   transition-timing-function: ease-in-out;
 `;
 
+let DropContent = styled.div`
+  width: 120px;
+  text-transform: none;
+  display: grid;
+  padding-bottom: 1em;
+  grid-template-rows: 1em 1em;
+  grid-row-gap: 1em;
+  text-align: left;
+  a:hover {
+    color: purple;
+    text-decoration: underline;
+  }
+`;
+
 class Navigation extends Component {
   constructor() {
     super();
@@ -29,7 +43,7 @@ class Navigation extends Component {
       checkToggle: false,
       hamburgerClass: 'hamburger hamburger--squeeze',
       toggleNav: 'toggle-nav',
-      top: "0",
+      top: '0'
     };
   }
   componentDidMount = () => {
@@ -45,7 +59,7 @@ class Navigation extends Component {
     if (this.state.checkToggle === false) {
       this.setState({
         hamburgerClass: 'hamburger hamburger--squeeze is-active',
-        toggleNav: 'toggle-nav-on',
+        toggleNav: 'toggle-nav-on'
       });
     }
     if (this.state.checkToggle === true) {
@@ -68,10 +82,9 @@ class Navigation extends Component {
       this.setState({ toggleNav: '' });
     }
     if (window.innerWidth < 968) {
-      this.setState({toggleNav: 'toggle-nav'})
+      this.setState({ toggleNav: 'toggle-nav' });
       if (this.state.checkToggle === true) {
-        this.setState({toggleNav: 'toggle-nav-on'})
-
+        this.setState({ toggleNav: 'toggle-nav-on' });
       }
     }
   };
@@ -119,7 +132,16 @@ class Navigation extends Component {
               </li>
               {this.props.user ? (
                 <li>
-                  <Link to="/add-item">Sell</Link>
+                  <Dropdown name="your products">
+                    <DropContent>
+                      <Link to="/add-item">
+                        <div>Add new item</div>
+                      </Link>
+                      <Link to="/seller-items">
+                        <div>All my items</div>
+                      </Link>
+                    </DropContent>
+                  </Dropdown>
                 </li>
               ) : (
                 ''
