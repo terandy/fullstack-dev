@@ -187,8 +187,7 @@ class AddItem extends Component {
               maxLength="15"
             />
             <label>Description</label>
-            <input
-              type="text"
+            <textarea
               value={this.state.description}
               onChange={this.descChangeHandler}
             />
