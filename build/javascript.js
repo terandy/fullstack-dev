@@ -41688,7 +41688,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _RegisterPage_jsx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./RegisterPage.jsx */ "./src/RegisterPage.jsx");
 /* harmony import */ var _AddItem_jsx__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./AddItem.jsx */ "./src/AddItem.jsx");
 /* harmony import */ var _ItemDetail_jsx__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./ItemDetail.jsx */ "./src/ItemDetail.jsx");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 
@@ -41702,6 +41704,23 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 class App extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   constructor(...args) {
     super(...args);
+
+    _defineProperty(this, "componentDidMount", () => {
+      let checkUser = async () => {
+        console.log('check if user is logged in');
+        let response = await fetch('/user', {
+          method: 'POST'
+        });
+        let text = await response.text();
+        let body = JSON.parse(text);
+        this.props.dispatch({
+          type: 'login-sucess',
+          content: body.user
+        });
+      };
+
+      checkUser();
+    });
 
     _defineProperty(this, "renderHomePage", routerData => {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_MainPage_jsx__WEBPACK_IMPORTED_MODULE_3__["default"], null));
@@ -41792,7 +41811,7 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (App);
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_8__["connect"])()(App));
 
 /***/ }),
 
@@ -42205,23 +42224,6 @@ let Button = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].button`
 class Items extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   constructor(props) {
     super(props);
-
-    _defineProperty(this, "componentDidUpdate", () => {
-      let checkUser = async () => {
-        console.log('check if user is logged in');
-        let response = await fetch('/user', {
-          method: 'POST'
-        });
-        let text = await response.text();
-        let body = JSON.parse(text);
-        this.props.dispatch({
-          type: 'login-sucess',
-          content: body.user
-        });
-      };
-
-      checkUser();
-    });
 
     _defineProperty(this, "updateItems", async () => {
       // console.log(this.props.items);

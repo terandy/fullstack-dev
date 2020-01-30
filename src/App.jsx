@@ -6,8 +6,20 @@ import LoginPage from './LoginPage.jsx';
 import RegisterPage from './RegisterPage.jsx';
 import AddItem from './AddItem.jsx';
 import ItemDetail from './ItemDetail.jsx';
+import { connect } from 'react-redux';
 
 class App extends Component {
+  componentDidMount = () => {
+    let checkUser = async () => {
+      console.log('check if user is logged in');
+      let response = await fetch('/user', { method: 'POST' });
+      let text = await response.text();
+      let body = JSON.parse(text);
+      this.props.dispatch({ type: 'login-sucess', content: body.user });
+    };
+    checkUser();
+  };
+
   renderHomePage = routerData => {
     return (
       <div>
@@ -86,4 +98,4 @@ class App extends Component {
   };
 }
 
-export default App;
+export default connect()(App);

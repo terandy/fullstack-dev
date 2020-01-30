@@ -152,13 +152,20 @@ class Navigation extends Component {
               {this.props.user ? (
                 <li className="dropdown-container">
                   <div className="flexMobile profileMobileAlign">
-                    <img className="profileMobile" src="../uploads/profile.png" width="32px" height="32px"></img>
+                    <img
+                      className="profileMobile"
+                      src="../uploads/profile.png"
+                      width="32px"
+                      height="32px"
+                    ></img>
                     <div className="hideMobile">Profile</div>
                   </div>
-                    <div className="dropdown-content">
-                      <div className="hideDesktop">Welcome back, {this.props.user}</div>
-                      <button onClick={this.logoutHandler}>Logout</button>
+                  <div className="dropdown-content">
+                    <div className="hideDesktop">
+                      Welcome back, {this.props.user}
                     </div>
+                    <button onClick={this.logoutHandler}>Logout</button>
+                  </div>
                 </li>
               ) : (
                 <div className="flex">
@@ -168,7 +175,7 @@ class Navigation extends Component {
                   <li>
                     <Link to="/register">Register</Link>
                   </li>
-              </div>
+                </div>
               )}
             </div>
           </ul>
