@@ -42623,7 +42623,10 @@ class Navigation extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       }, "Sell")) : ''), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "flex"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SearchBar_jsx__WEBPACK_IMPORTED_MODULE_4__["default"], null), this.props.user ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-        className: "dropdown-container"
+        className: "dropdown-container",
+        style: {
+          cursor: "pointer"
+        }
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "flexMobile profileMobileAlign"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {

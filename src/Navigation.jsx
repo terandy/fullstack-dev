@@ -128,7 +128,7 @@ class Navigation extends Component {
             <div className="flex">
               <SearchBar />
               {this.props.user ? (
-                <li className="dropdown-container">
+                <li className="dropdown-container" style={{cursor: "pointer"}}>
                   <div className="flexMobile profileMobileAlign">
                     <img className="profileMobile" src="../uploads/profile.png" width="32px" height="32px"></img>
                     <div className="hideMobile">Profile</div>
