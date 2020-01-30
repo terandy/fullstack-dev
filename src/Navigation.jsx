@@ -120,7 +120,7 @@ class Navigation extends Component {
         </div>
         <div id="navItems" className={this.state.toggleNav}>
           <ul>
-            <div className="navLeft">
+            <div className="flex">
               <li>
                 <Link to="/">AliBay</Link>
               </li>
@@ -147,22 +147,29 @@ class Navigation extends Component {
                 ''
               )}
             </div>
-            <div className="navRight">
+            <div className="flex">
               <SearchBar />
               {this.props.user ? (
-                <li>
-                  {'Welcome back ' + this.props.user}
-                  <button onClick={this.logoutHandler}>Logout</button>{' '}
+                <li className="dropdown-container">
+                  <div className="flexMobile profileMobileAlign">
+                    <img className="profileMobile" src="../uploads/profile.png" width="32px" height="32px"></img>
+                    <div className="hideMobile">Profile</div>
+                  </div>
+                    <div className="dropdown-content">
+                      <div className="hideDesktop">Welcome back, {this.props.user}</div>
+                      <button onClick={this.logoutHandler}>Logout</button>
+                    </div>
                 </li>
               ) : (
-                ''
+                <div className="flex">
+                  <li>
+                    <Link to="/login">Login</Link>
+                  </li>
+                  <li>
+                    <Link to="/register">Register</Link>
+                  </li>
+              </div>
               )}
-              <li>
-                <Link to="/login">Login</Link>
-              </li>
-              <li>
-                <Link to="/register">Register</Link>
-              </li>
             </div>
           </ul>
         </div>
