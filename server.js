@@ -71,7 +71,7 @@ app.post('/register', upload.none(), (req, res) => {
   console.log('register', req.body);
   let name = req.body.username;
   let pwd = req.body.password;
-  let cart = req.body.cart
+  let cart = req.body.cart;
   console.log('dbo response register');
   dbo.collection('users').findOne({ username: name }, (err, user) => {
     if (user === null) {
@@ -115,16 +115,51 @@ app.post('/add-item', upload.array('images'), (req, res) => {
     res.send(JSON.stringify({ success: false }));
   }
 });
+app.post('/update-item', upload.array('images'), (req, res) => {
+  let sid = req.cookies.sid;
+  let seller = req.body.seller;
+  console.log('session', sessions[sid]);
+  console.log('seller', seller);
+  if (sessions[sid] && sessions[sid] === seller) {
+    let description = req.body.description;
+    let price = req.body.price;
+    let tag = req.body.tag.split(',');
+    let item = req.body.item;
+    let files = req.files;
+    let imgPaths = files.map(file => {
+      return '/uploads/' + file.filename;
+    });
+    console.log('images', imgPaths);
+    dbo.collection('items').updateOne(
+      { _id: ObjectID(req.body.itemId) },
+      {
+        $set: {
+          description: description,
+          item: item,
+          seller: seller,
+          imgPaths: imgPaths,
+          price: price,
+          tag: tag
+        }
+      }
+    );
+    console.log('item updated');
+
+    res.send(JSON.stringify({ success: true }));
+    return;
+  } else {
+    console.log('Item not added');
+    res.send(JSON.stringify({ success: false }));
+  }
+});
 
 app.post('/add-to-cart', upload.none(), (req, res) => {
-  let item = req.body.itemId
-  let sessionId = req.cookies.sid
-  let username = sessions[sessionId]
+  let item = req.body.itemId;
+  let sessionId = req.cookies.sid;
+  let username = sessions[sessionId];
 
   try {
-    dbo
-      .collection('users')
-      .update({ username }, {$push: {cart: item}})
+    dbo.collection('users').update({ username }, { $push: { cart: item } });
     res.send(JSON.stringify({ success: true }));
   } catch (err) {
     console.log('error', err);

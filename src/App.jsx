@@ -2,10 +2,13 @@ import React, { Component } from 'react';
 import { Route, BrowserRouter, Link } from 'react-router-dom';
 import Navigation from './Navigation.jsx';
 import MainPage from './MainPage.jsx';
+import Items from './Items.jsx';
 import LoginPage from './LoginPage.jsx';
 import RegisterPage from './RegisterPage.jsx';
 import AddItem from './AddItem.jsx';
 import ItemDetail from './ItemDetail.jsx';
+import SellerItemDetail from './SellerItemDetail.jsx';
+import SellerItems from './SellerItems.jsx';
 import { connect } from 'react-redux';
 
 class App extends Component {
@@ -27,6 +30,13 @@ class App extends Component {
       </div>
     );
   };
+  renderShopPage = routerData => {
+    return (
+      <div>
+        <Items />
+      </div>
+    );
+  };
   renderLoginPage = routerData => {
     return <LoginPage history={routerData.history} />;
   };
@@ -39,14 +49,20 @@ class App extends Component {
   renderItemDetail = renderdata => {
     return <ItemDetail itemId={renderdata.match.params.itemId} />;
   };
+  renderSellerItemDetail = renderdata => {
+    return <SellerItemDetail itemId={renderdata.match.params.itemId} />;
+  };
   renderAddItem = routerData => {
     return <AddItem history={routerData.history} />;
   };
   renderMenItems = () => {
-    return <MenItems />;
+    return <Items category="man" />;
   };
   renderWomenItems = () => {
-    return <WomenItems />;
+    return <Items category="woman" />;
+  };
+  renderSellerItemPage = () => {
+    return <SellerItems />;
   };
 
   render = () => {
@@ -55,11 +71,17 @@ class App extends Component {
         <div>
           <Navigation />
           <Route exact={true} path="/" render={this.renderHomePage}></Route>
+          <Route exact={true} path="/shop" render={this.renderShopPage}></Route>
           <Route exact={true} path="/men" render={this.renderMenItems}></Route>
           <Route
             exact={true}
             path="/women"
             render={this.renderWomenItems}
+          ></Route>
+          <Route
+            exact={true}
+            path="/seller-items"
+            render={this.renderSellerItemPage}
           ></Route>
           <Route
             exact={true}
@@ -86,6 +108,11 @@ class App extends Component {
             exact={true}
             path="/item-detail/:itemId"
             render={this.renderItemDetail}
+          ></Route>
+          <Route
+            exact={true}
+            path="/seller-item-detail/:itemId"
+            render={this.renderSellerItemDetail}
           ></Route>
           <Route
             exact={true}

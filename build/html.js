@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n  <head>\r\n    <meta charset=\"utf-8\" />\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\r\n    <link\r\n      href=\"https://fonts.googleapis.com/css?family=Quicksand&display=swap\"\r\n      rel=\"stylesheet\"\r\n    />\r\n    <title>Alibay</title>\r\n  </head>\r\n\r\n  <body>\r\n    <div id=\"root\"></div>\r\n  </body>\r\n</html>\r\n";
+module.exports = "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    <link\n      href=\"https://fonts.googleapis.com/css?family=Quicksand&display=swap\"\n      rel=\"stylesheet\"\n    />\n    <title>Alibay</title>\n  </head>\n\n  <body>\n    <div id=\"root\"></div>\n  </body>\n</html>\n";
 
 /***/ })
 
