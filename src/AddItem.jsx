@@ -172,7 +172,8 @@ class AddItem extends Component {
   };
   render = () => {
     return (
-      <div>
+      <div style={{ marginTop: '5em' }}>
+        <h1 className="all-items-title">Selling</h1>
         <Form onSubmit={this.submitHandler}>
           <Title>
             Step 1: Describe Item

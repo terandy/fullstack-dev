@@ -4,7 +4,7 @@ body {
 }
 
 .hamburger:focus {
-  outline:none;
+  outline: none;
 }
 
 .nav {
@@ -17,21 +17,21 @@ body {
 .toggle-nav-on {
   display: block;
   position: fixed;
-    width: 45%;
-    height: 100%;
-    right: 0;
-    top: 0;
-    padding: 3em 1em 0 0;
-    font-size: 1.5em;
-    background-color: whitesmoke;
-    box-shadow: 0 0 3px grey;
-    
-    transition-property: right;
-    transition-duration: .5s;
-    -webkit-transition-duration: .5s;
-    -moz-transition-duration: .5s;
-    -o-transition-duration: .5s;
-    transition-timing-function: ease-in-out;
+  width: 45%;
+  height: 100%;
+  right: 0;
+  top: 0;
+  padding: 3em 1em 0 0;
+  font-size: 1.5em;
+  background-color: whitesmoke;
+  box-shadow: 0 0 3px grey;
+
+  transition-property: right;
+  transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
 }
 .toggle-nav {
   visibility: hidden;
@@ -84,6 +84,11 @@ a {
 }
 
 /* all items container */
+.all-items-title {
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+}
 .all-items-display {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -263,8 +268,23 @@ a {
     padding: 1em;
     z-index: 99;
   }
+
   .dropdown-container:hover .dropdown-content {
     display: block;
+  }
+  .dropdown-button {
+    display: flex;
+    align-items: center;
+  }
+  .dropdown-button:after {
+    background: url('/../uploads/arrow.png') no-repeat;
+    background-size: cover;
+    content: '';
+    display: inline-block;
+    width: 0.6em;
+    height: 0.6em;
+    margin-left: 5px;
+    transform: rotate(90deg);
   }
   .dropdown-button:hover {
     color: purple;

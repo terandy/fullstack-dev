@@ -393,6 +393,7 @@ class SellerItemDetail extends Component {
   render = () => {
     return (
       <div style={{ marginTop: '5em' }}>
+        <h1 className="all-items-title">Selling</h1>
         <Form>
           <h1 style={{ margin: '0' }}>Edit Existing Item</h1>
         </Form>

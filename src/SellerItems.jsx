@@ -61,6 +61,13 @@ class SellerItems extends Component {
 
     return (
       <div style={{ marginTop: '5em' }}>
+        <h1 className="all-items-title">Selling</h1>
+        <p
+          className="all-items-title"
+          style={{ margin: '-1em 0 0 0', textTransform: 'none' }}
+        >
+          Click item to edit
+        </p>
         <div className="all-items-display">
           {results.map((item, index) => {
             return (
