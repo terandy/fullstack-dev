@@ -21,7 +21,7 @@ let Button = styled.button`
   }
 `;
 
-class Items extends Component {
+class SellerItems extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -43,13 +43,10 @@ class Items extends Component {
     };
     updateItems();
   };
-
   render = () => {
     let results = this.state.items.filter(item => {
       if (this.state.items === '') return true;
-      return item.tag.includes(
-        this.props.category ? this.props.category : this.props.searchTag
-      );
+      return item.seller === this.props.user;
     });
     if (results.length === 0) {
       return <div style={{ marginTop: '5em' }}>No contents to display</div>;
@@ -60,7 +57,7 @@ class Items extends Component {
           {results.map((item, index) => {
             return (
               <div key={index}>
-                {<OneItem item={item} link="/item-detail/" />}
+                {<OneItem item={item} link="seller-item-detail/" />}
               </div>
             );
           })}
@@ -73,8 +70,8 @@ class Items extends Component {
 let mapStateToProps = state => {
   return {
     items: state.items,
-    searchTag: state.searchTag
+    user: state.username
   };
 };
 
-export default connect(mapStateToProps)(Items);
+export default connect(mapStateToProps)(SellerItems);

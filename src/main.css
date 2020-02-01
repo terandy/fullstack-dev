@@ -44,14 +44,14 @@ body {
   height: 100%;
   width: 45%;
   background-color: whitesmoke;
-  position:fixed;
+  position: fixed;
 
   transition-property: visibility, right;
-      transition-duration: .5s;
-    -webkit-transition-duration: .5s;
-    -moz-transition-duration: .5s;
-    -o-transition-duration: .5s;
-    transition-timing-function: ease-in-out;
+  transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
 }
 
 .hideDesktop {
@@ -194,7 +194,7 @@ a {
 /* CSS applies to 968px and above */
 @media screen and (min-width: 968px) {
   .hideDesktop {
-    display:block;
+    display: block;
   }
   .all-items-display {
     padding: 0 5%;
@@ -228,7 +228,7 @@ a {
     box-shadow: 0px 0px 2px grey;
     background-color: white;
   }
-  .nav ul  {
+  .nav ul {
     display: flex;
     flex-direction: row;
     list-style-type: none;

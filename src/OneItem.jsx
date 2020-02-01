@@ -18,7 +18,7 @@ class OneItem extends Component {
   };
   render = () => {
     return (
-      <Link to={'/item-detail/' + this.props.item._id}>
+      <Link to={this.props.link + this.props.item._id}>
         <div className="one-item">
           <div
             onMouseEnter={this.toggleImage}

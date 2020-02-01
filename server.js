@@ -88,7 +88,59 @@ app.post('/register', upload.none(), (req, res) => {
     }
   });
 });
+app.post('/update-tag-item', upload.none(), (req, res) => {
+  let sid = req.cookies.sid;
+  let seller = req.body.seller;
+  console.log('session', sessions[sid]);
+  console.log('seller', seller);
+  console.log('update-tag-item endpoint');
+  if (sessions[sid] && sessions[sid] === seller) {
+    let tag = req.body.tag;
+    dbo.collection('items').updateOne(
+      { _id: ObjectID(req.body.itemId) },
+      {
+        $set: {
+          tag: tag
+        }
+      }
+    );
+    console.log('item updated');
 
+    res.send(JSON.stringify({ success: true }));
+    return;
+  } else {
+    console.log('Item not added');
+    res.send(JSON.stringify({ success: false }));
+  }
+});
+app.post('/update-image-item', upload.array('images'), (req, res) => {
+  let sid = req.cookies.sid;
+  let seller = req.body.seller;
+  console.log('session', sessions[sid]);
+  console.log('seller', seller);
+  if (sessions[sid] && sessions[sid] === seller) {
+    let files = req.files;
+    let imgPaths = files.map(file => {
+      return '/uploads/' + file.filename;
+    });
+    console.log('images', imgPaths);
+    dbo.collection('items').updateOne(
+      { _id: ObjectID(req.body.itemId) },
+      {
+        $set: {
+          imgPaths: imgPaths
+        }
+      }
+    );
+    console.log('item updated');
+
+    res.send(JSON.stringify({ success: true }));
+    return;
+  } else {
+    console.log('Item not added');
+    res.send(JSON.stringify({ success: false }));
+  }
+});
 app.post('/add-item', upload.array('images'), (req, res) => {
   let sid = req.cookies.sid;
   let seller = req.body.seller;
@@ -110,7 +162,30 @@ app.post('/add-item', upload.array('images'), (req, res) => {
       price: price,
       tag: tag
     });
-    console.log('item added');
+
+    res.send(JSON.stringify({ success: true }));
+  } else {
+    res.send(JSON.stringify({ success: false }));
+  }
+});
+////////
+app.post('/update-image-order-item', upload.none(), (req, res) => {
+  let sid = req.cookies.sid;
+  let seller = req.body.seller;
+  console.log('session', sessions[sid]);
+  console.log('seller', seller);
+  if (sessions[sid] && sessions[sid] === seller) {
+    let images = req.body.images;
+    console.log('images order', images);
+    dbo.collection('items').updateOne(
+      { _id: ObjectID(req.body.itemId) },
+      {
+        $set: {
+          imgPaths: images
+        }
+      }
+    );
+    console.log('item updated');
 
     res.send(JSON.stringify({ success: true }));
     return;
@@ -119,16 +194,60 @@ app.post('/add-item', upload.array('images'), (req, res) => {
     res.send(JSON.stringify({ success: false }));
   }
 });
+app.post('/update-detail-item', upload.none(), (req, res) => {
+  let sid = req.cookies.sid;
+  let seller = req.body.seller;
+  console.log('session', sessions[sid]);
+  console.log('seller', seller);
+  if (sessions[sid] && sessions[sid] === seller) {
+    let description = req.body.description;
+    let price = req.body.price;
+    let item = req.body.item;
+    dbo.collection('items').updateOne(
+      { _id: ObjectID(req.body.itemId) },
+      {
+        $set: {
+          description: description,
+          item: item,
+          price: price
+        }
+      }
+    );
+    console.log('item updated');
+
+    res.send(JSON.stringify({ success: true }));
+    return;
+  } else {
+    console.log('Item not added');
+    res.send(JSON.stringify({ success: false }));
+  }
+});
+app.post('/delete-item', upload.none(), (req, res) => {
+  let sid = req.cookies.sid;
+  let seller = req.body.seller;
+  console.log('/delete-item endpoint');
+  console.log(req.body.itemId);
+  console.log('session', sessions[sid]);
+  console.log('seller', seller);
+  if (sessions[sid] && sessions[sid] === seller) {
+    dbo.collection('items').deleteOne({ _id: ObjectID(req.body.itemId) });
+    console.log('item deleted');
+
+    res.send(JSON.stringify({ success: true }));
+    return;
+  } else {
+    console.log('Item not deleted');
+    res.send(JSON.stringify({ success: false }));
+  }
+});
 
 app.post('/add-to-cart', upload.none(), (req, res) => {
-  let item = req.body.itemId
-  let sessionId = req.cookies.sid
-  let username = sessions[sessionId]
+  let item = req.body.itemId;
+  let sessionId = req.cookies.sid;
+  let username = sessions[sessionId];
 
   try {
-    dbo
-      .collection('users')
-      .update({ username }, {$push: {cart: item}})
+    dbo.collection('users').update({ username }, { $push: { cart: item } });
     res.send(JSON.stringify({ success: true }));
   } catch (err) {
     console.log('error', err);

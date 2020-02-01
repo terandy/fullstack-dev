@@ -964,7 +964,11 @@ exports.push([module.i, "/*!\r\n * Hamburgers\r\n * @description Tasty CSS-anima
 
 exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
+<<<<<<< HEAD
 exports.push([module.i, "body {\r\n  background-color: white;\r\n  margin: 0;\r\n}\r\n\r\n.hamburger:focus {\r\n  outline:none;\r\n}\r\n\r\n.nav {\r\n  background-color: white;\r\n}\r\n.flexMobile {\r\n  display: flex;\r\n}\r\n\r\n.toggle-nav-on {\r\n  display: block;\r\n  position: fixed;\r\n    width: 45%;\r\n    height: 100%;\r\n    right: 0;\r\n    top: 0;\r\n    padding: 3em 1em 0 0;\r\n    font-size: 1.5em;\r\n    background-color: whitesmoke;\r\n    box-shadow: 0 0 3px grey;\r\n    \r\n    transition-property: right;\r\n    transition-duration: .5s;\r\n    -webkit-transition-duration: .5s;\r\n    -moz-transition-duration: .5s;\r\n    -o-transition-duration: .5s;\r\n    transition-timing-function: ease-in-out;\r\n}\r\n.toggle-nav {\r\n  visibility: hidden;\r\n  overflow: hidden;\r\n  top: 0;\r\n  padding: 3em 1em 0 0;\r\n  right: -100%;\r\n  padding-right: 1em;\r\n  font-size: 1.5em;\r\n  height: 100%;\r\n  width: 45%;\r\n  background-color: whitesmoke;\r\n  position:fixed;\r\n\r\n  transition-property: visibility, right;\r\n      transition-duration: .5s;\r\n    -webkit-transition-duration: .5s;\r\n    -moz-transition-duration: .5s;\r\n    -o-transition-duration: .5s;\r\n    transition-timing-function: ease-in-out;\r\n}\r\n\r\n.hideDesktop {\r\n  display: none;\r\n}\r\n\r\n.mobileNav {\r\n  display: flex;\r\n  justify-content: space-between;\r\n}\r\n\r\n.mobileNav h1 {\r\n  margin-left: 15px;\r\n}\r\n\r\na {\r\n  color: black;\r\n  text-decoration: none;\r\n}\r\n\r\n.nav ul {\r\n  list-style-type: none;\r\n  text-transform: uppercase;\r\n  padding: 0px;\r\n  line-height: 2em;\r\n  display: flex;\r\n  flex-direction: column;\r\n  text-align: right;\r\n  font-family: sans-serif;\r\n}\r\n\r\n/* all items container */\r\n.all-items-display {\r\n  display: grid;\r\n  grid-template-columns: 1fr 1fr;\r\n  margin: auto;\r\n  width: 90vw;\r\n}\r\n/* individual item */\r\n.one-item {\r\n  font-family: 'sans-serif';\r\n  color: black;\r\n  padding: 0;\r\n  margin: 10px;\r\n  height: 70vw;\r\n  width: 40vw;\r\n  z-index: 1;\r\n}\r\n.one-item-image {\r\n  height: 80%;\r\n  width: 100%;\r\n  background: lightgrey;\r\n}\r\n.one-item-image > img {\r\n  width: 100%;\r\n  height: 100%;\r\n  object-fit: cover;\r\n  overflow: hidden;\r\n}\r\n.one-item-text {\r\n  padding: 0;\r\n  margin: 0;\r\n  margin-top: 10px;\r\n  font-family: 'Helvetica';\r\n}\r\n.one-item-text > h1 {\r\n  padding: 0;\r\n  margin: 0;\r\n  font-size: 20px;\r\n  width: 100%;\r\n  overflow: visible;\r\n  text-transform: capitalize;\r\n  font-weight: lighter;\r\n}\r\n.one-item-text > p {\r\n  padding-top: 5px;\r\n  font-size: 70%;\r\n  font-weight: lighter;\r\n  border-top: black solid 1px;\r\n  width: 33%;\r\n}\r\n\r\n.popup {\r\n  z-index: 1000;\r\n  width: 400px;\r\n  box-shadow: rgba(128, 128, 128, 0.479) 4px 4px 4px 4px 16px;\r\n  text-transform: none;\r\n}\r\n.popup-form-container {\r\n  background-color: white;\r\n  display: flex;\r\n}\r\n.detail-container {\r\n  display: grid;\r\n  grid-column-gap: 50px;\r\n  width: 100vw;\r\n  margin-top: 5em;\r\n}\r\n\r\n.detail-description {\r\n  display: grid;\r\n  grid-template-rows: 5em 2em 2em 1fr 3em;\r\n  padding: 2em;\r\n  height: 40vh;\r\n}\r\n.detail-image {\r\n  width: 90vw;\r\n  height: 70vh;\r\n  margin: auto;\r\n  display: flex;\r\n  justify-content: center;\r\n}\r\n\r\n@media screen and (min-width: 650px) {\r\n  .all-items-display {\r\n    display: grid;\r\n    grid-template-columns: 1fr 1fr 1fr;\r\n    margin: auto;\r\n    width: 90vw;\r\n  }\r\n  .one-item-text > h1 {\r\n    font-size: 25px;\r\n  }\r\n  .one-item {\r\n    height: 430px;\r\n    width: 230px;\r\n  }\r\n}\r\n@media screen and (max-width: 968px) {\r\n  .profileMobile {\r\n    position: relative;\r\n    right: 10px;\r\n  }\r\n  .profileAlign {\r\n    align-items: center;\r\n    justify-content: flex-end;\r\n  }\r\n}\r\n\r\n/* CSS applies to 968px and above */\r\n@media screen and (min-width: 968px) {\r\n  .hideDesktop {\r\n    display:block;\r\n  }\r\n  .all-items-display {\r\n    padding: 0 5%;\r\n    display: grid;\r\n    grid-template-columns: 1fr 1fr 1fr 1fr;\r\n    justify-content: center;\r\n    width: 90vw;\r\n  }\r\n  .one-item-text > h1 {\r\n    font-size: 25px;\r\n  }\r\n  .one-item {\r\n    height: 430px;\r\n    width: 230px;\r\n  }\r\n  /* navigation */\r\n  .toggle-nav {\r\n    display: block;\r\n  }\r\n  .hideMobile {\r\n    display: none;\r\n  }\r\n  #navItems {\r\n    width: 100%;\r\n  }\r\n  .nav {\r\n    display: flex;\r\n    height: 4em;\r\n    border-bottom: 1px solid black;\r\n    margin-bottom: 0.5em;\r\n    box-shadow: 0px 0px 2px grey;\r\n    background-color: white;\r\n  }\r\n  .nav ul  {\r\n    display: flex;\r\n    flex-direction: row;\r\n    list-style-type: none;\r\n    text-transform: uppercase;\r\n    justify-content: space-between;\r\n  }\r\n\r\n  .nav ul li {\r\n    margin: 0 1em 0 1em;\r\n  }\r\n  .flex {\r\n    display: flex;\r\n  }\r\n  .profileAlign {\r\n    margin-right: 1em;\r\n  }\r\n\r\n  /* end navigation */\r\n\r\n  /* dropdown */\r\n  .dropdown-container {\r\n    position: relative;\r\n  }\r\n\r\n  .dropdown-content {\r\n    display: none;\r\n    position: absolute;\r\n    right: 0;\r\n    min-width: max-content;\r\n    box-shadow: rgba(128, 128, 128, 0.479) 4px 4px 16px;\r\n    background-color: white;\r\n    padding: 1em;\r\n    z-index: 99;\r\n  }\r\n  .dropdown-container:hover .dropdown-content {\r\n    display: block;\r\n  }\r\n  .dropdown-button:hover {\r\n    color: purple;\r\n    cursor: pointer;\r\n  }\r\n  /* end of dropdown */\r\n  .detail-container {\r\n    grid-template-columns: 1fr 30%;\r\n    width: 90vw;\r\n    margin: 2em;\r\n    margin-top: 5em;\r\n  }\r\n  .detail-description {\r\n    width: 90%;\r\n    height: 80vh;\r\n    padding: 0;\r\n    margin: 1em;\r\n  }\r\n  .detail-image {\r\n    justify-content: center;\r\n    display: flex;\r\n    align-items: center;\r\n    margin: auto;\r\n    width: 100%;\r\n    height: 90vh;\r\n  }\r\n}\r\n", ""]);
+=======
+exports.push([module.i, "body {\n  background-color: white;\n  margin: 0;\n}\n\n.nav {\n  background-color: white;\n}\n.flexMobile {\n  display: flex;\n}\n\n.toggle-nav-on {\n  display: block;\n  position: fixed;\n  width: 45%;\n  height: 100%;\n  right: 0;\n  top: 0;\n  padding: 2em 1em 0 0;\n  font-size: 2em;\n  background-color: whitesmoke;\n  box-shadow: 0 0 3px grey;\n\n  transition-property: right;\n  transition-duration: 0.5s;\n  -webkit-transition-duration: 0.5s;\n  -moz-transition-duration: 0.5s;\n  -o-transition-duration: 0.5s;\n  transition-timing-function: ease-in-out;\n}\n.toggle-nav {\n  visibility: hidden;\n  overflow: hidden;\n  top: 0;\n  padding: 2em 1em 0 0;\n  right: -100%;\n  padding-right: 1em;\n  font-size: 2em;\n  height: 100%;\n  width: 45%;\n  background-color: whitesmoke;\n  position: fixed;\n\n  transition-property: visibility, right;\n  transition-duration: 0.5s;\n  -webkit-transition-duration: 0.5s;\n  -moz-transition-duration: 0.5s;\n  -o-transition-duration: 0.5s;\n  transition-timing-function: ease-in-out;\n}\n\n.hideDesktop {\n  display: none;\n}\n\n.mobileNav {\n  display: flex;\n  justify-content: space-between;\n}\n\n.mobileNav h1 {\n  margin-left: 15px;\n}\n\na {\n  color: black;\n  text-decoration: none;\n}\n\n.nav ul {\n  list-style-type: none;\n  text-transform: uppercase;\n  padding: 0px;\n  line-height: 2em;\n  display: flex;\n  flex-direction: column;\n  text-align: right;\n  font-family: sans-serif;\n}\n\n/* all items container */\n.all-items-display {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  margin: auto;\n  width: 90vw;\n}\n/* individual item */\n.one-item {\n  font-family: 'sans-serif';\n  color: black;\n  padding: 0;\n  margin: 10px;\n  height: 70vw;\n  width: 40vw;\n  z-index: 1;\n}\n.one-item-image {\n  height: 80%;\n  width: 100%;\n  background: lightgrey;\n}\n.one-item-image > img {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  overflow: hidden;\n}\n.one-item-text {\n  padding: 0;\n  margin: 0;\n  margin-top: 10px;\n  font-family: 'Helvetica';\n}\n.one-item-text > h1 {\n  padding: 0;\n  margin: 0;\n  font-size: 20px;\n  width: 100%;\n  overflow: visible;\n  text-transform: capitalize;\n  font-weight: lighter;\n}\n.one-item-text > p {\n  padding-top: 5px;\n  font-size: 70%;\n  font-weight: lighter;\n  border-top: black solid 1px;\n  width: 33%;\n}\n\n.popup {\n  z-index: 1000;\n  width: 400px;\n  box-shadow: rgba(128, 128, 128, 0.479) 4px 4px 4px 4px 16px;\n  text-transform: none;\n}\n.popup-form-container {\n  background-color: white;\n  display: flex;\n}\n.detail-container {\n  display: grid;\n  grid-column-gap: 50px;\n  width: 100vw;\n  margin-top: 5em;\n}\n\n.detail-description {\n  display: grid;\n  grid-template-rows: 5em 2em 2em 1fr 3em;\n  padding: 2em;\n  height: 40vh;\n}\n.detail-image {\n  width: 90vw;\n  height: 70vh;\n  margin: auto;\n  display: flex;\n  justify-content: center;\n}\n\n@media screen and (min-width: 650px) {\n  .all-items-display {\n    display: grid;\n    grid-template-columns: 1fr 1fr 1fr;\n    margin: auto;\n    width: 90vw;\n  }\n  .one-item-text > h1 {\n    font-size: 25px;\n  }\n  .one-item {\n    height: 430px;\n    width: 230px;\n  }\n}\n@media screen and (max-width: 968px) {\n  .profileMobile {\n    position: relative;\n    right: 10px;\n  }\n  .profileMobileAlign {\n    align-items: center;\n    justify-content: flex-end;\n  }\n}\n\n/* CSS applies to 968px and above */\n@media screen and (min-width: 968px) {\n  .hideDesktop {\n    display: block;\n  }\n  .all-items-display {\n    padding: 0 5%;\n    display: grid;\n    grid-template-columns: 1fr 1fr 1fr 1fr;\n    justify-content: center;\n    width: 90vw;\n  }\n  .one-item-text > h1 {\n    font-size: 25px;\n  }\n  .one-item {\n    height: 430px;\n    width: 230px;\n  }\n  /* navigation */\n  .toggle-nav {\n    display: block;\n  }\n  .hideMobile {\n    display: none;\n  }\n  #navItems {\n    width: 100%;\n  }\n  .nav {\n    display: flex;\n    height: 4em;\n    border-bottom: 1px solid black;\n    margin-bottom: 0.5em;\n    box-shadow: 0px 0px 2px grey;\n    background-color: white;\n  }\n  .nav ul {\n    display: flex;\n    flex-direction: row;\n    list-style-type: none;\n    text-transform: uppercase;\n    justify-content: space-between;\n  }\n\n  .nav ul li {\n    margin: 0 1em 0 1em;\n  }\n  .flex {\n    display: flex;\n  }\n  /* end navigation */\n\n  /* dropdown */\n  .dropdown-container {\n    position: relative;\n  }\n\n  .dropdown-content {\n    display: none;\n    position: absolute;\n    right: 0;\n    min-width: max-content;\n    box-shadow: rgba(128, 128, 128, 0.479) 4px 4px 16px;\n    background-color: white;\n    padding: 1em;\n    z-index: 99;\n  }\n  .dropdown-container:hover .dropdown-content {\n    display: block;\n  }\n  .dropdown-button:hover {\n    color: purple;\n    cursor: pointer;\n  }\n  /* end of dropdown */\n  .detail-container {\n    grid-template-columns: 1fr 30%;\n    width: 90vw;\n    margin: 2em;\n    margin-top: 5em;\n  }\n  .detail-description {\n    width: 90%;\n    height: 80vh;\n    padding: 0;\n    margin: 1em;\n  }\n  .detail-image {\n    justify-content: center;\n    display: flex;\n    align-items: center;\n    margin: auto;\n    width: 100%;\n    height: 90vh;\n  }\n}\n", ""]);
+>>>>>>> 4838156e4d9f7f1656978d3290c4927f0439e2ce
 
 
 
@@ -41684,11 +41688,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _Navigation_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Navigation.jsx */ "./src/Navigation.jsx");
 /* harmony import */ var _MainPage_jsx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./MainPage.jsx */ "./src/MainPage.jsx");
+<<<<<<< HEAD
 /* harmony import */ var _LoginPage_jsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./LoginPage.jsx */ "./src/LoginPage.jsx");
 /* harmony import */ var _RegisterPage_jsx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./RegisterPage.jsx */ "./src/RegisterPage.jsx");
 /* harmony import */ var _AddItem_jsx__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./AddItem.jsx */ "./src/AddItem.jsx");
 /* harmony import */ var _ItemDetail_jsx__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./ItemDetail.jsx */ "./src/ItemDetail.jsx");
 /* harmony import */ var _Cart_jsx__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Cart.jsx */ "./src/Cart.jsx");
+=======
+/* harmony import */ var _Items_jsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Items.jsx */ "./src/Items.jsx");
+/* harmony import */ var _LoginPage_jsx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./LoginPage.jsx */ "./src/LoginPage.jsx");
+/* harmony import */ var _RegisterPage_jsx__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./RegisterPage.jsx */ "./src/RegisterPage.jsx");
+/* harmony import */ var _AddItem_jsx__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./AddItem.jsx */ "./src/AddItem.jsx");
+/* harmony import */ var _ItemDetail_jsx__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./ItemDetail.jsx */ "./src/ItemDetail.jsx");
+/* harmony import */ var _SellerItemDetail_jsx__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./SellerItemDetail.jsx */ "./src/SellerItemDetail.jsx");
+/* harmony import */ var _SellerItems_jsx__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./SellerItems.jsx */ "./src/SellerItems.jsx");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+>>>>>>> 4838156e4d9f7f1656978d3290c4927f0439e2ce
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -41701,22 +41716,49 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 4838156e4d9f7f1656978d3290c4927f0439e2ce
 class App extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   constructor(...args) {
     super(...args);
+
+    _defineProperty(this, "componentDidMount", () => {
+      let checkUser = async () => {
+        console.log('check if user is logged in');
+        let response = await fetch('/user', {
+          method: 'POST'
+        });
+        let text = await response.text();
+        let body = JSON.parse(text);
+        this.props.dispatch({
+          type: 'login-sucess',
+          content: body.user
+        });
+      };
+
+      checkUser();
+    });
 
     _defineProperty(this, "renderHomePage", routerData => {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_MainPage_jsx__WEBPACK_IMPORTED_MODULE_3__["default"], null));
     });
 
+    _defineProperty(this, "renderShopPage", routerData => {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Items_jsx__WEBPACK_IMPORTED_MODULE_4__["default"], null));
+    });
+
     _defineProperty(this, "renderLoginPage", routerData => {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_LoginPage_jsx__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_LoginPage_jsx__WEBPACK_IMPORTED_MODULE_5__["default"], {
         history: routerData.history
       });
     });
 
     _defineProperty(this, "renderSignupPage", routerData => {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_RegisterPage_jsx__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_RegisterPage_jsx__WEBPACK_IMPORTED_MODULE_6__["default"], {
         history: routerData.history
       });
     });
@@ -41728,23 +41770,37 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     });
 
     _defineProperty(this, "renderItemDetail", renderdata => {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ItemDetail_jsx__WEBPACK_IMPORTED_MODULE_7__["default"], {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ItemDetail_jsx__WEBPACK_IMPORTED_MODULE_8__["default"], {
+        itemId: renderdata.match.params.itemId
+      });
+    });
+
+    _defineProperty(this, "renderSellerItemDetail", renderdata => {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SellerItemDetail_jsx__WEBPACK_IMPORTED_MODULE_9__["default"], {
         itemId: renderdata.match.params.itemId
       });
     });
 
     _defineProperty(this, "renderAddItem", routerData => {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AddItem_jsx__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AddItem_jsx__WEBPACK_IMPORTED_MODULE_7__["default"], {
         history: routerData.history
       });
     });
 
     _defineProperty(this, "renderMenItems", () => {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MenItems, null);
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Items_jsx__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        category: "man"
+      });
     });
 
     _defineProperty(this, "renderWomenItems", () => {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(WomenItems, null);
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Items_jsx__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        category: "woman"
+      });
+    });
+
+    _defineProperty(this, "renderSellerItemPage", () => {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SellerItems_jsx__WEBPACK_IMPORTED_MODULE_10__["default"], null);
     });
 
     _defineProperty(this, "renderCart", () => {
@@ -41758,12 +41814,20 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         render: this.renderHomePage
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         exact: true,
+        path: "/shop",
+        render: this.renderShopPage
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+        exact: true,
         path: "/men",
         render: this.renderMenItems
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         exact: true,
         path: "/women",
         render: this.renderWomenItems
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+        exact: true,
+        path: "/seller-items",
+        render: this.renderSellerItemPage
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         exact: true,
         path: "/login",
@@ -41790,6 +41854,10 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         render: this.renderItemDetail
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         exact: true,
+        path: "/seller-item-detail/:itemId",
+        render: this.renderSellerItemDetail
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+        exact: true,
         path: "/search/:tags",
         render: this.renderSearchPage
       })));
@@ -41798,7 +41866,7 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (App);
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_11__["connect"])()(App));
 
 /***/ }),
 
@@ -42288,53 +42356,52 @@ class Items extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   constructor(props) {
     super(props);
 
-    _defineProperty(this, "componentDidUpdate", () => {
-      let checkUser = async () => {
-        console.log('check if user is logged in');
-        let response = await fetch('/user', {
+    _defineProperty(this, "componentDidMount", () => {
+      let updateItems = async () => {
+        // console.log(this.props.items);
+        let responseBody = await fetch('/all-items', {
           method: 'POST'
         });
-        let text = await response.text();
-        let body = JSON.parse(text);
+        let responseText = await responseBody.text();
+        let itemsArray = JSON.parse(responseText);
         this.props.dispatch({
-          type: 'login-sucess',
-          content: body.user
+          type: 'set-items',
+          content: itemsArray
+        });
+        this.setState({
+          items: this.props.items
         });
       };
 
-      checkUser();
-    });
-
-    _defineProperty(this, "updateItems", async () => {
-      // console.log(this.props.items);
-      let responseBody = await fetch('/all-items', {
-        method: 'POST'
-      });
-      let responseText = await responseBody.text();
-      let itemsArray = JSON.parse(responseText);
-      this.props.dispatch({
-        type: 'set-items',
-        content: itemsArray
-      });
-      this.setState({
-        items: this.props.items
-      });
+      updateItems();
     });
 
     _defineProperty(this, "render", () => {
       let results = this.state.items.filter(item => {
         if (this.state.items === '') return true;
-        return item.tag.includes(this.props.searchTag);
+        return item.tag.includes(this.props.category ? this.props.category : this.props.searchTag);
       });
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Button, {
-        onClick: this.updateItems
-      }, "Shop All"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+
+      if (results.length === 0) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          style: {
+            marginTop: '5em'
+          }
+        }, "No contents to display");
+      }
+
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        style: {
+          marginTop: '5em'
+        }
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "all-items-display"
       }, results.map((item, index) => {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           key: index
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_OneItem_jsx__WEBPACK_IMPORTED_MODULE_1__["default"], {
-          item: item
+          item: item,
+          link: "/item-detail/"
         }));
       })));
     });
@@ -42520,24 +42587,72 @@ class LoginPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _Items_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Items.jsx */ "./src/Items.jsx");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
 
 
+const Main = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div`
+  margin-top: 6em;
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    'shop-all shop-all'
+    'woman man';
+  padding: 0;
+  @media screen and (min-width: 968px) {
+    margin-top: 4em;
+    grid-template-rows: 0.5fr 0.6fr;
+  }
+`;
+const ShopAll = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div`
+  grid-area: shop-all;
+  border: solid white 5px;
+  background-color: teal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  a {
+    color: white;
+    border: white solid 2px;
+    padding: 1em;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    &:hover {
+      color: grey;
+      border: grey solid 2px;
+    }
+  }
+`;
+const Woman = Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["default"])(ShopAll)`
+  grid-area: woman;
+  background-image: url('../uploads/woman.jpeg');
+`;
+const Man = Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["default"])(ShopAll)`
+  grid-area: man;
+  background-image: url('../uploads/man.jpeg');
+`;
 
 class MainPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   constructor(...args) {
     super(...args);
 
     _defineProperty(this, "render", () => {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        style: {
-          margin: '5em 0 0 0'
-        }
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Items_jsx__WEBPACK_IMPORTED_MODULE_2__["default"], null));
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Main, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ShopAll, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/shop"
+      }, "ShopAll")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Woman, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/women"
+      }, "Woman")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Man, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/men"
+      }, "Man")));
     });
   }
 
@@ -42808,7 +42923,7 @@ class OneItem extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
     _defineProperty(this, "render", () => {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: '/item-detail/' + this.props.item._id
+        to: this.props.link + this.props.item._id
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "one-item"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -43035,6 +43150,671 @@ class SearchBar extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])()(SearchBar));
+
+/***/ }),
+
+/***/ "./src/SellerItemDetail.jsx":
+/*!**********************************!*\
+  !*** ./src/SellerItemDetail.jsx ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+ //---styles
+
+const Form = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].form`
+  display: grid;
+  max-width: 500px;
+  min-width: 300px;
+  font-family: sans-serif;
+  margin: auto;
+  border: lightgrey solid 1px;
+  padding: 3em;
+  h1 {
+    margin: 1.5em 0 -1em 0;
+    padding: 0;
+    color: purple;
+    font-size: 1.5em;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: normal;
+  }
+`;
+const DetailsContent = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div`
+  font-family: 'sans-serif';
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1.5em 5em 1em;
+  grid-column-gap: 0.5em;
+  grid-row-gap: 1.5em;
+  label {
+    display: flex;
+    justify-content: flex-end;
+    :after {
+      content: ':';
+    }
+  }
+`;
+const Tag = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div`
+  &:hover {
+    cursor: pointer;
+    text-decoration: line-through;
+  }
+`;
+const Title = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].h2`
+  font-size: 1.25em;
+  margin: 3.5em 0 2em 0;
+  font-weight: normal;
+  text-transform: uppercase;
+  div {
+    font-size: 50%;
+    font-weight: lighter;
+  }
+`;
+const Images = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div`
+  display: grid;
+  justify-items: center;
+`;
+const Img = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div`
+  display: flex;
+  width: 90%;
+  flex-wrap: wrap;
+  border: 1px lightgrey solid;
+  margin: 0 0 1em 0;
+  img {
+    margin: 1px;
+    height: auto;
+    width: 100px;
+    text-align: middle;
+    border: 1px solid white;
+    &:hover {
+      cursor: pointer;
+      border: 1px red solid;
+    }
+  }
+`;
+const Tags = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div`
+  font-family: 'sans-serif';
+  display: grid;
+  justify-items: center;
+  border: solid lightgrey 1px;
+  padding: 2em;
+  div input {
+    height: 2em;
+    border: none;
+    border-bottom: 1px lightgrey solid;
+    margin-right: 2em;
+    &:focus {
+      outline: 0;
+      border-bottom: black 1px solid;
+    }
+  }
+  div button {
+    height: 2em;
+    font-family: sans-serif;
+  }
+`;
+const InputImages = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].input`
+  font-family: 'sans-serif';
+  color: purple;
+  border: solid lightgrey 1px;
+  padding: 2em;
+`;
+const SubmitButton = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].input`
+  background-color: purple;
+  width: 50%;
+  border-radius: 2em;
+  font-size: 1em;
+  color: white;
+  margin: 1em 25% 2em 25%;
+  padding: 0.75em;
+  border: none;
+  text-transform: uppercase;
+  &:focus {
+    outline: 0;
+  }
+  &:hover {
+    cursor: pointer;
+    background-color: grey;
+  }
+`;
+const DeleteButton = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].button`
+  background-color: Teal;
+  width: 50%;
+  border-radius: 2em;
+  font-size: 1em;
+  color: white;
+  margin: 1em 25% 2em 25%;
+  padding: 0.75em;
+  border: none;
+  text-transform: uppercase;
+  &:focus {
+    outline: 0;
+  }
+  &:hover {
+    cursor: pointer;
+    background-color: grey;
+  }
+`;
+const Button = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].button`
+  background-color: white;
+  color: black;
+  border: lightgrey solid 1px;
+  font-size: 0.75em;
+  border-radius: 0.5em;
+  font-family: times;
+  font-weight: lighter;
+  &:focus {
+    outline: none;
+  }
+`; //------Component------
+
+class SellerItemDetail extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  constructor(props) {
+    super(props);
+
+    _defineProperty(this, "componentDidMount", async () => {
+      window.scrollTo(0, 0);
+      let data = new FormData();
+      data.append('itemId', this.props.itemId);
+      let responseBody = await fetch('/one-item', {
+        method: 'POST',
+        body: data
+      });
+      let responseText = await responseBody.text();
+      let itemObject = JSON.parse(responseText);
+      console.log('itemObject', itemObject);
+      let responseImages = await itemObject.imgPaths;
+      let responseTags = await itemObject.tag;
+      console.log('response tags', responseTags);
+      console.log('tags', itemObject.tags);
+      this.setState({
+        thisItem: itemObject,
+        images: responseImages,
+        tags: responseTags,
+        price: itemObject.price,
+        seller: itemObject.seller,
+        item: itemObject.item,
+        description: itemObject.description
+      });
+    });
+
+    _defineProperty(this, "descChangeHandler", e => {
+      this.setState({
+        description: e.target.value
+      });
+    });
+
+    _defineProperty(this, "itemChangeHandler", e => {
+      this.setState({
+        item: e.target.value
+      });
+    });
+
+    _defineProperty(this, "usernameChangeHandler", e => {
+      this.setState({
+        username: e.target.value
+      });
+    });
+
+    _defineProperty(this, "priceChangeHandler", e => {
+      this.setState({
+        price: e.target.value
+      });
+    });
+
+    _defineProperty(this, "tagChangeHandler", e => {
+      this.setState({
+        tag: e.target.value
+      });
+    });
+
+    _defineProperty(this, "fileChangeHandler", e => {
+      this.setState({
+        files: [...e.target.files]
+      });
+    });
+
+    _defineProperty(this, "addTagSubmit", e => {
+      e.preventDefault();
+      this.setState({
+        tags: this.state.tags.concat(this.state.tag),
+        tag: ''
+      });
+    });
+
+    _defineProperty(this, "toggleSubmitButton", () => {
+      this.setState(this.state.submit ? {
+        submit: false
+      } : {
+        submit: true
+      });
+    });
+
+    _defineProperty(this, "submitHandler", async evt => {
+      evt.preventDefault();
+      let data = new FormData();
+      console.log('files', this.state.files);
+      this.state.files.forEach(file => data.append('images', file));
+      data.append('item', this.state.item);
+      data.append('description', this.state.description);
+      data.append('price', this.state.price);
+      data.append('seller', this.state.seller);
+      data.append('tag', this.state.tags);
+      data.append('itemId', this.props.itemId);
+      let response = await fetch('/update-item', {
+        method: 'POST',
+        body: data
+      });
+      let text = await response.text();
+      let body = JSON.parse(text);
+
+      if (body.success) {
+        console.log('added');
+        this.setState({
+          files: [],
+          description: '',
+          seller: this.props.seller,
+          item: '',
+          price: '',
+          tag: '',
+          tags: ['']
+        });
+      } else {
+        console.log('not added');
+        this.setState({
+          errorMessage: '***Must be logged in to sell items.'
+        });
+      }
+
+      alert('Your item was edited to the Alibay!');
+    });
+
+    _defineProperty(this, "submitDetailHandler", async evt => {
+      evt.preventDefault();
+      let data = new FormData();
+      data.append('item', this.state.item);
+      data.append('description', this.state.description);
+      data.append('price', this.state.price);
+      data.append('seller', this.state.seller);
+      data.append('itemId', this.props.itemId);
+      let response = await fetch('/update-detail-item', {
+        method: 'POST',
+        body: data
+      });
+      let text = await response.text();
+      let body = JSON.parse(text);
+
+      if (body.success) {
+        console.log('added');
+        this.setState({
+          description: '',
+          item: '',
+          price: ''
+        });
+      } else {
+        console.log('not added');
+        this.setState({
+          errorMessage: '***Must be logged in to sell items.'
+        });
+      }
+
+      alert('Your item was edited!');
+    });
+
+    _defineProperty(this, "submitImageHandler", async evt => {
+      evt.preventDefault();
+      let data = new FormData();
+      data.append('seller', this.state.seller);
+      console.log('files', this.state.files);
+      this.state.files.forEach(file => data.append('images', file));
+      data.append('itemId', this.props.itemId);
+      let response = await fetch('/update-image-item', {
+        method: 'POST',
+        body: data
+      });
+      let text = await response.text();
+      let body = JSON.parse(text);
+
+      if (body.success) {
+        console.log('added');
+        this.setState({
+          files: []
+        });
+      } else {
+        console.log('not added');
+        this.setState({
+          errorMessage: '***Must be logged in to sell items.'
+        });
+      }
+
+      alert('Your item was edited!');
+    });
+
+    _defineProperty(this, "submitImageOrderHandler", async evt => {
+      evt.preventDefault();
+      let data = new FormData();
+      data.append('seller', this.state.seller);
+      this.state.images.forEach(image => data.append('images', image));
+      data.append('itemId', this.props.itemId);
+      let response = await fetch('/update-image-order-item', {
+        method: 'POST',
+        body: data
+      });
+      let text = await response.text();
+      let body = JSON.parse(text);
+
+      if (body.success) {
+        console.log('added');
+      } else {
+        console.log('not added');
+        this.setState({
+          errorMessage: '***Must be logged in to sell items.'
+        });
+      }
+
+      alert('Your item was edited!');
+    });
+
+    _defineProperty(this, "submitTagHandler", async evt => {
+      console.log('yes submitted tag updates');
+      evt.preventDefault();
+      let data = new FormData();
+      data.append('seller', this.state.seller);
+      this.state.tags.forEach(tag => {
+        data.append('tag', tag);
+      });
+      data.append('itemId', this.props.itemId);
+      let response = await fetch('/update-tag-item', {
+        method: 'POST',
+        body: data
+      });
+      let text = await response.text();
+      let body = JSON.parse(text);
+
+      if (body.success) {
+        console.log('added');
+        this.setState({
+          tag: ''
+        });
+      } else {
+        console.log('not added');
+        this.setState({
+          errorMessage: '***Must be logged in to sell items.'
+        });
+      }
+
+      alert('Your item was edited!');
+    });
+
+    _defineProperty(this, "makeMainImage", index => {
+      let newImages = [];
+      newImages[0] = this.state.images[index];
+      this.state.images.forEach((image, i) => {
+        if (i !== index) {
+          console.log('pushed iamge', i);
+          newImages.push(image);
+        }
+      });
+      this.setState({
+        images: newImages
+      });
+      console.log('images switched', this.state.images);
+    });
+
+    _defineProperty(this, "removeTag", index => {
+      let newTags = [];
+      this.state.tags.forEach((tag, i) => {
+        if (index !== i) {
+          newTags.push(tag);
+        }
+      });
+      this.setState({
+        tags: newTags
+      });
+    });
+
+    _defineProperty(this, "deleteItem", async evt => {
+      evt.preventDefault();
+      let data = new FormData();
+      data.append('seller', this.state.seller);
+      data.append('itemId', this.props.itemId);
+      let response = await fetch('/delete-item', {
+        method: 'POST',
+        body: data
+      });
+      let text = await response.text();
+      let body = JSON.parse(text);
+
+      if (body.success) {
+        console.log('delted');
+        this.setState({
+          tag: ''
+        });
+      } else {
+        console.log('not deleted');
+      }
+
+      alert('Your item was delted!');
+    });
+
+    _defineProperty(this, "render", () => {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        style: {
+          marginTop: '5em'
+        }
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Edit Existing Item"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Form, {
+        onSubmit: this.submitDetailHandler
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Title, null, "1 - Information", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Include here all information related to your item.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(DetailsContent, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Title"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "text",
+        value: this.state.item,
+        onChange: this.itemChangeHandler,
+        maxLength: "15"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Description"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
+        value: this.state.description,
+        onChange: this.descChangeHandler
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Price"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "text",
+        value: this.state.price,
+        onChange: this.priceChangeHandler
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SubmitButton, {
+        type: "submit",
+        value: "Update",
+        onChange: () => console.log('submited')
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Form, {
+        onSubmit: this.submitImageOrderHandler
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Title, null, "2.1 - Select main Image", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Click image to select as main. All other images will be shifted right.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Images, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Img, null, this.state.images.map((image, index) => {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          key: index
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          style: {
+            height: '1em',
+            width: '100px',
+            textAlign: 'center',
+            margin: '1em 0'
+          }
+        }, index === 0 ? 'Main' : index === 1 ? 'Second' : ''), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+          src: '..' + image,
+          onClick: () => this.makeMainImage(index)
+        }));
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SubmitButton, {
+        type: "submit",
+        value: "Update order of images",
+        onChange: () => console.log('submited')
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Form, {
+        onSubmit: this.submitImageHandler
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Title, null, "2.2 - Update Images", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Replace all existing images with new uploads")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(InputImages, {
+        type: "file",
+        multiple: true,
+        onChange: this.fileChangeHandler
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SubmitButton, {
+        type: "submit",
+        value: "Update all images",
+        onChange: () => console.log('submited')
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Form, {
+        onSubmit: this.submitTagHandler
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Title, null, "3 - Tags", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Add new tags, or click tag to remove.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Tags, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "text",
+        value: this.state.tag,
+        onChange: this.tagChangeHandler
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Button, {
+        onClick: this.addTagSubmit
+      }, "Add Tag "), this.state.tags.map((tag, index) => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Tag, {
+        key: index,
+        onClick: () => this.removeTag(index)
+      }, tag)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SubmitButton, {
+        type: "submit",
+        value: "Update",
+        onChange: () => console.log('submited')
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Form, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Title, null, "4 - Remove item", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Delete item from Alibay")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(DeleteButton, {
+        onClick: this.deleteItem
+      }, "Delete Item")));
+    });
+
+    this.state = {
+      files: [],
+      description: '',
+      seller: this.props.seller,
+      item: '',
+      price: '',
+      tag: '',
+      tags: [''],
+      submit: false,
+      errorMessage: '',
+      thisItem: [],
+      images: []
+    };
+  }
+
+}
+
+let mapStateToProps = state => {
+  return {
+    seller: state.username
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps)(SellerItemDetail));
+
+/***/ }),
+
+/***/ "./src/SellerItems.jsx":
+/*!*****************************!*\
+  !*** ./src/SellerItems.jsx ***!
+  \*****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _OneItem_jsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./OneItem.jsx */ "./src/OneItem.jsx");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+
+let Button = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].button`
+  border: 1px solid lightgrey;
+  padding: 1em 2em;
+  font-size: 1.5em;
+  font-family: helvetica;
+  text-transform: uppercase;
+  font-weight: lighter;
+  color: purple;
+  width: 100%;
+  &:hover {
+    cursor: pointer;
+    color: violet;
+  }
+  &:focus {
+    outline: 0;
+  }
+`;
+
+class SellerItems extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  constructor(props) {
+    super(props);
+
+    _defineProperty(this, "componentDidMount", () => {
+      let updateItems = async () => {
+        // console.log(this.props.items);
+        let responseBody = await fetch('/all-items', {
+          method: 'POST'
+        });
+        let responseText = await responseBody.text();
+        let itemsArray = JSON.parse(responseText);
+        this.props.dispatch({
+          type: 'set-items',
+          content: itemsArray
+        });
+        this.setState({
+          items: this.props.items
+        });
+      };
+
+      updateItems();
+    });
+
+    _defineProperty(this, "render", () => {
+      let results = this.state.items.filter(item => {
+        if (this.state.items === '') return true;
+        return item.seller === this.props.user;
+      });
+
+      if (results.length === 0) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          style: {
+            marginTop: '5em'
+          }
+        }, "No contents to display");
+      }
+
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        style: {
+          marginTop: '5em'
+        }
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "all-items-display"
+      }, results.map((item, index) => {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          key: index
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_OneItem_jsx__WEBPACK_IMPORTED_MODULE_1__["default"], {
+          item: item,
+          link: "seller-item-detail/"
+        }));
+      })));
+    });
+
+    this.state = {
+      items: []
+    };
+  }
+
+}
+
+let mapStateToProps = state => {
+  return {
+    items: state.items,
+    user: state.username
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(mapStateToProps)(SellerItems));
 
 /***/ }),
 

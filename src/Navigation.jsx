@@ -179,7 +179,7 @@ class Navigation extends Component {
                   <li>
                     <Link to="/register">Register</Link>
                   </li>
-              </div>
+                </div>
               )}
             </div>
           </ul>
