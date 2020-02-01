@@ -16,6 +16,10 @@ let reducer = (state, action) => {
     console.log('filter content', action.content);
     return { ...state, searchTag: action.content };
   }
+  if (action.type === 'clear-tags') {
+    console.log('clear tag');
+    return { ...state, searchTag: '' };
+  }
   if (action.type === 'add-to-cart') {
     console.log('add to cart', action.content);
     return { ...state, cart: state.cart.concat(action.content) };

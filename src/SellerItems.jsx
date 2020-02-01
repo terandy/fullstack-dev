@@ -39,6 +39,9 @@ class SellerItems extends Component {
         type: 'set-items',
         content: itemsArray
       });
+      this.props.dispatch({
+        type: 'clear-tags'
+      });
       this.setState({ items: this.props.items });
     };
     updateItems();
@@ -46,11 +49,16 @@ class SellerItems extends Component {
   render = () => {
     let results = this.state.items.filter(item => {
       if (this.state.items === '') return true;
+      console.log('tag', this.props.searchTag);
+      return item.tag.includes(this.props.searchTag);
+    });
+    results = results.filter(item => {
       return item.seller === this.props.user;
     });
-    if (results.length === 0) {
+    if (results.length === 0 && this.state.items.length !== 0) {
       return <div style={{ marginTop: '5em' }}>No contents to display</div>;
     }
+
     return (
       <div style={{ marginTop: '5em' }}>
         <div className="all-items-display">
@@ -70,7 +78,8 @@ class SellerItems extends Component {
 let mapStateToProps = state => {
   return {
     items: state.items,
-    user: state.username
+    user: state.username,
+    searchTag: state.searchTag
   };
 };
 

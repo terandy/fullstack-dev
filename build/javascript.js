@@ -42240,11 +42240,11 @@ class ItemDetail extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     });
 
     _defineProperty(this, "handleCart", async evt => {
-      console.log("dispatching to cart: ", this.props.itemId);
+      console.log('dispatching to cart: ', this.props.itemId);
 
       if (this.props.username === undefined) {
         this.props.dispatch({
-          type: "add-to-cart",
+          type: 'add-to-cart',
           content: this.props.itemId
         });
         alert('Added to cart!');
@@ -42355,6 +42355,9 @@ class Items extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
           type: 'set-items',
           content: itemsArray
         });
+        this.props.dispatch({
+          type: 'clear-tags'
+        });
         this.setState({
           items: this.props.items
         });
@@ -42366,10 +42369,16 @@ class Items extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     _defineProperty(this, "render", () => {
       let results = this.state.items.filter(item => {
         if (this.state.items === '') return true;
-        return item.tag.includes(this.props.category ? this.props.category : this.props.searchTag);
+        return item.tag.includes(this.props.searchTag);
       });
 
-      if (results.length === 0) {
+      if (this.props.category) {
+        results = results.filter(item => {
+          return item.tag.includes(this.props.category);
+        });
+      }
+
+      if (results.length === 0 && this.state.items.length !== 0) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           style: {
             marginTop: '5em'
@@ -42614,8 +42623,8 @@ const ShopAll = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div`
     display: flex;
     justify-content: center;
     &:hover {
-      color: grey;
-      border: grey solid 2px;
+      color: lightgrey;
+      border: lightgrey solid 2px;
     }
   }
 `;
@@ -43476,7 +43485,8 @@ class SellerItemDetail extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       if (body.success) {
         console.log('added');
         this.setState({
-          files: []
+          files: [],
+          images: body.imgPaths
         });
       } else {
         console.log('not added');
@@ -43584,7 +43594,7 @@ class SellerItemDetail extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       let body = JSON.parse(text);
 
       if (body.success) {
-        console.log('delted');
+        console.log('deleted');
         this.setState({
           tag: ''
         });
@@ -43753,6 +43763,9 @@ class SellerItems extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
           type: 'set-items',
           content: itemsArray
         });
+        this.props.dispatch({
+          type: 'clear-tags'
+        });
         this.setState({
           items: this.props.items
         });
@@ -43764,10 +43777,14 @@ class SellerItems extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     _defineProperty(this, "render", () => {
       let results = this.state.items.filter(item => {
         if (this.state.items === '') return true;
+        console.log('tag', this.props.searchTag);
+        return item.tag.includes(this.props.searchTag);
+      });
+      results = results.filter(item => {
         return item.seller === this.props.user;
       });
 
-      if (results.length === 0) {
+      if (results.length === 0 && this.state.items.length !== 0) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           style: {
             marginTop: '5em'
@@ -43801,7 +43818,8 @@ class SellerItems extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 let mapStateToProps = state => {
   return {
     items: state.items,
-    user: state.username
+    user: state.username,
+    searchTag: state.searchTag
   };
 };
 
@@ -44049,6 +44067,13 @@ let reducer = (state, action) => {
     console.log('filter content', action.content);
     return { ...state,
       searchTag: action.content
+    };
+  }
+
+  if (action.type === 'clear-tags') {
+    console.log('clear tag');
+    return { ...state,
+      searchTag: ''
     };
   }
 
