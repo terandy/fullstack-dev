@@ -137,6 +137,34 @@ app.post('/update-image-item', upload.array('images'), (req, res) => {
     res.send(JSON.stringify({ success: false }));
   }
 });
+app.post('/add-item', upload.array('images'), (req, res) => {
+  let sid = req.cookies.sid;
+  let seller = req.body.seller;
+  console.log('session', sessions[sid]);
+  console.log('seller', seller);
+  if (sessions[sid] && sessions[sid] === seller) {
+    let description = req.body.description;
+    let price = req.body.price;
+    let tag = req.body.tag.split(',');
+    let item = req.body.item;
+    let files = req.files;
+    let imgPaths = files.map(file => '/uploads/' + file.filename);
+
+    dbo.collection('items').insertOne({
+      description: description,
+      item: item,
+      seller: seller,
+      imgPaths: imgPaths,
+      price: price,
+      tag: tag
+    });
+
+    res.send(JSON.stringify({ success: true }));
+  } else {
+    res.send(JSON.stringify({ success: false }));
+  }
+});
+////////
 app.post('/update-image-order-item', upload.none(), (req, res) => {
   let sid = req.cookies.sid;
   let seller = req.body.seller;

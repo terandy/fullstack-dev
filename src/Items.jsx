@@ -51,8 +51,11 @@ class Items extends Component {
         this.props.category ? this.props.category : this.props.searchTag
       );
     });
+    if (results.length === 0) {
+      return <div style={{ marginTop: '5em' }}>No contents to display</div>;
+    }
     return (
-      <div>
+      <div style={{ marginTop: '5em' }}>
         <div className="all-items-display">
           {results.map((item, index) => {
             return (

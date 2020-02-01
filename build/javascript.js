@@ -42286,7 +42286,20 @@ class Items extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         if (this.state.items === '') return true;
         return item.tag.includes(this.props.category ? this.props.category : this.props.searchTag);
       });
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+
+      if (results.length === 0) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          style: {
+            marginTop: '5em'
+          }
+        }, "No contents to display");
+      }
+
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        style: {
+          marginTop: '5em'
+        }
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "all-items-display"
       }, results.map((item, index) => {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -43610,7 +43623,20 @@ class SellerItems extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         if (this.state.items === '') return true;
         return item.seller === this.props.user;
       });
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+
+      if (results.length === 0) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          style: {
+            marginTop: '5em'
+          }
+        }, "No contents to display");
+      }
+
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        style: {
+          marginTop: '5em'
+        }
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "all-items-display"
       }, results.map((item, index) => {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {

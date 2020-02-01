@@ -48,8 +48,11 @@ class SellerItems extends Component {
       if (this.state.items === '') return true;
       return item.seller === this.props.user;
     });
+    if (results.length === 0) {
+      return <div style={{ marginTop: '5em' }}>No contents to display</div>;
+    }
     return (
-      <div>
+      <div style={{ marginTop: '5em' }}>
         <div className="all-items-display">
           {results.map((item, index) => {
             return (
