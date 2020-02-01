@@ -146,20 +146,31 @@ class Navigation extends Component {
               ) : (
                 ''
               )}
+              <li>
+              <SearchBar />
+              </li>
             </div>
             <div className="flex">
-              <SearchBar />
               {this.props.user ? (
-                <li className="dropdown-container" style={{cursor: "pointer"}}>
-                  <div className="flexMobile profileMobileAlign">
+                <Dropdown name={
+                  <div className="flexMobile profileAlign" >
                     <img className="profileMobile" src="../uploads/profile.png" width="32px" height="32px"></img>
                     <div className="hideMobile">Profile</div>
                   </div>
-                    <div className="dropdown-content">
-                      <div className="hideDesktop">Welcome back, {this.props.user}</div>
-                      <button onClick={this.logoutHandler}>Logout</button>
-                    </div>
-                </li>
+                }>
+                  <DropContent>
+                    <div className="hideDesktop">Welcome, {this.props.user}</div>
+                    <span style={{width: "100%", borderTop: "1px solid black"}}></span>
+                  </DropContent>
+                  <DropContent>
+                    <Link to="/cart">
+                          <div>View Cart</div>
+                    </Link>
+                  </DropContent>
+                  <DropContent>
+                    <button onClick={this.logoutHandler}>Logout</button>
+                  </DropContent>
+                </Dropdown>
               ) : (
                 <div className="flex">
                   <li>

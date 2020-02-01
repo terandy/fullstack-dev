@@ -6,6 +6,8 @@ import LoginPage from './LoginPage.jsx';
 import RegisterPage from './RegisterPage.jsx';
 import AddItem from './AddItem.jsx';
 import ItemDetail from './ItemDetail.jsx';
+import Cart from './Cart.jsx';
+
 
 class App extends Component {
   renderHomePage = routerData => {
@@ -36,6 +38,9 @@ class App extends Component {
   renderWomenItems = () => {
     return <WomenItems />;
   };
+  renderCart = () => {
+    return <Cart/>
+  }
 
   render = () => {
     return (

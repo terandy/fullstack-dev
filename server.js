@@ -72,6 +72,10 @@ app.post('/register', upload.none(), (req, res) => {
   let name = req.body.username;
   let pwd = req.body.password;
   let cart = req.body.cart
+  console.log("cart:", cart)
+  if (!cart) {
+    cart = []
+  }
   console.log('dbo response register');
   dbo.collection('users').findOne({ username: name }, (err, user) => {
     if (user === null) {
@@ -131,6 +135,26 @@ app.post('/add-to-cart', upload.none(), (req, res) => {
     res.send(JSON.stringify({ success: false }));
   }
 });
+
+app.post('/cart', upload.none(), async (req, res) => { 
+let sessionId = req.cookies.sid
+let username = sessions[sessionId]
+let items = []
+
+try {
+  let user = await dbo.collection('users').findOne({ username })
+  console.log(user)
+  let cart = await dbo.collection('items').find({
+    _id: { $in: user.cart.map(item => ObjectID(item)) }
+  }).toArray()
+  
+  console.log('items: ', cart)
+  res.send(JSON.stringify({ success: true, cart }));
+} catch (err) {
+  console.log('error', err);
+  res.send(JSON.stringify({ success: false }));
+}
+})
 
 app.post('/all-items', upload.none(), (req, res) => {
   console.log('request to /all-items');
