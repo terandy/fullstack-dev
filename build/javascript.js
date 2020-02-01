@@ -42493,27 +42493,71 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
 
+
+const Main = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div`
+  margin-top: 6em;
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    'shop-all shop-all'
+    'woman man';
+  padding: 0;
+  @media screen and (min-width: 968px) {
+    margin-top: 4em;
+    grid-template-rows: 0.5fr 0.6fr;
+  }
+`;
+const ShopAll = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div`
+  grid-area: shop-all;
+  border: solid white 5px;
+  background-color: teal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  a {
+    color: white;
+    border: white solid 2px;
+    padding: 1em;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    &:hover {
+      color: grey;
+      border: grey solid 2px;
+    }
+  }
+`;
+const Woman = Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["default"])(ShopAll)`
+  grid-area: woman;
+  background-image: url('../uploads/woman.jpeg');
+`;
+const Man = Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["default"])(ShopAll)`
+  grid-area: man;
+  background-image: url('../uploads/man.jpeg');
+`;
 
 class MainPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   constructor(...args) {
     super(...args);
 
     _defineProperty(this, "render", () => {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        style: {
-          margin: '5em 0 0 0'
-        }
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Main, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ShopAll, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         to: "/shop"
-      }, "Shop All"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+      }, "ShopAll")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Woman, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         to: "/women"
-      }, "women"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+      }, "Woman")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Man, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         to: "/men"
-      }, "men"));
+      }, "Man")));
     });
   }
 
