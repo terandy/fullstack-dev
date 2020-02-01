@@ -43123,6 +43123,24 @@ const SubmitButton = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].i
     background-color: grey;
   }
 `;
+const DeleteButton = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].button`
+  background-color: Teal;
+  width: 50%;
+  border-radius: 2em;
+  font-size: 1em;
+  color: white;
+  margin: 1em 25% 2em 25%;
+  padding: 0.75em;
+  border: none;
+  text-transform: uppercase;
+  &:focus {
+    outline: 0;
+  }
+  &:hover {
+    cursor: pointer;
+    background-color: grey;
+  }
+`;
 const Button = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].button`
   background-color: white;
   color: black;
@@ -43401,8 +43419,36 @@ class SellerItemDetail extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       });
     });
 
+    _defineProperty(this, "deleteItem", async evt => {
+      evt.preventDefault();
+      let data = new FormData();
+      data.append('seller', this.state.seller);
+      data.append('itemId', this.props.itemId);
+      let response = await fetch('/delete-item', {
+        method: 'POST',
+        body: data
+      });
+      let text = await response.text();
+      let body = JSON.parse(text);
+
+      if (body.success) {
+        console.log('delted');
+        this.setState({
+          tag: ''
+        });
+      } else {
+        console.log('not deleted');
+      }
+
+      alert('Your item was delted!');
+    });
+
     _defineProperty(this, "render", () => {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Edit Existing Item"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Form, {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        style: {
+          marginTop: '5em'
+        }
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Edit Existing Item"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Form, {
         onSubmit: this.submitDetailHandler
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Title, null, "1 - Information", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Include here all information related to your item.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(DetailsContent, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Title"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
@@ -43423,7 +43469,9 @@ class SellerItemDetail extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Form, {
         onSubmit: this.submitImageOrderHandler
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Title, null, "2.1 - Select main Image", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Click image to select as main. All other images will be shifted right.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Images, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Img, null, this.state.images.map((image, index) => {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          key: index
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           style: {
             height: '1em',
             width: '100px',
@@ -43463,7 +43511,9 @@ class SellerItemDetail extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         type: "submit",
         value: "Update",
         onChange: () => console.log('submited')
-      })));
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Form, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Title, null, "4 - Remove item", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Delete item from Alibay")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(DeleteButton, {
+        onClick: this.deleteItem
+      }, "Delete Item")));
     });
 
     this.state = {

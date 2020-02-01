@@ -190,6 +190,24 @@ app.post('/update-detail-item', upload.none(), (req, res) => {
     res.send(JSON.stringify({ success: false }));
   }
 });
+app.post('/delete-item', upload.none(), (req, res) => {
+  let sid = req.cookies.sid;
+  let seller = req.body.seller;
+  console.log('/delete-item endpoint');
+  console.log(req.body.itemId);
+  console.log('session', sessions[sid]);
+  console.log('seller', seller);
+  if (sessions[sid] && sessions[sid] === seller) {
+    dbo.collection('items').deleteOne({ _id: ObjectID(req.body.itemId) });
+    console.log('item deleted');
+
+    res.send(JSON.stringify({ success: true }));
+    return;
+  } else {
+    console.log('Item not deleted');
+    res.send(JSON.stringify({ success: false }));
+  }
+});
 
 app.post('/add-to-cart', upload.none(), (req, res) => {
   let item = req.body.itemId;

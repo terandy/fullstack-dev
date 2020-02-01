@@ -118,6 +118,24 @@ const SubmitButton = styled.input`
     background-color: grey;
   }
 `;
+const DeleteButton = styled.button`
+  background-color: Teal;
+  width: 50%;
+  border-radius: 2em;
+  font-size: 1em;
+  color: white;
+  margin: 1em 25% 2em 25%;
+  padding: 0.75em;
+  border: none;
+  text-transform: uppercase;
+  &:focus {
+    outline: 0;
+  }
+  &:hover {
+    cursor: pointer;
+    background-color: grey;
+  }
+`;
 const Button = styled.button`
   background-color: white;
   color: black;
@@ -349,11 +367,33 @@ class SellerItemDetail extends Component {
     });
     this.setState({ tags: newTags });
   };
+  deleteItem = async evt => {
+    evt.preventDefault();
+    let data = new FormData();
+    data.append('seller', this.state.seller);
+    data.append('itemId', this.props.itemId);
+    let response = await fetch('/delete-item', {
+      method: 'POST',
+      body: data
+    });
+    let text = await response.text();
+    let body = JSON.parse(text);
+    if (body.success) {
+      console.log('delted');
+      this.setState({
+        tag: ''
+      });
+    } else {
+      console.log('not deleted');
+    }
+    alert('Your item was delted!');
+  };
 
   render = () => {
     return (
-      <div>
+      <div style={{ marginTop: '5em' }}>
         <h1>Edit Existing Item</h1>
+
         <Form onSubmit={this.submitDetailHandler}>
           <Title>
             1 - Information
@@ -398,7 +438,7 @@ class SellerItemDetail extends Component {
             <Img>
               {this.state.images.map((image, index) => {
                 return (
-                  <div>
+                  <div key={index}>
                     <div
                       style={{
                         height: '1em',
@@ -463,6 +503,12 @@ class SellerItemDetail extends Component {
             value="Update"
             onChange={() => console.log('submited')}
           />
+        </Form>
+        <Form>
+          <Title>
+            4 - Remove item<div>Delete item from Alibay</div>
+          </Title>
+          <DeleteButton onClick={this.deleteItem}>Delete Item</DeleteButton>
         </Form>
       </div>
     );
