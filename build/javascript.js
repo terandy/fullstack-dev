@@ -43505,7 +43505,11 @@ class SellerItemDetail extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         style: {
           marginTop: '5em'
         }
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Edit Existing Item"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Form, {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Form, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+        style: {
+          margin: '0'
+        }
+      }, "Edit Existing Item")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Form, {
         onSubmit: this.submitDetailHandler
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Title, null, "1 - Information", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Include here all information related to your item.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(DetailsContent, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Title"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",

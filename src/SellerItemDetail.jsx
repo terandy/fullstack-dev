@@ -392,8 +392,9 @@ class SellerItemDetail extends Component {
   render = () => {
     return (
       <div style={{ marginTop: '5em' }}>
-        <h1>Edit Existing Item</h1>
-
+        <Form>
+          <h1 style={{ margin: '0' }}>Edit Existing Item</h1>
+        </Form>
         <Form onSubmit={this.submitDetailHandler}>
           <Title>
             1 - Information
