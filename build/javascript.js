@@ -43040,6 +43040,12 @@ const DetailsContent = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"]
     }
   }
 `;
+const Tag = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div`
+  &:hover {
+    cursor: pointer;
+    text-decoration: line-through;
+  }
+`;
 const Title = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].h2`
   font-size: 1.25em;
   margin: 3.5em 0 2em 0;
@@ -43061,9 +43067,15 @@ const Img = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div`
   border: 1px lightgrey solid;
   margin: 0 0 1em 0;
   img {
-    border: 1px red solid;
-    height: 100px;
-    width: auto;
+    margin: 1px;
+    height: auto;
+    width: 100px;
+    text-align: middle;
+    border: 1px solid white;
+    &:hover {
+      cursor: pointer;
+      border: 1px red solid;
+    }
   }
 `;
 const Tags = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div`
@@ -43245,10 +43257,154 @@ class SellerItemDetail extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       alert('Your item was edited to the Alibay!');
     });
 
+    _defineProperty(this, "submitDetailHandler", async evt => {
+      evt.preventDefault();
+      let data = new FormData();
+      data.append('item', this.state.item);
+      data.append('description', this.state.description);
+      data.append('price', this.state.price);
+      data.append('seller', this.state.seller);
+      data.append('itemId', this.props.itemId);
+      let response = await fetch('/update-detail-item', {
+        method: 'POST',
+        body: data
+      });
+      let text = await response.text();
+      let body = JSON.parse(text);
+
+      if (body.success) {
+        console.log('added');
+        this.setState({
+          description: '',
+          item: '',
+          price: ''
+        });
+      } else {
+        console.log('not added');
+        this.setState({
+          errorMessage: '***Must be logged in to sell items.'
+        });
+      }
+
+      alert('Your item was edited!');
+    });
+
+    _defineProperty(this, "submitImageHandler", async evt => {
+      evt.preventDefault();
+      let data = new FormData();
+      data.append('seller', this.state.seller);
+      console.log('files', this.state.files);
+      this.state.files.forEach(file => data.append('images', file));
+      data.append('itemId', this.props.itemId);
+      let response = await fetch('/update-image-item', {
+        method: 'POST',
+        body: data
+      });
+      let text = await response.text();
+      let body = JSON.parse(text);
+
+      if (body.success) {
+        console.log('added');
+        this.setState({
+          files: []
+        });
+      } else {
+        console.log('not added');
+        this.setState({
+          errorMessage: '***Must be logged in to sell items.'
+        });
+      }
+
+      alert('Your item was edited!');
+    });
+
+    _defineProperty(this, "submitImageOrderHandler", async evt => {
+      evt.preventDefault();
+      let data = new FormData();
+      data.append('seller', this.state.seller);
+      this.state.images.forEach(image => data.append('images', image));
+      data.append('itemId', this.props.itemId);
+      let response = await fetch('/update-image-order-item', {
+        method: 'POST',
+        body: data
+      });
+      let text = await response.text();
+      let body = JSON.parse(text);
+
+      if (body.success) {
+        console.log('added');
+      } else {
+        console.log('not added');
+        this.setState({
+          errorMessage: '***Must be logged in to sell items.'
+        });
+      }
+
+      alert('Your item was edited!');
+    });
+
+    _defineProperty(this, "submitTagHandler", async evt => {
+      console.log('yes submitted tag updates');
+      evt.preventDefault();
+      let data = new FormData();
+      data.append('seller', this.state.seller);
+      this.state.tags.forEach(tag => {
+        data.append('tag', tag);
+      });
+      data.append('itemId', this.props.itemId);
+      let response = await fetch('/update-tag-item', {
+        method: 'POST',
+        body: data
+      });
+      let text = await response.text();
+      let body = JSON.parse(text);
+
+      if (body.success) {
+        console.log('added');
+        this.setState({
+          tag: ''
+        });
+      } else {
+        console.log('not added');
+        this.setState({
+          errorMessage: '***Must be logged in to sell items.'
+        });
+      }
+
+      alert('Your item was edited!');
+    });
+
+    _defineProperty(this, "makeMainImage", index => {
+      let newImages = [];
+      newImages[0] = this.state.images[index];
+      this.state.images.forEach((image, i) => {
+        if (i !== index) {
+          console.log('pushed iamge', i);
+          newImages.push(image);
+        }
+      });
+      this.setState({
+        images: newImages
+      });
+      console.log('images switched', this.state.images);
+    });
+
+    _defineProperty(this, "removeTag", index => {
+      let newTags = [];
+      this.state.tags.forEach((tag, i) => {
+        if (index !== i) {
+          newTags.push(tag);
+        }
+      });
+      this.setState({
+        tags: newTags
+      });
+    });
+
     _defineProperty(this, "render", () => {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Form, {
-        onSubmit: this.submitHandler
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Edit Existing Item"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Title, null, "1 - Information", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Include here all information related to your item.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(DetailsContent, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Title"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Edit Existing Item"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Form, {
+        onSubmit: this.submitDetailHandler
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Title, null, "1 - Information", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Include here all information related to your item.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(DetailsContent, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Title"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
         value: this.state.item,
         onChange: this.itemChangeHandler,
@@ -43260,26 +43416,52 @@ class SellerItemDetail extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         type: "text",
         value: this.state.price,
         onChange: this.priceChangeHandler
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Title, null, "2 - Images", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Edit image display")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Images, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Img, null, this.state.images.map(image => {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-          src: '..' + image
-        });
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(InputImages, {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SubmitButton, {
+        type: "submit",
+        value: "Update",
+        onChange: () => console.log('submited')
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Form, {
+        onSubmit: this.submitImageOrderHandler
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Title, null, "2.1 - Select main Image", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Click image to select as main. All other images will be shifted right.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Images, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Img, null, this.state.images.map((image, index) => {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          style: {
+            height: '1em',
+            width: '100px',
+            textAlign: 'center',
+            margin: '1em 0'
+          }
+        }, index === 0 ? 'Main' : index === 1 ? 'Second' : ''), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+          src: '..' + image,
+          onClick: () => this.makeMainImage(index)
+        }));
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SubmitButton, {
+        type: "submit",
+        value: "Update order of images",
+        onChange: () => console.log('submited')
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Form, {
+        onSubmit: this.submitImageHandler
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Title, null, "2.2 - Update Images", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Replace all existing images with new uploads")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(InputImages, {
         type: "file",
         multiple: true,
         onChange: this.fileChangeHandler
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Title, null, "3 - Tags", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Tags help users find your item.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Tags, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SubmitButton, {
+        type: "submit",
+        value: "Update all images",
+        onChange: () => console.log('submited')
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Form, {
+        onSubmit: this.submitTagHandler
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Title, null, "3 - Tags", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Add new tags, or click tag to remove.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Tags, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
         value: this.state.tag,
         onChange: this.tagChangeHandler
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Button, {
         onClick: this.addTagSubmit
-      }, "Add Tag "), this.state.tags.map((tag, index) => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        key: index
+      }, "Add Tag "), this.state.tags.map((tag, index) => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Tag, {
+        key: index,
+        onClick: () => this.removeTag(index)
       }, tag)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SubmitButton, {
         type: "submit",
         value: "Update",
-        checked: this.state.submit,
         onChange: () => console.log('submited')
       })));
     });

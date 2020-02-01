@@ -35,6 +35,12 @@ const DetailsContent = styled.div`
     }
   }
 `;
+const Tag = styled.div`
+  &:hover {
+    cursor: pointer;
+    text-decoration: line-through;
+  }
+`;
 const Title = styled.h2`
   font-size: 1.25em;
   margin: 3.5em 0 2em 0;
@@ -56,9 +62,15 @@ const Img = styled.div`
   border: 1px lightgrey solid;
   margin: 0 0 1em 0;
   img {
-    border: 1px red solid;
-    height: 100px;
-    width: auto;
+    margin: 1px;
+    height: auto;
+    width: 100px;
+    text-align: middle;
+    border: 1px solid white;
+    &:hover {
+      cursor: pointer;
+      border: 1px red solid;
+    }
   }
 `;
 const Tags = styled.div`
@@ -219,11 +231,130 @@ class SellerItemDetail extends Component {
     }
     alert('Your item was edited to the Alibay!');
   };
+  submitDetailHandler = async evt => {
+    evt.preventDefault();
+    let data = new FormData();
+    data.append('item', this.state.item);
+    data.append('description', this.state.description);
+    data.append('price', this.state.price);
+    data.append('seller', this.state.seller);
+    data.append('itemId', this.props.itemId);
+    let response = await fetch('/update-detail-item', {
+      method: 'POST',
+      body: data
+    });
+    let text = await response.text();
+    let body = JSON.parse(text);
+    if (body.success) {
+      console.log('added');
+      this.setState({
+        description: '',
+        item: '',
+        price: ''
+      });
+    } else {
+      console.log('not added');
+      this.setState({ errorMessage: '***Must be logged in to sell items.' });
+    }
+    alert('Your item was edited!');
+  };
+  submitImageHandler = async evt => {
+    evt.preventDefault();
+    let data = new FormData();
+    data.append('seller', this.state.seller);
+    console.log('files', this.state.files);
+    this.state.files.forEach(file => data.append('images', file));
+    data.append('itemId', this.props.itemId);
+    let response = await fetch('/update-image-item', {
+      method: 'POST',
+      body: data
+    });
+    let text = await response.text();
+    let body = JSON.parse(text);
+    if (body.success) {
+      console.log('added');
+      this.setState({
+        files: []
+      });
+    } else {
+      console.log('not added');
+      this.setState({ errorMessage: '***Must be logged in to sell items.' });
+    }
+    alert('Your item was edited!');
+  };
+  submitImageOrderHandler = async evt => {
+    evt.preventDefault();
+    let data = new FormData();
+    data.append('seller', this.state.seller);
+    this.state.images.forEach(image => data.append('images', image));
+    data.append('itemId', this.props.itemId);
+    let response = await fetch('/update-image-order-item', {
+      method: 'POST',
+      body: data
+    });
+    let text = await response.text();
+    let body = JSON.parse(text);
+    if (body.success) {
+      console.log('added');
+    } else {
+      console.log('not added');
+      this.setState({ errorMessage: '***Must be logged in to sell items.' });
+    }
+    alert('Your item was edited!');
+  };
+  submitTagHandler = async evt => {
+    console.log('yes submitted tag updates');
+    evt.preventDefault();
+    let data = new FormData();
+    data.append('seller', this.state.seller);
+    this.state.tags.forEach(tag => {
+      data.append('tag', tag);
+    });
+    data.append('itemId', this.props.itemId);
+    let response = await fetch('/update-tag-item', {
+      method: 'POST',
+      body: data
+    });
+    let text = await response.text();
+    let body = JSON.parse(text);
+    if (body.success) {
+      console.log('added');
+      this.setState({
+        tag: ''
+      });
+    } else {
+      console.log('not added');
+      this.setState({ errorMessage: '***Must be logged in to sell items.' });
+    }
+    alert('Your item was edited!');
+  };
+  makeMainImage = index => {
+    let newImages = [];
+    newImages[0] = this.state.images[index];
+    this.state.images.forEach((image, i) => {
+      if (i !== index) {
+        console.log('pushed iamge', i);
+        newImages.push(image);
+      }
+    });
+    this.setState({ images: newImages });
+    console.log('images switched', this.state.images);
+  };
+  removeTag = index => {
+    let newTags = [];
+    this.state.tags.forEach((tag, i) => {
+      if (index !== i) {
+        newTags.push(tag);
+      }
+    });
+    this.setState({ tags: newTags });
+  };
+
   render = () => {
     return (
       <div>
-        <Form onSubmit={this.submitHandler}>
-          <h1>Edit Existing Item</h1>
+        <h1>Edit Existing Item</h1>
+        <Form onSubmit={this.submitDetailHandler}>
           <Title>
             1 - Information
             <div>Include here all information related to your item.</div>
@@ -248,23 +379,68 @@ class SellerItemDetail extends Component {
               onChange={this.priceChangeHandler}
             />
           </DetailsContent>
+          <SubmitButton
+            type="submit"
+            value="Update"
+            onChange={() => console.log('submited')}
+          />
+        </Form>
+
+        <Form onSubmit={this.submitImageOrderHandler}>
           <Title>
-            2 - Images<div>Edit image display</div>
+            2.1 - Select main Image
+            <div>
+              Click image to select as main. All other images will be shifted
+              right.
+            </div>
           </Title>
           <Images>
             <Img>
-              {this.state.images.map(image => {
-                return <img src={'..' + image} />;
+              {this.state.images.map((image, index) => {
+                return (
+                  <div>
+                    <div
+                      style={{
+                        height: '1em',
+                        width: '100px',
+                        textAlign: 'center',
+                        margin: '1em 0'
+                      }}
+                    >
+                      {index === 0 ? 'Main' : index === 1 ? 'Second' : ''}
+                    </div>
+                    <img
+                      src={'..' + image}
+                      onClick={() => this.makeMainImage(index)}
+                    />
+                  </div>
+                );
               })}
             </Img>
-            <InputImages
-              type="file"
-              multiple
-              onChange={this.fileChangeHandler}
-            />
           </Images>
+          <SubmitButton
+            type="submit"
+            value="Update order of images"
+            onChange={() => console.log('submited')}
+          />
+        </Form>
+        <Form onSubmit={this.submitImageHandler}>
           <Title>
-            3 - Tags<div>Tags help users find your item.</div>
+            2.2 - Update Images
+            <div>Replace all existing images with new uploads</div>
+          </Title>
+          <InputImages type="file" multiple onChange={this.fileChangeHandler} />
+
+          <SubmitButton
+            type="submit"
+            value="Update all images"
+            onChange={() => console.log('submited')}
+          />
+        </Form>
+
+        <Form onSubmit={this.submitTagHandler}>
+          <Title>
+            3 - Tags<div>Add new tags, or click tag to remove.</div>
           </Title>
 
           <Tags>
@@ -276,14 +452,15 @@ class SellerItemDetail extends Component {
               />
               <Button onClick={this.addTagSubmit}>Add Tag </Button>
               {this.state.tags.map((tag, index) => (
-                <div key={index}>{tag}</div>
+                <Tag key={index} onClick={() => this.removeTag(index)}>
+                  {tag}
+                </Tag>
               ))}
             </div>
           </Tags>
           <SubmitButton
             type="submit"
             value="Update"
-            checked={this.state.submit}
             onChange={() => console.log('submited')}
           />
         </Form>
