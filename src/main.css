@@ -3,6 +3,10 @@ body {
   margin: 0;
 }
 
+.hamburger:focus {
+  outline:none;
+}
+
 .nav {
   background-color: white;
 }
@@ -13,30 +17,30 @@ body {
 .toggle-nav-on {
   display: block;
   position: fixed;
-  width: 45%;
-  height: 100%;
-  right: 0;
-  top: 0;
-  padding: 2em 1em 0 0;
-  font-size: 2em;
-  background-color: whitesmoke;
-  box-shadow: 0 0 3px grey;
-
-  transition-property: right;
-  transition-duration: 0.5s;
-  -webkit-transition-duration: 0.5s;
-  -moz-transition-duration: 0.5s;
-  -o-transition-duration: 0.5s;
-  transition-timing-function: ease-in-out;
+    width: 45%;
+    height: 100%;
+    right: 0;
+    top: 0;
+    padding: 3em 1em 0 0;
+    font-size: 1.5em;
+    background-color: whitesmoke;
+    box-shadow: 0 0 3px grey;
+    
+    transition-property: right;
+    transition-duration: .5s;
+    -webkit-transition-duration: .5s;
+    -moz-transition-duration: .5s;
+    -o-transition-duration: .5s;
+    transition-timing-function: ease-in-out;
 }
 .toggle-nav {
   visibility: hidden;
   overflow: hidden;
   top: 0;
-  padding: 2em 1em 0 0;
+  padding: 3em 1em 0 0;
   right: -100%;
   padding-right: 1em;
-  font-size: 2em;
+  font-size: 1.5em;
   height: 100%;
   width: 45%;
   background-color: whitesmoke;
@@ -181,7 +185,7 @@ a {
     position: relative;
     right: 10px;
   }
-  .profileMobileAlign {
+  .profileAlign {
     align-items: center;
     justify-content: flex-end;
   }
@@ -238,6 +242,10 @@ a {
   .flex {
     display: flex;
   }
+  .profileAlign {
+    margin-right: 1em;
+  }
+
   /* end navigation */
 
   /* dropdown */

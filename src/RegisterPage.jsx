@@ -24,7 +24,14 @@ class Register extends Component {
     let data = new FormData();
     data.append('username', name);
     data.append('password', this.state.passwordRegisterInput);
-    data.append('cart', this.props.cart)
+    if (this.props.cart === []) {
+      data.append('cart', this.props.cart)
+    } 
+    else {
+      this.props.cart.forEach(item => {
+        data.append('cart', item)
+      })
+    }
     let response = await fetch('/register', { method: 'POST', body: data });
     let body = await response.text();
     console.log('/register response', body);

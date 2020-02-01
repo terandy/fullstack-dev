@@ -18,7 +18,7 @@ let reducer = (state, action) => {
   }
   if (action.type === 'add-to-cart') {
     console.log('add to cart', action.content);
-    return { ...state, cart: action.content };
+    return { ...state, cart: state.cart.concat(action.content) };
   }
   return state;
 };

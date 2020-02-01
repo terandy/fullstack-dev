@@ -7,6 +7,7 @@ import LoginPage from './LoginPage.jsx';
 import RegisterPage from './RegisterPage.jsx';
 import AddItem from './AddItem.jsx';
 import ItemDetail from './ItemDetail.jsx';
+import Cart from './Cart.jsx';
 import SellerItemDetail from './SellerItemDetail.jsx';
 import SellerItems from './SellerItems.jsx';
 import { connect } from 'react-redux';
@@ -64,6 +65,9 @@ class App extends Component {
   renderSellerItemPage = () => {
     return <SellerItems />;
   };
+  renderCart = () => {
+    return <Cart/>
+  }
 
   render = () => {
     return (
