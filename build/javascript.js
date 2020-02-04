@@ -964,11 +964,7 @@ exports.push([module.i, "/*!\r\n * Hamburgers\r\n * @description Tasty CSS-anima
 
 exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-<<<<<<< HEAD
-exports.push([module.i, "body {\r\n  background-color: white;\r\n  margin: 0;\r\n}\r\n\r\n.hamburger:focus {\r\n  outline:none;\r\n}\r\n\r\n.nav {\r\n  background-color: white;\r\n}\r\n.flexMobile {\r\n  display: flex;\r\n}\r\n\r\n.toggle-nav-on {\r\n  display: block;\r\n  position: fixed;\r\n    width: 45%;\r\n    height: 100%;\r\n    right: 0;\r\n    top: 0;\r\n    padding: 3em 1em 0 0;\r\n    font-size: 1.5em;\r\n    background-color: whitesmoke;\r\n    box-shadow: 0 0 3px grey;\r\n    \r\n    transition-property: right;\r\n    transition-duration: .5s;\r\n    -webkit-transition-duration: .5s;\r\n    -moz-transition-duration: .5s;\r\n    -o-transition-duration: .5s;\r\n    transition-timing-function: ease-in-out;\r\n}\r\n.toggle-nav {\r\n  visibility: hidden;\r\n  overflow: hidden;\r\n  top: 0;\r\n  padding: 3em 1em 0 0;\r\n  right: -100%;\r\n  padding-right: 1em;\r\n  font-size: 1.5em;\r\n  height: 100%;\r\n  width: 45%;\r\n  background-color: whitesmoke;\r\n  position:fixed;\r\n\r\n  transition-property: visibility, right;\r\n      transition-duration: .5s;\r\n    -webkit-transition-duration: .5s;\r\n    -moz-transition-duration: .5s;\r\n    -o-transition-duration: .5s;\r\n    transition-timing-function: ease-in-out;\r\n}\r\n\r\n.hideDesktop {\r\n  display: none;\r\n}\r\n\r\n.mobileNav {\r\n  display: flex;\r\n  justify-content: space-between;\r\n}\r\n\r\n.mobileNav h1 {\r\n  margin-left: 15px;\r\n}\r\n\r\na {\r\n  color: black;\r\n  text-decoration: none;\r\n}\r\n\r\n.nav ul {\r\n  list-style-type: none;\r\n  text-transform: uppercase;\r\n  padding: 0px;\r\n  line-height: 2em;\r\n  display: flex;\r\n  flex-direction: column;\r\n  text-align: right;\r\n  font-family: sans-serif;\r\n}\r\n\r\n/* all items container */\r\n.all-items-display {\r\n  display: grid;\r\n  grid-template-columns: 1fr 1fr;\r\n  margin: auto;\r\n  width: 90vw;\r\n}\r\n/* individual item */\r\n.one-item {\r\n  font-family: 'sans-serif';\r\n  color: black;\r\n  padding: 0;\r\n  margin: 10px;\r\n  height: 70vw;\r\n  width: 40vw;\r\n  z-index: 1;\r\n}\r\n.one-item-image {\r\n  height: 80%;\r\n  width: 100%;\r\n  background: lightgrey;\r\n}\r\n.one-item-image > img {\r\n  width: 100%;\r\n  height: 100%;\r\n  object-fit: cover;\r\n  overflow: hidden;\r\n}\r\n.one-item-text {\r\n  padding: 0;\r\n  margin: 0;\r\n  margin-top: 10px;\r\n  font-family: 'Helvetica';\r\n}\r\n.one-item-text > h1 {\r\n  padding: 0;\r\n  margin: 0;\r\n  font-size: 20px;\r\n  width: 100%;\r\n  overflow: visible;\r\n  text-transform: capitalize;\r\n  font-weight: lighter;\r\n}\r\n.one-item-text > p {\r\n  padding-top: 5px;\r\n  font-size: 70%;\r\n  font-weight: lighter;\r\n  border-top: black solid 1px;\r\n  width: 33%;\r\n}\r\n\r\n.popup {\r\n  z-index: 1000;\r\n  width: 400px;\r\n  box-shadow: rgba(128, 128, 128, 0.479) 4px 4px 4px 4px 16px;\r\n  text-transform: none;\r\n}\r\n.popup-form-container {\r\n  background-color: white;\r\n  display: flex;\r\n}\r\n.detail-container {\r\n  display: grid;\r\n  grid-column-gap: 50px;\r\n  width: 100vw;\r\n  margin-top: 5em;\r\n}\r\n\r\n.detail-description {\r\n  display: grid;\r\n  grid-template-rows: 5em 2em 2em 1fr 3em;\r\n  padding: 2em;\r\n  height: 40vh;\r\n}\r\n.detail-image {\r\n  width: 90vw;\r\n  height: 70vh;\r\n  margin: auto;\r\n  display: flex;\r\n  justify-content: center;\r\n}\r\n\r\n@media screen and (min-width: 650px) {\r\n  .all-items-display {\r\n    display: grid;\r\n    grid-template-columns: 1fr 1fr 1fr;\r\n    margin: auto;\r\n    width: 90vw;\r\n  }\r\n  .one-item-text > h1 {\r\n    font-size: 25px;\r\n  }\r\n  .one-item {\r\n    height: 430px;\r\n    width: 230px;\r\n  }\r\n}\r\n@media screen and (max-width: 968px) {\r\n  .profileMobile {\r\n    position: relative;\r\n    right: 10px;\r\n  }\r\n  .profileAlign {\r\n    align-items: center;\r\n    justify-content: flex-end;\r\n  }\r\n}\r\n\r\n/* CSS applies to 968px and above */\r\n@media screen and (min-width: 968px) {\r\n  .hideDesktop {\r\n    display:block;\r\n  }\r\n  .all-items-display {\r\n    padding: 0 5%;\r\n    display: grid;\r\n    grid-template-columns: 1fr 1fr 1fr 1fr;\r\n    justify-content: center;\r\n    width: 90vw;\r\n  }\r\n  .one-item-text > h1 {\r\n    font-size: 25px;\r\n  }\r\n  .one-item {\r\n    height: 430px;\r\n    width: 230px;\r\n  }\r\n  /* navigation */\r\n  .toggle-nav {\r\n    display: block;\r\n  }\r\n  .hideMobile {\r\n    display: none;\r\n  }\r\n  #navItems {\r\n    width: 100%;\r\n  }\r\n  .nav {\r\n    display: flex;\r\n    height: 4em;\r\n    border-bottom: 1px solid black;\r\n    margin-bottom: 0.5em;\r\n    box-shadow: 0px 0px 2px grey;\r\n    background-color: white;\r\n  }\r\n  .nav ul  {\r\n    display: flex;\r\n    flex-direction: row;\r\n    list-style-type: none;\r\n    text-transform: uppercase;\r\n    justify-content: space-between;\r\n  }\r\n\r\n  .nav ul li {\r\n    margin: 0 1em 0 1em;\r\n  }\r\n  .flex {\r\n    display: flex;\r\n  }\r\n  .profileAlign {\r\n    margin-right: 1em;\r\n  }\r\n\r\n  /* end navigation */\r\n\r\n  /* dropdown */\r\n  .dropdown-container {\r\n    position: relative;\r\n  }\r\n\r\n  .dropdown-content {\r\n    display: none;\r\n    position: absolute;\r\n    right: 0;\r\n    min-width: max-content;\r\n    box-shadow: rgba(128, 128, 128, 0.479) 4px 4px 16px;\r\n    background-color: white;\r\n    padding: 1em;\r\n    z-index: 99;\r\n  }\r\n  .dropdown-container:hover .dropdown-content {\r\n    display: block;\r\n  }\r\n  .dropdown-button:hover {\r\n    color: purple;\r\n    cursor: pointer;\r\n  }\r\n  /* end of dropdown */\r\n  .detail-container {\r\n    grid-template-columns: 1fr 30%;\r\n    width: 90vw;\r\n    margin: 2em;\r\n    margin-top: 5em;\r\n  }\r\n  .detail-description {\r\n    width: 90%;\r\n    height: 80vh;\r\n    padding: 0;\r\n    margin: 1em;\r\n  }\r\n  .detail-image {\r\n    justify-content: center;\r\n    display: flex;\r\n    align-items: center;\r\n    margin: auto;\r\n    width: 100%;\r\n    height: 90vh;\r\n  }\r\n}\r\n", ""]);
-=======
-exports.push([module.i, "body {\n  background-color: white;\n  margin: 0;\n}\n\n.nav {\n  background-color: white;\n}\n.flexMobile {\n  display: flex;\n}\n\n.toggle-nav-on {\n  display: block;\n  position: fixed;\n  width: 45%;\n  height: 100%;\n  right: 0;\n  top: 0;\n  padding: 2em 1em 0 0;\n  font-size: 2em;\n  background-color: whitesmoke;\n  box-shadow: 0 0 3px grey;\n\n  transition-property: right;\n  transition-duration: 0.5s;\n  -webkit-transition-duration: 0.5s;\n  -moz-transition-duration: 0.5s;\n  -o-transition-duration: 0.5s;\n  transition-timing-function: ease-in-out;\n}\n.toggle-nav {\n  visibility: hidden;\n  overflow: hidden;\n  top: 0;\n  padding: 2em 1em 0 0;\n  right: -100%;\n  padding-right: 1em;\n  font-size: 2em;\n  height: 100%;\n  width: 45%;\n  background-color: whitesmoke;\n  position: fixed;\n\n  transition-property: visibility, right;\n  transition-duration: 0.5s;\n  -webkit-transition-duration: 0.5s;\n  -moz-transition-duration: 0.5s;\n  -o-transition-duration: 0.5s;\n  transition-timing-function: ease-in-out;\n}\n\n.hideDesktop {\n  display: none;\n}\n\n.mobileNav {\n  display: flex;\n  justify-content: space-between;\n}\n\n.mobileNav h1 {\n  margin-left: 15px;\n}\n\na {\n  color: black;\n  text-decoration: none;\n}\n\n.nav ul {\n  list-style-type: none;\n  text-transform: uppercase;\n  padding: 0px;\n  line-height: 2em;\n  display: flex;\n  flex-direction: column;\n  text-align: right;\n  font-family: sans-serif;\n}\n\n/* all items container */\n.all-items-display {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  margin: auto;\n  width: 90vw;\n}\n/* individual item */\n.one-item {\n  font-family: 'sans-serif';\n  color: black;\n  padding: 0;\n  margin: 10px;\n  height: 70vw;\n  width: 40vw;\n  z-index: 1;\n}\n.one-item-image {\n  height: 80%;\n  width: 100%;\n  background: lightgrey;\n}\n.one-item-image > img {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  overflow: hidden;\n}\n.one-item-text {\n  padding: 0;\n  margin: 0;\n  margin-top: 10px;\n  font-family: 'Helvetica';\n}\n.one-item-text > h1 {\n  padding: 0;\n  margin: 0;\n  font-size: 20px;\n  width: 100%;\n  overflow: visible;\n  text-transform: capitalize;\n  font-weight: lighter;\n}\n.one-item-text > p {\n  padding-top: 5px;\n  font-size: 70%;\n  font-weight: lighter;\n  border-top: black solid 1px;\n  width: 33%;\n}\n\n.popup {\n  z-index: 1000;\n  width: 400px;\n  box-shadow: rgba(128, 128, 128, 0.479) 4px 4px 4px 4px 16px;\n  text-transform: none;\n}\n.popup-form-container {\n  background-color: white;\n  display: flex;\n}\n.detail-container {\n  display: grid;\n  grid-column-gap: 50px;\n  width: 100vw;\n  margin-top: 5em;\n}\n\n.detail-description {\n  display: grid;\n  grid-template-rows: 5em 2em 2em 1fr 3em;\n  padding: 2em;\n  height: 40vh;\n}\n.detail-image {\n  width: 90vw;\n  height: 70vh;\n  margin: auto;\n  display: flex;\n  justify-content: center;\n}\n\n@media screen and (min-width: 650px) {\n  .all-items-display {\n    display: grid;\n    grid-template-columns: 1fr 1fr 1fr;\n    margin: auto;\n    width: 90vw;\n  }\n  .one-item-text > h1 {\n    font-size: 25px;\n  }\n  .one-item {\n    height: 430px;\n    width: 230px;\n  }\n}\n@media screen and (max-width: 968px) {\n  .profileMobile {\n    position: relative;\n    right: 10px;\n  }\n  .profileMobileAlign {\n    align-items: center;\n    justify-content: flex-end;\n  }\n}\n\n/* CSS applies to 968px and above */\n@media screen and (min-width: 968px) {\n  .hideDesktop {\n    display: block;\n  }\n  .all-items-display {\n    padding: 0 5%;\n    display: grid;\n    grid-template-columns: 1fr 1fr 1fr 1fr;\n    justify-content: center;\n    width: 90vw;\n  }\n  .one-item-text > h1 {\n    font-size: 25px;\n  }\n  .one-item {\n    height: 430px;\n    width: 230px;\n  }\n  /* navigation */\n  .toggle-nav {\n    display: block;\n  }\n  .hideMobile {\n    display: none;\n  }\n  #navItems {\n    width: 100%;\n  }\n  .nav {\n    display: flex;\n    height: 4em;\n    border-bottom: 1px solid black;\n    margin-bottom: 0.5em;\n    box-shadow: 0px 0px 2px grey;\n    background-color: white;\n  }\n  .nav ul {\n    display: flex;\n    flex-direction: row;\n    list-style-type: none;\n    text-transform: uppercase;\n    justify-content: space-between;\n  }\n\n  .nav ul li {\n    margin: 0 1em 0 1em;\n  }\n  .flex {\n    display: flex;\n  }\n  /* end navigation */\n\n  /* dropdown */\n  .dropdown-container {\n    position: relative;\n  }\n\n  .dropdown-content {\n    display: none;\n    position: absolute;\n    right: 0;\n    min-width: max-content;\n    box-shadow: rgba(128, 128, 128, 0.479) 4px 4px 16px;\n    background-color: white;\n    padding: 1em;\n    z-index: 99;\n  }\n  .dropdown-container:hover .dropdown-content {\n    display: block;\n  }\n  .dropdown-button:hover {\n    color: purple;\n    cursor: pointer;\n  }\n  /* end of dropdown */\n  .detail-container {\n    grid-template-columns: 1fr 30%;\n    width: 90vw;\n    margin: 2em;\n    margin-top: 5em;\n  }\n  .detail-description {\n    width: 90%;\n    height: 80vh;\n    padding: 0;\n    margin: 1em;\n  }\n  .detail-image {\n    justify-content: center;\n    display: flex;\n    align-items: center;\n    margin: auto;\n    width: 100%;\n    height: 90vh;\n  }\n}\n", ""]);
->>>>>>> 4838156e4d9f7f1656978d3290c4927f0439e2ce
+exports.push([module.i, "body {\r\n  background-color: white;\r\n  margin: 0;\r\n}\r\n\r\n.hamburger:focus {\r\n  outline:none;\r\n}\r\n\r\n.nav {\r\n  background-color: white;\r\n}\r\n.flexMobile {\r\n  display: flex;\r\n}\r\n\r\n.toggle-nav-on {\r\n  display: block;\r\n  position: fixed;\r\n    width: 45%;\r\n    height: 100%;\r\n    right: 0;\r\n    top: 0;\r\n    padding: 3em 1em 0 0;\r\n    font-size: 1.5em;\r\n    background-color: whitesmoke;\r\n    box-shadow: 0 0 3px grey;\r\n    \r\n    transition-property: right;\r\n    transition-duration: .5s;\r\n    -webkit-transition-duration: .5s;\r\n    -moz-transition-duration: .5s;\r\n    -o-transition-duration: .5s;\r\n    transition-timing-function: ease-in-out;\r\n}\r\n.toggle-nav {\r\n  visibility: hidden;\r\n  overflow: hidden;\r\n  top: 0;\r\n  padding: 3em 1em 0 0;\r\n  right: -100%;\r\n  padding-right: 1em;\r\n  font-size: 1.5em;\r\n  height: 100%;\r\n  width: 45%;\r\n  background-color: whitesmoke;\r\n  position: fixed;\r\n\r\n  transition-property: visibility, right;\r\n  transition-duration: 0.5s;\r\n  -webkit-transition-duration: 0.5s;\r\n  -moz-transition-duration: 0.5s;\r\n  -o-transition-duration: 0.5s;\r\n  transition-timing-function: ease-in-out;\r\n}\r\n\r\n.hideDesktop {\r\n  display: none;\r\n}\r\n\r\n.mobileNav {\r\n  display: flex;\r\n  justify-content: space-between;\r\n}\r\n\r\n.mobileNav h1 {\r\n  margin-left: 15px;\r\n}\r\n\r\na {\r\n  color: black;\r\n  text-decoration: none;\r\n}\r\n\r\n.nav ul {\r\n  list-style-type: none;\r\n  text-transform: uppercase;\r\n  padding: 0px;\r\n  line-height: 2em;\r\n  display: flex;\r\n  flex-direction: column;\r\n  text-align: right;\r\n  font-family: sans-serif;\r\n}\r\n\r\n.nav a, .nav div {\r\n  font-family: 'Work Sans', sans-serif;\r\n  font-weight: 800;\r\n  letter-spacing: 2px;\r\n}\r\n\r\nh1, h2, h3, h4, h5, h6 {\r\n  font-family: 'Lato', sans-serif;\r\n  letter-spacing: 1px;\r\n}\r\n\r\n/* all items container */\r\n.all-items-display {\r\n  display: grid;\r\n  grid-template-columns: 1fr 1fr;\r\n  margin: auto;\r\n  width: 90vw;\r\n}\r\n/* individual item */\r\n.one-item {\r\n  font-family: 'sans-serif';\r\n  color: black;\r\n  padding: 0;\r\n  margin: 10px;\r\n  height: 70vw;\r\n  width: 40vw;\r\n  z-index: 1;\r\n}\r\n.one-item-image {\r\n  height: 80%;\r\n  width: 100%;\r\n  background: lightgrey;\r\n}\r\n.one-item-image > img {\r\n  width: 100%;\r\n  height: 100%;\r\n  object-fit: cover;\r\n  overflow: hidden;\r\n}\r\n.one-item-text {\r\n  padding: 0;\r\n  margin: 0;\r\n  margin-top: 10px;\r\n  font-family: 'Helvetica';\r\n}\r\n.one-item-text > h1 {\r\n  padding: 0;\r\n  margin: 0;\r\n  font-size: 20px;\r\n  width: 100%;\r\n  overflow: visible;\r\n  text-transform: capitalize;\r\n  font-weight: lighter;\r\n}\r\n.one-item-text > p {\r\n  padding-top: 5px;\r\n  font-size: 70%;\r\n  font-weight: lighter;\r\n  border-top: black solid 1px;\r\n  width: 33%;\r\n}\r\n\r\n.popup {\r\n  z-index: 1000;\r\n  width: 400px;\r\n  box-shadow: rgba(128, 128, 128, 0.479) 4px 4px 4px 4px 16px;\r\n  text-transform: none;\r\n}\r\n.popup-form-container {\r\n  background-color: white;\r\n  display: flex;\r\n}\r\n.detail-container {\r\n  display: grid;\r\n  grid-column-gap: 50px;\r\n  width: 100vw;\r\n  margin-top: 5em;\r\n}\r\n\r\n.detail-description {\r\n  display: grid;\r\n  grid-template-rows: 5em 2em 2em 1fr 3em;\r\n  padding: 2em;\r\n  height: 40vh;\r\n}\r\n.detail-image {\r\n  width: 90vw;\r\n  height: 70vh;\r\n  margin: auto;\r\n  display: flex;\r\n  justify-content: center;\r\n}\r\n\r\n@media screen and (min-width: 650px) {\r\n  .all-items-display {\r\n    display: grid;\r\n    grid-template-columns: 1fr 1fr 1fr;\r\n    margin: auto;\r\n    width: 90vw;\r\n  }\r\n  .one-item-text > h1 {\r\n    font-size: 25px;\r\n  }\r\n  .one-item {\r\n    height: 430px;\r\n    width: 230px;\r\n  }\r\n}\r\n@media screen and (max-width: 968px) {\r\n  .profileMobile {\r\n    position: relative;\r\n    right: 10px;\r\n  }\r\n  .profileAlign {\r\n    align-items: center;\r\n    justify-content: flex-end;\r\n  }\r\n}\r\n\r\n/* CSS applies to 968px and above */\r\n@media screen and (min-width: 968px) {\r\n  .hideDesktop {\r\n    display: block;\r\n  }\r\n  .all-items-display {\r\n    padding: 0 5%;\r\n    display: grid;\r\n    grid-template-columns: 1fr 1fr 1fr 1fr;\r\n    justify-content: center;\r\n    width: 90vw;\r\n  }\r\n  .one-item-text > h1 {\r\n    font-size: 25px;\r\n  }\r\n  .one-item {\r\n    height: 430px;\r\n    width: 230px;\r\n  }\r\n  /* navigation */\r\n  .toggle-nav {\r\n    display: block;\r\n  }\r\n  .hideMobile {\r\n    display: none;\r\n  }\r\n  #navItems {\r\n    width: 100%;\r\n  }\r\n  .nav {\r\n    display: flex;\r\n    height: 4em;\r\n    border-bottom: 1px solid black;\r\n    margin-bottom: 0.5em;\r\n    box-shadow: 0px 0px 2px grey;\r\n    background-color: white;\r\n  }\r\n  .nav ul {\r\n    display: flex;\r\n    flex-direction: row;\r\n    list-style-type: none;\r\n    text-transform: uppercase;\r\n    justify-content: space-between;\r\n  }\r\n\r\n  .nav ul li {\r\n    margin: 0 1em 0 1em;\r\n  }\r\n  .flex {\r\n    display: flex;\r\n  }\r\n  .profileAlign {\r\n    margin-right: 1em;\r\n  }\r\n\r\n  /* end navigation */\r\n\r\n  /* dropdown */\r\n  .dropdown-container {\r\n    position: relative;\r\n  }\r\n\r\n  .dropdown-content {\r\n    display: none;\r\n    position: absolute;\r\n    right: 0;\r\n    min-width: max-content;\r\n    box-shadow: rgba(128, 128, 128, 0.479) 4px 4px 16px;\r\n    background-color: white;\r\n    padding: 1em;\r\n    z-index: 99;\r\n  }\r\n  .dropdown-container:hover .dropdown-content {\r\n    display: block;\r\n  }\r\n  .dropdown-button:hover {\r\n    color: purple;\r\n    cursor: pointer;\r\n  }\r\n  /* end of dropdown */\r\n  .detail-container {\r\n    grid-template-columns: 1fr 30%;\r\n    width: 90vw;\r\n    margin: 2em;\r\n    margin-top: 5em;\r\n  }\r\n  .detail-description {\r\n    width: 90%;\r\n    height: 80vh;\r\n    padding: 0;\r\n    margin: 1em;\r\n  }\r\n  .detail-image {\r\n    justify-content: center;\r\n    display: flex;\r\n    align-items: center;\r\n    margin: auto;\r\n    width: 100%;\r\n    height: 90vh;\r\n  }\r\n}\r\n", ""]);
 
 
 
@@ -41688,22 +41684,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _Navigation_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Navigation.jsx */ "./src/Navigation.jsx");
 /* harmony import */ var _MainPage_jsx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./MainPage.jsx */ "./src/MainPage.jsx");
-<<<<<<< HEAD
-/* harmony import */ var _LoginPage_jsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./LoginPage.jsx */ "./src/LoginPage.jsx");
-/* harmony import */ var _RegisterPage_jsx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./RegisterPage.jsx */ "./src/RegisterPage.jsx");
-/* harmony import */ var _AddItem_jsx__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./AddItem.jsx */ "./src/AddItem.jsx");
-/* harmony import */ var _ItemDetail_jsx__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./ItemDetail.jsx */ "./src/ItemDetail.jsx");
-/* harmony import */ var _Cart_jsx__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Cart.jsx */ "./src/Cart.jsx");
-=======
 /* harmony import */ var _Items_jsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Items.jsx */ "./src/Items.jsx");
 /* harmony import */ var _LoginPage_jsx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./LoginPage.jsx */ "./src/LoginPage.jsx");
 /* harmony import */ var _RegisterPage_jsx__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./RegisterPage.jsx */ "./src/RegisterPage.jsx");
 /* harmony import */ var _AddItem_jsx__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./AddItem.jsx */ "./src/AddItem.jsx");
 /* harmony import */ var _ItemDetail_jsx__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./ItemDetail.jsx */ "./src/ItemDetail.jsx");
-/* harmony import */ var _SellerItemDetail_jsx__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./SellerItemDetail.jsx */ "./src/SellerItemDetail.jsx");
-/* harmony import */ var _SellerItems_jsx__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./SellerItems.jsx */ "./src/SellerItems.jsx");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
->>>>>>> 4838156e4d9f7f1656978d3290c4927f0439e2ce
+/* harmony import */ var _Cart_jsx__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./Cart.jsx */ "./src/Cart.jsx");
+/* harmony import */ var _SellerItemDetail_jsx__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./SellerItemDetail.jsx */ "./src/SellerItemDetail.jsx");
+/* harmony import */ var _SellerItems_jsx__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./SellerItems.jsx */ "./src/SellerItems.jsx");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -41716,12 +41705,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 4838156e4d9f7f1656978d3290c4927f0439e2ce
+
 class App extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   constructor(...args) {
     super(...args);
@@ -41776,7 +41763,7 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     });
 
     _defineProperty(this, "renderSellerItemDetail", renderdata => {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SellerItemDetail_jsx__WEBPACK_IMPORTED_MODULE_9__["default"], {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SellerItemDetail_jsx__WEBPACK_IMPORTED_MODULE_10__["default"], {
         itemId: renderdata.match.params.itemId
       });
     });
@@ -41800,11 +41787,11 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     });
 
     _defineProperty(this, "renderSellerItemPage", () => {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SellerItems_jsx__WEBPACK_IMPORTED_MODULE_10__["default"], null);
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SellerItems_jsx__WEBPACK_IMPORTED_MODULE_11__["default"], null);
     });
 
     _defineProperty(this, "renderCart", () => {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Cart_jsx__WEBPACK_IMPORTED_MODULE_8__["default"], null);
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Cart_jsx__WEBPACK_IMPORTED_MODULE_9__["default"], null);
     });
 
     _defineProperty(this, "render", () => {
@@ -41866,7 +41853,7 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_11__["connect"])()(App));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_12__["connect"])()(App));
 
 /***/ }),
 
@@ -41892,8 +41879,43 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-let CartContainer = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].div`
+const CartContainer = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].div`
+padding: 1em;
+width: 400px;
+background-color: #fafafa;
+box-shadow: 0 0 2px grey;
 
+@media screen and (min-width: 968px) {
+width:750px
+}
+`;
+const Title = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].h2`
+`;
+const CartItem = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].div`
+border-top: 1px solid #e9e9e9;
+padding-top: 1em;
+display:flex;
+padding-bottom: 1em;
+`;
+const ContentLeft = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].img`
+width:200px;
+`;
+const ContentRight = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].div`
+margin-left:1em;
+`;
+const RemoveButton = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].div`
+position: relative;
+top: -90px;
+right:-164px;
+font-size: 1.5em;
+
+    
+    &:hover {
+        cursor:pointer;
+    }
+    @media screen and (min-width: 968px) {
+    right: -515px;
+    }
 `;
 
 class Cart extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
@@ -41922,23 +41944,65 @@ class Cart extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       });
     });
 
+    _defineProperty(this, "removeCartItem", async itemId => {
+      let data = new FormData();
+      data.append("itemId", itemId);
+      let body = await fetch('/remove-cart-item', {
+        method: 'POST',
+        body: data
+      });
+      let response = await body.text();
+      let parsed = JSON.parse(response);
+
+      if (parsed.success) {
+        console.log("parsed: ", parsed);
+        alert("Item Removed");
+        this.setState({
+          cart: parsed.cart
+        });
+        return;
+      }
+
+      alert("Error");
+    });
+
     _defineProperty(this, "render", () => {
       console.log("rendering cart page with: ", this.state.cart);
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         style: {
-          margin: '5em 0 0 0'
+          backgroundColor: 'whitesmoke',
+          height: "100vh",
+          overflow: "hidden"
         }
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CartContainer, null, this.state.cart.map((item, index) => {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-          key: index
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_OneItem_jsx__WEBPACK_IMPORTED_MODULE_3__["default"], {
-          item: item
-        }));
-      })));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        style: {
+          padding: '5em 0 0 0',
+          display: "flex",
+          justifyContent: "center"
+        }
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CartContainer, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Title, null, "Your Cart"), this.state.cart.map((item, index) => {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CartItem, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ContentLeft, {
+          src: item.imgPaths[0]
+        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ContentRight, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+          style: {
+            margin: 0
+          }
+        }, item.item), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+          style: {
+            marginTop: "1em"
+          }
+        }, item.price), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Qty: x"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(RemoveButton, {
+          onClick: () => {
+            this.removeCartItem(item._id);
+          }
+        }, "\u2716")));
+      }))));
     });
 
     this.state = {
-      cart: []
+      cart: [],
+      cartTotal: '',
+      totalPrice: ''
     };
   }
 
@@ -42705,7 +42769,7 @@ let NavDiv = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div`
   transition-timing-function: ease-in-out;
 `;
 let DropContent = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div`
-  width: 120px;
+  width: 130px;
   text-transform: none;
   display: grid;
   padding-bottom: 1em;

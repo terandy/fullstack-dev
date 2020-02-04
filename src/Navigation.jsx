@@ -23,7 +23,7 @@ let NavDiv = styled.div`
 `;
 
 let DropContent = styled.div`
-  width: 120px;
+  width: 130px;
   text-transform: none;
   display: grid;
   padding-bottom: 1em;
