@@ -35,8 +35,8 @@ const ShopAll = styled.div`
     display: flex;
     justify-content: center;
     &:hover {
-      color: grey;
-      border: grey solid 2px;
+      color: lightgrey;
+      border: lightgrey solid 2px;
     }
   }
 `;

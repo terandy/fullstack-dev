@@ -39,6 +39,9 @@ class Items extends Component {
         type: 'set-items',
         content: itemsArray
       });
+      this.props.dispatch({
+        type: 'clear-tags'
+      });
       this.setState({ items: this.props.items });
     };
     updateItems();
@@ -47,11 +50,14 @@ class Items extends Component {
   render = () => {
     let results = this.state.items.filter(item => {
       if (this.state.items === '') return true;
-      return item.tag.includes(
-        this.props.category ? this.props.category : this.props.searchTag
-      );
+      return item.tag.includes(this.props.searchTag);
     });
-    if (results.length === 0) {
+    if (this.props.category) {
+      results = results.filter(item => {
+        return item.tag.includes(this.props.category);
+      });
+    }
+    if (results.length === 0 && this.state.items.length !== 0) {
       return <div style={{ marginTop: '5em' }}>No contents to display</div>;
     }
     return (

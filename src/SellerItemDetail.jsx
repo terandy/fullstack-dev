@@ -292,7 +292,8 @@ class SellerItemDetail extends Component {
     if (body.success) {
       console.log('added');
       this.setState({
-        files: []
+        files: [],
+        images: body.imgPaths
       });
     } else {
       console.log('not added');
@@ -379,7 +380,7 @@ class SellerItemDetail extends Component {
     let text = await response.text();
     let body = JSON.parse(text);
     if (body.success) {
-      console.log('delted');
+      console.log('deleted');
       this.setState({
         tag: ''
       });
@@ -392,8 +393,10 @@ class SellerItemDetail extends Component {
   render = () => {
     return (
       <div style={{ marginTop: '5em' }}>
-        <h1>Edit Existing Item</h1>
-
+        <h1 className="all-items-title">Selling</h1>
+        <Form>
+          <h1 style={{ margin: '0' }}>Edit Existing Item</h1>
+        </Form>
         <Form onSubmit={this.submitDetailHandler}>
           <Title>
             1 - Information
