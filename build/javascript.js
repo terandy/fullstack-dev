@@ -43235,11 +43235,63 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
 
 
+
+const Container = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div`
+  display: flex;
+  align-items: center;
+  text-align: center;
+  height: 1.5em;
+  border-radius: 1em;
+  padding: 0.25em;
+  border: ${props => props.toggle ? '1px solid lightgrey' : 'none'};
+  @media screen and (max-width: 968px) {
+    border: 1px solid lightgrey;
+  }
+`;
+const Form = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].form`
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  input {
+    width: ${props => props.toggle ? '200px' : '0'};
+    transition: 1s;
+    margin: 0;
+    padding: 0;
+    padding-left: 1em;
+    height: 2em;
+    border: none;
+    &:focus {
+      outline: 0;
+    }
+    @media screen and (max-width: 968px) {
+      width: 100%;
+    }
+  }
+  button {
+    margin: 0;
+    padding: 0;
+    height: 2em;
+    border: none;
+    &:focus {
+      outline: 0;
+    }
+  }
+`;
+const SearchIcon = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].img`
+  max-height: 90%;
+  width: auto;
+
+  &:hover {
+    cursor: pointer;
+  }
+`;
 
 class SearchBar extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   constructor() {
@@ -43260,21 +43312,38 @@ class SearchBar extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         type: 'filter',
         content: lowercased
       });
+      this.setState({
+        searchInput: ''
+      });
+    });
+
+    _defineProperty(this, "displaySearch", () => {
+      this.setState({
+        toggle: !this.state.toggle
+      });
     });
 
     _defineProperty(this, "render", () => {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
-        onSubmit: this.handleSubmit
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Container, {
+        toggle: this.state.toggle
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Form, {
+        onSubmit: this.handleSubmit,
+        toggle: this.state.toggle
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
+        value: this.state.searchInput,
         onChange: this.handleSearchInput
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         type: "submit"
-      })));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SearchIcon, {
+        src: "/../uploads/search.png",
+        onClick: this.displaySearch
+      }))));
     });
 
     this.state = {
-      searchInput: ''
+      searchInput: '',
+      toggle: false
     };
   }
 
