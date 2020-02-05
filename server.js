@@ -278,6 +278,27 @@ app.post('/cart', upload.none(), async (req, res) => {
   }
 });
 
+app.post('/remove-cart-item', upload.none(), async (req, res) => {
+  let item = req.body.itemId;
+  let sessionId = req.cookies.sid;
+  let username = sessions[sessionId];
+
+  try {
+    dbo.collection('users').updateOne({ username }, {$pull: {cart: item}});
+    
+    let user = await dbo.collection('users').findOne({ username })
+    console.log(user)
+    let cart = await dbo.collection('items').find({
+      _id: { $in: user.cart.map(item => ObjectID(item)) }
+    }).toArray()
+
+    res.send(JSON.stringify({ success: true, cart }));
+  } catch (err) {
+    console.log('error', err);
+    res.send(JSON.stringify({ success: false }));
+  }
+});
+
 app.post('/all-items', upload.none(), (req, res) => {
   console.log('request to /all-items');
   dbo

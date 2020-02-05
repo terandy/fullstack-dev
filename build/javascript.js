@@ -964,7 +964,7 @@ exports.push([module.i, "/*!\n * Hamburgers\n * @description Tasty CSS-animated 
 
 exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "body {\n  background-color: white;\n  margin: 0;\n}\n\n.hamburger:focus {\n  outline: none;\n}\n\n.nav {\n  background-color: white;\n}\n.flexMobile {\n  display: flex;\n}\n\n.toggle-nav-on {\n  display: block;\n  position: fixed;\n  width: 45%;\n  height: 100%;\n  right: 0;\n  top: 0;\n  padding: 3em 1em 0 0;\n  font-size: 1.5em;\n  background-color: whitesmoke;\n  box-shadow: 0 0 3px grey;\n\n  transition-property: right;\n  transition-duration: 0.5s;\n  -webkit-transition-duration: 0.5s;\n  -moz-transition-duration: 0.5s;\n  -o-transition-duration: 0.5s;\n  transition-timing-function: ease-in-out;\n}\n.toggle-nav {\n  visibility: hidden;\n  overflow: hidden;\n  top: 0;\n  padding: 3em 1em 0 0;\n  right: -100%;\n  padding-right: 1em;\n  font-size: 1.5em;\n  height: 100%;\n  width: 45%;\n  background-color: whitesmoke;\n  position: fixed;\n\n  transition-property: visibility, right;\n  transition-duration: 0.5s;\n  -webkit-transition-duration: 0.5s;\n  -moz-transition-duration: 0.5s;\n  -o-transition-duration: 0.5s;\n  transition-timing-function: ease-in-out;\n}\n.display-if-not-mobile {\n  display: none;\n}\n\n.hideDesktop {\n  display: none;\n  text-decoration: underline;\n  font-weight: bold;\n}\n\n.mobileNav {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n\n.mobileNav h1 {\n  margin-left: 15px;\n}\n\na {\n  color: black;\n  text-decoration: none;\n}\n\n.nav ul {\n  list-style-type: none;\n  text-transform: uppercase;\n  padding: 0px;\n  line-height: 2em;\n  display: flex;\n  flex-direction: column;\n  text-align: right;\n  font-family: sans-serif;\n}\n\n/* all items container */\n.all-items-title {\n  display: flex;\n  justify-content: center;\n  text-transform: uppercase;\n}\n.all-items-display {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  margin: auto;\n  width: 90vw;\n}\n/* individual item */\n.one-item {\n  font-family: 'sans-serif';\n  color: black;\n  padding: 0;\n  margin: 10px;\n  height: 70vw;\n  width: 40vw;\n  z-index: 1;\n}\n.one-item-image {\n  height: 80%;\n  width: 100%;\n  background: lightgrey;\n}\n.one-item-image > img {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  overflow: hidden;\n}\n.one-item-text {\n  padding: 0;\n  margin: 0;\n  margin-top: 10px;\n  font-family: 'Helvetica';\n}\n.one-item-text > h1 {\n  padding: 0;\n  margin: 0;\n  font-size: 20px;\n  width: 100%;\n  overflow: visible;\n  text-transform: capitalize;\n  font-weight: lighter;\n}\n.one-item-text > p {\n  padding-top: 5px;\n  font-size: 70%;\n  font-weight: lighter;\n  border-top: black solid 1px;\n  width: 33%;\n}\n\n.popup {\n  z-index: 1000;\n  width: 400px;\n  box-shadow: rgba(128, 128, 128, 0.479) 4px 4px 4px 4px 16px;\n  text-transform: none;\n}\n.popup-form-container {\n  background-color: white;\n  display: flex;\n}\n.detail-container {\n  display: grid;\n  grid-column-gap: 50px;\n  width: 100vw;\n  margin-top: 5em;\n}\n\n.detail-description {\n  display: grid;\n  grid-template-rows: 5em 2em 2em 1fr 3em;\n  padding: 2em;\n  height: 40vh;\n}\n.detail-image {\n  width: 90vw;\n  height: 70vh;\n  margin: auto;\n  display: flex;\n  justify-content: center;\n}\n\n@media screen and (min-width: 650px) {\n  .all-items-display {\n    display: grid;\n    grid-template-columns: 1fr 1fr 1fr;\n    margin: auto;\n    width: 90vw;\n  }\n  .one-item-text > h1 {\n    font-size: 25px;\n  }\n  .one-item {\n    height: 430px;\n    width: 230px;\n  }\n}\n@media screen and (max-width: 968px) {\n  .profileMobile {\n    position: relative;\n    right: 10px;\n  }\n  .profileAlign {\n    align-items: center;\n    justify-content: flex-end;\n  }\n}\n\n/* CSS applies to 968px and above */\n@media screen and (min-width: 968px) {\n  .hideDesktop {\n    display: block;\n  }\n  .all-items-display {\n    padding: 0 5%;\n    display: grid;\n    grid-template-columns: 1fr 1fr 1fr 1fr;\n    justify-content: center;\n    width: 90vw;\n  }\n  .one-item-text > h1 {\n    font-size: 25px;\n  }\n  .one-item {\n    height: 430px;\n    width: 230px;\n  }\n  /* navigation */\n  .toggle-nav {\n    display: block;\n  }\n  .hideMobile {\n    display: none;\n  }\n  #navItems {\n    width: 100%;\n  }\n  .nav {\n    display: flex;\n    height: 4em;\n    border-bottom: 1px solid black;\n    margin-bottom: 0.5em;\n    box-shadow: 0px 0px 2px grey;\n    background-color: white;\n  }\n  .nav ul {\n    display: flex;\n    flex-direction: row;\n    list-style-type: none;\n    text-transform: uppercase;\n    justify-content: space-between;\n  }\n\n  .nav ul li {\n    margin: 0 1em 0 1em;\n  }\n  .flex {\n    display: flex;\n  }\n\n  .rightNav {\n    margin-right: 1em;\n  }\n\n  /* end navigation */\n\n  .detail-container {\n    grid-template-columns: 1fr 30%;\n    width: 90vw;\n    margin: 2em;\n    margin-top: 5em;\n  }\n  .detail-description {\n    width: 90%;\n    height: 80vh;\n    padding: 0;\n    margin: 1em;\n  }\n  .detail-image {\n    justify-content: center;\n    display: flex;\n    align-items: center;\n    margin: auto;\n    width: 100%;\n    height: 90vh;\n  }\n  .display-if-not-mobile {\n    display: block;\n  }\n}\n", ""]);
+exports.push([module.i, "body {\n  background-color: white;\n  margin: 0;\n}\n\n.hamburger:focus {\n  outline: none;\n}\n\n.nav {\n  background-color: white;\n}\n.flexMobile {\n  display: flex;\n}\n\n.toggle-nav-on {\n  display: block;\n  position: fixed;\n  width: 45%;\n  height: 100%;\n  right: 0;\n  top: 0;\n  padding: 3em 1em 0 0;\n  font-size: 1.5em;\n  background-color: whitesmoke;\n  box-shadow: 0 0 3px grey;\n\n  transition-property: right;\n  transition-duration: 0.5s;\n  -webkit-transition-duration: 0.5s;\n  -moz-transition-duration: 0.5s;\n  -o-transition-duration: 0.5s;\n  transition-timing-function: ease-in-out;\n}\n.toggle-nav {\n  visibility: hidden;\n  overflow: hidden;\n  top: 0;\n  padding: 3em 1em 0 0;\n  right: -100%;\n  padding-right: 1em;\n  font-size: 1.5em;\n  height: 100%;\n  width: 45%;\n  background-color: whitesmoke;\n  position: fixed;\n\n  transition-property: visibility, right;\n  transition-duration: 0.5s;\n  -webkit-transition-duration: 0.5s;\n  -moz-transition-duration: 0.5s;\n  -o-transition-duration: 0.5s;\n  transition-timing-function: ease-in-out;\n}\n.display-if-not-mobile {\n  display: none;\n}\n\n.hideDesktop {\n  display: none;\n  text-decoration: underline;\n  font-weight: bold;\n}\n\n.mobileNav {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n\n.mobileNav h1 {\n  margin-left: 15px;\n}\n\na {\n  color: black;\n  text-decoration: none;\n}\n\n.nav ul {\n  list-style-type: none;\n  text-transform: uppercase;\n  padding: 0px;\n  line-height: 2em;\n  display: flex;\n  flex-direction: column;\n  text-align: right;\n  font-family: sans-serif;\n}\n\n.nav a, .nav div {\n  font-family: 'Work Sans', sans-serif;\n  font-weight: 800;\n  letter-spacing: 2px;\n}\n\nh1, h2, h3, h4, h5, h6 {\n  font-family: 'Lato', sans-serif;\n  letter-spacing: 1px;\n}\n\n/* all items container */\n.all-items-title {\n  display: flex;\n  justify-content: center;\n  text-transform: uppercase;\n}\n.all-items-display {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  margin: auto;\n  width: 90vw;\n}\n/* individual item */\n.one-item {\n  font-family: 'sans-serif';\n  color: black;\n  padding: 0;\n  margin: 10px;\n  height: 70vw;\n  width: 40vw;\n  z-index: 1;\n}\n.one-item-image {\n  height: 80%;\n  width: 100%;\n  background: lightgrey;\n}\n.one-item-image > img {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  overflow: hidden;\n}\n.one-item-text {\n  padding: 0;\n  margin: 0;\n  margin-top: 10px;\n  font-family: 'Helvetica';\n}\n.one-item-text > h1 {\n  padding: 0;\n  margin: 0;\n  font-size: 20px;\n  width: 100%;\n  overflow: visible;\n  text-transform: capitalize;\n  font-weight: lighter;\n}\n.one-item-text > p {\n  padding-top: 5px;\n  font-size: 70%;\n  font-weight: lighter;\n  border-top: black solid 1px;\n  width: 33%;\n}\n\n.popup {\n  z-index: 1000;\n  width: 400px;\n  box-shadow: rgba(128, 128, 128, 0.479) 4px 4px 4px 4px 16px;\n  text-transform: none;\n}\n.popup-form-container {\n  background-color: white;\n  display: flex;\n}\n.detail-container {\n  display: grid;\n  grid-column-gap: 50px;\n  width: 100vw;\n  margin-top: 5em;\n}\n\n.detail-description {\n  display: grid;\n  grid-template-rows: 5em 2em 2em 1fr 3em;\n  padding: 2em;\n  height: 40vh;\n}\n.detail-image {\n  width: 90vw;\n  height: 70vh;\n  margin: auto;\n  display: flex;\n  justify-content: center;\n}\n\n@media screen and (min-width: 650px) {\n  .all-items-display {\n    display: grid;\n    grid-template-columns: 1fr 1fr 1fr;\n    margin: auto;\n    width: 90vw;\n  }\n  .one-item-text > h1 {\n    font-size: 25px;\n  }\n  .one-item {\n    height: 430px;\n    width: 230px;\n  }\n}\n@media screen and (max-width: 968px) {\n  .profileMobile {\n    position: relative;\n    right: 10px;\n  }\n  .profileAlign {\n    align-items: center;\n    justify-content: flex-end;\n  }\n}\n\n/* CSS applies to 968px and above */\n@media screen and (min-width: 968px) {\n  .hideDesktop {\n    display: block;\n  }\n  .all-items-display {\n    padding: 0 5%;\n    display: grid;\n    grid-template-columns: 1fr 1fr 1fr 1fr;\n    justify-content: center;\n    width: 90vw;\n  }\n  .one-item-text > h1 {\n    font-size: 25px;\n  }\n  .one-item {\n    height: 430px;\n    width: 230px;\n  }\n  /* navigation */\n  .toggle-nav {\n    display: block;\n  }\n  .hideMobile {\n    display: none;\n  }\n  #navItems {\n    width: 100%;\n  }\n  .nav {\n    display: flex;\n    height: 4em;\n    border-bottom: 1px solid black;\n    margin-bottom: 0.5em;\n    box-shadow: 0px 0px 2px grey;\n    background-color: white;\n  }\n  .nav ul {\n    display: flex;\n    flex-direction: row;\n    list-style-type: none;\n    text-transform: uppercase;\n    justify-content: space-between;\n  }\n\n  .nav ul li {\n    margin: 0 1em 0 1em;\n  }\n  .flex {\n    display: flex;\n  }\n\n  .rightNav {\n    margin-right: 1em;\n  }\n\n  /* end navigation */\n\n  .detail-container {\n    grid-template-columns: 1fr 30%;\n    width: 90vw;\n    margin: 2em;\n    margin-top: 5em;\n  }\n  .detail-description {\n    width: 90%;\n    height: 80vh;\n    padding: 0;\n    margin: 1em;\n  }\n  .detail-image {\n    justify-content: center;\n    display: flex;\n    align-items: center;\n    margin: auto;\n    width: 100%;\n    height: 90vh;\n  }\n  .display-if-not-mobile {\n    display: block;\n  }\n}\n", ""]);
 
 
 
@@ -41885,8 +41885,43 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-let CartContainer = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].div`
+const CartContainer = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].div`
+padding: 1em;
+width: 400px;
+background-color: #fafafa;
+box-shadow: 0 0 2px grey;
 
+@media screen and (min-width: 968px) {
+width:750px
+}
+`;
+const Title = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].h2`
+`;
+const CartItem = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].div`
+border-top: 1px solid #e9e9e9;
+padding-top: 1em;
+display:flex;
+padding-bottom: 1em;
+`;
+const ContentLeft = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].img`
+width:200px;
+`;
+const ContentRight = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].div`
+margin-left:1em;
+`;
+const RemoveButton = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].div`
+position: relative;
+top: -90px;
+right:-164px;
+font-size: 1.5em;
+
+    
+    &:hover {
+        cursor:pointer;
+    }
+    @media screen and (min-width: 968px) {
+    right: -515px;
+    }
 `;
 
 class Cart extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
@@ -41915,23 +41950,65 @@ class Cart extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       });
     });
 
+    _defineProperty(this, "removeCartItem", async itemId => {
+      let data = new FormData();
+      data.append("itemId", itemId);
+      let body = await fetch('/remove-cart-item', {
+        method: 'POST',
+        body: data
+      });
+      let response = await body.text();
+      let parsed = JSON.parse(response);
+
+      if (parsed.success) {
+        console.log("parsed: ", parsed);
+        alert("Item Removed");
+        this.setState({
+          cart: parsed.cart
+        });
+        return;
+      }
+
+      alert("Error");
+    });
+
     _defineProperty(this, "render", () => {
       console.log("rendering cart page with: ", this.state.cart);
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         style: {
-          margin: '5em 0 0 0'
+          backgroundColor: 'whitesmoke',
+          height: "100vh",
+          overflow: "hidden"
         }
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CartContainer, null, this.state.cart.map((item, index) => {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-          key: index
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_OneItem_jsx__WEBPACK_IMPORTED_MODULE_3__["default"], {
-          item: item
-        }));
-      })));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        style: {
+          padding: '5em 0 0 0',
+          display: "flex",
+          justifyContent: "center"
+        }
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CartContainer, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Title, null, "Your Cart"), this.state.cart.map((item, index) => {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CartItem, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ContentLeft, {
+          src: item.imgPaths[0]
+        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ContentRight, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+          style: {
+            margin: 0
+          }
+        }, item.item), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+          style: {
+            marginTop: "1em"
+          }
+        }, item.price), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Qty: x"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(RemoveButton, {
+          onClick: () => {
+            this.removeCartItem(item._id);
+          }
+        }, "\u2716")));
+      }))));
     });
 
     this.state = {
-      cart: []
+      cart: [],
+      cartTotal: '',
+      totalPrice: ''
     };
   }
 
@@ -42761,7 +42838,7 @@ let NavDiv = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div`
   transition-timing-function: ease-in-out;
 `;
 let DropContent = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div`
-  width: 120px;
+  width: 130px;
   text-transform: none;
   display: grid;
   padding-bottom: 1em;
