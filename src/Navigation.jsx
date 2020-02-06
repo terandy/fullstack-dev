@@ -108,6 +108,7 @@ class Navigation extends Component {
           <h1>
             <Link to="/">AliBay</Link>
           </h1>
+          <SearchBar />
           <button
             className={this.state.hamburgerClass}
             type="button"
@@ -132,7 +133,7 @@ class Navigation extends Component {
               </li>
               {this.props.user ? (
                 <li>
-                  <Dropdown name="your products">
+                  <Dropdown name="Seller">
                     <DropContent>
                       <Link to="/add-item">
                         <div>Add new item</div>
@@ -146,29 +147,35 @@ class Navigation extends Component {
               ) : (
                 ''
               )}
-              <li>
-              <SearchBar />
+              <li className="display-if-not-mobile">
+                <SearchBar />
               </li>
             </div>
-            <div className="flex">
+            <div className="flex rightNav">
               {this.props.user ? (
-                <Dropdown name={
-                  <div className="flexMobile profileAlign" >
-                    <img className="profileMobile" src="../uploads/profile.png" width="32px" height="32px"></img>
-                    <div className="hideMobile">Profile</div>
-                  </div>
-                }>
+                <Dropdown
+                  name={
+                    <div className="flexMobile  profileAlign">
+                      <img
+                        className="profileMobile"
+                        src="../uploads/profile.png"
+                        width="32px"
+                        height="32px"
+                      ></img>
+                      <div className="hideMobile">Profile</div>
+                    </div>
+                  }
+                >
                   <DropContent>
-                    <div className="hideDesktop">Welcome, {this.props.user}</div>
-                    <span style={{width: "100%", borderTop: "1px solid black"}}></span>
-                  </DropContent>
-                  <DropContent>
+                    <div className="hideDesktop">
+                      Welcome back {this.props.user}
+                    </div>
                     <Link to="/cart">
-                          <div>View Cart</div>
+                      <div>View Cart</div>
                     </Link>
-                  </DropContent>
-                  <DropContent>
-                    <button onClick={this.logoutHandler}>Logout</button>
+                    <Link onClick={this.logoutHandler} to="/">
+                      Logout
+                    </Link>
                   </DropContent>
                 </Dropdown>
               ) : (

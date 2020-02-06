@@ -964,7 +964,11 @@ exports.push([module.i, "/*!\r\n * Hamburgers\r\n * @description Tasty CSS-anima
 
 exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
+<<<<<<< HEAD
 exports.push([module.i, "body {\r\n  background-color: white;\r\n  margin: 0;\r\n}\r\n\r\n.hamburger:focus {\r\n  outline: none;\r\n}\r\n\r\n.nav {\r\n  background-color: white;\r\n}\r\n.flexMobile {\r\n  display: flex;\r\n}\r\n\r\n.toggle-nav-on {\r\n  display: block;\r\n  position: fixed;\r\n  width: 45%;\r\n  height: 100%;\r\n  right: 0;\r\n  top: 0;\r\n  padding: 3em 1em 0 0;\r\n  font-size: 1.5em;\r\n  background-color: whitesmoke;\r\n  box-shadow: 0 0 3px grey;\r\n\r\n  transition-property: right;\r\n  transition-duration: 0.5s;\r\n  -webkit-transition-duration: 0.5s;\r\n  -moz-transition-duration: 0.5s;\r\n  -o-transition-duration: 0.5s;\r\n  transition-timing-function: ease-in-out;\r\n}\r\n.toggle-nav {\r\n  visibility: hidden;\r\n  overflow: hidden;\r\n  top: 0;\r\n  padding: 3em 1em 0 0;\r\n  right: -100%;\r\n  padding-right: 1em;\r\n  font-size: 1.5em;\r\n  height: 100%;\r\n  width: 45%;\r\n  background-color: whitesmoke;\r\n  position: fixed;\r\n\r\n  transition-property: visibility, right;\r\n  transition-duration: 0.5s;\r\n  -webkit-transition-duration: 0.5s;\r\n  -moz-transition-duration: 0.5s;\r\n  -o-transition-duration: 0.5s;\r\n  transition-timing-function: ease-in-out;\r\n}\r\n\r\n.hideDesktop {\r\n  display: none;\r\n}\r\n\r\n.mobileNav {\r\n  display: flex;\r\n  justify-content: space-between;\r\n}\r\n\r\n.mobileNav h1 {\r\n  margin-left: 15px;\r\n}\r\n\r\na {\r\n  color: black;\r\n  text-decoration: none;\r\n}\r\n\r\n.nav ul {\r\n  list-style-type: none;\r\n  text-transform: uppercase;\r\n  padding: 0px;\r\n  line-height: 2em;\r\n  display: flex;\r\n  flex-direction: column;\r\n  text-align: right;\r\n  font-family: sans-serif;\r\n}\r\n\r\n.nav a, .nav div {\r\n  font-family: 'Work Sans', sans-serif;\r\n  font-weight: 800;\r\n  letter-spacing: 2px;\r\n}\r\n\r\nh1, h2, h3, h4, h5, h6 {\r\n  font-family: 'Lato', sans-serif;\r\n  letter-spacing: 1px;\r\n}\r\n\r\n/* all items container */\r\n.all-items-title {\r\n  display: flex;\r\n  justify-content: center;\r\n  text-transform: uppercase;\r\n}\r\n.all-items-display {\r\n  display: grid;\r\n  grid-template-columns: 1fr 1fr;\r\n  margin: auto;\r\n  width: 90vw;\r\n}\r\n/* individual item */\r\n.one-item {\r\n  font-family: 'sans-serif';\r\n  color: black;\r\n  padding: 0;\r\n  margin: 10px;\r\n  height: 70vw;\r\n  width: 40vw;\r\n  z-index: 1;\r\n}\r\n.one-item-image {\r\n  height: 80%;\r\n  width: 100%;\r\n  background: lightgrey;\r\n}\r\n.one-item-image > img {\r\n  width: 100%;\r\n  height: 100%;\r\n  object-fit: cover;\r\n  overflow: hidden;\r\n}\r\n.one-item-text {\r\n  padding: 0;\r\n  margin: 0;\r\n  margin-top: 10px;\r\n  font-family: 'Helvetica';\r\n}\r\n.one-item-text > h1 {\r\n  padding: 0;\r\n  margin: 0;\r\n  font-size: 20px;\r\n  width: 100%;\r\n  overflow: visible;\r\n  text-transform: capitalize;\r\n  font-weight: lighter;\r\n}\r\n.one-item-text > p {\r\n  padding-top: 5px;\r\n  font-size: 70%;\r\n  font-weight: lighter;\r\n  border-top: black solid 1px;\r\n  width: 33%;\r\n}\r\n\r\n.popup {\r\n  z-index: 1000;\r\n  width: 400px;\r\n  box-shadow: rgba(128, 128, 128, 0.479) 4px 4px 4px 4px 16px;\r\n  text-transform: none;\r\n}\r\n.popup-form-container {\r\n  background-color: white;\r\n  display: flex;\r\n}\r\n.detail-container {\r\n  display: grid;\r\n  grid-column-gap: 50px;\r\n  width: 100vw;\r\n  margin-top: 5em;\r\n}\r\n\r\n.detail-description {\r\n  display: grid;\r\n  grid-template-rows: 5em 2em 2em 1fr 3em;\r\n  padding: 2em;\r\n  height: 40vh;\r\n}\r\n.detail-image {\r\n  width: 90vw;\r\n  height: 70vh;\r\n  margin: auto;\r\n  display: flex;\r\n  justify-content: center;\r\n}\r\n\r\n@media screen and (min-width: 650px) {\r\n  .all-items-display {\r\n    display: grid;\r\n    grid-template-columns: 1fr 1fr 1fr;\r\n    margin: auto;\r\n    width: 90vw;\r\n  }\r\n  .one-item-text > h1 {\r\n    font-size: 25px;\r\n  }\r\n  .one-item {\r\n    height: 430px;\r\n    width: 230px;\r\n  }\r\n}\r\n@media screen and (max-width: 968px) {\r\n  .profileMobile {\r\n    position: relative;\r\n    right: 10px;\r\n  }\r\n  .profileAlign {\r\n    align-items: center;\r\n    justify-content: flex-end;\r\n  }\r\n}\r\n\r\n/* CSS applies to 968px and above */\r\n@media screen and (min-width: 968px) {\r\n  .hideDesktop {\r\n    display: block;\r\n  }\r\n  .all-items-display {\r\n    padding: 0 5%;\r\n    display: grid;\r\n    grid-template-columns: 1fr 1fr 1fr 1fr;\r\n    justify-content: center;\r\n    width: 90vw;\r\n  }\r\n  .one-item-text > h1 {\r\n    font-size: 25px;\r\n  }\r\n  .one-item {\r\n    height: 430px;\r\n    width: 230px;\r\n  }\r\n  /* navigation */\r\n  .toggle-nav {\r\n    display: block;\r\n  }\r\n  .hideMobile {\r\n    display: none;\r\n  }\r\n  #navItems {\r\n    width: 100%;\r\n  }\r\n  .nav {\r\n    display: flex;\r\n    height: 4em;\r\n    border-bottom: 1px solid black;\r\n    margin-bottom: 0.5em;\r\n    box-shadow: 0px 0px 2px grey;\r\n    background-color: white;\r\n  }\r\n  .nav ul {\r\n    display: flex;\r\n    flex-direction: row;\r\n    list-style-type: none;\r\n    text-transform: uppercase;\r\n    justify-content: space-between;\r\n  }\r\n\r\n  .nav ul li {\r\n    margin: 0 1em 0 1em;\r\n  }\r\n  .flex {\r\n    display: flex;\r\n  }\r\n  .profileAlign {\r\n    margin-right: 1em;\r\n  }\r\n\r\n  /* end navigation */\r\n\r\n  /* dropdown */\r\n  .dropdown-container {\r\n    position: relative;\r\n  }\r\n\r\n  .dropdown-content {\r\n    display: none;\r\n    position: absolute;\r\n    right: 0;\r\n    min-width: max-content;\r\n    box-shadow: rgba(128, 128, 128, 0.479) 4px 4px 16px;\r\n    background-color: white;\r\n    padding: 1em;\r\n    z-index: 99;\r\n  }\r\n\r\n  .dropdown-container:hover .dropdown-content {\r\n    display: block;\r\n  }\r\n  .dropdown-button {\r\n    display: flex;\r\n    align-items: center;\r\n  }\r\n  .dropdown-button:after {\r\n    background: url('/../uploads/arrow.png') no-repeat;\r\n    background-size: cover;\r\n    content: '';\r\n    display: inline-block;\r\n    width: 0.6em;\r\n    height: 0.6em;\r\n    margin-left: 5px;\r\n    transform: rotate(90deg);\r\n  }\r\n  .dropdown-button:hover {\r\n    color: purple;\r\n    cursor: pointer;\r\n  }\r\n  /* end of dropdown */\r\n  .detail-container {\r\n    grid-template-columns: 1fr 30%;\r\n    width: 90vw;\r\n    margin: 2em;\r\n    margin-top: 5em;\r\n  }\r\n  .detail-description {\r\n    width: 90%;\r\n    height: 80vh;\r\n    padding: 0;\r\n    margin: 1em;\r\n  }\r\n  .detail-image {\r\n    justify-content: center;\r\n    display: flex;\r\n    align-items: center;\r\n    margin: auto;\r\n    width: 100%;\r\n    height: 90vh;\r\n  }\r\n}\r\n", ""]);
+=======
+exports.push([module.i, "body {\n  background-color: white;\n  margin: 0;\n}\n\n.hamburger:focus {\n  outline: none;\n}\n\n.nav {\n  background-color: white;\n}\n.flexMobile {\n  display: flex;\n}\n\n.toggle-nav-on {\n  display: block;\n  position: fixed;\n  width: 45%;\n  height: 100%;\n  right: 0;\n  top: 0;\n  padding: 3em 1em 0 0;\n  font-size: 1.5em;\n  background-color: whitesmoke;\n  box-shadow: 0 0 3px grey;\n\n  transition-property: right;\n  transition-duration: 0.5s;\n  -webkit-transition-duration: 0.5s;\n  -moz-transition-duration: 0.5s;\n  -o-transition-duration: 0.5s;\n  transition-timing-function: ease-in-out;\n}\n.toggle-nav {\n  visibility: hidden;\n  overflow: hidden;\n  top: 0;\n  padding: 3em 1em 0 0;\n  right: -100%;\n  padding-right: 1em;\n  font-size: 1.5em;\n  height: 100%;\n  width: 45%;\n  background-color: whitesmoke;\n  position: fixed;\n\n  transition-property: visibility, right;\n  transition-duration: 0.5s;\n  -webkit-transition-duration: 0.5s;\n  -moz-transition-duration: 0.5s;\n  -o-transition-duration: 0.5s;\n  transition-timing-function: ease-in-out;\n}\n.display-if-not-mobile {\n  display: none;\n}\n\n.hideDesktop {\n  display: none;\n  text-decoration: underline;\n  font-weight: bold;\n}\n\n.mobileNav {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n\n.mobileNav h1 {\n  margin-left: 15px;\n}\n\na {\n  color: black;\n  text-decoration: none;\n}\n\n.nav ul {\n  list-style-type: none;\n  text-transform: uppercase;\n  padding: 0px;\n  line-height: 2em;\n  display: flex;\n  flex-direction: column;\n  text-align: right;\n  font-family: sans-serif;\n}\n\n.nav a, .nav div {\n  font-family: 'Work Sans', sans-serif;\n  font-weight: 800;\n  letter-spacing: 2px;\n}\n\nh1, h2, h3, h4, h5, h6 {\n  font-family: 'Lato', sans-serif;\n  letter-spacing: 1px;\n}\n\n/* all items container */\n.all-items-title {\n  display: flex;\n  justify-content: center;\n  text-transform: uppercase;\n}\n.all-items-display {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  margin: auto;\n  width: 90vw;\n}\n/* individual item */\n.one-item {\n  font-family: 'sans-serif';\n  color: black;\n  padding: 0;\n  margin: 10px;\n  height: 70vw;\n  width: 40vw;\n  z-index: 1;\n}\n.one-item-image {\n  height: 80%;\n  width: 100%;\n  background: lightgrey;\n}\n.one-item-image > img {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  overflow: hidden;\n}\n.one-item-text {\n  padding: 0;\n  margin: 0;\n  margin-top: 10px;\n  font-family: 'Helvetica';\n}\n.one-item-text > h1 {\n  padding: 0;\n  margin: 0;\n  font-size: 20px;\n  width: 100%;\n  overflow: visible;\n  text-transform: capitalize;\n  font-weight: lighter;\n}\n.one-item-text > p {\n  padding-top: 5px;\n  font-size: 70%;\n  font-weight: lighter;\n  border-top: black solid 1px;\n  width: 33%;\n}\n\n.popup {\n  z-index: 1000;\n  width: 400px;\n  box-shadow: rgba(128, 128, 128, 0.479) 4px 4px 4px 4px 16px;\n  text-transform: none;\n}\n.popup-form-container {\n  background-color: white;\n  display: flex;\n}\n.detail-container {\n  display: grid;\n  grid-column-gap: 50px;\n  width: 100vw;\n  margin-top: 5em;\n}\n\n.detail-description {\n  display: grid;\n  grid-template-rows: 5em 2em 2em 1fr 3em;\n  padding: 2em;\n  height: 40vh;\n}\n.detail-image {\n  width: 90vw;\n  height: 70vh;\n  margin: auto;\n  display: flex;\n  justify-content: center;\n}\n\n@media screen and (min-width: 650px) {\n  .all-items-display {\n    display: grid;\n    grid-template-columns: 1fr 1fr 1fr;\n    margin: auto;\n    width: 90vw;\n  }\n  .one-item-text > h1 {\n    font-size: 25px;\n  }\n  .one-item {\n    height: 430px;\n    width: 230px;\n  }\n}\n@media screen and (max-width: 968px) {\n  .profileMobile {\n    position: relative;\n    right: 10px;\n  }\n  .profileAlign {\n    align-items: center;\n    justify-content: flex-end;\n  }\n}\n\n/* CSS applies to 968px and above */\n@media screen and (min-width: 968px) {\n  .hideDesktop {\n    display: block;\n  }\n  .all-items-display {\n    padding: 0 5%;\n    display: grid;\n    grid-template-columns: 1fr 1fr 1fr 1fr;\n    justify-content: center;\n    width: 90vw;\n  }\n  .one-item-text > h1 {\n    font-size: 25px;\n  }\n  .one-item {\n    height: 430px;\n    width: 230px;\n  }\n  /* navigation */\n  .toggle-nav {\n    display: block;\n  }\n  .hideMobile {\n    display: none;\n  }\n  #navItems {\n    width: 100%;\n  }\n  .nav {\n    display: flex;\n    height: 4em;\n    border-bottom: 1px solid black;\n    margin-bottom: 0.5em;\n    box-shadow: 0px 0px 2px grey;\n    background-color: white;\n  }\n  .nav ul {\n    display: flex;\n    flex-direction: row;\n    list-style-type: none;\n    text-transform: uppercase;\n    justify-content: space-between;\n  }\n\n  .nav ul li {\n    margin: 0 1em 0 1em;\n  }\n  .flex {\n    display: flex;\n  }\n\n  .rightNav {\n    margin-right: 1em;\n  }\n\n  /* end navigation */\n\n  .detail-container {\n    grid-template-columns: 1fr 30%;\n    width: 90vw;\n    margin: 2em;\n    margin-top: 5em;\n  }\n  .detail-description {\n    width: 90%;\n    height: 80vh;\n    padding: 0;\n    margin: 1em;\n  }\n  .detail-image {\n    justify-content: center;\n    display: flex;\n    align-items: center;\n    margin: auto;\n    width: 100%;\n    height: 90vh;\n  }\n  .display-if-not-mobile {\n    display: block;\n  }\n}\n", ""]);
+>>>>>>> 5685fdf8631cfcb434d36dfb428a334f23ed30f3
 
 
 
@@ -42107,17 +42111,71 @@ class Cart extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 
 
+const Container = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
+  display: block;
+  @media screen and (min-width: 968px) {
+    position: relative;
+  }
+`;
+const Button = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  &:hover {
+    color: purple;
+    cursor: pointer;
+  }
+`;
+const Content = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
+  display: ${props => props.display};
+  font-size: 0.7em;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 1em;
+  div {
+    text-align: right;
+    width: 100%;
+  }
+  @media screen and (min-width: 968px) {
+    display: none;
+    position: absolute;
+    right: 0;
+    min-width: max-content;
+    box-shadow: rgba(128, 128, 128, 0.479) 4px 4px 16px;
+    background-color: white;
+    padding: 1em;
+    z-index: 99;
+    ${Container}:hover & {
+      display: block;
+    }
+  }
+`;
+const Img = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].img`
+  display: inline-block;
+  width: 0.5em;
+  height: 0.5em;
+  margin-left: 0.1em;
+  transition: 0.1s;
+  transform: ${props => {
+  return props.display === 'none' ? 'rotate(90deg)' : 'rotate(-90deg)';
+}};
+  @media screen and (min-width: 968px) {
+    transform: rotate(90deg);
+  }
+`;
 
 let Dropdown = props => {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "dropdown-container"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "dropdown-button"
-  }, props.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "dropdown-content hideDesktop"
+  const [display, setDisplay] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('none');
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Container, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Button, {
+    onClick: () => setDisplay(display === 'none' ? 'block' : 'none')
+  }, props.name, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Img, {
+    display: display,
+    src: "/../uploads/arrow.png"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Content, {
+    display: display
   }, props.children));
 };
 
@@ -42965,7 +43023,7 @@ class Navigation extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         className: "hideMobile mobileNav"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
         to: "/"
-      }, "AliBay")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      }, "AliBay")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SearchBar_jsx__WEBPACK_IMPORTED_MODULE_4__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: this.state.hamburgerClass,
         type: "button",
         onClick: this.handleToggle
@@ -42985,16 +43043,18 @@ class Navigation extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       }, "Men")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
         to: "/women"
       }, "Women")), this.props.user ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Dropdown_jsx__WEBPACK_IMPORTED_MODULE_6__["default"], {
-        name: "your products"
+        name: "Seller"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(DropContent, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
         to: "/add-item"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Add new item")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
         to: "/seller-items"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "All my items"))))) : '', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SearchBar_jsx__WEBPACK_IMPORTED_MODULE_4__["default"], null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "flex"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "All my items"))))) : '', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+        className: "display-if-not-mobile"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SearchBar_jsx__WEBPACK_IMPORTED_MODULE_4__["default"], null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "flex rightNav"
       }, this.props.user ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Dropdown_jsx__WEBPACK_IMPORTED_MODULE_6__["default"], {
         name: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-          className: "flexMobile profileAlign"
+          className: "flexMobile  profileAlign"
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
           className: "profileMobile",
           src: "../uploads/profile.png",
@@ -43005,15 +43065,11 @@ class Navigation extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         }, "Profile"))
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(DropContent, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "hideDesktop"
-      }, "Welcome, ", this.props.user), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-        style: {
-          width: "100%",
-          borderTop: "1px solid black"
-        }
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(DropContent, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+      }, "Welcome back ", this.props.user), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
         to: "/cart"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "View Cart"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(DropContent, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        onClick: this.logoutHandler
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "View Cart")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+        onClick: this.logoutHandler,
+        to: "/"
       }, "Logout"))) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "flex"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
@@ -43261,11 +43317,63 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
 
 
+
+const Container = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div`
+  display: flex;
+  align-items: center;
+  text-align: center;
+  height: 1.5em;
+  border-radius: 1em;
+  padding: 0.25em;
+  border: ${props => props.toggle ? '1px solid lightgrey' : 'none'};
+  @media screen and (max-width: 968px) {
+    border: 1px solid lightgrey;
+  }
+`;
+const Form = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].form`
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  input {
+    width: ${props => props.toggle ? '200px' : '0'};
+    transition: 1s;
+    margin: 0;
+    padding: 0;
+    padding-left: 1em;
+    height: 2em;
+    border: none;
+    &:focus {
+      outline: 0;
+    }
+    @media screen and (max-width: 968px) {
+      width: 100%;
+    }
+  }
+  button {
+    margin: 0;
+    padding: 0;
+    height: 2em;
+    border: none;
+    &:focus {
+      outline: 0;
+    }
+  }
+`;
+const SearchIcon = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].img`
+  max-height: 90%;
+  width: auto;
+
+  &:hover {
+    cursor: pointer;
+  }
+`;
 
 class SearchBar extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   constructor() {
@@ -43286,21 +43394,38 @@ class SearchBar extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         type: 'filter',
         content: lowercased
       });
+      this.setState({
+        searchInput: ''
+      });
+    });
+
+    _defineProperty(this, "displaySearch", () => {
+      this.setState({
+        toggle: !this.state.toggle
+      });
     });
 
     _defineProperty(this, "render", () => {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
-        onSubmit: this.handleSubmit
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Container, {
+        toggle: this.state.toggle
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Form, {
+        onSubmit: this.handleSubmit,
+        toggle: this.state.toggle
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
+        value: this.state.searchInput,
         onChange: this.handleSearchInput
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         type: "submit"
-      })));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SearchIcon, {
+        src: "/../uploads/search.png",
+        onClick: this.displaySearch
+      }))));
     });
 
     this.state = {
-      searchInput: ''
+      searchInput: '',
+      toggle: false
     };
   }
 
