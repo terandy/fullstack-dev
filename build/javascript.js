@@ -43267,6 +43267,7 @@ const Form = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].form`
     padding-left: 1em;
     height: 2em;
     border: none;
+    background-color: transparent;
     &:focus {
       outline: 0;
     }
@@ -43279,6 +43280,7 @@ const Form = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].form`
     padding: 0;
     height: 2em;
     border: none;
+    background-color: transparent;
     &:focus {
       outline: 0;
     }
@@ -43287,6 +43289,7 @@ const Form = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].form`
 const SearchIcon = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].img`
   max-height: 90%;
   width: auto;
+  background-color: transparent;
 
   &:hover {
     cursor: pointer;

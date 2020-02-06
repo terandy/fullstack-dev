@@ -27,6 +27,7 @@ const Form = styled.form`
     padding-left: 1em;
     height: 2em;
     border: none;
+    background-color: transparent;
     &:focus {
       outline: 0;
     }
@@ -39,6 +40,7 @@ const Form = styled.form`
     padding: 0;
     height: 2em;
     border: none;
+    background-color: transparent;
     &:focus {
       outline: 0;
     }
@@ -47,6 +49,7 @@ const Form = styled.form`
 const SearchIcon = styled.img`
   max-height: 90%;
   width: auto;
+  background-color: transparent;
 
   &:hover {
     cursor: pointer;

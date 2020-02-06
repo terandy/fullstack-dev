@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    <link href=\"https://fonts.googleapis.com/css?family=Lato|Work+Sans:200&display=swap\" rel=\"stylesheet\">\n    <title>Alibay</title>\n  </head>\n\n  <body>\n    <div id=\"root\"></div>\n  </body>\n</html>\n";
+module.exports = "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    <link\n      href=\"https://fonts.googleapis.com/css?family=Lato|Work+Sans:200&display=swap\"\n      rel=\"stylesheet\"\n    />\n    <script src=\"https://js.stripe.com/v3/\"></script>\n    <title>Alibay</title>\n  </head>\n\n  <body>\n    <div id=\"root\"></div>\n  </body>\n</html>\n";
 
 /***/ })
 
