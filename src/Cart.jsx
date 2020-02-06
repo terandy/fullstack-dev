@@ -4,11 +4,25 @@ import Items from './Items.jsx';
 import OneItem from './OneItem.jsx';
 import styled from 'styled-components';
 
+const Quantity = styled.div`
+display:flex;
+align-items:center;
+`
+
+const QuantityButton = styled.button`
+background-color: #007bff;
+border-radius: 3px;
+border:0;
+color:white;
+font-size:1.5em;
+`
+
 const CartContainer = styled.div`
 padding: 1em;
 width: 400px;
 background-color: #fafafa;
 box-shadow: 0 0 2px grey;
+margin-bottom:1em;
 
 @media screen and (min-width: 968px) {
 width:750px
@@ -52,7 +66,7 @@ class Cart extends Component {
         super()
         this.state = {
             cart: [],
-            cartTotal: '',
+            cartTotal: null,
             totalPrice: '',
         }
     }
@@ -62,29 +76,68 @@ class Cart extends Component {
         let parsed = JSON.parse(responseText)
         if (parsed.success) {
             console.log("parsed: ",parsed)
+            parsed.cart.forEach(item=> {
+                let price = item.price * item.quantity
+                this.setState({cartTotal: this.state.cartTotal + price})
+            })
             this.setState({cart: parsed.cart})
             return
         }
         this.setState({cart: [{item: "Error" }] })
     }
-    removeCartItem = async itemId => {
+    comp
+    
+    removeCartItem = async item => {
         let data = new FormData()
-        data.append("itemId", itemId)
+        data.append("itemId", item._id)
         let body = await fetch('/remove-cart-item', {method: 'POST', body: data})
         let response = await body.text()
         let parsed = JSON.parse(response)
         if (parsed.success) {
             console.log("parsed: ", parsed)
             alert("Item Removed")
+            this.setState({cartTotal: this.state.cartTotal - parseFloat(item.price * item.quantity)})
             this.setState({cart: parsed.cart})
             return
         }
         alert("Error")
     }
+    incrementCount = item => {
+            let newCart = this.state.cart.map(i => {
+                if (i._id === item._id) {
+                    i.quantity += 1;
+                    this.setState({cartTotal: this.state.cartTotal + parseFloat(i.price)})
+                    let data = new FormData()
+                    data.append('itemId', item._id)
+                    data.append('value', +1)
+                    fetch('/update-cart-quantity', {method: 'POST', body: data})
+                    return i
+                }else{
+                    return i
+                }
+            })
+            this.setState({cart: newCart })
+    }
+    decrementCount = item => {
+        if (item.quantity > 1) {
+            let newCart = this.state.cart.map(i => {
+                if (item._id === i._id) {
+                    i.quantity--
+                    this.setState({cartTotal: this.state.cartTotal - parseFloat(i.price)})
+                    let data = new FormData()
+                    data.append('itemId', item._id)
+                    data.append('value', -1)
+                    fetch('/update-cart-quantity', {method: 'POST', body: data})
+                    return i
+                }else return i
+            })
+            this.setState({cart: newCart })
+        }
+        }
     render = () => {
         console.log("rendering cart page with: ",this.state.cart)
         return (
-            <div style={{backgroundColor: 'whitesmoke', height: "100vh", overflow: "hidden"}}>
+            <div style={{backgroundColor: 'whitesmoke', height: "100%"}}>
             <div style={{ padding: '5em 0 0 0', display: "flex", justifyContent: "center" }}>
                 <CartContainer>
                     <Title>Your Cart</Title>
@@ -93,12 +146,17 @@ class Cart extends Component {
                         <ContentLeft src={item.imgPaths[0]}></ContentLeft>
                         <ContentRight>
                             <h3 style={{margin: 0}}>{item.item}</h3>
-                            <h5 style={{marginTop: "1em"}}>{item.price}</h5>
-                            <div>Qty: x</div>
-                            <RemoveButton onClick={()=> {this.removeCartItem(item._id)}}>&#10006;</RemoveButton>
+                            <h5 style={{marginTop: "1em"}}>${(item.price * item.quantity).toFixed(2)}</h5>
+                            <Quantity>
+                                <QuantityButton onClick={() => {this.decrementCount(item)}}>&#8722;</QuantityButton>
+                                &nbsp; Qty: {item.quantity} &nbsp; 
+                                <QuantityButton onClick={() => {this.incrementCount(item)}}>&#43;</QuantityButton>
+                            </Quantity>
+                            <RemoveButton onClick={()=> {this.removeCartItem(item)}}>&#10006;</RemoveButton>
                         </ContentRight>
                     </CartItem>)
                 })}
+                <h2>Total: {this.state.cartTotal ? this.state.cartTotal.toFixed(2) : 'Error'}</h2>
                 </CartContainer>
             </div>
             </div>
