@@ -1,5 +1,3 @@
-To start the server, run `nodemon server.js`
+To start the server, run `npm install` and `npm start`
 
-Modify the `server.js` file to add endpoints
-
-The frontend code goes in the `/src` directory
+View in browser: http://localhost:4000/
