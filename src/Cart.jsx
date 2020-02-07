@@ -156,7 +156,7 @@ class Cart extends Component {
                         </ContentRight>
                     </CartItem>)
                 })}
-                <h2>Total: {this.state.cartTotal ? this.state.cartTotal.toFixed(2) : 'Error'}</h2>
+                <h2>Total: {this.state.cartTotal ? this.state.cartTotal.toFixed(2) : ''}</h2>
                 </CartContainer>
             </div>
             </div>

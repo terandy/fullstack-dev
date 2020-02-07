@@ -964,11 +964,7 @@ exports.push([module.i, "/*!\r\n * Hamburgers\r\n * @description Tasty CSS-anima
 
 exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-<<<<<<< HEAD
-exports.push([module.i, "body {\r\n  background-color: white;\r\n  margin: 0;\r\n}\r\n\r\n.hamburger:focus {\r\n  outline: none;\r\n}\r\n\r\n.nav {\r\n  background-color: white;\r\n}\r\n.flexMobile {\r\n  display: flex;\r\n}\r\n\r\n.toggle-nav-on {\r\n  display: block;\r\n  position: fixed;\r\n  width: 45%;\r\n  height: 100%;\r\n  right: 0;\r\n  top: 0;\r\n  padding: 3em 1em 0 0;\r\n  font-size: 1.5em;\r\n  background-color: whitesmoke;\r\n  box-shadow: 0 0 3px grey;\r\n\r\n  transition-property: right;\r\n  transition-duration: 0.5s;\r\n  -webkit-transition-duration: 0.5s;\r\n  -moz-transition-duration: 0.5s;\r\n  -o-transition-duration: 0.5s;\r\n  transition-timing-function: ease-in-out;\r\n}\r\n.toggle-nav {\r\n  visibility: hidden;\r\n  overflow: hidden;\r\n  top: 0;\r\n  padding: 3em 1em 0 0;\r\n  right: -100%;\r\n  padding-right: 1em;\r\n  font-size: 1.5em;\r\n  height: 100%;\r\n  width: 45%;\r\n  background-color: whitesmoke;\r\n  position: fixed;\r\n\r\n  transition-property: visibility, right;\r\n  transition-duration: 0.5s;\r\n  -webkit-transition-duration: 0.5s;\r\n  -moz-transition-duration: 0.5s;\r\n  -o-transition-duration: 0.5s;\r\n  transition-timing-function: ease-in-out;\r\n}\r\n\r\n.hideDesktop {\r\n  display: none;\r\n}\r\n\r\n.mobileNav {\r\n  display: flex;\r\n  justify-content: space-between;\r\n}\r\n\r\n.mobileNav h1 {\r\n  margin-left: 15px;\r\n}\r\n\r\na {\r\n  color: black;\r\n  text-decoration: none;\r\n}\r\n\r\n.nav ul {\r\n  list-style-type: none;\r\n  text-transform: uppercase;\r\n  padding: 0px;\r\n  line-height: 2em;\r\n  display: flex;\r\n  flex-direction: column;\r\n  text-align: right;\r\n  font-family: sans-serif;\r\n}\r\n\r\n.nav a, .nav div {\r\n  font-family: 'Work Sans', sans-serif;\r\n  font-weight: 800;\r\n  letter-spacing: 2px;\r\n}\r\n\r\nh1, h2, h3, h4, h5, h6 {\r\n  font-family: 'Lato', sans-serif;\r\n  letter-spacing: 1px;\r\n}\r\n\r\n/* all items container */\r\n.all-items-title {\r\n  display: flex;\r\n  justify-content: center;\r\n  text-transform: uppercase;\r\n}\r\n.all-items-display {\r\n  display: grid;\r\n  grid-template-columns: 1fr 1fr;\r\n  margin: auto;\r\n  width: 90vw;\r\n}\r\n/* individual item */\r\n.one-item {\r\n  font-family: 'sans-serif';\r\n  color: black;\r\n  padding: 0;\r\n  margin: 10px;\r\n  height: 70vw;\r\n  width: 40vw;\r\n  z-index: 1;\r\n}\r\n.one-item-image {\r\n  height: 80%;\r\n  width: 100%;\r\n  background: lightgrey;\r\n}\r\n.one-item-image > img {\r\n  width: 100%;\r\n  height: 100%;\r\n  object-fit: cover;\r\n  overflow: hidden;\r\n}\r\n.one-item-text {\r\n  padding: 0;\r\n  margin: 0;\r\n  margin-top: 10px;\r\n  font-family: 'Helvetica';\r\n}\r\n.one-item-text > h1 {\r\n  padding: 0;\r\n  margin: 0;\r\n  font-size: 20px;\r\n  width: 100%;\r\n  overflow: visible;\r\n  text-transform: capitalize;\r\n  font-weight: lighter;\r\n}\r\n.one-item-text > p {\r\n  padding-top: 5px;\r\n  font-size: 70%;\r\n  font-weight: lighter;\r\n  border-top: black solid 1px;\r\n  width: 33%;\r\n}\r\n\r\n.popup {\r\n  z-index: 1000;\r\n  width: 400px;\r\n  box-shadow: rgba(128, 128, 128, 0.479) 4px 4px 4px 4px 16px;\r\n  text-transform: none;\r\n}\r\n.popup-form-container {\r\n  background-color: white;\r\n  display: flex;\r\n}\r\n.detail-container {\r\n  display: grid;\r\n  grid-column-gap: 50px;\r\n  width: 100vw;\r\n  margin-top: 5em;\r\n}\r\n\r\n.detail-description {\r\n  display: grid;\r\n  grid-template-rows: 5em 2em 2em 1fr 3em;\r\n  padding: 2em;\r\n  height: 40vh;\r\n}\r\n.detail-image {\r\n  width: 90vw;\r\n  height: 70vh;\r\n  margin: auto;\r\n  display: flex;\r\n  justify-content: center;\r\n}\r\n\r\n@media screen and (min-width: 650px) {\r\n  .all-items-display {\r\n    display: grid;\r\n    grid-template-columns: 1fr 1fr 1fr;\r\n    margin: auto;\r\n    width: 90vw;\r\n  }\r\n  .one-item-text > h1 {\r\n    font-size: 25px;\r\n  }\r\n  .one-item {\r\n    height: 430px;\r\n    width: 230px;\r\n  }\r\n}\r\n@media screen and (max-width: 968px) {\r\n  .profileMobile {\r\n    position: relative;\r\n    right: 10px;\r\n  }\r\n  .profileAlign {\r\n    align-items: center;\r\n    justify-content: flex-end;\r\n  }\r\n}\r\n\r\n/* CSS applies to 968px and above */\r\n@media screen and (min-width: 968px) {\r\n  .hideDesktop {\r\n    display: block;\r\n  }\r\n  .all-items-display {\r\n    padding: 0 5%;\r\n    display: grid;\r\n    grid-template-columns: 1fr 1fr 1fr 1fr;\r\n    justify-content: center;\r\n    width: 90vw;\r\n  }\r\n  .one-item-text > h1 {\r\n    font-size: 25px;\r\n  }\r\n  .one-item {\r\n    height: 430px;\r\n    width: 230px;\r\n  }\r\n  /* navigation */\r\n  .toggle-nav {\r\n    display: block;\r\n  }\r\n  .hideMobile {\r\n    display: none;\r\n  }\r\n  #navItems {\r\n    width: 100%;\r\n  }\r\n  .nav {\r\n    display: flex;\r\n    height: 4em;\r\n    border-bottom: 1px solid black;\r\n    margin-bottom: 0.5em;\r\n    box-shadow: 0px 0px 2px grey;\r\n    background-color: white;\r\n  }\r\n  .nav ul {\r\n    display: flex;\r\n    flex-direction: row;\r\n    list-style-type: none;\r\n    text-transform: uppercase;\r\n    justify-content: space-between;\r\n  }\r\n\r\n  .nav ul li {\r\n    margin: 0 1em 0 1em;\r\n  }\r\n  .flex {\r\n    display: flex;\r\n  }\r\n  .profileAlign {\r\n    margin-right: 1em;\r\n  }\r\n\r\n  /* end navigation */\r\n\r\n  /* dropdown */\r\n  .dropdown-container {\r\n    position: relative;\r\n  }\r\n\r\n  .dropdown-content {\r\n    display: none;\r\n    position: absolute;\r\n    right: 0;\r\n    min-width: max-content;\r\n    box-shadow: rgba(128, 128, 128, 0.479) 4px 4px 16px;\r\n    background-color: white;\r\n    padding: 1em;\r\n    z-index: 99;\r\n  }\r\n\r\n  .dropdown-container:hover .dropdown-content {\r\n    display: block;\r\n  }\r\n  .dropdown-button {\r\n    display: flex;\r\n    align-items: center;\r\n  }\r\n  .dropdown-button:after {\r\n    background: url('/../uploads/arrow.png') no-repeat;\r\n    background-size: cover;\r\n    content: '';\r\n    display: inline-block;\r\n    width: 0.6em;\r\n    height: 0.6em;\r\n    margin-left: 5px;\r\n    transform: rotate(90deg);\r\n  }\r\n  .dropdown-button:hover {\r\n    color: purple;\r\n    cursor: pointer;\r\n  }\r\n  /* end of dropdown */\r\n  .detail-container {\r\n    grid-template-columns: 1fr 30%;\r\n    width: 90vw;\r\n    margin: 2em;\r\n    margin-top: 5em;\r\n  }\r\n  .detail-description {\r\n    width: 90%;\r\n    height: 80vh;\r\n    padding: 0;\r\n    margin: 1em;\r\n  }\r\n  .detail-image {\r\n    justify-content: center;\r\n    display: flex;\r\n    align-items: center;\r\n    margin: auto;\r\n    width: 100%;\r\n    height: 90vh;\r\n  }\r\n}\r\n", ""]);
-=======
-exports.push([module.i, "body {\n  background-color: white;\n  margin: 0;\n}\n\n.hamburger:focus {\n  outline: none;\n}\n\n.nav {\n  background-color: white;\n}\n.flexMobile {\n  display: flex;\n}\n\n.toggle-nav-on {\n  display: block;\n  position: fixed;\n  width: 45%;\n  height: 100%;\n  right: 0;\n  top: 0;\n  padding: 3em 1em 0 0;\n  font-size: 1.5em;\n  background-color: whitesmoke;\n  box-shadow: 0 0 3px grey;\n\n  transition-property: right;\n  transition-duration: 0.5s;\n  -webkit-transition-duration: 0.5s;\n  -moz-transition-duration: 0.5s;\n  -o-transition-duration: 0.5s;\n  transition-timing-function: ease-in-out;\n}\n.toggle-nav {\n  visibility: hidden;\n  overflow: hidden;\n  top: 0;\n  padding: 3em 1em 0 0;\n  right: -100%;\n  padding-right: 1em;\n  font-size: 1.5em;\n  height: 100%;\n  width: 45%;\n  background-color: whitesmoke;\n  position: fixed;\n\n  transition-property: visibility, right;\n  transition-duration: 0.5s;\n  -webkit-transition-duration: 0.5s;\n  -moz-transition-duration: 0.5s;\n  -o-transition-duration: 0.5s;\n  transition-timing-function: ease-in-out;\n}\n.display-if-not-mobile {\n  display: none;\n}\n\n.hideDesktop {\n  display: none;\n  text-decoration: underline;\n  font-weight: bold;\n}\n\n.mobileNav {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n\n.mobileNav h1 {\n  margin-left: 15px;\n}\n\na {\n  color: black;\n  text-decoration: none;\n}\n\n.nav ul {\n  list-style-type: none;\n  text-transform: uppercase;\n  padding: 0px;\n  line-height: 2em;\n  display: flex;\n  flex-direction: column;\n  text-align: right;\n  font-family: sans-serif;\n}\n\n.nav a, .nav div {\n  font-family: 'Work Sans', sans-serif;\n  font-weight: 800;\n  letter-spacing: 2px;\n}\n\nh1, h2, h3, h4, h5, h6 {\n  font-family: 'Lato', sans-serif;\n  letter-spacing: 1px;\n}\n\n/* all items container */\n.all-items-title {\n  display: flex;\n  justify-content: center;\n  text-transform: uppercase;\n}\n.all-items-display {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  margin: auto;\n  width: 90vw;\n}\n/* individual item */\n.one-item {\n  font-family: 'sans-serif';\n  color: black;\n  padding: 0;\n  margin: 10px;\n  height: 70vw;\n  width: 40vw;\n  z-index: 1;\n}\n.one-item-image {\n  height: 80%;\n  width: 100%;\n  background: lightgrey;\n}\n.one-item-image > img {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  overflow: hidden;\n}\n.one-item-text {\n  padding: 0;\n  margin: 0;\n  margin-top: 10px;\n  font-family: 'Helvetica';\n}\n.one-item-text > h1 {\n  padding: 0;\n  margin: 0;\n  font-size: 20px;\n  width: 100%;\n  overflow: visible;\n  text-transform: capitalize;\n  font-weight: lighter;\n}\n.one-item-text > p {\n  padding-top: 5px;\n  font-size: 70%;\n  font-weight: lighter;\n  border-top: black solid 1px;\n  width: 33%;\n}\n\n.popup {\n  z-index: 1000;\n  width: 400px;\n  box-shadow: rgba(128, 128, 128, 0.479) 4px 4px 4px 4px 16px;\n  text-transform: none;\n}\n.popup-form-container {\n  background-color: white;\n  display: flex;\n}\n.detail-container {\n  display: grid;\n  grid-column-gap: 50px;\n  width: 100vw;\n  margin-top: 5em;\n}\n\n.detail-description {\n  display: grid;\n  grid-template-rows: 5em 2em 2em 1fr 3em;\n  padding: 2em;\n  height: 40vh;\n}\n.detail-image {\n  width: 90vw;\n  height: 70vh;\n  margin: auto;\n  display: flex;\n  justify-content: center;\n}\n\n@media screen and (min-width: 650px) {\n  .all-items-display {\n    display: grid;\n    grid-template-columns: 1fr 1fr 1fr;\n    margin: auto;\n    width: 90vw;\n  }\n  .one-item-text > h1 {\n    font-size: 25px;\n  }\n  .one-item {\n    height: 430px;\n    width: 230px;\n  }\n}\n@media screen and (max-width: 968px) {\n  .profileMobile {\n    position: relative;\n    right: 10px;\n  }\n  .profileAlign {\n    align-items: center;\n    justify-content: flex-end;\n  }\n}\n\n/* CSS applies to 968px and above */\n@media screen and (min-width: 968px) {\n  .hideDesktop {\n    display: block;\n  }\n  .all-items-display {\n    padding: 0 5%;\n    display: grid;\n    grid-template-columns: 1fr 1fr 1fr 1fr;\n    justify-content: center;\n    width: 90vw;\n  }\n  .one-item-text > h1 {\n    font-size: 25px;\n  }\n  .one-item {\n    height: 430px;\n    width: 230px;\n  }\n  /* navigation */\n  .toggle-nav {\n    display: block;\n  }\n  .hideMobile {\n    display: none;\n  }\n  #navItems {\n    width: 100%;\n  }\n  .nav {\n    display: flex;\n    height: 4em;\n    border-bottom: 1px solid black;\n    margin-bottom: 0.5em;\n    box-shadow: 0px 0px 2px grey;\n    background-color: white;\n  }\n  .nav ul {\n    display: flex;\n    flex-direction: row;\n    list-style-type: none;\n    text-transform: uppercase;\n    justify-content: space-between;\n  }\n\n  .nav ul li {\n    margin: 0 1em 0 1em;\n  }\n  .flex {\n    display: flex;\n  }\n\n  .rightNav {\n    margin-right: 1em;\n  }\n\n  /* end navigation */\n\n  .detail-container {\n    grid-template-columns: 1fr 30%;\n    width: 90vw;\n    margin: 2em;\n    margin-top: 5em;\n  }\n  .detail-description {\n    width: 90%;\n    height: 80vh;\n    padding: 0;\n    margin: 1em;\n  }\n  .detail-image {\n    justify-content: center;\n    display: flex;\n    align-items: center;\n    margin: auto;\n    width: 100%;\n    height: 90vh;\n  }\n  .display-if-not-mobile {\n    display: block;\n  }\n}\n", ""]);
->>>>>>> 5685fdf8631cfcb434d36dfb428a334f23ed30f3
+exports.push([module.i, "body {\r\n  background-color: white;\r\n  margin: 0;\r\n}\r\n\r\n.hamburger:focus {\r\n  outline: none;\r\n}\r\n\r\n.nav {\r\n  background-color: white;\r\n}\r\n.flexMobile {\r\n  display: flex;\r\n}\r\n\r\n.toggle-nav-on {\r\n  display: block;\r\n  position: fixed;\r\n  width: 45%;\r\n  height: 100%;\r\n  right: 0;\r\n  top: 0;\r\n  padding: 3em 1em 0 0;\r\n  font-size: 1.5em;\r\n  background-color: whitesmoke;\r\n  box-shadow: 0 0 3px grey;\r\n\r\n  transition-property: right;\r\n  transition-duration: 0.5s;\r\n  -webkit-transition-duration: 0.5s;\r\n  -moz-transition-duration: 0.5s;\r\n  -o-transition-duration: 0.5s;\r\n  transition-timing-function: ease-in-out;\r\n}\r\n.toggle-nav {\r\n  visibility: hidden;\r\n  overflow: hidden;\r\n  top: 0;\r\n  padding: 3em 1em 0 0;\r\n  right: -100%;\r\n  padding-right: 1em;\r\n  font-size: 1.5em;\r\n  height: 100%;\r\n  width: 45%;\r\n  background-color: whitesmoke;\r\n  position: fixed;\r\n\r\n  transition-property: visibility, right;\r\n  transition-duration: 0.5s;\r\n  -webkit-transition-duration: 0.5s;\r\n  -moz-transition-duration: 0.5s;\r\n  -o-transition-duration: 0.5s;\r\n  transition-timing-function: ease-in-out;\r\n}\r\n.display-if-not-mobile {\r\n  display: none;\r\n}\r\n\r\n.hideDesktop {\r\n  display: none;\r\n  text-decoration: underline;\r\n  font-weight: bold;\r\n}\r\n\r\n.mobileNav {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: center;\r\n}\r\n\r\n.mobileNav h1 {\r\n  margin-left: 15px;\r\n}\r\n\r\na {\r\n  color: black;\r\n  text-decoration: none;\r\n}\r\n\r\n.nav ul {\r\n  list-style-type: none;\r\n  text-transform: uppercase;\r\n  padding: 0px;\r\n  line-height: 2em;\r\n  display: flex;\r\n  flex-direction: column;\r\n  text-align: right;\r\n  font-family: sans-serif;\r\n}\r\n\r\n.nav a, .nav div {\r\n  font-family: 'Work Sans', sans-serif;\r\n  font-weight: 800;\r\n  letter-spacing: 2px;\r\n}\r\n\r\nh1, h2, h3, h4, h5, h6 {\r\n  font-family: 'Lato', sans-serif;\r\n  letter-spacing: 1px;\r\n}\r\n\r\n/* all items container */\r\n.all-items-title {\r\n  display: flex;\r\n  justify-content: center;\r\n  text-transform: uppercase;\r\n}\r\n.all-items-display {\r\n  display: grid;\r\n  grid-template-columns: 1fr 1fr;\r\n  margin: auto;\r\n  width: 90vw;\r\n}\r\n/* individual item */\r\n.one-item {\r\n  font-family: 'sans-serif';\r\n  color: black;\r\n  padding: 0;\r\n  margin: 10px;\r\n  height: 70vw;\r\n  width: 40vw;\r\n  z-index: 1;\r\n}\r\n.one-item-image {\r\n  height: 80%;\r\n  width: 100%;\r\n  background: lightgrey;\r\n}\r\n.one-item-image > img {\r\n  width: 100%;\r\n  height: 100%;\r\n  object-fit: cover;\r\n  overflow: hidden;\r\n}\r\n.one-item-text {\r\n  padding: 0;\r\n  margin: 0;\r\n  margin-top: 10px;\r\n  font-family: 'Helvetica';\r\n}\r\n.one-item-text > h1 {\r\n  padding: 0;\r\n  margin: 0;\r\n  font-size: 20px;\r\n  width: 100%;\r\n  overflow: visible;\r\n  text-transform: capitalize;\r\n  font-weight: lighter;\r\n}\r\n.one-item-text > p {\r\n  padding-top: 5px;\r\n  font-size: 70%;\r\n  font-weight: lighter;\r\n  border-top: black solid 1px;\r\n  width: 33%;\r\n}\r\n\r\n.popup {\r\n  z-index: 1000;\r\n  width: 400px;\r\n  box-shadow: rgba(128, 128, 128, 0.479) 4px 4px 4px 4px 16px;\r\n  text-transform: none;\r\n}\r\n.popup-form-container {\r\n  background-color: white;\r\n  display: flex;\r\n}\r\n.detail-container {\r\n  display: grid;\r\n  grid-column-gap: 50px;\r\n  width: 100vw;\r\n  margin-top: 5em;\r\n}\r\n\r\n.detail-description {\r\n  display: grid;\r\n  grid-template-rows: 5em 2em 2em 1fr 3em;\r\n  padding: 2em;\r\n}\r\n.detail-image {\r\n  width: 90vw;\r\n  height: 70vh;\r\n  margin: auto;\r\n  display: flex;\r\n  justify-content: center;\r\n}\r\n\r\n@media screen and (min-width: 650px) {\r\n  .all-items-display {\r\n    display: grid;\r\n    grid-template-columns: 1fr 1fr 1fr;\r\n    margin: auto;\r\n    width: 90vw;\r\n  }\r\n  .one-item-text > h1 {\r\n    font-size: 25px;\r\n  }\r\n  .one-item {\r\n    height: 430px;\r\n    width: 230px;\r\n  }\r\n}\r\n@media screen and (max-width: 968px) {\r\n  .profileMobile {\r\n    position: relative;\r\n    right: 10px;\r\n  }\r\n  .profileAlign {\r\n    align-items: center;\r\n    justify-content: flex-end;\r\n  }\r\n}\r\n\r\n/* CSS applies to 968px and above */\r\n@media screen and (min-width: 968px) {\r\n  .hideDesktop {\r\n    display: block;\r\n  }\r\n  .all-items-display {\r\n    display: grid;\r\n    grid-template-columns: 1fr 1fr 1fr 1fr;\r\n    justify-content: center;\r\n    width: 90vw;\r\n  }\r\n  .one-item-text > h1 {\r\n    font-size: 25px;\r\n  }\r\n  .one-item {\r\n    height: 430px;\r\n    width: 230px;\r\n  }\r\n  /* navigation */\r\n  .toggle-nav {\r\n    display: block;\r\n  }\r\n  .hideMobile {\r\n    display: none;\r\n  }\r\n  #navItems {\r\n    width: 100%;\r\n  }\r\n  .nav {\r\n    display: flex;\r\n    height: 4em;\r\n    border-bottom: 1px solid black;\r\n    margin-bottom: 0.5em;\r\n    box-shadow: 0px 0px 2px grey;\r\n    background-color: white;\r\n  }\r\n  .nav ul {\r\n    display: flex;\r\n    flex-direction: row;\r\n    list-style-type: none;\r\n    text-transform: uppercase;\r\n    justify-content: space-between;\r\n  }\r\n\r\n  .nav ul li {\r\n    margin: 0 1em 0 1em;\r\n  }\r\n  .flex {\r\n    display: flex;\r\n  }\r\n\r\n  .rightNav {\r\n    margin-right: 1em;\r\n  }\r\n\r\n  /* end navigation */\r\n\r\n  .detail-container {\r\n    grid-template-columns: 1fr 30%;\r\n    width: 90vw;\r\n    margin: 2em;\r\n    margin-top: 5em;\r\n  }\r\n  .detail-description {\r\n    width: 90%;\r\n    padding: 0;\r\n    margin: 1em;\r\n  }\r\n  .detail-image {\r\n    justify-content: center;\r\n    display: flex;\r\n    margin: 0;\r\n    width: 100%;\r\n  }\r\n  .display-if-not-mobile {\r\n    display: block;\r\n  }\r\n}\r\n", ""]);
 
 
 
@@ -42084,7 +42080,7 @@ class Cart extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
             this.removeCartItem(item);
           }
         }, "\u2716")));
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Total: ", this.state.cartTotal ? this.state.cartTotal.toFixed(2) : 'Error'))));
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Total: ", this.state.cartTotal ? this.state.cartTotal.toFixed(2) : ''))));
     });
 
     this.state = {
@@ -42205,7 +42201,7 @@ const SliderContainer = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"
   overflow: hidden;
   @media screen and (min-width: 960px) {
     width: 100%;
-    height: 80vh;
+    height: 76vh;
   }
 `;
 const ImgDiv = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
@@ -42351,7 +42347,7 @@ class ImageSlider extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         }),
         key: index,
         border: index === this.state.position ? 'solid 5px white' : 'none',
-        bc: index === this.state.position ? 'teal' : 'grey'
+        bc: index === this.state.position ? '#0064cf' : 'grey'
       });
     })));
   }
@@ -42410,11 +42406,13 @@ const Price = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
 `;
 const Button = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].button`
   color: white;
-  background-color: black;
+  background-color: #007bff;
+  border: none;
+  border-radius:3px;
   width: 100%;
   padding: 1em;
   &:hover {
-    background-color: darkgrey;
+    background-color: #0064cf;
     cursor: pointer;
   }
 `;
@@ -42810,50 +42808,82 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 const Main = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div`
+  width:100%;
+  
   margin-top: 6em;
   display: grid;
-  height: 100vh;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-template-areas:
-    'shop-all shop-all'
-    'woman man';
+    'woman man'
+    'shop-all shop-all';
+    
   padding: 0;
   @media screen and (min-width: 968px) {
+    width:900px;
     margin-top: 4em;
     grid-template-rows: 0.5fr 0.6fr;
   }
+  @media screen and (min-width: 1200px) {
+    width:1200px
+  }
 `;
 const ShopAll = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div`
+  height:200px;
   grid-area: shop-all;
   border: solid white 5px;
-  background-color: teal;
+  background-color: #222324;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url('https://images.unsplash.com/photo-1551488831-68b4d0c92c13?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   a {
     color: white;
-    border: white solid 2px;
-    padding: 1em;
-    width: 30%;
-    display: flex;
-    justify-content: center;
+    font-family: "Lato";
+    font-weight: 900;
+    font-size:2em;
+    text-shadow: 0px 0px 10px #222324;
     &:hover {
-      color: lightgrey;
-      border: lightgrey solid 2px;
+      color: #dedede;
     }
+  }
+  @media screen and (max-width: 968px) {
+    height:150px
   }
 `;
 const Woman = Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["default"])(ShopAll)`
+  height:400px;
   grid-area: woman;
-  background-image: url('../uploads/woman.jpeg');
+  background-position-y: 5%;
+  background-image: url('https://images.unsplash.com/photo-1513387170035-7cc8ccd63f7d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3101&q=80');
+  a {
+    display: flex;
+    justify-content: flex-start;
+    height: 95%;
+    width: 95%;
+    align-items: flex-end;
+  }
+  @media screen and (max-width: 968px) {
+    height:350px;
+  }
 `;
 const Man = Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["default"])(ShopAll)`
+  height:400px;
   grid-area: man;
-  background-image: url('../uploads/man.jpeg');
+  background-image: url('https://images.unsplash.com/photo-1552060405-f2081b6e7951?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1300&q=80');
+  a {
+    display: flex;
+    justify-content: flex-end;
+    height: 95%;
+    width: 95%;
+    align-items: flex-start;
+  }
+  @media screen and (max-width: 968px) {
+    height:350px;
+  }
 `;
 
 class MainPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
@@ -42861,13 +42891,18 @@ class MainPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     super(...args);
 
     _defineProperty(this, "render", () => {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Main, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ShopAll, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: "/shop"
-      }, "ShopAll")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Woman, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        style: {
+          display: "flex",
+          justifyContent: "center"
+        }
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Main, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Woman, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         to: "/women"
       }, "Woman")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Man, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         to: "/men"
-      }, "Man")));
+      }, "Man")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ShopAll, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/shop"
+      }, "Shop All"))));
     });
   }
 
@@ -43136,7 +43171,11 @@ class OneItem extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
     _defineProperty(this, "render", () => {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: this.props.link + this.props.item._id
+        to: this.props.link + this.props.item._id,
+        style: {
+          display: "flex",
+          justifyContent: "center"
+        }
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "one-item"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {

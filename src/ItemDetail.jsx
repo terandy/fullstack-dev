@@ -31,11 +31,13 @@ const Price = styled.div`
 `;
 const Button = styled.button`
   color: white;
-  background-color: black;
+  background-color: #007bff;
+  border: none;
+  border-radius:3px;
   width: 100%;
   padding: 1em;
   &:hover {
-    background-color: darkgrey;
+    background-color: #0064cf;
     cursor: pointer;
   }
 `;
