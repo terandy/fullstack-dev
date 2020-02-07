@@ -1,5 +1,7 @@
-To start the server, run `nodemon server.js`
+To start the server, run `npm install` and `npm start`
 
-Modify the `server.js` file to add endpoints
+View in browser: http://localhost:4000/
 
-The frontend code goes in the `/src` directory
+
+User and product info is updated to MongoDB at the following API:
+  public key:`tczpalov`
