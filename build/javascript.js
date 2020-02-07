@@ -44336,22 +44336,17 @@ class Navigation extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "flex"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-        to: "/",
-        onClick: this.handleToggle
+        to: "/"
       }, "AliBay")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-        to: "/men",
-        onClick: this.handleToggle
+        to: "/men"
       }, "Men")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-        to: "/women",
-        onClick: this.handleToggle
+        to: "/women"
       }, "Women")), this.props.user ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Dropdown_jsx__WEBPACK_IMPORTED_MODULE_6__["default"], {
         name: "Seller"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(DropContent, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-        to: "/add-item",
-        onClick: this.handleToggle
+        to: "/add-item"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Add new item")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-        to: "/seller-items",
-        onClick: this.handleToggle
+        to: "/seller-items"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "All my items"))))) : '', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
         className: "display-if-not-mobile"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SearchBar_jsx__WEBPACK_IMPORTED_MODULE_4__["default"], null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -44370,8 +44365,7 @@ class Navigation extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(DropContent, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "hideDesktop"
       }, "Welcome back ", this.props.user), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-        to: "/cart",
-        onClick: this.handleToggle
+        to: "/cart"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "View Cart")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
         onClick: this.logoutHandler,
         to: "/"

@@ -15,6 +15,9 @@ app.use('/', express.static('public')); // Needed for local assets
 app.use('/uploads', express.static('uploads'));
 
 //Database
+
+//private key:`993c948a-1f31-48ba-913c-ceb5f4359be3`
+
 let dbo = undefined;
 let url =
   'mongodb+srv://bob:bobsue@cluster0-2cadr.mongodb.net/test?retryWrites=true&w=majority';
