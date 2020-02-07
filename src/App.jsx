@@ -66,8 +66,8 @@ class App extends Component {
     return <SellerItems />;
   };
   renderCart = () => {
-    return <Cart/>
-  }
+    return <Cart />;
+  };
 
   render = () => {
     return (

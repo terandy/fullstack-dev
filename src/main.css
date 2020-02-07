@@ -13,7 +13,38 @@ body {
 .flexMobile {
   display: flex;
 }
-
+.payment-container {
+  width: 100%;
+  margin: auto;
+  border: solid lightgrey 1px;
+  padding: 2em;
+}
+.payment-container > form {
+  text-align: center;
+  width: 50%;
+  min-width: 300px;
+  margin: auto;
+}
+.payment-container > form > h1 {
+  text-transform: uppercase;
+  font-size: 1.5em;
+  margin-bottom: 2em;
+}
+.payment-container > form > button {
+  width: 50%;
+  border-radius: 2em;
+  height: 3em;
+  margin: 2em;
+  margin-top: 5em;
+  background-color: purple;
+  border: none;
+  color: white;
+  text-transform: uppercase;
+}
+.payment-container > form > button:hover {
+  cursor: pointer;
+  background-color: grey;
+}
 .toggle-nav-on {
   display: block;
   position: fixed;
@@ -89,13 +120,19 @@ a {
   font-family: sans-serif;
 }
 
-.nav a, .nav div {
+.nav a,
+.nav div {
   font-family: 'Work Sans', sans-serif;
   font-weight: 800;
   letter-spacing: 2px;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Lato', sans-serif;
   letter-spacing: 1px;
 }
