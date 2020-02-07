@@ -26,6 +26,7 @@ class CheckoutForm extends Component {
       .then(({ paymentMethod }) => {
         alert('Payment received!');
         this.removeCartItems();
+        this.props.emptyCart();
       });
   };
 
@@ -49,7 +50,7 @@ class MyStoreCheckout extends Component {
   render() {
     return (
       <Elements>
-        <InjectedCheckoutForm />
+        <InjectedCheckoutForm emptyCart={this.props.emptyCart} />
       </Elements>
     );
   }

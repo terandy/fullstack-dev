@@ -46,7 +46,11 @@ const ContentLeft = styled.img`
 const ContentRight = styled.div`
   margin-left: 1em;
 `;
-
+const initialState = {
+  cart: [],
+  cartTotal: null,
+  totalPrice: ''
+};
 const RemoveButton = styled.div`
   position: relative;
   top: -90px;
@@ -198,7 +202,7 @@ class Cart extends Component {
           </CartContainer>
         </div>
         <StripeProvider apiKey="pk_test_N55KXUOXeQlzSfDPEmL9vMi000A4Q5Gef7">
-          <MyStoreCheckout />
+          <MyStoreCheckout emptyCart={() => this.setState(initialState)} />
         </StripeProvider>
       </div>
     );

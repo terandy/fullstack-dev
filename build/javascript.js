@@ -964,7 +964,7 @@ exports.push([module.i, "/*!\n * Hamburgers\n * @description Tasty CSS-animated 
 
 exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "body {\n  background-color: white;\n  margin: 0;\n}\n\n.hamburger:focus {\n  outline: none;\n}\n\n.nav {\n  background-color: white;\n}\n.flexMobile {\n  display: flex;\n}\n.payment-container {\n  width: 100%;\n  margin: auto;\n  border: solid lightgrey 1px;\n  padding: 2em;\n}\n.payment-container > form {\n  text-align: center;\n  width: 50%;\n  min-width: 300px;\n  margin: auto;\n}\n.payment-container > form > h1 {\n  text-transform: uppercase;\n  font-size: 1.5em;\n  margin-bottom: 2em;\n}\n.payment-container > form > button {\n  width: 50%;\n  border-radius: 2em;\n  height: 3em;\n  margin: 2em;\n  margin-top: 5em;\n  background-color: purple;\n  border: none;\n  color: white;\n  text-transform: uppercase;\n}\n.payment-container > form > button:hover {\n  cursor: pointer;\n  background-color: grey;\n}\n.toggle-nav-on {\n  display: block;\n  position: fixed;\n  width: 45%;\n  height: 100%;\n  right: 0;\n  top: 0;\n  padding: 3em 1em 0 0;\n  font-size: 1.5em;\n  background-color: whitesmoke;\n  box-shadow: 0 0 3px grey;\n\n  transition-property: right;\n  transition-duration: 0.5s;\n  -webkit-transition-duration: 0.5s;\n  -moz-transition-duration: 0.5s;\n  -o-transition-duration: 0.5s;\n  transition-timing-function: ease-in-out;\n}\n.toggle-nav {\n  visibility: hidden;\n  overflow: hidden;\n  top: 0;\n  padding: 3em 1em 0 0;\n  right: -100%;\n  padding-right: 1em;\n  font-size: 1.5em;\n  height: 100%;\n  width: 45%;\n  background-color: whitesmoke;\n  position: fixed;\n\n  transition-property: visibility, right;\n  transition-duration: 0.5s;\n  -webkit-transition-duration: 0.5s;\n  -moz-transition-duration: 0.5s;\n  -o-transition-duration: 0.5s;\n  transition-timing-function: ease-in-out;\n}\n.display-if-not-mobile {\n  display: none;\n}\n\n.hideDesktop {\n  display: none;\n  text-decoration: underline;\n  font-weight: bold;\n}\n\n.mobileNav {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n\n.mobileNav h1 {\n  margin-left: 15px;\n}\n\na {\n  color: black;\n  text-decoration: none;\n}\n\n.nav ul {\n  list-style-type: none;\n  text-transform: uppercase;\n  padding: 0px;\n  line-height: 2em;\n  display: flex;\n  flex-direction: column;\n  text-align: right;\n  font-family: sans-serif;\n}\n\n.nav a,\n.nav div {\n  font-family: 'Work Sans', sans-serif;\n  font-weight: 800;\n  letter-spacing: 2px;\n}\n\nh1,\nh2,\nh3,\nh4,\nh5,\nh6 {\n  font-family: 'Lato', sans-serif;\n  letter-spacing: 1px;\n}\n\n/* all items container */\n.all-items-title {\n  display: flex;\n  justify-content: center;\n  text-transform: uppercase;\n}\n.all-items-display {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  margin: auto;\n  width: 90vw;\n}\n/* individual item */\n.one-item {\n  font-family: 'sans-serif';\n  color: black;\n  padding: 0;\n  margin: 10px;\n  height: 70vw;\n  width: 40vw;\n  z-index: 1;\n}\n.one-item-image {\n  height: 80%;\n  width: 100%;\n  background: lightgrey;\n}\n.one-item-image > img {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  overflow: hidden;\n}\n.one-item-text {\n  padding: 0;\n  margin: 0;\n  margin-top: 10px;\n  font-family: 'Helvetica';\n}\n.one-item-text > h1 {\n  padding: 0;\n  margin: 0;\n  font-size: 20px;\n  width: 100%;\n  overflow: visible;\n  text-transform: capitalize;\n  font-weight: lighter;\n}\n.one-item-text > p {\n  padding-top: 5px;\n  font-size: 70%;\n  font-weight: lighter;\n  border-top: black solid 1px;\n  width: 33%;\n}\n\n.popup {\n  z-index: 1000;\n  width: 400px;\n  box-shadow: rgba(128, 128, 128, 0.479) 4px 4px 4px 4px 16px;\n  text-transform: none;\n}\n.popup-form-container {\n  background-color: white;\n  display: flex;\n}\n.detail-container {\n  display: grid;\n  grid-column-gap: 50px;\n  width: 100vw;\n  margin-top: 5em;\n}\n\n.detail-description {\n  display: grid;\n  grid-template-rows: 5em 2em 2em 1fr 3em;\n  padding: 2em;\n  height: 40vh;\n}\n.detail-image {\n  width: 90vw;\n  height: 70vh;\n  margin: auto;\n  display: flex;\n  justify-content: center;\n}\n\n@media screen and (min-width: 650px) {\n  .all-items-display {\n    display: grid;\n    grid-template-columns: 1fr 1fr 1fr;\n    margin: auto;\n    width: 90vw;\n  }\n  .one-item-text > h1 {\n    font-size: 25px;\n  }\n  .one-item {\n    height: 430px;\n    width: 230px;\n  }\n}\n@media screen and (max-width: 968px) {\n  .profileMobile {\n    position: relative;\n    right: 10px;\n  }\n  .profileAlign {\n    align-items: center;\n    justify-content: flex-end;\n  }\n}\n\n/* CSS applies to 968px and above */\n@media screen and (min-width: 968px) {\n  .hideDesktop {\n    display: block;\n  }\n  .all-items-display {\n    padding: 0 5%;\n    display: grid;\n    grid-template-columns: 1fr 1fr 1fr 1fr;\n    justify-content: center;\n    width: 90vw;\n  }\n  .one-item-text > h1 {\n    font-size: 25px;\n  }\n  .one-item {\n    height: 430px;\n    width: 230px;\n  }\n  /* navigation */\n  .toggle-nav {\n    display: block;\n  }\n  .hideMobile {\n    display: none;\n  }\n  #navItems {\n    width: 100%;\n  }\n  .nav {\n    display: flex;\n    height: 4em;\n    border-bottom: 1px solid black;\n    margin-bottom: 0.5em;\n    box-shadow: 0px 0px 2px grey;\n    background-color: white;\n  }\n  .nav ul {\n    display: flex;\n    flex-direction: row;\n    list-style-type: none;\n    text-transform: uppercase;\n    justify-content: space-between;\n  }\n\n  .nav ul li {\n    margin: 0 1em 0 1em;\n  }\n  .flex {\n    display: flex;\n  }\n\n  .rightNav {\n    margin-right: 1em;\n  }\n\n  /* end navigation */\n\n  .detail-container {\n    grid-template-columns: 1fr 30%;\n    width: 90vw;\n    margin: 2em;\n    margin-top: 5em;\n  }\n  .detail-description {\n    width: 90%;\n    height: 80vh;\n    padding: 0;\n    margin: 1em;\n  }\n  .detail-image {\n    justify-content: center;\n    display: flex;\n    align-items: center;\n    margin: auto;\n    width: 100%;\n    height: 90vh;\n  }\n  .display-if-not-mobile {\n    display: block;\n  }\n}\n", ""]);
+exports.push([module.i, "body {\n  background-color: white;\n  margin: 0;\n}\n\n.hamburger:focus {\n  outline: none;\n}\n\n.nav {\n  background-color: white;\n}\n.flexMobile {\n  display: flex;\n}\n.payment-container {\n  width: 100%;\n  margin: auto;\n  border: solid lightgrey 1px;\n  padding: 2em;\n}\n.payment-container > form {\n  text-align: center;\n  width: 50%;\n  min-width: 300px;\n  margin: auto;\n}\n.payment-container > form > h1 {\n  text-transform: uppercase;\n  font-size: 1.5em;\n  margin-bottom: 2em;\n}\n.payment-container > form > button {\n  width: 50%;\n  border-radius: 2em;\n  height: 3em;\n  margin: 2em;\n  margin-top: 5em;\n  background-color: purple;\n  border: none;\n  color: white;\n  text-transform: uppercase;\n}\n.payment-container > form > button:hover {\n  cursor: pointer;\n  background-color: grey;\n}\n.toggle-nav-on {\n  display: block;\n  position: fixed;\n  width: 45%;\n  height: 100%;\n  right: 0;\n  top: 0;\n  padding: 3em 1em 0 0;\n  font-size: 1.5em;\n  background-color: whitesmoke;\n  box-shadow: 0 0 3px grey;\n\n  transition-property: right;\n  transition-duration: 0.5s;\n  -webkit-transition-duration: 0.5s;\n  -moz-transition-duration: 0.5s;\n  -o-transition-duration: 0.5s;\n  transition-timing-function: ease-in-out;\n}\n.toggle-nav {\n  visibility: hidden;\n  overflow: hidden;\n  top: 0;\n  padding: 3em 1em 0 0;\n  right: -100%;\n  padding-right: 1em;\n  font-size: 1.5em;\n  height: 100%;\n  width: 45%;\n  background-color: whitesmoke;\n  position: fixed;\n\n  transition-property: visibility, right;\n  transition-duration: 0.5s;\n  -webkit-transition-duration: 0.5s;\n  -moz-transition-duration: 0.5s;\n  -o-transition-duration: 0.5s;\n  transition-timing-function: ease-in-out;\n}\n.display-if-not-mobile {\n  display: none;\n}\n\n.hideDesktop {\n  display: none;\n  text-decoration: underline;\n  font-weight: bold;\n}\n\n.mobileNav {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n\n.mobileNav h1 {\n  margin-left: 15px;\n}\n\na {\n  color: black;\n  text-decoration: none;\n}\n\n.nav ul {\n  list-style-type: none;\n  text-transform: uppercase;\n  padding: 0px;\n  line-height: 2em;\n  display: flex;\n  flex-direction: column;\n  text-align: right;\n  font-family: sans-serif;\n}\n\n.nav a,\n.nav div {\n  font-family: 'Work Sans', sans-serif;\n  font-weight: 800;\n  letter-spacing: 2px;\n}\n\nh1,\nh2,\nh3,\nh4,\nh5,\nh6 {\n  font-family: 'Lato', sans-serif;\n  letter-spacing: 1px;\n}\n\n/* all items container */\n.all-items-title {\n  display: flex;\n  justify-content: center;\n  text-transform: uppercase;\n}\n.all-items-display {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  margin: auto;\n  width: 90vw;\n}\n/* individual item */\n.one-item {\n  font-family: 'sans-serif';\n  color: black;\n  padding: 0;\n  margin: 10px;\n  height: 70vw;\n  width: 40vw;\n  z-index: 1;\n}\n.one-item-image {\n  height: 80%;\n  width: 100%;\n  background: lightgrey;\n}\n.one-item-image > img {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  overflow: hidden;\n}\n.one-item-text {\n  padding: 0;\n  margin: 0;\n  margin-top: 10px;\n  font-family: 'Helvetica';\n}\n.one-item-text > h1 {\n  padding: 0;\n  margin: 0;\n  font-size: 20px;\n  width: 100%;\n  overflow: visible;\n  text-transform: capitalize;\n  font-weight: lighter;\n}\n.one-item-text > p {\n  padding-top: 5px;\n  font-size: 70%;\n  font-weight: lighter;\n  border-top: black solid 1px;\n  width: 33%;\n}\n\n.popup {\n  z-index: 1000;\n  width: 400px;\n  box-shadow: rgba(128, 128, 128, 0.479) 4px 4px 4px 4px 16px;\n  text-transform: none;\n}\n.popup-form-container {\n  background-color: white;\n  display: flex;\n}\n.detail-container {\n  display: grid;\n  grid-column-gap: 50px;\n  width: 100vw;\n  margin-top: 5em;\n}\n\n.detail-description {\n  display: grid;\n  grid-template-rows: 5em 2em 2em 1fr 3em;\n  padding: 2em;\n}\n.detail-image {\n  width: 90vw;\n  height: 70vh;\n  margin: auto;\n  display: flex;\n  justify-content: center;\n}\n\n@media screen and (min-width: 650px) {\n  .all-items-display {\n    display: grid;\n    grid-template-columns: 1fr 1fr 1fr;\n    margin: auto;\n    width: 90vw;\n  }\n  .one-item-text > h1 {\n    font-size: 25px;\n  }\n  .one-item {\n    height: 430px;\n    width: 230px;\n  }\n}\n@media screen and (max-width: 968px) {\n  .profileMobile {\n    position: relative;\n    right: 10px;\n  }\n  .profileAlign {\n    align-items: center;\n    justify-content: flex-end;\n  }\n}\n\n/* CSS applies to 968px and above */\n@media screen and (min-width: 968px) {\n  .hideDesktop {\n    display: block;\n  }\n  .all-items-display {\n    display: grid;\n    grid-template-columns: 1fr 1fr 1fr 1fr;\n    justify-content: center;\n    width: 90vw;\n  }\n  .one-item-text > h1 {\n    font-size: 25px;\n  }\n  .one-item {\n    height: 430px;\n    width: 230px;\n  }\n  /* navigation */\n  .toggle-nav {\n    display: block;\n  }\n  .hideMobile {\n    display: none;\n  }\n  #navItems {\n    width: 100%;\n  }\n  .nav {\n    display: flex;\n    height: 4em;\n    border-bottom: 1px solid black;\n    margin-bottom: 0.5em;\n    box-shadow: 0px 0px 2px grey;\n    background-color: white;\n  }\n  .nav ul {\n    display: flex;\n    flex-direction: row;\n    list-style-type: none;\n    text-transform: uppercase;\n    justify-content: space-between;\n  }\n\n  .nav ul li {\n    margin: 0 1em 0 1em;\n  }\n  .flex {\n    display: flex;\n  }\n\n  .rightNav {\n    margin-right: 1em;\n  }\n\n  /* end navigation */\n\n  .detail-container {\n    grid-template-columns: 1fr 30%;\n    width: 90vw;\n    margin: 2em;\n    margin-top: 5em;\n  }\n  .detail-description {\n    width: 90%;\n    padding: 0;\n    margin: 1em;\n  }\n  .detail-image {\n    justify-content: center;\n    display: flex;\n    margin: 0;\n    width: 100%;\n  }\n  .display-if-not-mobile {\n    display: block;\n  }\n}\n", ""]);
 
 
 
@@ -43085,6 +43085,11 @@ const ContentLeft = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].im
 const ContentRight = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].div`
   margin-left: 1em;
 `;
+const initialState = {
+  cart: [],
+  cartTotal: null,
+  totalPrice: ''
+};
 const RemoveButton = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].div`
   position: relative;
   top: -90px;
@@ -43247,7 +43252,9 @@ class Cart extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         }, "\u2716")));
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Total:", ' ', this.state.cartTotal ? this.state.cartTotal.toFixed(2) : 'Error'))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_stripe_elements__WEBPACK_IMPORTED_MODULE_5__["StripeProvider"], {
         apiKey: "pk_test_N55KXUOXeQlzSfDPEmL9vMi000A4Q5Gef7"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_MyStoreCheckout_jsx__WEBPACK_IMPORTED_MODULE_6__["default"], null)));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_MyStoreCheckout_jsx__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        emptyCart: () => this.setState(initialState)
+      })));
     });
 
     this.state = {
@@ -43368,7 +43375,7 @@ const SliderContainer = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"
   overflow: hidden;
   @media screen and (min-width: 960px) {
     width: 100%;
-    height: 80vh;
+    height: 76vh;
   }
 `;
 const ImgDiv = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
@@ -43514,7 +43521,7 @@ class ImageSlider extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         }),
         key: index,
         border: index === this.state.position ? 'solid 5px white' : 'none',
-        bc: index === this.state.position ? 'teal' : 'grey'
+        bc: index === this.state.position ? '#0064cf' : 'grey'
       });
     })));
   }
@@ -43573,11 +43580,13 @@ const Price = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
 `;
 const Button = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].button`
   color: white;
-  background-color: black;
+  background-color: #007bff;
+  border: none;
+  border-radius:3px;
   width: 100%;
   padding: 1em;
   &:hover {
-    background-color: darkgrey;
+    background-color: #0064cf;
     cursor: pointer;
   }
 `;
@@ -43973,50 +43982,82 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 const Main = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div`
+  width:100%;
+  
   margin-top: 6em;
   display: grid;
-  height: 100vh;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-template-areas:
-    'shop-all shop-all'
-    'woman man';
+    'woman man'
+    'shop-all shop-all';
+    
   padding: 0;
   @media screen and (min-width: 968px) {
+    width:900px;
     margin-top: 4em;
     grid-template-rows: 0.5fr 0.6fr;
   }
+  @media screen and (min-width: 1200px) {
+    width:1200px
+  }
 `;
 const ShopAll = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div`
+  height:200px;
   grid-area: shop-all;
   border: solid white 5px;
-  background-color: teal;
+  background-color: #222324;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url('https://images.unsplash.com/photo-1551488831-68b4d0c92c13?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   a {
     color: white;
-    border: white solid 2px;
-    padding: 1em;
-    width: 30%;
-    display: flex;
-    justify-content: center;
+    font-family: "Lato";
+    font-weight: 900;
+    font-size:2em;
+    text-shadow: 0px 0px 10px #222324;
     &:hover {
-      color: lightgrey;
-      border: lightgrey solid 2px;
+      color: #dedede;
     }
+  }
+  @media screen and (max-width: 968px) {
+    height:150px
   }
 `;
 const Woman = Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["default"])(ShopAll)`
+  height:400px;
   grid-area: woman;
-  background-image: url('../uploads/woman.jpeg');
+  background-position-y: 5%;
+  background-image: url('https://images.unsplash.com/photo-1513387170035-7cc8ccd63f7d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3101&q=80');
+  a {
+    display: flex;
+    justify-content: flex-start;
+    height: 95%;
+    width: 95%;
+    align-items: flex-end;
+  }
+  @media screen and (max-width: 968px) {
+    height:350px;
+  }
 `;
 const Man = Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["default"])(ShopAll)`
+  height:400px;
   grid-area: man;
-  background-image: url('../uploads/man.jpeg');
+  background-image: url('https://images.unsplash.com/photo-1552060405-f2081b6e7951?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1300&q=80');
+  a {
+    display: flex;
+    justify-content: flex-end;
+    height: 95%;
+    width: 95%;
+    align-items: flex-start;
+  }
+  @media screen and (max-width: 968px) {
+    height:350px;
+  }
 `;
 
 class MainPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
@@ -44024,13 +44065,18 @@ class MainPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     super(...args);
 
     _defineProperty(this, "render", () => {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Main, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ShopAll, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: "/shop"
-      }, "ShopAll")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Woman, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        style: {
+          display: "flex",
+          justifyContent: "center"
+        }
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Main, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Woman, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         to: "/women"
       }, "Woman")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Man, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         to: "/men"
-      }, "Man")));
+      }, "Man")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ShopAll, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/shop"
+      }, "Shop All"))));
     });
   }
 
@@ -44094,6 +44140,7 @@ class CheckoutForm extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       }) => {
         alert('Payment received!');
         this.removeCartItems();
+        this.props.emptyCart();
       });
     });
   }
@@ -44118,7 +44165,9 @@ let InjectedCheckoutForm = Object(react_stripe_elements__WEBPACK_IMPORTED_MODULE
 
 class MyStoreCheckout extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   render() {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_stripe_elements__WEBPACK_IMPORTED_MODULE_1__["Elements"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(InjectedCheckoutForm, null));
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_stripe_elements__WEBPACK_IMPORTED_MODULE_1__["Elements"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(InjectedCheckoutForm, {
+      emptyCart: this.props.emptyCart
+    }));
   }
 
 }
@@ -44392,7 +44441,11 @@ class OneItem extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
     _defineProperty(this, "render", () => {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: this.props.link + this.props.item._id
+        to: this.props.link + this.props.item._id,
+        style: {
+          display: "flex",
+          justifyContent: "center"
+        }
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "one-item"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {

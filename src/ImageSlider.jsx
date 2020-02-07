@@ -7,7 +7,7 @@ const SliderContainer = styled.div`
   overflow: hidden;
   @media screen and (min-width: 960px) {
     width: 100%;
-    height: 80vh;
+    height: 76vh;
   }
 `;
 const ImgDiv = styled.div`
@@ -135,7 +135,7 @@ class ImageSlider extends Component {
                 border={
                   index === this.state.position ? 'solid 5px white' : 'none'
                 }
-                bc={index === this.state.position ? 'teal' : 'grey'}
+                bc={index === this.state.position ? '#0064cf' : 'grey'}
               />
             );
           })}
