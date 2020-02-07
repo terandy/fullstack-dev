@@ -949,7 +949,7 @@ var unitlessKeys = {
 
 exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "/*!\r\n * Hamburgers\r\n * @description Tasty CSS-animated hamburgers\r\n * @author Jonathan Suh @jonsuh\r\n * @site https://jonsuh.com/hamburgers\r\n * @link https://github.com/jonsuh/hamburgers\r\n */\r\n .hamburger {\r\n   z-index: 100;\r\n    padding: 15px 15px;\r\n    display: inline-block;\r\n    cursor: pointer;\r\n    transition-property: opacity, filter;\r\n    transition-duration: 0.15s;\r\n    transition-timing-function: linear;\r\n    font: inherit;\r\n    color: inherit;\r\n    text-transform: none;\r\n    background-color: transparent;\r\n    border: 0;\r\n    margin: 0;\r\n    overflow: visible; }\r\n    .hamburger:hover {\r\n      opacity: 0.7; }\r\n    .hamburger.is-active:hover {\r\n      opacity: 0.7; }\r\n    .hamburger.is-active .hamburger-inner,\r\n    .hamburger.is-active .hamburger-inner::before,\r\n    .hamburger.is-active .hamburger-inner::after {\r\n      background-color: #000; }\r\n  \r\n  .hamburger-box {\r\n    width: 40px;\r\n    height: 24px;\r\n    display: inline-block;\r\n    position: relative; }\r\n  \r\n  .hamburger-inner {\r\n    display: block;\r\n    top: 50%;\r\n    margin-top: -2px; }\r\n    .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {\r\n      width: 40px;\r\n      height: 4px;\r\n      background-color: #000;\r\n      border-radius: 4px;\r\n      position: absolute;\r\n      transition-property: transform;\r\n      transition-duration: 0.15s;\r\n      transition-timing-function: ease; }\r\n    .hamburger-inner::before, .hamburger-inner::after {\r\n      content: \"\";\r\n      display: block; }\r\n    .hamburger-inner::before {\r\n      top: -10px; }\r\n    .hamburger-inner::after {\r\n      bottom: -10px; }\r\n  \r\n  /*\r\n     * 3DX\r\n     */\r\n  .hamburger--3dx .hamburger-box {\r\n    perspective: 80px; }\r\n  \r\n  .hamburger--3dx .hamburger-inner {\r\n    transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); }\r\n    .hamburger--3dx .hamburger-inner::before, .hamburger--3dx .hamburger-inner::after {\r\n      transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); }\r\n  \r\n  .hamburger--3dx.is-active .hamburger-inner {\r\n    background-color: transparent !important;\r\n    transform: rotateY(180deg); }\r\n    .hamburger--3dx.is-active .hamburger-inner::before {\r\n      transform: translate3d(0, 10px, 0) rotate(45deg); }\r\n    .hamburger--3dx.is-active .hamburger-inner::after {\r\n      transform: translate3d(0, -10px, 0) rotate(-45deg); }\r\n  \r\n  /*\r\n     * 3DX Reverse\r\n     */\r\n  .hamburger--3dx-r .hamburger-box {\r\n    perspective: 80px; }\r\n  \r\n  .hamburger--3dx-r .hamburger-inner {\r\n    transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); }\r\n    .hamburger--3dx-r .hamburger-inner::before, .hamburger--3dx-r .hamburger-inner::after {\r\n      transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); }\r\n  \r\n  .hamburger--3dx-r.is-active .hamburger-inner {\r\n    background-color: transparent !important;\r\n    transform: rotateY(-180deg); }\r\n    .hamburger--3dx-r.is-active .hamburger-inner::before {\r\n      transform: translate3d(0, 10px, 0) rotate(45deg); }\r\n    .hamburger--3dx-r.is-active .hamburger-inner::after {\r\n      transform: translate3d(0, -10px, 0) rotate(-45deg); }\r\n  \r\n  /*\r\n     * 3DY\r\n     */\r\n  .hamburger--3dy .hamburger-box {\r\n    perspective: 80px; }\r\n  \r\n  .hamburger--3dy .hamburger-inner {\r\n    transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); }\r\n    .hamburger--3dy .hamburger-inner::before, .hamburger--3dy .hamburger-inner::after {\r\n      transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); }\r\n  \r\n  .hamburger--3dy.is-active .hamburger-inner {\r\n    background-color: transparent !important;\r\n    transform: rotateX(-180deg); }\r\n    .hamburger--3dy.is-active .hamburger-inner::before {\r\n      transform: translate3d(0, 10px, 0) rotate(45deg); }\r\n    .hamburger--3dy.is-active .hamburger-inner::after {\r\n      transform: translate3d(0, -10px, 0) rotate(-45deg); }\r\n  \r\n  /*\r\n     * 3DY Reverse\r\n     */\r\n  .hamburger--3dy-r .hamburger-box {\r\n    perspective: 80px; }\r\n  \r\n  .hamburger--3dy-r .hamburger-inner {\r\n    transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); }\r\n    .hamburger--3dy-r .hamburger-inner::before, .hamburger--3dy-r .hamburger-inner::after {\r\n      transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); }\r\n  \r\n  .hamburger--3dy-r.is-active .hamburger-inner {\r\n    background-color: transparent !important;\r\n    transform: rotateX(180deg); }\r\n    .hamburger--3dy-r.is-active .hamburger-inner::before {\r\n      transform: translate3d(0, 10px, 0) rotate(45deg); }\r\n    .hamburger--3dy-r.is-active .hamburger-inner::after {\r\n      transform: translate3d(0, -10px, 0) rotate(-45deg); }\r\n  \r\n  /*\r\n     * 3DXY\r\n     */\r\n  .hamburger--3dxy .hamburger-box {\r\n    perspective: 80px; }\r\n  \r\n  .hamburger--3dxy .hamburger-inner {\r\n    transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); }\r\n    .hamburger--3dxy .hamburger-inner::before, .hamburger--3dxy .hamburger-inner::after {\r\n      transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); }\r\n  \r\n  .hamburger--3dxy.is-active .hamburger-inner {\r\n    background-color: transparent !important;\r\n    transform: rotateX(180deg) rotateY(180deg); }\r\n    .hamburger--3dxy.is-active .hamburger-inner::before {\r\n      transform: translate3d(0, 10px, 0) rotate(45deg); }\r\n    .hamburger--3dxy.is-active .hamburger-inner::after {\r\n      transform: translate3d(0, -10px, 0) rotate(-45deg); }\r\n  \r\n  /*\r\n     * 3DXY Reverse\r\n     */\r\n  .hamburger--3dxy-r .hamburger-box {\r\n    perspective: 80px; }\r\n  \r\n  .hamburger--3dxy-r .hamburger-inner {\r\n    transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); }\r\n    .hamburger--3dxy-r .hamburger-inner::before, .hamburger--3dxy-r .hamburger-inner::after {\r\n      transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); }\r\n  \r\n  .hamburger--3dxy-r.is-active .hamburger-inner {\r\n    background-color: transparent !important;\r\n    transform: rotateX(180deg) rotateY(180deg) rotateZ(-180deg); }\r\n    .hamburger--3dxy-r.is-active .hamburger-inner::before {\r\n      transform: translate3d(0, 10px, 0) rotate(45deg); }\r\n    .hamburger--3dxy-r.is-active .hamburger-inner::after {\r\n      transform: translate3d(0, -10px, 0) rotate(-45deg); }\r\n  \r\n  /*\r\n     * Arrow\r\n     */\r\n  .hamburger--arrow.is-active .hamburger-inner::before {\r\n    transform: translate3d(-8px, 0, 0) rotate(-45deg) scale(0.7, 1); }\r\n  \r\n  .hamburger--arrow.is-active .hamburger-inner::after {\r\n    transform: translate3d(-8px, 0, 0) rotate(45deg) scale(0.7, 1); }\r\n  \r\n  /*\r\n     * Arrow Right\r\n     */\r\n  .hamburger--arrow-r.is-active .hamburger-inner::before {\r\n    transform: translate3d(8px, 0, 0) rotate(45deg) scale(0.7, 1); }\r\n  \r\n  .hamburger--arrow-r.is-active .hamburger-inner::after {\r\n    transform: translate3d(8px, 0, 0) rotate(-45deg) scale(0.7, 1); }\r\n  \r\n  /*\r\n     * Arrow Alt\r\n     */\r\n  .hamburger--arrowalt .hamburger-inner::before {\r\n    transition: top 0.1s 0.1s ease, transform 0.1s cubic-bezier(0.165, 0.84, 0.44, 1); }\r\n  \r\n  .hamburger--arrowalt .hamburger-inner::after {\r\n    transition: bottom 0.1s 0.1s ease, transform 0.1s cubic-bezier(0.165, 0.84, 0.44, 1); }\r\n  \r\n  .hamburger--arrowalt.is-active .hamburger-inner::before {\r\n    top: 0;\r\n    transform: translate3d(-8px, -10px, 0) rotate(-45deg) scale(0.7, 1);\r\n    transition: top 0.1s ease, transform 0.1s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22); }\r\n  \r\n  .hamburger--arrowalt.is-active .hamburger-inner::after {\r\n    bottom: 0;\r\n    transform: translate3d(-8px, 10px, 0) rotate(45deg) scale(0.7, 1);\r\n    transition: bottom 0.1s ease, transform 0.1s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22); }\r\n  \r\n  /*\r\n     * Arrow Alt Right\r\n     */\r\n  .hamburger--arrowalt-r .hamburger-inner::before {\r\n    transition: top 0.1s 0.1s ease, transform 0.1s cubic-bezier(0.165, 0.84, 0.44, 1); }\r\n  \r\n  .hamburger--arrowalt-r .hamburger-inner::after {\r\n    transition: bottom 0.1s 0.1s ease, transform 0.1s cubic-bezier(0.165, 0.84, 0.44, 1); }\r\n  \r\n  .hamburger--arrowalt-r.is-active .hamburger-inner::before {\r\n    top: 0;\r\n    transform: translate3d(8px, -10px, 0) rotate(45deg) scale(0.7, 1);\r\n    transition: top 0.1s ease, transform 0.1s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22); }\r\n  \r\n  .hamburger--arrowalt-r.is-active .hamburger-inner::after {\r\n    bottom: 0;\r\n    transform: translate3d(8px, 10px, 0) rotate(-45deg) scale(0.7, 1);\r\n    transition: bottom 0.1s ease, transform 0.1s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22); }\r\n  \r\n  /*\r\n     * Arrow Turn\r\n     */\r\n  .hamburger--arrowturn.is-active .hamburger-inner {\r\n    transform: rotate(-180deg); }\r\n    .hamburger--arrowturn.is-active .hamburger-inner::before {\r\n      transform: translate3d(8px, 0, 0) rotate(45deg) scale(0.7, 1); }\r\n    .hamburger--arrowturn.is-active .hamburger-inner::after {\r\n      transform: translate3d(8px, 0, 0) rotate(-45deg) scale(0.7, 1); }\r\n  \r\n  /*\r\n     * Arrow Turn Right\r\n     */\r\n  .hamburger--arrowturn-r.is-active .hamburger-inner {\r\n    transform: rotate(-180deg); }\r\n    .hamburger--arrowturn-r.is-active .hamburger-inner::before {\r\n      transform: translate3d(-8px, 0, 0) rotate(-45deg) scale(0.7, 1); }\r\n    .hamburger--arrowturn-r.is-active .hamburger-inner::after {\r\n      transform: translate3d(-8px, 0, 0) rotate(45deg) scale(0.7, 1); }\r\n  \r\n  /*\r\n     * Boring\r\n     */\r\n  .hamburger--boring .hamburger-inner, .hamburger--boring .hamburger-inner::before, .hamburger--boring .hamburger-inner::after {\r\n    transition-property: none; }\r\n  \r\n  .hamburger--boring.is-active .hamburger-inner {\r\n    transform: rotate(45deg); }\r\n    .hamburger--boring.is-active .hamburger-inner::before {\r\n      top: 0;\r\n      opacity: 0; }\r\n    .hamburger--boring.is-active .hamburger-inner::after {\r\n      bottom: 0;\r\n      transform: rotate(-90deg); }\r\n  \r\n  /*\r\n     * Collapse\r\n     */\r\n  .hamburger--collapse .hamburger-inner {\r\n    top: auto;\r\n    bottom: 0;\r\n    transition-duration: 0.13s;\r\n    transition-delay: 0.13s;\r\n    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }\r\n    .hamburger--collapse .hamburger-inner::after {\r\n      top: -20px;\r\n      transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), opacity 0.1s linear; }\r\n    .hamburger--collapse .hamburger-inner::before {\r\n      transition: top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19); }\r\n  \r\n  .hamburger--collapse.is-active .hamburger-inner {\r\n    transform: translate3d(0, -10px, 0) rotate(-45deg);\r\n    transition-delay: 0.22s;\r\n    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }\r\n    .hamburger--collapse.is-active .hamburger-inner::after {\r\n      top: 0;\r\n      opacity: 0;\r\n      transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0.1s 0.22s linear; }\r\n    .hamburger--collapse.is-active .hamburger-inner::before {\r\n      top: 0;\r\n      transform: rotate(-90deg);\r\n      transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1); }\r\n  \r\n  /*\r\n     * Collapse Reverse\r\n     */\r\n  .hamburger--collapse-r .hamburger-inner {\r\n    top: auto;\r\n    bottom: 0;\r\n    transition-duration: 0.13s;\r\n    transition-delay: 0.13s;\r\n    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }\r\n    .hamburger--collapse-r .hamburger-inner::after {\r\n      top: -20px;\r\n      transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), opacity 0.1s linear; }\r\n    .hamburger--collapse-r .hamburger-inner::before {\r\n      transition: top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19); }\r\n  \r\n  .hamburger--collapse-r.is-active .hamburger-inner {\r\n    transform: translate3d(0, -10px, 0) rotate(45deg);\r\n    transition-delay: 0.22s;\r\n    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }\r\n    .hamburger--collapse-r.is-active .hamburger-inner::after {\r\n      top: 0;\r\n      opacity: 0;\r\n      transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0.1s 0.22s linear; }\r\n    .hamburger--collapse-r.is-active .hamburger-inner::before {\r\n      top: 0;\r\n      transform: rotate(90deg);\r\n      transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1); }\r\n  \r\n  /*\r\n     * Elastic\r\n     */\r\n  .hamburger--elastic .hamburger-inner {\r\n    top: 2px;\r\n    transition-duration: 0.275s;\r\n    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); }\r\n    .hamburger--elastic .hamburger-inner::before {\r\n      top: 10px;\r\n      transition: opacity 0.125s 0.275s ease; }\r\n    .hamburger--elastic .hamburger-inner::after {\r\n      top: 20px;\r\n      transition: transform 0.275s cubic-bezier(0.68, -0.55, 0.265, 1.55); }\r\n  \r\n  .hamburger--elastic.is-active .hamburger-inner {\r\n    transform: translate3d(0, 10px, 0) rotate(135deg);\r\n    transition-delay: 0.075s; }\r\n    .hamburger--elastic.is-active .hamburger-inner::before {\r\n      transition-delay: 0s;\r\n      opacity: 0; }\r\n    .hamburger--elastic.is-active .hamburger-inner::after {\r\n      transform: translate3d(0, -20px, 0) rotate(-270deg);\r\n      transition-delay: 0.075s; }\r\n  \r\n  /*\r\n     * Elastic Reverse\r\n     */\r\n  .hamburger--elastic-r .hamburger-inner {\r\n    top: 2px;\r\n    transition-duration: 0.275s;\r\n    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); }\r\n    .hamburger--elastic-r .hamburger-inner::before {\r\n      top: 10px;\r\n      transition: opacity 0.125s 0.275s ease; }\r\n    .hamburger--elastic-r .hamburger-inner::after {\r\n      top: 20px;\r\n      transition: transform 0.275s cubic-bezier(0.68, -0.55, 0.265, 1.55); }\r\n  \r\n  .hamburger--elastic-r.is-active .hamburger-inner {\r\n    transform: translate3d(0, 10px, 0) rotate(-135deg);\r\n    transition-delay: 0.075s; }\r\n    .hamburger--elastic-r.is-active .hamburger-inner::before {\r\n      transition-delay: 0s;\r\n      opacity: 0; }\r\n    .hamburger--elastic-r.is-active .hamburger-inner::after {\r\n      transform: translate3d(0, -20px, 0) rotate(270deg);\r\n      transition-delay: 0.075s; }\r\n  \r\n  /*\r\n     * Emphatic\r\n     */\r\n  .hamburger--emphatic {\r\n    overflow: hidden; }\r\n    .hamburger--emphatic .hamburger-inner {\r\n      transition: background-color 0.125s 0.175s ease-in; }\r\n      .hamburger--emphatic .hamburger-inner::before {\r\n        left: 0;\r\n        transition: transform 0.125s cubic-bezier(0.6, 0.04, 0.98, 0.335), top 0.05s 0.125s linear, left 0.125s 0.175s ease-in; }\r\n      .hamburger--emphatic .hamburger-inner::after {\r\n        top: 10px;\r\n        right: 0;\r\n        transition: transform 0.125s cubic-bezier(0.6, 0.04, 0.98, 0.335), top 0.05s 0.125s linear, right 0.125s 0.175s ease-in; }\r\n    .hamburger--emphatic.is-active .hamburger-inner {\r\n      transition-delay: 0s;\r\n      transition-timing-function: ease-out;\r\n      background-color: transparent !important; }\r\n      .hamburger--emphatic.is-active .hamburger-inner::before {\r\n        left: -80px;\r\n        top: -80px;\r\n        transform: translate3d(80px, 80px, 0) rotate(45deg);\r\n        transition: left 0.125s ease-out, top 0.05s 0.125s linear, transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1); }\r\n      .hamburger--emphatic.is-active .hamburger-inner::after {\r\n        right: -80px;\r\n        top: -80px;\r\n        transform: translate3d(-80px, 80px, 0) rotate(-45deg);\r\n        transition: right 0.125s ease-out, top 0.05s 0.125s linear, transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1); }\r\n  \r\n  /*\r\n     * Emphatic Reverse\r\n     */\r\n  .hamburger--emphatic-r {\r\n    overflow: hidden; }\r\n    .hamburger--emphatic-r .hamburger-inner {\r\n      transition: background-color 0.125s 0.175s ease-in; }\r\n      .hamburger--emphatic-r .hamburger-inner::before {\r\n        left: 0;\r\n        transition: transform 0.125s cubic-bezier(0.6, 0.04, 0.98, 0.335), top 0.05s 0.125s linear, left 0.125s 0.175s ease-in; }\r\n      .hamburger--emphatic-r .hamburger-inner::after {\r\n        top: 10px;\r\n        right: 0;\r\n        transition: transform 0.125s cubic-bezier(0.6, 0.04, 0.98, 0.335), top 0.05s 0.125s linear, right 0.125s 0.175s ease-in; }\r\n    .hamburger--emphatic-r.is-active .hamburger-inner {\r\n      transition-delay: 0s;\r\n      transition-timing-function: ease-out;\r\n      background-color: transparent !important; }\r\n      .hamburger--emphatic-r.is-active .hamburger-inner::before {\r\n        left: -80px;\r\n        top: 80px;\r\n        transform: translate3d(80px, -80px, 0) rotate(-45deg);\r\n        transition: left 0.125s ease-out, top 0.05s 0.125s linear, transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1); }\r\n      .hamburger--emphatic-r.is-active .hamburger-inner::after {\r\n        right: -80px;\r\n        top: 80px;\r\n        transform: translate3d(-80px, -80px, 0) rotate(45deg);\r\n        transition: right 0.125s ease-out, top 0.05s 0.125s linear, transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1); }\r\n  \r\n  /*\r\n     * Minus\r\n     */\r\n  .hamburger--minus .hamburger-inner::before, .hamburger--minus .hamburger-inner::after {\r\n    transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear; }\r\n  \r\n  .hamburger--minus.is-active .hamburger-inner::before, .hamburger--minus.is-active .hamburger-inner::after {\r\n    opacity: 0;\r\n    transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear; }\r\n  \r\n  .hamburger--minus.is-active .hamburger-inner::before {\r\n    top: 0; }\r\n  \r\n  .hamburger--minus.is-active .hamburger-inner::after {\r\n    bottom: 0; }\r\n  \r\n  /*\r\n     * Slider\r\n     */\r\n  .hamburger--slider .hamburger-inner {\r\n    top: 2px; }\r\n    .hamburger--slider .hamburger-inner::before {\r\n      top: 10px;\r\n      transition-property: transform, opacity;\r\n      transition-timing-function: ease;\r\n      transition-duration: 0.15s; }\r\n    .hamburger--slider .hamburger-inner::after {\r\n      top: 20px; }\r\n  \r\n  .hamburger--slider.is-active .hamburger-inner {\r\n    transform: translate3d(0, 10px, 0) rotate(45deg); }\r\n    .hamburger--slider.is-active .hamburger-inner::before {\r\n      transform: rotate(-45deg) translate3d(-5.71429px, -6px, 0);\r\n      opacity: 0; }\r\n    .hamburger--slider.is-active .hamburger-inner::after {\r\n      transform: translate3d(0, -20px, 0) rotate(-90deg); }\r\n  \r\n  /*\r\n     * Slider Reverse\r\n     */\r\n  .hamburger--slider-r .hamburger-inner {\r\n    top: 2px; }\r\n    .hamburger--slider-r .hamburger-inner::before {\r\n      top: 10px;\r\n      transition-property: transform, opacity;\r\n      transition-timing-function: ease;\r\n      transition-duration: 0.15s; }\r\n    .hamburger--slider-r .hamburger-inner::after {\r\n      top: 20px; }\r\n  \r\n  .hamburger--slider-r.is-active .hamburger-inner {\r\n    transform: translate3d(0, 10px, 0) rotate(-45deg); }\r\n    .hamburger--slider-r.is-active .hamburger-inner::before {\r\n      transform: rotate(45deg) translate3d(5.71429px, -6px, 0);\r\n      opacity: 0; }\r\n    .hamburger--slider-r.is-active .hamburger-inner::after {\r\n      transform: translate3d(0, -20px, 0) rotate(90deg); }\r\n  \r\n  /*\r\n     * Spin\r\n     */\r\n  .hamburger--spin .hamburger-inner {\r\n    transition-duration: 0.22s;\r\n    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }\r\n    .hamburger--spin .hamburger-inner::before {\r\n      transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }\r\n    .hamburger--spin .hamburger-inner::after {\r\n      transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19); }\r\n  \r\n  .hamburger--spin.is-active .hamburger-inner {\r\n    transform: rotate(225deg);\r\n    transition-delay: 0.12s;\r\n    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }\r\n    .hamburger--spin.is-active .hamburger-inner::before {\r\n      top: 0;\r\n      opacity: 0;\r\n      transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }\r\n    .hamburger--spin.is-active .hamburger-inner::after {\r\n      bottom: 0;\r\n      transform: rotate(-90deg);\r\n      transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1); }\r\n  \r\n  /*\r\n     * Spin Reverse\r\n     */\r\n  .hamburger--spin-r .hamburger-inner {\r\n    transition-duration: 0.22s;\r\n    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }\r\n    .hamburger--spin-r .hamburger-inner::before {\r\n      transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }\r\n    .hamburger--spin-r .hamburger-inner::after {\r\n      transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19); }\r\n  \r\n  .hamburger--spin-r.is-active .hamburger-inner {\r\n    transform: rotate(-225deg);\r\n    transition-delay: 0.12s;\r\n    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }\r\n    .hamburger--spin-r.is-active .hamburger-inner::before {\r\n      top: 0;\r\n      opacity: 0;\r\n      transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }\r\n    .hamburger--spin-r.is-active .hamburger-inner::after {\r\n      bottom: 0;\r\n      transform: rotate(90deg);\r\n      transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1); }\r\n  \r\n  /*\r\n     * Spring\r\n     */\r\n  .hamburger--spring .hamburger-inner {\r\n    top: 2px;\r\n    transition: background-color 0s 0.13s linear; }\r\n    .hamburger--spring .hamburger-inner::before {\r\n      top: 10px;\r\n      transition: top 0.1s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19); }\r\n    .hamburger--spring .hamburger-inner::after {\r\n      top: 20px;\r\n      transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19); }\r\n  \r\n  .hamburger--spring.is-active .hamburger-inner {\r\n    transition-delay: 0.22s;\r\n    background-color: transparent !important; }\r\n    .hamburger--spring.is-active .hamburger-inner::before {\r\n      top: 0;\r\n      transition: top 0.1s 0.15s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);\r\n      transform: translate3d(0, 10px, 0) rotate(45deg); }\r\n    .hamburger--spring.is-active .hamburger-inner::after {\r\n      top: 0;\r\n      transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);\r\n      transform: translate3d(0, 10px, 0) rotate(-45deg); }\r\n  \r\n  /*\r\n     * Spring Reverse\r\n     */\r\n  .hamburger--spring-r .hamburger-inner {\r\n    top: auto;\r\n    bottom: 0;\r\n    transition-duration: 0.13s;\r\n    transition-delay: 0s;\r\n    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }\r\n    .hamburger--spring-r .hamburger-inner::after {\r\n      top: -20px;\r\n      transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), opacity 0s linear; }\r\n    .hamburger--spring-r .hamburger-inner::before {\r\n      transition: top 0.1s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19); }\r\n  \r\n  .hamburger--spring-r.is-active .hamburger-inner {\r\n    transform: translate3d(0, -10px, 0) rotate(-45deg);\r\n    transition-delay: 0.22s;\r\n    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }\r\n    .hamburger--spring-r.is-active .hamburger-inner::after {\r\n      top: 0;\r\n      opacity: 0;\r\n      transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0s 0.22s linear; }\r\n    .hamburger--spring-r.is-active .hamburger-inner::before {\r\n      top: 0;\r\n      transform: rotate(90deg);\r\n      transition: top 0.1s 0.15s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1); }\r\n  \r\n  /*\r\n     * Stand\r\n     */\r\n  .hamburger--stand .hamburger-inner {\r\n    transition: transform 0.075s 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19), background-color 0s 0.075s linear; }\r\n    .hamburger--stand .hamburger-inner::before {\r\n      transition: top 0.075s 0.075s ease-in, transform 0.075s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19); }\r\n    .hamburger--stand .hamburger-inner::after {\r\n      transition: bottom 0.075s 0.075s ease-in, transform 0.075s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19); }\r\n  \r\n  .hamburger--stand.is-active .hamburger-inner {\r\n    transform: rotate(90deg);\r\n    background-color: transparent !important;\r\n    transition: transform 0.075s 0s cubic-bezier(0.215, 0.61, 0.355, 1), background-color 0s 0.15s linear; }\r\n    .hamburger--stand.is-active .hamburger-inner::before {\r\n      top: 0;\r\n      transform: rotate(-45deg);\r\n      transition: top 0.075s 0.1s ease-out, transform 0.075s 0.15s cubic-bezier(0.215, 0.61, 0.355, 1); }\r\n    .hamburger--stand.is-active .hamburger-inner::after {\r\n      bottom: 0;\r\n      transform: rotate(45deg);\r\n      transition: bottom 0.075s 0.1s ease-out, transform 0.075s 0.15s cubic-bezier(0.215, 0.61, 0.355, 1); }\r\n  \r\n  /*\r\n     * Stand Reverse\r\n     */\r\n  .hamburger--stand-r .hamburger-inner {\r\n    transition: transform 0.075s 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19), background-color 0s 0.075s linear; }\r\n    .hamburger--stand-r .hamburger-inner::before {\r\n      transition: top 0.075s 0.075s ease-in, transform 0.075s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19); }\r\n    .hamburger--stand-r .hamburger-inner::after {\r\n      transition: bottom 0.075s 0.075s ease-in, transform 0.075s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19); }\r\n  \r\n  .hamburger--stand-r.is-active .hamburger-inner {\r\n    transform: rotate(-90deg);\r\n    background-color: transparent !important;\r\n    transition: transform 0.075s 0s cubic-bezier(0.215, 0.61, 0.355, 1), background-color 0s 0.15s linear; }\r\n    .hamburger--stand-r.is-active .hamburger-inner::before {\r\n      top: 0;\r\n      transform: rotate(-45deg);\r\n      transition: top 0.075s 0.1s ease-out, transform 0.075s 0.15s cubic-bezier(0.215, 0.61, 0.355, 1); }\r\n    .hamburger--stand-r.is-active .hamburger-inner::after {\r\n      bottom: 0;\r\n      transform: rotate(45deg);\r\n      transition: bottom 0.075s 0.1s ease-out, transform 0.075s 0.15s cubic-bezier(0.215, 0.61, 0.355, 1); }\r\n  \r\n  /*\r\n     * Squeeze\r\n     */\r\n  .hamburger--squeeze .hamburger-inner {\r\n    transition-duration: 0.075s;\r\n    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }\r\n    .hamburger--squeeze .hamburger-inner::before {\r\n      transition: top 0.075s 0.12s ease, opacity 0.075s ease; }\r\n    .hamburger--squeeze .hamburger-inner::after {\r\n      transition: bottom 0.075s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19); }\r\n  \r\n  .hamburger--squeeze.is-active .hamburger-inner {\r\n    transform: rotate(45deg);\r\n    transition-delay: 0.12s;\r\n    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }\r\n    .hamburger--squeeze.is-active .hamburger-inner::before {\r\n      top: 0;\r\n      opacity: 0;\r\n      transition: top 0.075s ease, opacity 0.075s 0.12s ease; }\r\n    .hamburger--squeeze.is-active .hamburger-inner::after {\r\n      bottom: 0;\r\n      transform: rotate(-90deg);\r\n      transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1); }\r\n  \r\n  /*\r\n     * Vortex\r\n     */\r\n  .hamburger--vortex .hamburger-inner {\r\n    transition-duration: 0.2s;\r\n    transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1); }\r\n    .hamburger--vortex .hamburger-inner::before, .hamburger--vortex .hamburger-inner::after {\r\n      transition-duration: 0s;\r\n      transition-delay: 0.1s;\r\n      transition-timing-function: linear; }\r\n    .hamburger--vortex .hamburger-inner::before {\r\n      transition-property: top, opacity; }\r\n    .hamburger--vortex .hamburger-inner::after {\r\n      transition-property: bottom, transform; }\r\n  \r\n  .hamburger--vortex.is-active .hamburger-inner {\r\n    transform: rotate(765deg);\r\n    transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1); }\r\n    .hamburger--vortex.is-active .hamburger-inner::before, .hamburger--vortex.is-active .hamburger-inner::after {\r\n      transition-delay: 0s; }\r\n    .hamburger--vortex.is-active .hamburger-inner::before {\r\n      top: 0;\r\n      opacity: 0; }\r\n    .hamburger--vortex.is-active .hamburger-inner::after {\r\n      bottom: 0;\r\n      transform: rotate(90deg); }\r\n  \r\n  /*\r\n     * Vortex Reverse\r\n     */\r\n  .hamburger--vortex-r .hamburger-inner {\r\n    transition-duration: 0.2s;\r\n    transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1); }\r\n    .hamburger--vortex-r .hamburger-inner::before, .hamburger--vortex-r .hamburger-inner::after {\r\n      transition-duration: 0s;\r\n      transition-delay: 0.1s;\r\n      transition-timing-function: linear; }\r\n    .hamburger--vortex-r .hamburger-inner::before {\r\n      transition-property: top, opacity; }\r\n    .hamburger--vortex-r .hamburger-inner::after {\r\n      transition-property: bottom, transform; }\r\n  \r\n  .hamburger--vortex-r.is-active .hamburger-inner {\r\n    transform: rotate(-765deg);\r\n    transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1); }\r\n    .hamburger--vortex-r.is-active .hamburger-inner::before, .hamburger--vortex-r.is-active .hamburger-inner::after {\r\n      transition-delay: 0s; }\r\n    .hamburger--vortex-r.is-active .hamburger-inner::before {\r\n      top: 0;\r\n      opacity: 0; }\r\n    .hamburger--vortex-r.is-active .hamburger-inner::after {\r\n      bottom: 0;\r\n      transform: rotate(-90deg); }", ""]);
+exports.push([module.i, "/*!\n * Hamburgers\n * @description Tasty CSS-animated hamburgers\n * @author Jonathan Suh @jonsuh\n * @site https://jonsuh.com/hamburgers\n * @link https://github.com/jonsuh/hamburgers\n */\n .hamburger {\n   z-index: 100;\n    padding: 15px 15px;\n    display: inline-block;\n    cursor: pointer;\n    transition-property: opacity, filter;\n    transition-duration: 0.15s;\n    transition-timing-function: linear;\n    font: inherit;\n    color: inherit;\n    text-transform: none;\n    background-color: transparent;\n    border: 0;\n    margin: 0;\n    overflow: visible; }\n    .hamburger:hover {\n      opacity: 0.7; }\n    .hamburger.is-active:hover {\n      opacity: 0.7; }\n    .hamburger.is-active .hamburger-inner,\n    .hamburger.is-active .hamburger-inner::before,\n    .hamburger.is-active .hamburger-inner::after {\n      background-color: #000; }\n  \n  .hamburger-box {\n    width: 40px;\n    height: 24px;\n    display: inline-block;\n    position: relative; }\n  \n  .hamburger-inner {\n    display: block;\n    top: 50%;\n    margin-top: -2px; }\n    .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {\n      width: 40px;\n      height: 4px;\n      background-color: #000;\n      border-radius: 4px;\n      position: absolute;\n      transition-property: transform;\n      transition-duration: 0.15s;\n      transition-timing-function: ease; }\n    .hamburger-inner::before, .hamburger-inner::after {\n      content: \"\";\n      display: block; }\n    .hamburger-inner::before {\n      top: -10px; }\n    .hamburger-inner::after {\n      bottom: -10px; }\n  \n  /*\n     * 3DX\n     */\n  .hamburger--3dx .hamburger-box {\n    perspective: 80px; }\n  \n  .hamburger--3dx .hamburger-inner {\n    transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); }\n    .hamburger--3dx .hamburger-inner::before, .hamburger--3dx .hamburger-inner::after {\n      transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); }\n  \n  .hamburger--3dx.is-active .hamburger-inner {\n    background-color: transparent !important;\n    transform: rotateY(180deg); }\n    .hamburger--3dx.is-active .hamburger-inner::before {\n      transform: translate3d(0, 10px, 0) rotate(45deg); }\n    .hamburger--3dx.is-active .hamburger-inner::after {\n      transform: translate3d(0, -10px, 0) rotate(-45deg); }\n  \n  /*\n     * 3DX Reverse\n     */\n  .hamburger--3dx-r .hamburger-box {\n    perspective: 80px; }\n  \n  .hamburger--3dx-r .hamburger-inner {\n    transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); }\n    .hamburger--3dx-r .hamburger-inner::before, .hamburger--3dx-r .hamburger-inner::after {\n      transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); }\n  \n  .hamburger--3dx-r.is-active .hamburger-inner {\n    background-color: transparent !important;\n    transform: rotateY(-180deg); }\n    .hamburger--3dx-r.is-active .hamburger-inner::before {\n      transform: translate3d(0, 10px, 0) rotate(45deg); }\n    .hamburger--3dx-r.is-active .hamburger-inner::after {\n      transform: translate3d(0, -10px, 0) rotate(-45deg); }\n  \n  /*\n     * 3DY\n     */\n  .hamburger--3dy .hamburger-box {\n    perspective: 80px; }\n  \n  .hamburger--3dy .hamburger-inner {\n    transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); }\n    .hamburger--3dy .hamburger-inner::before, .hamburger--3dy .hamburger-inner::after {\n      transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); }\n  \n  .hamburger--3dy.is-active .hamburger-inner {\n    background-color: transparent !important;\n    transform: rotateX(-180deg); }\n    .hamburger--3dy.is-active .hamburger-inner::before {\n      transform: translate3d(0, 10px, 0) rotate(45deg); }\n    .hamburger--3dy.is-active .hamburger-inner::after {\n      transform: translate3d(0, -10px, 0) rotate(-45deg); }\n  \n  /*\n     * 3DY Reverse\n     */\n  .hamburger--3dy-r .hamburger-box {\n    perspective: 80px; }\n  \n  .hamburger--3dy-r .hamburger-inner {\n    transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); }\n    .hamburger--3dy-r .hamburger-inner::before, .hamburger--3dy-r .hamburger-inner::after {\n      transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); }\n  \n  .hamburger--3dy-r.is-active .hamburger-inner {\n    background-color: transparent !important;\n    transform: rotateX(180deg); }\n    .hamburger--3dy-r.is-active .hamburger-inner::before {\n      transform: translate3d(0, 10px, 0) rotate(45deg); }\n    .hamburger--3dy-r.is-active .hamburger-inner::after {\n      transform: translate3d(0, -10px, 0) rotate(-45deg); }\n  \n  /*\n     * 3DXY\n     */\n  .hamburger--3dxy .hamburger-box {\n    perspective: 80px; }\n  \n  .hamburger--3dxy .hamburger-inner {\n    transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); }\n    .hamburger--3dxy .hamburger-inner::before, .hamburger--3dxy .hamburger-inner::after {\n      transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); }\n  \n  .hamburger--3dxy.is-active .hamburger-inner {\n    background-color: transparent !important;\n    transform: rotateX(180deg) rotateY(180deg); }\n    .hamburger--3dxy.is-active .hamburger-inner::before {\n      transform: translate3d(0, 10px, 0) rotate(45deg); }\n    .hamburger--3dxy.is-active .hamburger-inner::after {\n      transform: translate3d(0, -10px, 0) rotate(-45deg); }\n  \n  /*\n     * 3DXY Reverse\n     */\n  .hamburger--3dxy-r .hamburger-box {\n    perspective: 80px; }\n  \n  .hamburger--3dxy-r .hamburger-inner {\n    transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); }\n    .hamburger--3dxy-r .hamburger-inner::before, .hamburger--3dxy-r .hamburger-inner::after {\n      transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); }\n  \n  .hamburger--3dxy-r.is-active .hamburger-inner {\n    background-color: transparent !important;\n    transform: rotateX(180deg) rotateY(180deg) rotateZ(-180deg); }\n    .hamburger--3dxy-r.is-active .hamburger-inner::before {\n      transform: translate3d(0, 10px, 0) rotate(45deg); }\n    .hamburger--3dxy-r.is-active .hamburger-inner::after {\n      transform: translate3d(0, -10px, 0) rotate(-45deg); }\n  \n  /*\n     * Arrow\n     */\n  .hamburger--arrow.is-active .hamburger-inner::before {\n    transform: translate3d(-8px, 0, 0) rotate(-45deg) scale(0.7, 1); }\n  \n  .hamburger--arrow.is-active .hamburger-inner::after {\n    transform: translate3d(-8px, 0, 0) rotate(45deg) scale(0.7, 1); }\n  \n  /*\n     * Arrow Right\n     */\n  .hamburger--arrow-r.is-active .hamburger-inner::before {\n    transform: translate3d(8px, 0, 0) rotate(45deg) scale(0.7, 1); }\n  \n  .hamburger--arrow-r.is-active .hamburger-inner::after {\n    transform: translate3d(8px, 0, 0) rotate(-45deg) scale(0.7, 1); }\n  \n  /*\n     * Arrow Alt\n     */\n  .hamburger--arrowalt .hamburger-inner::before {\n    transition: top 0.1s 0.1s ease, transform 0.1s cubic-bezier(0.165, 0.84, 0.44, 1); }\n  \n  .hamburger--arrowalt .hamburger-inner::after {\n    transition: bottom 0.1s 0.1s ease, transform 0.1s cubic-bezier(0.165, 0.84, 0.44, 1); }\n  \n  .hamburger--arrowalt.is-active .hamburger-inner::before {\n    top: 0;\n    transform: translate3d(-8px, -10px, 0) rotate(-45deg) scale(0.7, 1);\n    transition: top 0.1s ease, transform 0.1s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22); }\n  \n  .hamburger--arrowalt.is-active .hamburger-inner::after {\n    bottom: 0;\n    transform: translate3d(-8px, 10px, 0) rotate(45deg) scale(0.7, 1);\n    transition: bottom 0.1s ease, transform 0.1s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22); }\n  \n  /*\n     * Arrow Alt Right\n     */\n  .hamburger--arrowalt-r .hamburger-inner::before {\n    transition: top 0.1s 0.1s ease, transform 0.1s cubic-bezier(0.165, 0.84, 0.44, 1); }\n  \n  .hamburger--arrowalt-r .hamburger-inner::after {\n    transition: bottom 0.1s 0.1s ease, transform 0.1s cubic-bezier(0.165, 0.84, 0.44, 1); }\n  \n  .hamburger--arrowalt-r.is-active .hamburger-inner::before {\n    top: 0;\n    transform: translate3d(8px, -10px, 0) rotate(45deg) scale(0.7, 1);\n    transition: top 0.1s ease, transform 0.1s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22); }\n  \n  .hamburger--arrowalt-r.is-active .hamburger-inner::after {\n    bottom: 0;\n    transform: translate3d(8px, 10px, 0) rotate(-45deg) scale(0.7, 1);\n    transition: bottom 0.1s ease, transform 0.1s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22); }\n  \n  /*\n     * Arrow Turn\n     */\n  .hamburger--arrowturn.is-active .hamburger-inner {\n    transform: rotate(-180deg); }\n    .hamburger--arrowturn.is-active .hamburger-inner::before {\n      transform: translate3d(8px, 0, 0) rotate(45deg) scale(0.7, 1); }\n    .hamburger--arrowturn.is-active .hamburger-inner::after {\n      transform: translate3d(8px, 0, 0) rotate(-45deg) scale(0.7, 1); }\n  \n  /*\n     * Arrow Turn Right\n     */\n  .hamburger--arrowturn-r.is-active .hamburger-inner {\n    transform: rotate(-180deg); }\n    .hamburger--arrowturn-r.is-active .hamburger-inner::before {\n      transform: translate3d(-8px, 0, 0) rotate(-45deg) scale(0.7, 1); }\n    .hamburger--arrowturn-r.is-active .hamburger-inner::after {\n      transform: translate3d(-8px, 0, 0) rotate(45deg) scale(0.7, 1); }\n  \n  /*\n     * Boring\n     */\n  .hamburger--boring .hamburger-inner, .hamburger--boring .hamburger-inner::before, .hamburger--boring .hamburger-inner::after {\n    transition-property: none; }\n  \n  .hamburger--boring.is-active .hamburger-inner {\n    transform: rotate(45deg); }\n    .hamburger--boring.is-active .hamburger-inner::before {\n      top: 0;\n      opacity: 0; }\n    .hamburger--boring.is-active .hamburger-inner::after {\n      bottom: 0;\n      transform: rotate(-90deg); }\n  \n  /*\n     * Collapse\n     */\n  .hamburger--collapse .hamburger-inner {\n    top: auto;\n    bottom: 0;\n    transition-duration: 0.13s;\n    transition-delay: 0.13s;\n    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }\n    .hamburger--collapse .hamburger-inner::after {\n      top: -20px;\n      transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), opacity 0.1s linear; }\n    .hamburger--collapse .hamburger-inner::before {\n      transition: top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19); }\n  \n  .hamburger--collapse.is-active .hamburger-inner {\n    transform: translate3d(0, -10px, 0) rotate(-45deg);\n    transition-delay: 0.22s;\n    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }\n    .hamburger--collapse.is-active .hamburger-inner::after {\n      top: 0;\n      opacity: 0;\n      transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0.1s 0.22s linear; }\n    .hamburger--collapse.is-active .hamburger-inner::before {\n      top: 0;\n      transform: rotate(-90deg);\n      transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1); }\n  \n  /*\n     * Collapse Reverse\n     */\n  .hamburger--collapse-r .hamburger-inner {\n    top: auto;\n    bottom: 0;\n    transition-duration: 0.13s;\n    transition-delay: 0.13s;\n    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }\n    .hamburger--collapse-r .hamburger-inner::after {\n      top: -20px;\n      transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), opacity 0.1s linear; }\n    .hamburger--collapse-r .hamburger-inner::before {\n      transition: top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19); }\n  \n  .hamburger--collapse-r.is-active .hamburger-inner {\n    transform: translate3d(0, -10px, 0) rotate(45deg);\n    transition-delay: 0.22s;\n    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }\n    .hamburger--collapse-r.is-active .hamburger-inner::after {\n      top: 0;\n      opacity: 0;\n      transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0.1s 0.22s linear; }\n    .hamburger--collapse-r.is-active .hamburger-inner::before {\n      top: 0;\n      transform: rotate(90deg);\n      transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1); }\n  \n  /*\n     * Elastic\n     */\n  .hamburger--elastic .hamburger-inner {\n    top: 2px;\n    transition-duration: 0.275s;\n    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); }\n    .hamburger--elastic .hamburger-inner::before {\n      top: 10px;\n      transition: opacity 0.125s 0.275s ease; }\n    .hamburger--elastic .hamburger-inner::after {\n      top: 20px;\n      transition: transform 0.275s cubic-bezier(0.68, -0.55, 0.265, 1.55); }\n  \n  .hamburger--elastic.is-active .hamburger-inner {\n    transform: translate3d(0, 10px, 0) rotate(135deg);\n    transition-delay: 0.075s; }\n    .hamburger--elastic.is-active .hamburger-inner::before {\n      transition-delay: 0s;\n      opacity: 0; }\n    .hamburger--elastic.is-active .hamburger-inner::after {\n      transform: translate3d(0, -20px, 0) rotate(-270deg);\n      transition-delay: 0.075s; }\n  \n  /*\n     * Elastic Reverse\n     */\n  .hamburger--elastic-r .hamburger-inner {\n    top: 2px;\n    transition-duration: 0.275s;\n    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); }\n    .hamburger--elastic-r .hamburger-inner::before {\n      top: 10px;\n      transition: opacity 0.125s 0.275s ease; }\n    .hamburger--elastic-r .hamburger-inner::after {\n      top: 20px;\n      transition: transform 0.275s cubic-bezier(0.68, -0.55, 0.265, 1.55); }\n  \n  .hamburger--elastic-r.is-active .hamburger-inner {\n    transform: translate3d(0, 10px, 0) rotate(-135deg);\n    transition-delay: 0.075s; }\n    .hamburger--elastic-r.is-active .hamburger-inner::before {\n      transition-delay: 0s;\n      opacity: 0; }\n    .hamburger--elastic-r.is-active .hamburger-inner::after {\n      transform: translate3d(0, -20px, 0) rotate(270deg);\n      transition-delay: 0.075s; }\n  \n  /*\n     * Emphatic\n     */\n  .hamburger--emphatic {\n    overflow: hidden; }\n    .hamburger--emphatic .hamburger-inner {\n      transition: background-color 0.125s 0.175s ease-in; }\n      .hamburger--emphatic .hamburger-inner::before {\n        left: 0;\n        transition: transform 0.125s cubic-bezier(0.6, 0.04, 0.98, 0.335), top 0.05s 0.125s linear, left 0.125s 0.175s ease-in; }\n      .hamburger--emphatic .hamburger-inner::after {\n        top: 10px;\n        right: 0;\n        transition: transform 0.125s cubic-bezier(0.6, 0.04, 0.98, 0.335), top 0.05s 0.125s linear, right 0.125s 0.175s ease-in; }\n    .hamburger--emphatic.is-active .hamburger-inner {\n      transition-delay: 0s;\n      transition-timing-function: ease-out;\n      background-color: transparent !important; }\n      .hamburger--emphatic.is-active .hamburger-inner::before {\n        left: -80px;\n        top: -80px;\n        transform: translate3d(80px, 80px, 0) rotate(45deg);\n        transition: left 0.125s ease-out, top 0.05s 0.125s linear, transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1); }\n      .hamburger--emphatic.is-active .hamburger-inner::after {\n        right: -80px;\n        top: -80px;\n        transform: translate3d(-80px, 80px, 0) rotate(-45deg);\n        transition: right 0.125s ease-out, top 0.05s 0.125s linear, transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1); }\n  \n  /*\n     * Emphatic Reverse\n     */\n  .hamburger--emphatic-r {\n    overflow: hidden; }\n    .hamburger--emphatic-r .hamburger-inner {\n      transition: background-color 0.125s 0.175s ease-in; }\n      .hamburger--emphatic-r .hamburger-inner::before {\n        left: 0;\n        transition: transform 0.125s cubic-bezier(0.6, 0.04, 0.98, 0.335), top 0.05s 0.125s linear, left 0.125s 0.175s ease-in; }\n      .hamburger--emphatic-r .hamburger-inner::after {\n        top: 10px;\n        right: 0;\n        transition: transform 0.125s cubic-bezier(0.6, 0.04, 0.98, 0.335), top 0.05s 0.125s linear, right 0.125s 0.175s ease-in; }\n    .hamburger--emphatic-r.is-active .hamburger-inner {\n      transition-delay: 0s;\n      transition-timing-function: ease-out;\n      background-color: transparent !important; }\n      .hamburger--emphatic-r.is-active .hamburger-inner::before {\n        left: -80px;\n        top: 80px;\n        transform: translate3d(80px, -80px, 0) rotate(-45deg);\n        transition: left 0.125s ease-out, top 0.05s 0.125s linear, transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1); }\n      .hamburger--emphatic-r.is-active .hamburger-inner::after {\n        right: -80px;\n        top: 80px;\n        transform: translate3d(-80px, -80px, 0) rotate(45deg);\n        transition: right 0.125s ease-out, top 0.05s 0.125s linear, transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1); }\n  \n  /*\n     * Minus\n     */\n  .hamburger--minus .hamburger-inner::before, .hamburger--minus .hamburger-inner::after {\n    transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear; }\n  \n  .hamburger--minus.is-active .hamburger-inner::before, .hamburger--minus.is-active .hamburger-inner::after {\n    opacity: 0;\n    transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear; }\n  \n  .hamburger--minus.is-active .hamburger-inner::before {\n    top: 0; }\n  \n  .hamburger--minus.is-active .hamburger-inner::after {\n    bottom: 0; }\n  \n  /*\n     * Slider\n     */\n  .hamburger--slider .hamburger-inner {\n    top: 2px; }\n    .hamburger--slider .hamburger-inner::before {\n      top: 10px;\n      transition-property: transform, opacity;\n      transition-timing-function: ease;\n      transition-duration: 0.15s; }\n    .hamburger--slider .hamburger-inner::after {\n      top: 20px; }\n  \n  .hamburger--slider.is-active .hamburger-inner {\n    transform: translate3d(0, 10px, 0) rotate(45deg); }\n    .hamburger--slider.is-active .hamburger-inner::before {\n      transform: rotate(-45deg) translate3d(-5.71429px, -6px, 0);\n      opacity: 0; }\n    .hamburger--slider.is-active .hamburger-inner::after {\n      transform: translate3d(0, -20px, 0) rotate(-90deg); }\n  \n  /*\n     * Slider Reverse\n     */\n  .hamburger--slider-r .hamburger-inner {\n    top: 2px; }\n    .hamburger--slider-r .hamburger-inner::before {\n      top: 10px;\n      transition-property: transform, opacity;\n      transition-timing-function: ease;\n      transition-duration: 0.15s; }\n    .hamburger--slider-r .hamburger-inner::after {\n      top: 20px; }\n  \n  .hamburger--slider-r.is-active .hamburger-inner {\n    transform: translate3d(0, 10px, 0) rotate(-45deg); }\n    .hamburger--slider-r.is-active .hamburger-inner::before {\n      transform: rotate(45deg) translate3d(5.71429px, -6px, 0);\n      opacity: 0; }\n    .hamburger--slider-r.is-active .hamburger-inner::after {\n      transform: translate3d(0, -20px, 0) rotate(90deg); }\n  \n  /*\n     * Spin\n     */\n  .hamburger--spin .hamburger-inner {\n    transition-duration: 0.22s;\n    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }\n    .hamburger--spin .hamburger-inner::before {\n      transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }\n    .hamburger--spin .hamburger-inner::after {\n      transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19); }\n  \n  .hamburger--spin.is-active .hamburger-inner {\n    transform: rotate(225deg);\n    transition-delay: 0.12s;\n    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }\n    .hamburger--spin.is-active .hamburger-inner::before {\n      top: 0;\n      opacity: 0;\n      transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }\n    .hamburger--spin.is-active .hamburger-inner::after {\n      bottom: 0;\n      transform: rotate(-90deg);\n      transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1); }\n  \n  /*\n     * Spin Reverse\n     */\n  .hamburger--spin-r .hamburger-inner {\n    transition-duration: 0.22s;\n    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }\n    .hamburger--spin-r .hamburger-inner::before {\n      transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }\n    .hamburger--spin-r .hamburger-inner::after {\n      transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19); }\n  \n  .hamburger--spin-r.is-active .hamburger-inner {\n    transform: rotate(-225deg);\n    transition-delay: 0.12s;\n    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }\n    .hamburger--spin-r.is-active .hamburger-inner::before {\n      top: 0;\n      opacity: 0;\n      transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }\n    .hamburger--spin-r.is-active .hamburger-inner::after {\n      bottom: 0;\n      transform: rotate(90deg);\n      transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1); }\n  \n  /*\n     * Spring\n     */\n  .hamburger--spring .hamburger-inner {\n    top: 2px;\n    transition: background-color 0s 0.13s linear; }\n    .hamburger--spring .hamburger-inner::before {\n      top: 10px;\n      transition: top 0.1s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19); }\n    .hamburger--spring .hamburger-inner::after {\n      top: 20px;\n      transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19); }\n  \n  .hamburger--spring.is-active .hamburger-inner {\n    transition-delay: 0.22s;\n    background-color: transparent !important; }\n    .hamburger--spring.is-active .hamburger-inner::before {\n      top: 0;\n      transition: top 0.1s 0.15s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);\n      transform: translate3d(0, 10px, 0) rotate(45deg); }\n    .hamburger--spring.is-active .hamburger-inner::after {\n      top: 0;\n      transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);\n      transform: translate3d(0, 10px, 0) rotate(-45deg); }\n  \n  /*\n     * Spring Reverse\n     */\n  .hamburger--spring-r .hamburger-inner {\n    top: auto;\n    bottom: 0;\n    transition-duration: 0.13s;\n    transition-delay: 0s;\n    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }\n    .hamburger--spring-r .hamburger-inner::after {\n      top: -20px;\n      transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), opacity 0s linear; }\n    .hamburger--spring-r .hamburger-inner::before {\n      transition: top 0.1s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19); }\n  \n  .hamburger--spring-r.is-active .hamburger-inner {\n    transform: translate3d(0, -10px, 0) rotate(-45deg);\n    transition-delay: 0.22s;\n    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }\n    .hamburger--spring-r.is-active .hamburger-inner::after {\n      top: 0;\n      opacity: 0;\n      transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0s 0.22s linear; }\n    .hamburger--spring-r.is-active .hamburger-inner::before {\n      top: 0;\n      transform: rotate(90deg);\n      transition: top 0.1s 0.15s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1); }\n  \n  /*\n     * Stand\n     */\n  .hamburger--stand .hamburger-inner {\n    transition: transform 0.075s 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19), background-color 0s 0.075s linear; }\n    .hamburger--stand .hamburger-inner::before {\n      transition: top 0.075s 0.075s ease-in, transform 0.075s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19); }\n    .hamburger--stand .hamburger-inner::after {\n      transition: bottom 0.075s 0.075s ease-in, transform 0.075s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19); }\n  \n  .hamburger--stand.is-active .hamburger-inner {\n    transform: rotate(90deg);\n    background-color: transparent !important;\n    transition: transform 0.075s 0s cubic-bezier(0.215, 0.61, 0.355, 1), background-color 0s 0.15s linear; }\n    .hamburger--stand.is-active .hamburger-inner::before {\n      top: 0;\n      transform: rotate(-45deg);\n      transition: top 0.075s 0.1s ease-out, transform 0.075s 0.15s cubic-bezier(0.215, 0.61, 0.355, 1); }\n    .hamburger--stand.is-active .hamburger-inner::after {\n      bottom: 0;\n      transform: rotate(45deg);\n      transition: bottom 0.075s 0.1s ease-out, transform 0.075s 0.15s cubic-bezier(0.215, 0.61, 0.355, 1); }\n  \n  /*\n     * Stand Reverse\n     */\n  .hamburger--stand-r .hamburger-inner {\n    transition: transform 0.075s 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19), background-color 0s 0.075s linear; }\n    .hamburger--stand-r .hamburger-inner::before {\n      transition: top 0.075s 0.075s ease-in, transform 0.075s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19); }\n    .hamburger--stand-r .hamburger-inner::after {\n      transition: bottom 0.075s 0.075s ease-in, transform 0.075s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19); }\n  \n  .hamburger--stand-r.is-active .hamburger-inner {\n    transform: rotate(-90deg);\n    background-color: transparent !important;\n    transition: transform 0.075s 0s cubic-bezier(0.215, 0.61, 0.355, 1), background-color 0s 0.15s linear; }\n    .hamburger--stand-r.is-active .hamburger-inner::before {\n      top: 0;\n      transform: rotate(-45deg);\n      transition: top 0.075s 0.1s ease-out, transform 0.075s 0.15s cubic-bezier(0.215, 0.61, 0.355, 1); }\n    .hamburger--stand-r.is-active .hamburger-inner::after {\n      bottom: 0;\n      transform: rotate(45deg);\n      transition: bottom 0.075s 0.1s ease-out, transform 0.075s 0.15s cubic-bezier(0.215, 0.61, 0.355, 1); }\n  \n  /*\n     * Squeeze\n     */\n  .hamburger--squeeze .hamburger-inner {\n    transition-duration: 0.075s;\n    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }\n    .hamburger--squeeze .hamburger-inner::before {\n      transition: top 0.075s 0.12s ease, opacity 0.075s ease; }\n    .hamburger--squeeze .hamburger-inner::after {\n      transition: bottom 0.075s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19); }\n  \n  .hamburger--squeeze.is-active .hamburger-inner {\n    transform: rotate(45deg);\n    transition-delay: 0.12s;\n    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }\n    .hamburger--squeeze.is-active .hamburger-inner::before {\n      top: 0;\n      opacity: 0;\n      transition: top 0.075s ease, opacity 0.075s 0.12s ease; }\n    .hamburger--squeeze.is-active .hamburger-inner::after {\n      bottom: 0;\n      transform: rotate(-90deg);\n      transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1); }\n  \n  /*\n     * Vortex\n     */\n  .hamburger--vortex .hamburger-inner {\n    transition-duration: 0.2s;\n    transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1); }\n    .hamburger--vortex .hamburger-inner::before, .hamburger--vortex .hamburger-inner::after {\n      transition-duration: 0s;\n      transition-delay: 0.1s;\n      transition-timing-function: linear; }\n    .hamburger--vortex .hamburger-inner::before {\n      transition-property: top, opacity; }\n    .hamburger--vortex .hamburger-inner::after {\n      transition-property: bottom, transform; }\n  \n  .hamburger--vortex.is-active .hamburger-inner {\n    transform: rotate(765deg);\n    transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1); }\n    .hamburger--vortex.is-active .hamburger-inner::before, .hamburger--vortex.is-active .hamburger-inner::after {\n      transition-delay: 0s; }\n    .hamburger--vortex.is-active .hamburger-inner::before {\n      top: 0;\n      opacity: 0; }\n    .hamburger--vortex.is-active .hamburger-inner::after {\n      bottom: 0;\n      transform: rotate(90deg); }\n  \n  /*\n     * Vortex Reverse\n     */\n  .hamburger--vortex-r .hamburger-inner {\n    transition-duration: 0.2s;\n    transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1); }\n    .hamburger--vortex-r .hamburger-inner::before, .hamburger--vortex-r .hamburger-inner::after {\n      transition-duration: 0s;\n      transition-delay: 0.1s;\n      transition-timing-function: linear; }\n    .hamburger--vortex-r .hamburger-inner::before {\n      transition-property: top, opacity; }\n    .hamburger--vortex-r .hamburger-inner::after {\n      transition-property: bottom, transform; }\n  \n  .hamburger--vortex-r.is-active .hamburger-inner {\n    transform: rotate(-765deg);\n    transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1); }\n    .hamburger--vortex-r.is-active .hamburger-inner::before, .hamburger--vortex-r.is-active .hamburger-inner::after {\n      transition-delay: 0s; }\n    .hamburger--vortex-r.is-active .hamburger-inner::before {\n      top: 0;\n      opacity: 0; }\n    .hamburger--vortex-r.is-active .hamburger-inner::after {\n      bottom: 0;\n      transform: rotate(-90deg); }", ""]);
 
 
 
@@ -964,11 +964,7 @@ exports.push([module.i, "/*!\r\n * Hamburgers\r\n * @description Tasty CSS-anima
 
 exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-<<<<<<< HEAD
-exports.push([module.i, "body {\r\n  background-color: white;\r\n  margin: 0;\r\n}\r\n\r\n.hamburger:focus {\r\n  outline: none;\r\n}\r\n\r\n.nav {\r\n  background-color: white;\r\n}\r\n.flexMobile {\r\n  display: flex;\r\n}\r\n\r\n.toggle-nav-on {\r\n  display: block;\r\n  position: fixed;\r\n  width: 45%;\r\n  height: 100%;\r\n  right: 0;\r\n  top: 0;\r\n  padding: 3em 1em 0 0;\r\n  font-size: 1.5em;\r\n  background-color: whitesmoke;\r\n  box-shadow: 0 0 3px grey;\r\n\r\n  transition-property: right;\r\n  transition-duration: 0.5s;\r\n  -webkit-transition-duration: 0.5s;\r\n  -moz-transition-duration: 0.5s;\r\n  -o-transition-duration: 0.5s;\r\n  transition-timing-function: ease-in-out;\r\n}\r\n.toggle-nav {\r\n  visibility: hidden;\r\n  overflow: hidden;\r\n  top: 0;\r\n  padding: 3em 1em 0 0;\r\n  right: -100%;\r\n  padding-right: 1em;\r\n  font-size: 1.5em;\r\n  height: 100%;\r\n  width: 45%;\r\n  background-color: whitesmoke;\r\n  position: fixed;\r\n\r\n  transition-property: visibility, right;\r\n  transition-duration: 0.5s;\r\n  -webkit-transition-duration: 0.5s;\r\n  -moz-transition-duration: 0.5s;\r\n  -o-transition-duration: 0.5s;\r\n  transition-timing-function: ease-in-out;\r\n}\r\n\r\n.hideDesktop {\r\n  display: none;\r\n}\r\n\r\n.mobileNav {\r\n  display: flex;\r\n  justify-content: space-between;\r\n}\r\n\r\n.mobileNav h1 {\r\n  margin-left: 15px;\r\n}\r\n\r\na {\r\n  color: black;\r\n  text-decoration: none;\r\n}\r\n\r\n.nav ul {\r\n  list-style-type: none;\r\n  text-transform: uppercase;\r\n  padding: 0px;\r\n  line-height: 2em;\r\n  display: flex;\r\n  flex-direction: column;\r\n  text-align: right;\r\n  font-family: sans-serif;\r\n}\r\n\r\n.nav a, .nav div {\r\n  font-family: 'Work Sans', sans-serif;\r\n  font-weight: 800;\r\n  letter-spacing: 2px;\r\n}\r\n\r\nh1, h2, h3, h4, h5, h6 {\r\n  font-family: 'Lato', sans-serif;\r\n  letter-spacing: 1px;\r\n}\r\n\r\n/* all items container */\r\n.all-items-title {\r\n  display: flex;\r\n  justify-content: center;\r\n  text-transform: uppercase;\r\n}\r\n.all-items-display {\r\n  display: grid;\r\n  grid-template-columns: 1fr 1fr;\r\n  margin: auto;\r\n  width: 90vw;\r\n}\r\n/* individual item */\r\n.one-item {\r\n  font-family: 'sans-serif';\r\n  color: black;\r\n  padding: 0;\r\n  margin: 10px;\r\n  height: 70vw;\r\n  width: 40vw;\r\n  z-index: 1;\r\n}\r\n.one-item-image {\r\n  height: 80%;\r\n  width: 100%;\r\n  background: lightgrey;\r\n}\r\n.one-item-image > img {\r\n  width: 100%;\r\n  height: 100%;\r\n  object-fit: cover;\r\n  overflow: hidden;\r\n}\r\n.one-item-text {\r\n  padding: 0;\r\n  margin: 0;\r\n  margin-top: 10px;\r\n  font-family: 'Helvetica';\r\n}\r\n.one-item-text > h1 {\r\n  padding: 0;\r\n  margin: 0;\r\n  font-size: 20px;\r\n  width: 100%;\r\n  overflow: visible;\r\n  text-transform: capitalize;\r\n  font-weight: lighter;\r\n}\r\n.one-item-text > p {\r\n  padding-top: 5px;\r\n  font-size: 70%;\r\n  font-weight: lighter;\r\n  border-top: black solid 1px;\r\n  width: 33%;\r\n}\r\n\r\n.popup {\r\n  z-index: 1000;\r\n  width: 400px;\r\n  box-shadow: rgba(128, 128, 128, 0.479) 4px 4px 4px 4px 16px;\r\n  text-transform: none;\r\n}\r\n.popup-form-container {\r\n  background-color: white;\r\n  display: flex;\r\n}\r\n.detail-container {\r\n  display: grid;\r\n  grid-column-gap: 50px;\r\n  width: 100vw;\r\n  margin-top: 5em;\r\n}\r\n\r\n.detail-description {\r\n  display: grid;\r\n  grid-template-rows: 5em 2em 2em 1fr 3em;\r\n  padding: 2em;\r\n  height: 40vh;\r\n}\r\n.detail-image {\r\n  width: 90vw;\r\n  height: 70vh;\r\n  margin: auto;\r\n  display: flex;\r\n  justify-content: center;\r\n}\r\n\r\n@media screen and (min-width: 650px) {\r\n  .all-items-display {\r\n    display: grid;\r\n    grid-template-columns: 1fr 1fr 1fr;\r\n    margin: auto;\r\n    width: 90vw;\r\n  }\r\n  .one-item-text > h1 {\r\n    font-size: 25px;\r\n  }\r\n  .one-item {\r\n    height: 430px;\r\n    width: 230px;\r\n  }\r\n}\r\n@media screen and (max-width: 968px) {\r\n  .profileMobile {\r\n    position: relative;\r\n    right: 10px;\r\n  }\r\n  .profileAlign {\r\n    align-items: center;\r\n    justify-content: flex-end;\r\n  }\r\n}\r\n\r\n/* CSS applies to 968px and above */\r\n@media screen and (min-width: 968px) {\r\n  .hideDesktop {\r\n    display: block;\r\n  }\r\n  .all-items-display {\r\n    padding: 0 5%;\r\n    display: grid;\r\n    grid-template-columns: 1fr 1fr 1fr 1fr;\r\n    justify-content: center;\r\n    width: 90vw;\r\n  }\r\n  .one-item-text > h1 {\r\n    font-size: 25px;\r\n  }\r\n  .one-item {\r\n    height: 430px;\r\n    width: 230px;\r\n  }\r\n  /* navigation */\r\n  .toggle-nav {\r\n    display: block;\r\n  }\r\n  .hideMobile {\r\n    display: none;\r\n  }\r\n  #navItems {\r\n    width: 100%;\r\n  }\r\n  .nav {\r\n    display: flex;\r\n    height: 4em;\r\n    border-bottom: 1px solid black;\r\n    margin-bottom: 0.5em;\r\n    box-shadow: 0px 0px 2px grey;\r\n    background-color: white;\r\n  }\r\n  .nav ul {\r\n    display: flex;\r\n    flex-direction: row;\r\n    list-style-type: none;\r\n    text-transform: uppercase;\r\n    justify-content: space-between;\r\n  }\r\n\r\n  .nav ul li {\r\n    margin: 0 1em 0 1em;\r\n  }\r\n  .flex {\r\n    display: flex;\r\n  }\r\n  .profileAlign {\r\n    margin-right: 1em;\r\n  }\r\n\r\n  /* end navigation */\r\n\r\n  /* dropdown */\r\n  .dropdown-container {\r\n    position: relative;\r\n  }\r\n\r\n  .dropdown-content {\r\n    display: none;\r\n    position: absolute;\r\n    right: 0;\r\n    min-width: max-content;\r\n    box-shadow: rgba(128, 128, 128, 0.479) 4px 4px 16px;\r\n    background-color: white;\r\n    padding: 1em;\r\n    z-index: 99;\r\n  }\r\n\r\n  .dropdown-container:hover .dropdown-content {\r\n    display: block;\r\n  }\r\n  .dropdown-button {\r\n    display: flex;\r\n    align-items: center;\r\n  }\r\n  .dropdown-button:after {\r\n    background: url('/../uploads/arrow.png') no-repeat;\r\n    background-size: cover;\r\n    content: '';\r\n    display: inline-block;\r\n    width: 0.6em;\r\n    height: 0.6em;\r\n    margin-left: 5px;\r\n    transform: rotate(90deg);\r\n  }\r\n  .dropdown-button:hover {\r\n    color: purple;\r\n    cursor: pointer;\r\n  }\r\n  /* end of dropdown */\r\n  .detail-container {\r\n    grid-template-columns: 1fr 30%;\r\n    width: 90vw;\r\n    margin: 2em;\r\n    margin-top: 5em;\r\n  }\r\n  .detail-description {\r\n    width: 90%;\r\n    height: 80vh;\r\n    padding: 0;\r\n    margin: 1em;\r\n  }\r\n  .detail-image {\r\n    justify-content: center;\r\n    display: flex;\r\n    align-items: center;\r\n    margin: auto;\r\n    width: 100%;\r\n    height: 90vh;\r\n  }\r\n}\r\n", ""]);
-=======
-exports.push([module.i, "body {\n  background-color: white;\n  margin: 0;\n}\n\n.hamburger:focus {\n  outline: none;\n}\n\n.nav {\n  background-color: white;\n}\n.flexMobile {\n  display: flex;\n}\n\n.toggle-nav-on {\n  display: block;\n  position: fixed;\n  width: 45%;\n  height: 100%;\n  right: 0;\n  top: 0;\n  padding: 3em 1em 0 0;\n  font-size: 1.5em;\n  background-color: whitesmoke;\n  box-shadow: 0 0 3px grey;\n\n  transition-property: right;\n  transition-duration: 0.5s;\n  -webkit-transition-duration: 0.5s;\n  -moz-transition-duration: 0.5s;\n  -o-transition-duration: 0.5s;\n  transition-timing-function: ease-in-out;\n}\n.toggle-nav {\n  visibility: hidden;\n  overflow: hidden;\n  top: 0;\n  padding: 3em 1em 0 0;\n  right: -100%;\n  padding-right: 1em;\n  font-size: 1.5em;\n  height: 100%;\n  width: 45%;\n  background-color: whitesmoke;\n  position: fixed;\n\n  transition-property: visibility, right;\n  transition-duration: 0.5s;\n  -webkit-transition-duration: 0.5s;\n  -moz-transition-duration: 0.5s;\n  -o-transition-duration: 0.5s;\n  transition-timing-function: ease-in-out;\n}\n.display-if-not-mobile {\n  display: none;\n}\n\n.hideDesktop {\n  display: none;\n  text-decoration: underline;\n  font-weight: bold;\n}\n\n.mobileNav {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n\n.mobileNav h1 {\n  margin-left: 15px;\n}\n\na {\n  color: black;\n  text-decoration: none;\n}\n\n.nav ul {\n  list-style-type: none;\n  text-transform: uppercase;\n  padding: 0px;\n  line-height: 2em;\n  display: flex;\n  flex-direction: column;\n  text-align: right;\n  font-family: sans-serif;\n}\n\n.nav a, .nav div {\n  font-family: 'Work Sans', sans-serif;\n  font-weight: 800;\n  letter-spacing: 2px;\n}\n\nh1, h2, h3, h4, h5, h6 {\n  font-family: 'Lato', sans-serif;\n  letter-spacing: 1px;\n}\n\n/* all items container */\n.all-items-title {\n  display: flex;\n  justify-content: center;\n  text-transform: uppercase;\n}\n.all-items-display {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  margin: auto;\n  width: 90vw;\n}\n/* individual item */\n.one-item {\n  font-family: 'sans-serif';\n  color: black;\n  padding: 0;\n  margin: 10px;\n  height: 70vw;\n  width: 40vw;\n  z-index: 1;\n}\n.one-item-image {\n  height: 80%;\n  width: 100%;\n  background: lightgrey;\n}\n.one-item-image > img {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  overflow: hidden;\n}\n.one-item-text {\n  padding: 0;\n  margin: 0;\n  margin-top: 10px;\n  font-family: 'Helvetica';\n}\n.one-item-text > h1 {\n  padding: 0;\n  margin: 0;\n  font-size: 20px;\n  width: 100%;\n  overflow: visible;\n  text-transform: capitalize;\n  font-weight: lighter;\n}\n.one-item-text > p {\n  padding-top: 5px;\n  font-size: 70%;\n  font-weight: lighter;\n  border-top: black solid 1px;\n  width: 33%;\n}\n\n.popup {\n  z-index: 1000;\n  width: 400px;\n  box-shadow: rgba(128, 128, 128, 0.479) 4px 4px 4px 4px 16px;\n  text-transform: none;\n}\n.popup-form-container {\n  background-color: white;\n  display: flex;\n}\n.detail-container {\n  display: grid;\n  grid-column-gap: 50px;\n  width: 100vw;\n  margin-top: 5em;\n}\n\n.detail-description {\n  display: grid;\n  grid-template-rows: 5em 2em 2em 1fr 3em;\n  padding: 2em;\n  height: 40vh;\n}\n.detail-image {\n  width: 90vw;\n  height: 70vh;\n  margin: auto;\n  display: flex;\n  justify-content: center;\n}\n\n@media screen and (min-width: 650px) {\n  .all-items-display {\n    display: grid;\n    grid-template-columns: 1fr 1fr 1fr;\n    margin: auto;\n    width: 90vw;\n  }\n  .one-item-text > h1 {\n    font-size: 25px;\n  }\n  .one-item {\n    height: 430px;\n    width: 230px;\n  }\n}\n@media screen and (max-width: 968px) {\n  .profileMobile {\n    position: relative;\n    right: 10px;\n  }\n  .profileAlign {\n    align-items: center;\n    justify-content: flex-end;\n  }\n}\n\n/* CSS applies to 968px and above */\n@media screen and (min-width: 968px) {\n  .hideDesktop {\n    display: block;\n  }\n  .all-items-display {\n    padding: 0 5%;\n    display: grid;\n    grid-template-columns: 1fr 1fr 1fr 1fr;\n    justify-content: center;\n    width: 90vw;\n  }\n  .one-item-text > h1 {\n    font-size: 25px;\n  }\n  .one-item {\n    height: 430px;\n    width: 230px;\n  }\n  /* navigation */\n  .toggle-nav {\n    display: block;\n  }\n  .hideMobile {\n    display: none;\n  }\n  #navItems {\n    width: 100%;\n  }\n  .nav {\n    display: flex;\n    height: 4em;\n    border-bottom: 1px solid black;\n    margin-bottom: 0.5em;\n    box-shadow: 0px 0px 2px grey;\n    background-color: white;\n  }\n  .nav ul {\n    display: flex;\n    flex-direction: row;\n    list-style-type: none;\n    text-transform: uppercase;\n    justify-content: space-between;\n  }\n\n  .nav ul li {\n    margin: 0 1em 0 1em;\n  }\n  .flex {\n    display: flex;\n  }\n\n  .rightNav {\n    margin-right: 1em;\n  }\n\n  /* end navigation */\n\n  .detail-container {\n    grid-template-columns: 1fr 30%;\n    width: 90vw;\n    margin: 2em;\n    margin-top: 5em;\n  }\n  .detail-description {\n    width: 90%;\n    height: 80vh;\n    padding: 0;\n    margin: 1em;\n  }\n  .detail-image {\n    justify-content: center;\n    display: flex;\n    align-items: center;\n    margin: auto;\n    width: 100%;\n    height: 90vh;\n  }\n  .display-if-not-mobile {\n    display: block;\n  }\n}\n", ""]);
->>>>>>> 5685fdf8631cfcb434d36dfb428a334f23ed30f3
+exports.push([module.i, "body {\n  background-color: white;\n  margin: 0;\n}\n\n.hamburger:focus {\n  outline: none;\n}\n\n.nav {\n  background-color: white;\n}\n.flexMobile {\n  display: flex;\n}\n.payment-container {\n  width: 100%;\n  margin: auto;\n  border: solid lightgrey 1px;\n  padding: 2em;\n}\n.payment-container > form {\n  text-align: center;\n  width: 50%;\n  min-width: 300px;\n  margin: auto;\n}\n.payment-container > form > h1 {\n  text-transform: uppercase;\n  font-size: 1.5em;\n  margin-bottom: 2em;\n}\n.payment-container > form > button {\n  width: 50%;\n  border-radius: 2em;\n  height: 3em;\n  margin: 2em;\n  margin-top: 5em;\n  background-color: purple;\n  border: none;\n  color: white;\n  text-transform: uppercase;\n}\n.payment-container > form > button:hover {\n  cursor: pointer;\n  background-color: grey;\n}\n.toggle-nav-on {\n  display: block;\n  position: fixed;\n  width: 45%;\n  height: 100%;\n  right: 0;\n  top: 0;\n  padding: 3em 1em 0 0;\n  font-size: 1.5em;\n  background-color: whitesmoke;\n  box-shadow: 0 0 3px grey;\n\n  transition-property: right;\n  transition-duration: 0.5s;\n  -webkit-transition-duration: 0.5s;\n  -moz-transition-duration: 0.5s;\n  -o-transition-duration: 0.5s;\n  transition-timing-function: ease-in-out;\n}\n.toggle-nav {\n  visibility: hidden;\n  overflow: hidden;\n  top: 0;\n  padding: 3em 1em 0 0;\n  right: -100%;\n  padding-right: 1em;\n  font-size: 1.5em;\n  height: 100%;\n  width: 45%;\n  background-color: whitesmoke;\n  position: fixed;\n\n  transition-property: visibility, right;\n  transition-duration: 0.5s;\n  -webkit-transition-duration: 0.5s;\n  -moz-transition-duration: 0.5s;\n  -o-transition-duration: 0.5s;\n  transition-timing-function: ease-in-out;\n}\n.display-if-not-mobile {\n  display: none;\n}\n\n.hideDesktop {\n  display: none;\n  text-decoration: underline;\n  font-weight: bold;\n}\n\n.mobileNav {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n\n.mobileNav h1 {\n  margin-left: 15px;\n}\n\na {\n  color: black;\n  text-decoration: none;\n}\n\n.nav ul {\n  list-style-type: none;\n  text-transform: uppercase;\n  padding: 0px;\n  line-height: 2em;\n  display: flex;\n  flex-direction: column;\n  text-align: right;\n  font-family: sans-serif;\n}\n\n.nav a,\n.nav div {\n  font-family: 'Work Sans', sans-serif;\n  font-weight: 800;\n  letter-spacing: 2px;\n}\n\nh1,\nh2,\nh3,\nh4,\nh5,\nh6 {\n  font-family: 'Lato', sans-serif;\n  letter-spacing: 1px;\n}\n\n/* all items container */\n.all-items-title {\n  display: flex;\n  justify-content: center;\n  text-transform: uppercase;\n}\n.all-items-display {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  margin: auto;\n  width: 90vw;\n}\n/* individual item */\n.one-item {\n  font-family: 'sans-serif';\n  color: black;\n  padding: 0;\n  margin: 10px;\n  height: 70vw;\n  width: 40vw;\n  z-index: 1;\n}\n.one-item-image {\n  height: 80%;\n  width: 100%;\n  background: lightgrey;\n}\n.one-item-image > img {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  overflow: hidden;\n}\n.one-item-text {\n  padding: 0;\n  margin: 0;\n  margin-top: 10px;\n  font-family: 'Helvetica';\n}\n.one-item-text > h1 {\n  padding: 0;\n  margin: 0;\n  font-size: 20px;\n  width: 100%;\n  overflow: visible;\n  text-transform: capitalize;\n  font-weight: lighter;\n}\n.one-item-text > p {\n  padding-top: 5px;\n  font-size: 70%;\n  font-weight: lighter;\n  border-top: black solid 1px;\n  width: 33%;\n}\n\n.popup {\n  z-index: 1000;\n  width: 400px;\n  box-shadow: rgba(128, 128, 128, 0.479) 4px 4px 4px 4px 16px;\n  text-transform: none;\n}\n.popup-form-container {\n  background-color: white;\n  display: flex;\n}\n.detail-container {\n  display: grid;\n  grid-column-gap: 50px;\n  width: 100vw;\n  margin-top: 5em;\n}\n\n.detail-description {\n  display: grid;\n  grid-template-rows: 5em 2em 2em 1fr 3em;\n  padding: 2em;\n  height: 40vh;\n}\n.detail-image {\n  width: 90vw;\n  height: 70vh;\n  margin: auto;\n  display: flex;\n  justify-content: center;\n}\n\n@media screen and (min-width: 650px) {\n  .all-items-display {\n    display: grid;\n    grid-template-columns: 1fr 1fr 1fr;\n    margin: auto;\n    width: 90vw;\n  }\n  .one-item-text > h1 {\n    font-size: 25px;\n  }\n  .one-item {\n    height: 430px;\n    width: 230px;\n  }\n}\n@media screen and (max-width: 968px) {\n  .profileMobile {\n    position: relative;\n    right: 10px;\n  }\n  .profileAlign {\n    align-items: center;\n    justify-content: flex-end;\n  }\n}\n\n/* CSS applies to 968px and above */\n@media screen and (min-width: 968px) {\n  .hideDesktop {\n    display: block;\n  }\n  .all-items-display {\n    padding: 0 5%;\n    display: grid;\n    grid-template-columns: 1fr 1fr 1fr 1fr;\n    justify-content: center;\n    width: 90vw;\n  }\n  .one-item-text > h1 {\n    font-size: 25px;\n  }\n  .one-item {\n    height: 430px;\n    width: 230px;\n  }\n  /* navigation */\n  .toggle-nav {\n    display: block;\n  }\n  .hideMobile {\n    display: none;\n  }\n  #navItems {\n    width: 100%;\n  }\n  .nav {\n    display: flex;\n    height: 4em;\n    border-bottom: 1px solid black;\n    margin-bottom: 0.5em;\n    box-shadow: 0px 0px 2px grey;\n    background-color: white;\n  }\n  .nav ul {\n    display: flex;\n    flex-direction: row;\n    list-style-type: none;\n    text-transform: uppercase;\n    justify-content: space-between;\n  }\n\n  .nav ul li {\n    margin: 0 1em 0 1em;\n  }\n  .flex {\n    display: flex;\n  }\n\n  .rightNav {\n    margin-right: 1em;\n  }\n\n  /* end navigation */\n\n  .detail-container {\n    grid-template-columns: 1fr 30%;\n    width: 90vw;\n    margin: 2em;\n    margin-top: 5em;\n  }\n  .detail-description {\n    width: 90%;\n    height: 80vh;\n    padding: 0;\n    margin: 1em;\n  }\n  .detail-image {\n    justify-content: center;\n    display: flex;\n    align-items: center;\n    margin: auto;\n    width: 100%;\n    height: 90vh;\n  }\n  .display-if-not-mobile {\n    display: block;\n  }\n}\n", ""]);
 
 
 
@@ -983,7 +979,7 @@ exports.push([module.i, "body {\n  background-color: white;\n  margin: 0;\n}\n\n
 
 exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "/* Registration and Login */\r\n.page1-container {\r\n  position: fixed;\r\n  top: 0;\r\n  z-index:200\r\n}\r\n/* image */\r\n.page1-image1-container {\r\n  z-index: 0;\r\n  position: fixed;\r\n  top: 0;\r\n  height: 100%;\r\n  width: 100%;\r\n}\r\n.page1-image1 {\r\n  z-index: 0;\r\n  position: absolute;\r\n  right: 0;\r\n  height: 120%;\r\n  width: auto;\r\n}\r\n\r\n/* form - containers */\r\n.page1-form-container {\r\n  z-index: 1;\r\n  position: fixed;\r\n  left: 0;\r\n  height: 100%;\r\n  width: 33%;\r\n  min-width: 300px;\r\n  overflow: scroll;\r\n  background-color: white;\r\n  display: flex;\r\n}\r\n.page1-form-subcontainer {\r\n  width: 85%;\r\n  margin: auto;\r\n  text-align: center;\r\n}\r\n\r\n/* form - titles */\r\n.page1-form-subcontainer > h1 {\r\n  font-size: 3em;\r\n  margin-top: 0;\r\n  margin-bottom: 2em;\r\n}\r\n.page1-form-subcontainer > h2 {\r\n  font-size: 1em;\r\n  margin-bottom: 1em;\r\n}\r\n/* form - text inputs */\r\n.page1-form-input {\r\n  width: 99%;\r\n  height: 30px;\r\n  border: none;\r\n  font-size: 1em;\r\n  border-bottom: 1px lightgrey solid;\r\n  margin-bottom: 20px;\r\n}\r\n.page1-form-input:focus {\r\n  border-bottom: 1px grey solid;\r\n  outline: none;\r\n}\r\n/* form - submit button */\r\n.page1-botton {\r\n  background-color: #6a4caf;\r\n  border-radius: 25px;\r\n  width: 90%;\r\n  border: none;\r\n  color: white;\r\n  padding: 15px 32px;\r\n  text-align: center;\r\n  text-decoration: none;\r\n  display: inline-block;\r\n  font-size: 1em;\r\n  margin: 5px;\r\n  cursor: pointer;\r\n}\r\n.page1-botton:hover {\r\n  background-color: #8d76c2;\r\n}\r\n.page1-botton:focus {\r\n  outline: none;\r\n  background-color: #8d76c2;\r\n}\r\n/* form - links to other pages*/\r\n.page1-redirect {\r\n  font-size: 0.75em;\r\n  margin: 1em;\r\n}\r\n.page1-redirect:hover {\r\n  color: lightgrey;\r\n  cursor: pointer;\r\n}\r\n.page1-redirect > span {\r\n  text-decoration: underline;\r\n}\r\n", ""]);
+exports.push([module.i, "/* Registration and Login */\n.page1-container {\n  position: fixed;\n  top: 0;\n  z-index:200\n}\n/* image */\n.page1-image1-container {\n  z-index: 0;\n  position: fixed;\n  top: 0;\n  height: 100%;\n  width: 100%;\n}\n.page1-image1 {\n  z-index: 0;\n  position: absolute;\n  right: 0;\n  height: 120%;\n  width: auto;\n}\n\n/* form - containers */\n.page1-form-container {\n  z-index: 1;\n  position: fixed;\n  left: 0;\n  height: 100%;\n  width: 33%;\n  min-width: 300px;\n  overflow: scroll;\n  background-color: white;\n  display: flex;\n}\n.page1-form-subcontainer {\n  width: 85%;\n  margin: auto;\n  text-align: center;\n}\n\n/* form - titles */\n.page1-form-subcontainer > h1 {\n  font-size: 3em;\n  margin-top: 0;\n  margin-bottom: 2em;\n}\n.page1-form-subcontainer > h2 {\n  font-size: 1em;\n  margin-bottom: 1em;\n}\n/* form - text inputs */\n.page1-form-input {\n  width: 99%;\n  height: 30px;\n  border: none;\n  font-size: 1em;\n  border-bottom: 1px lightgrey solid;\n  margin-bottom: 20px;\n}\n.page1-form-input:focus {\n  border-bottom: 1px grey solid;\n  outline: none;\n}\n/* form - submit button */\n.page1-botton {\n  background-color: #6a4caf;\n  border-radius: 25px;\n  width: 90%;\n  border: none;\n  color: white;\n  padding: 15px 32px;\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 1em;\n  margin: 5px;\n  cursor: pointer;\n}\n.page1-botton:hover {\n  background-color: #8d76c2;\n}\n.page1-botton:focus {\n  outline: none;\n  background-color: #8d76c2;\n}\n/* form - links to other pages*/\n.page1-redirect {\n  font-size: 0.75em;\n  margin: 1em;\n}\n.page1-redirect:hover {\n  color: lightgrey;\n  cursor: pointer;\n}\n.page1-redirect > span {\n  text-decoration: underline;\n}\n", ""]);
 
 
 
@@ -34181,6 +34177,1166 @@ function pathToRegexp (path, keys, options) {
 
 /***/ }),
 
+/***/ "./node_modules/react-stripe-elements/es/components/Element.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/react-stripe-elements/es/components/Element.js ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _isEqual = __webpack_require__(/*! ../utils/isEqual */ "./node_modules/react-stripe-elements/es/utils/isEqual.js");
+
+var _isEqual2 = _interopRequireDefault(_isEqual);
+
+var _Elements = __webpack_require__(/*! ./Elements */ "./node_modules/react-stripe-elements/es/components/Elements.js");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var noop = function noop() {};
+
+var _extractOptions = function _extractOptions(props) {
+  var id = props.id,
+      className = props.className,
+      onChange = props.onChange,
+      onFocus = props.onFocus,
+      onBlur = props.onBlur,
+      onReady = props.onReady,
+      options = _objectWithoutProperties(props, ['id', 'className', 'onChange', 'onFocus', 'onBlur', 'onReady']);
+
+  return options;
+};
+
+var capitalized = function capitalized(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+};
+
+var Element = function Element(type) {
+  var _class, _temp;
+
+  var hocOptions = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+  return _temp = _class = function (_React$Component) {
+    _inherits(_class, _React$Component);
+
+    function _class(props, context) {
+      _classCallCheck(this, _class);
+
+      var _this = _possibleConstructorReturn(this, _React$Component.call(this, props, context));
+
+      _this.handleRef = function (ref) {
+        _this._ref = ref;
+      };
+
+      _this._element = null;
+
+      var options = _extractOptions(_this.props);
+      // We keep track of the extracted options on this._options to avoid re-rendering.
+      // (We would unnecessarily re-render if we were tracking them with state.)
+      _this._options = options;
+      return _this;
+    }
+
+    _class.prototype.componentDidMount = function componentDidMount() {
+      var _this2 = this;
+
+      this.context.addElementsLoadListener(function (elements) {
+        if (!_this2._ref) {
+          return;
+        }
+
+        var element = elements.create(type, _this2._options);
+        _this2._element = element;
+
+        _this2._setupEventListeners(element);
+
+        element.mount(_this2._ref);
+
+        // Register Element for automatic token / source / paymentMethod creation
+        if (hocOptions.impliedTokenType || hocOptions.impliedSourceType || hocOptions.impliedPaymentMethodType) {
+          _this2.context.registerElement(element, hocOptions.impliedTokenType, hocOptions.impliedSourceType, hocOptions.impliedPaymentMethodType);
+        }
+      });
+    };
+
+    _class.prototype.componentDidUpdate = function componentDidUpdate() {
+      var options = _extractOptions(this.props);
+      if (Object.keys(options).length !== 0 && !(0, _isEqual2.default)(options, this._options)) {
+        this._options = options;
+        if (this._element) {
+          this._element.update(options);
+        }
+      }
+    };
+
+    _class.prototype.componentWillUnmount = function componentWillUnmount() {
+      if (this._element) {
+        var element = this._element;
+        element.destroy();
+        this.context.unregisterElement(element);
+      }
+    };
+
+    _class.prototype._setupEventListeners = function _setupEventListeners(element) {
+      var _this3 = this;
+
+      element.on('ready', function () {
+        _this3.props.onReady(_this3._element);
+      });
+
+      element.on('change', function (change) {
+        _this3.props.onChange(change);
+      });
+
+      element.on('blur', function () {
+        var _props;
+
+        return (_props = _this3.props).onBlur.apply(_props, arguments);
+      });
+      element.on('focus', function () {
+        var _props2;
+
+        return (_props2 = _this3.props).onFocus.apply(_props2, arguments);
+      });
+    };
+
+    _class.prototype.render = function render() {
+      return _react2.default.createElement('div', {
+        id: this.props.id,
+        className: this.props.className,
+        ref: this.handleRef
+      });
+    };
+
+    return _class;
+  }(_react2.default.Component), _class.propTypes = {
+    id: _propTypes2.default.string,
+    className: _propTypes2.default.string,
+    onChange: _propTypes2.default.func,
+    onBlur: _propTypes2.default.func,
+    onFocus: _propTypes2.default.func,
+    onReady: _propTypes2.default.func
+  }, _class.defaultProps = {
+    id: undefined,
+    className: undefined,
+    onChange: noop,
+    onBlur: noop,
+    onFocus: noop,
+    onReady: noop
+  }, _class.contextTypes = _Elements.elementContextTypes, _class.displayName = capitalized(type) + 'Element', _temp;
+};
+
+exports.default = Element;
+
+/***/ }),
+
+/***/ "./node_modules/react-stripe-elements/es/components/Elements.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/react-stripe-elements/es/components/Elements.js ***!
+  \**********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.elementContextTypes = exports.injectContextTypes = undefined;
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _Provider = __webpack_require__(/*! ./Provider */ "./node_modules/react-stripe-elements/es/components/Provider.js");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var injectContextTypes = exports.injectContextTypes = {
+  getRegisteredElements: _propTypes2.default.func.isRequired,
+  elements: _propTypes2.default.object
+};
+
+var elementContextTypes = exports.elementContextTypes = {
+  addElementsLoadListener: _propTypes2.default.func.isRequired,
+  registerElement: _propTypes2.default.func.isRequired,
+  unregisterElement: _propTypes2.default.func.isRequired
+};
+
+var Elements = function (_React$Component) {
+  _inherits(Elements, _React$Component);
+
+  function Elements(props, context) {
+    _classCallCheck(this, Elements);
+
+    var _this = _possibleConstructorReturn(this, _React$Component.call(this, props, context));
+
+    _this._elements = null;
+
+    _this.handleRegisterElement = function (element, impliedTokenType, impliedSourceType, impliedPaymentMethodType) {
+      _this.setState(function (prevState) {
+        return {
+          registeredElements: [].concat(_toConsumableArray(prevState.registeredElements), [_extends({
+            element: element
+          }, impliedTokenType ? { impliedTokenType: impliedTokenType } : {}, impliedSourceType ? { impliedSourceType: impliedSourceType } : {}, impliedPaymentMethodType ? { impliedPaymentMethodType: impliedPaymentMethodType } : {})])
+        };
+      });
+    };
+
+    _this.handleUnregisterElement = function (el) {
+      _this.setState(function (prevState) {
+        return {
+          registeredElements: prevState.registeredElements.filter(function (_ref) {
+            var element = _ref.element;
+            return element !== el;
+          })
+        };
+      });
+    };
+
+    var _this$props = _this.props,
+        children = _this$props.children,
+        options = _objectWithoutProperties(_this$props, ['children']);
+
+    if (_this.context.tag === 'sync') {
+      _this._elements = _this.context.stripe.elements(options);
+    }
+
+    _this.state = {
+      registeredElements: []
+    };
+    return _this;
+  }
+
+  Elements.prototype.getChildContext = function getChildContext() {
+    var _this2 = this;
+
+    return {
+      addElementsLoadListener: function addElementsLoadListener(fn) {
+        // Return the existing elements instance if we already have one.
+        if (_this2.context.tag === 'sync') {
+          // This is impossible, but we need to make flow happy.
+          if (!_this2._elements) {
+            throw new Error('Expected elements to be instantiated but it was not.');
+          }
+
+          fn(_this2._elements);
+        } else {
+          _this2.context.addStripeLoadListener(function (stripe) {
+            if (_this2._elements) {
+              fn(_this2._elements);
+            } else {
+              var _props = _this2.props,
+                  _children = _props.children,
+                  options = _objectWithoutProperties(_props, ['children']);
+
+              _this2._elements = stripe.elements(options);
+              fn(_this2._elements);
+            }
+          });
+        }
+      },
+      registerElement: this.handleRegisterElement,
+      unregisterElement: this.handleUnregisterElement,
+      getRegisteredElements: function getRegisteredElements() {
+        return _this2.state.registeredElements;
+      },
+      elements: this._elements
+    };
+  };
+
+  Elements.prototype.render = function render() {
+    return _react2.default.Children.only(this.props.children);
+  };
+
+  return Elements;
+}(_react2.default.Component);
+
+Elements.childContextTypes = _extends({}, injectContextTypes, elementContextTypes);
+Elements.contextTypes = _Provider.providerContextTypes;
+Elements.defaultProps = {
+  children: null
+};
+exports.default = Elements;
+
+/***/ }),
+
+/***/ "./node_modules/react-stripe-elements/es/components/PaymentRequestButtonElement.js":
+/*!*****************************************************************************************!*\
+  !*** ./node_modules/react-stripe-elements/es/components/PaymentRequestButtonElement.js ***!
+  \*****************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _shallowEqual = __webpack_require__(/*! ../utils/shallowEqual */ "./node_modules/react-stripe-elements/es/utils/shallowEqual.js");
+
+var _shallowEqual2 = _interopRequireDefault(_shallowEqual);
+
+var _Elements = __webpack_require__(/*! ./Elements */ "./node_modules/react-stripe-elements/es/components/Elements.js");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var noop = function noop() {};
+
+var _extractOptions = function _extractOptions(props) {
+  var id = props.id,
+      className = props.className,
+      onBlur = props.onBlur,
+      onClick = props.onClick,
+      onFocus = props.onFocus,
+      onReady = props.onReady,
+      paymentRequest = props.paymentRequest,
+      options = _objectWithoutProperties(props, ['id', 'className', 'onBlur', 'onClick', 'onFocus', 'onReady', 'paymentRequest']);
+
+  return options;
+};
+
+var PaymentRequestButtonElement = function (_React$Component) {
+  _inherits(PaymentRequestButtonElement, _React$Component);
+
+  function PaymentRequestButtonElement(props, context) {
+    _classCallCheck(this, PaymentRequestButtonElement);
+
+    var _this = _possibleConstructorReturn(this, _React$Component.call(this, props, context));
+
+    _this.handleRef = function (ref) {
+      _this._ref = ref;
+    };
+
+    var options = _extractOptions(props);
+    // We keep track of the extracted options on this._options to avoid re-rendering.
+    // (We would unnecessarily re-render if we were tracking them with state.)
+    _this._options = options;
+    return _this;
+  }
+
+  PaymentRequestButtonElement.prototype.componentDidMount = function componentDidMount() {
+    var _this2 = this;
+
+    this.context.addElementsLoadListener(function (elements) {
+      _this2._element = elements.create('paymentRequestButton', _extends({
+        paymentRequest: _this2.props.paymentRequest
+      }, _this2._options));
+      _this2._element.on('ready', function () {
+        _this2.props.onReady(_this2._element);
+      });
+      _this2._element.on('focus', function () {
+        var _props;
+
+        return (_props = _this2.props).onFocus.apply(_props, arguments);
+      });
+      _this2._element.on('click', function () {
+        var _props2;
+
+        return (_props2 = _this2.props).onClick.apply(_props2, arguments);
+      });
+      _this2._element.on('blur', function () {
+        var _props3;
+
+        return (_props3 = _this2.props).onBlur.apply(_props3, arguments);
+      });
+      _this2._element.mount(_this2._ref);
+    });
+  };
+
+  PaymentRequestButtonElement.prototype.componentDidUpdate = function componentDidUpdate(prevProps) {
+    if (this.props.paymentRequest !== prevProps.paymentRequest) {
+      console.warn('Unsupported prop change: paymentRequest is not a customizable property.');
+    }
+    var options = _extractOptions(this.props);
+    if (Object.keys(options).length !== 0 && !(0, _shallowEqual2.default)(options, this._options)) {
+      this._options = options;
+      this._element.update(options);
+    }
+  };
+
+  PaymentRequestButtonElement.prototype.componentWillUnmount = function componentWillUnmount() {
+    this._element.destroy();
+  };
+
+  PaymentRequestButtonElement.prototype.render = function render() {
+    return _react2.default.createElement('div', {
+      id: this.props.id,
+      className: this.props.className,
+      ref: this.handleRef
+    });
+  };
+
+  return PaymentRequestButtonElement;
+}(_react2.default.Component);
+
+PaymentRequestButtonElement.propTypes = {
+  id: _propTypes2.default.string,
+  className: _propTypes2.default.string,
+  onBlur: _propTypes2.default.func,
+  onClick: _propTypes2.default.func,
+  onFocus: _propTypes2.default.func,
+  onReady: _propTypes2.default.func,
+  paymentRequest: _propTypes2.default.shape({
+    canMakePayment: _propTypes2.default.func.isRequired,
+    on: _propTypes2.default.func.isRequired,
+    show: _propTypes2.default.func.isRequired
+  }).isRequired
+};
+PaymentRequestButtonElement.defaultProps = {
+  id: undefined,
+  className: undefined,
+  onBlur: noop,
+  onClick: noop,
+  onFocus: noop,
+  onReady: noop
+};
+PaymentRequestButtonElement.contextTypes = _Elements.elementContextTypes;
+exports.default = PaymentRequestButtonElement;
+
+/***/ }),
+
+/***/ "./node_modules/react-stripe-elements/es/components/Provider.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/react-stripe-elements/es/components/Provider.js ***!
+  \**********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.providerContextTypes = undefined;
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+// TODO(jez) 'sync' and 'async' are bad tag names.
+// TODO(jez) What if redux also uses this.context.tag?
+var providerContextTypes = exports.providerContextTypes = {
+  tag: _propTypes2.default.string.isRequired,
+  stripe: _propTypes2.default.object,
+  addStripeLoadListener: _propTypes2.default.func
+};
+
+var getOrCreateStripe = function getOrCreateStripe(apiKey, options) {
+  /**
+   * Note that this is not meant to be a generic memoization solution.
+   * This is specifically a solution for `StripeProvider`s being initialized
+   * and destroyed regularly (with the same set of props) when users only
+   * use `StripeProvider` for the subtree that contains their checkout form.
+   */
+  window.Stripe.__cachedInstances = window.Stripe.__cachedInstances || {};
+  var cacheKey = 'key=' + apiKey + ' options=' + JSON.stringify(options);
+
+  var stripe = window.Stripe.__cachedInstances[cacheKey] || window.Stripe(apiKey, options);
+  window.Stripe.__cachedInstances[cacheKey] = stripe;
+
+  return stripe;
+};
+
+var ensureStripeShape = function ensureStripeShape(stripe) {
+  if (stripe && stripe.elements && stripe.createSource && stripe.createToken && stripe.createPaymentMethod && stripe.handleCardPayment) {
+    return stripe;
+  } else {
+    throw new Error("Please pass a valid Stripe object to StripeProvider. You can obtain a Stripe object by calling 'Stripe(...)' with your publishable key.");
+  }
+};
+
+var Provider = function (_React$Component) {
+  _inherits(Provider, _React$Component);
+
+  // on the other hand: childContextTypes is *required* to use context.
+  function Provider(props) {
+    _classCallCheck(this, Provider);
+
+    var _this = _possibleConstructorReturn(this, _React$Component.call(this, props));
+
+    if (_this.props.apiKey && _this.props.stripe) {
+      throw new Error("Please pass either 'apiKey' or 'stripe' to StripeProvider, not both.");
+    } else if (_this.props.apiKey) {
+      if (!window.Stripe) {
+        throw new Error("Please load Stripe.js (https://js.stripe.com/v3/) on this page to use react-stripe-elements. If Stripe.js isn't available yet (it's loading asynchronously, or you're using server-side rendering), see https://github.com/stripe/react-stripe-elements#advanced-integrations");
+      } else {
+        var _this$props = _this.props,
+            _apiKey = _this$props.apiKey,
+            _children = _this$props.children,
+            _stripe = _this$props.stripe,
+            options = _objectWithoutProperties(_this$props, ['apiKey', 'children', 'stripe']);
+
+        _this._meta = {
+          tag: 'sync',
+          stripe: getOrCreateStripe(_apiKey, options)
+        };
+      }
+    } else if (_this.props.stripe) {
+      // If we already have a stripe instance (in the constructor), we can behave synchronously.
+      _this._meta = {
+        tag: 'sync',
+        stripe: ensureStripeShape(_this.props.stripe)
+      };
+    } else if (_this.props.stripe === null) {
+      _this._meta = {
+        tag: 'async',
+        stripe: null
+      };
+    } else {
+      throw new Error("Please pass either 'apiKey' or 'stripe' to StripeProvider. If you're using 'stripe' but don't have a Stripe instance yet, pass 'null' explicitly.");
+    }
+
+    _this._didWarn = false;
+    _this._didWakeUpListeners = false;
+    _this._listeners = [];
+    return _this;
+  }
+  // Even though we're using flow, also use PropTypes so we can take advantage of developer warnings.
+
+
+  Provider.prototype.getChildContext = function getChildContext() {
+    var _this2 = this;
+
+    // getChildContext is run after the constructor, so we WILL have access to
+    // the initial state.
+    //
+    // However, context doesn't update in respnse to state changes like you
+    // might expect: context is pulled by the child, not pushed by the parent.
+    if (this._meta.tag === 'sync') {
+      return {
+        tag: 'sync',
+        stripe: this._meta.stripe
+      };
+    } else {
+      return {
+        tag: 'async',
+        addStripeLoadListener: function addStripeLoadListener(fn) {
+          if (_this2._meta.stripe) {
+            fn(_this2._meta.stripe);
+          } else {
+            _this2._listeners.push(fn);
+          }
+        }
+      };
+    }
+  };
+
+  Provider.prototype.componentDidUpdate = function componentDidUpdate(prevProps) {
+    var apiKeyChanged = this.props.apiKey && prevProps.apiKey && this.props.apiKey !== prevProps.apiKey;
+
+    var stripeInstanceChanged = this.props.stripe && prevProps.stripe && this.props.stripe !== prevProps.stripe;
+    if (!this._didWarn && (apiKeyChanged || stripeInstanceChanged) && window.console && window.console.error) {
+      this._didWarn = true;
+      // eslint-disable-next-line no-console
+      console.error('StripeProvider does not support changing the apiKey parameter.');
+      return;
+    }
+
+    if (!this._didWakeUpListeners && this.props.stripe) {
+      // Wake up the listeners if we've finally been given a StripeShape
+      this._didWakeUpListeners = true;
+      var _stripe2 = ensureStripeShape(this.props.stripe);
+      this._meta.stripe = _stripe2;
+      this._listeners.forEach(function (fn) {
+        fn(_stripe2);
+      });
+    }
+  };
+
+  Provider.prototype.render = function render() {
+    return _react2.default.Children.only(this.props.children);
+  };
+
+  return Provider;
+}(_react2.default.Component);
+
+Provider.propTypes = {
+  apiKey: _propTypes2.default.string,
+  // PropTypes.object is the only way we can accept a Stripe instance
+  // eslint-disable-next-line react/forbid-prop-types
+  stripe: _propTypes2.default.object,
+  children: _propTypes2.default.node
+};
+Provider.childContextTypes = providerContextTypes;
+Provider.defaultProps = {
+  apiKey: undefined,
+  stripe: undefined,
+  children: null
+};
+exports.default = Provider;
+
+/***/ }),
+
+/***/ "./node_modules/react-stripe-elements/es/components/inject.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/react-stripe-elements/es/components/inject.js ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _Elements = __webpack_require__(/*! ./Elements */ "./node_modules/react-stripe-elements/es/components/Elements.js");
+
+var _Provider = __webpack_require__(/*! ./Provider */ "./node_modules/react-stripe-elements/es/components/Provider.js");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+// react-redux does a bunch of stuff with pure components / checking if it needs to re-render.
+// not sure if we need to do the same.
+var inject = function inject(WrappedComponent) {
+  var _class, _temp;
+
+  var componentOptions = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+  var _componentOptions$wit = componentOptions.withRef,
+      withRef = _componentOptions$wit === undefined ? false : _componentOptions$wit;
+
+
+  return _temp = _class = function (_React$Component) {
+    _inherits(_class, _React$Component);
+
+    function _class(props, context) {
+      _classCallCheck(this, _class);
+
+      if (!context || !context.getRegisteredElements) {
+        throw new Error('It looks like you are trying to inject Stripe context outside of an Elements context.\nPlease be sure the component that calls createSource or createToken is within an <Elements> component.');
+      }
+
+      var _this = _possibleConstructorReturn(this, _React$Component.call(this, props, context));
+
+      _this.parseElementOrData = function (elementOrOptions) {
+        return elementOrOptions && (typeof elementOrOptions === 'undefined' ? 'undefined' : _typeof(elementOrOptions)) === 'object' && elementOrOptions._frame && _typeof(elementOrOptions._frame) === 'object' && elementOrOptions._frame.id && typeof elementOrOptions._frame.id === 'string' && typeof elementOrOptions._componentName === 'string' ? { type: 'element', element: elementOrOptions } : { type: 'data', data: elementOrOptions };
+      };
+
+      _this.findElement = function (filterBy, specifiedType) {
+        var allElements = _this.context.getRegisteredElements();
+        var filteredElements = allElements.filter(function (e) {
+          return e[filterBy];
+        });
+        var matchingElements = specifiedType === 'auto' ? filteredElements : filteredElements.filter(function (e) {
+          return e[filterBy] === specifiedType;
+        });
+
+        if (matchingElements.length === 1) {
+          return matchingElements[0].element;
+        } else if (matchingElements.length > 1) {
+          throw new Error('You did not specify the type of Source, Token, or PaymentMethod to create.\n        We could not infer which Element you want to use for this operation.');
+        } else {
+          return null;
+        }
+      };
+
+      _this.requireElement = function (filterBy, specifiedType) {
+        var element = _this.findElement(filterBy, specifiedType);
+        if (element) {
+          return element;
+        } else {
+          throw new Error('You did not specify the type of Source, Token, or PaymentMethod to create.\n        We could not infer which Element you want to use for this operation.');
+        }
+      };
+
+      _this.wrappedCreateToken = function (stripe) {
+        return function () {
+          var tokenTypeOrOptions = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+          var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+
+          if (tokenTypeOrOptions && (typeof tokenTypeOrOptions === 'undefined' ? 'undefined' : _typeof(tokenTypeOrOptions)) === 'object') {
+            // First argument is options; infer the Element and tokenize
+            var opts = tokenTypeOrOptions;
+
+            var tokenType = opts.type,
+                rest = _objectWithoutProperties(opts, ['type']);
+
+            var specifiedType = typeof tokenType === 'string' ? tokenType : 'auto';
+            // Since only options were passed in, a corresponding Element must exist
+            // for the tokenization to succeed -- thus we call requireElement.
+            var element = _this.requireElement('impliedTokenType', specifiedType);
+            return stripe.createToken(element, rest);
+          } else if (typeof tokenTypeOrOptions === 'string') {
+            // First argument is token type; tokenize with token type and options
+            var _tokenType = tokenTypeOrOptions;
+            return stripe.createToken(_tokenType, options);
+          } else {
+            // If a bad value was passed in for options, throw an error.
+            throw new Error('Invalid options passed to createToken. Expected an object, got ' + (typeof tokenTypeOrOptions === 'undefined' ? 'undefined' : _typeof(tokenTypeOrOptions)) + '.');
+          }
+        };
+      };
+
+      _this.wrappedCreateSource = function (stripe) {
+        return function () {
+          var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+
+          if (options && (typeof options === 'undefined' ? 'undefined' : _typeof(options)) === 'object') {
+            if (typeof options.type !== 'string') {
+              throw new Error('Invalid Source type passed to createSource. Expected string, got ' + _typeof(options.type) + '.');
+            }
+
+            var element = _this.findElement('impliedSourceType', options.type);
+            if (element) {
+              // If an Element exists for the source type, use that to create the
+              // corresponding source.
+              //
+              // NOTE: this prevents users from independently creating sources of
+              // type `foo` if an Element that can create `foo` sources exists in
+              // the current <Elements /> context.
+              return stripe.createSource(element, options);
+            } else {
+              // If no Element exists for the source type, directly create a source.
+              return stripe.createSource(options);
+            }
+          } else {
+            // If a bad value was passed in for options, throw an error.
+            throw new Error('Invalid options passed to createSource. Expected an object, got ' + (typeof options === 'undefined' ? 'undefined' : _typeof(options)) + '.');
+          }
+        };
+      };
+
+      _this.wrappedCreatePaymentMethod = function (stripe) {
+        return function (paymentMethodType, elementOrData, maybeData) {
+          if (paymentMethodType && (typeof paymentMethodType === 'undefined' ? 'undefined' : _typeof(paymentMethodType)) === 'object') {
+            return stripe.createPaymentMethod(paymentMethodType);
+          }
+
+          if (!paymentMethodType || typeof paymentMethodType !== 'string') {
+            throw new Error('Invalid PaymentMethod type passed to createPaymentMethod. Expected a string, got ' + (typeof paymentMethodType === 'undefined' ? 'undefined' : _typeof(paymentMethodType)) + '.');
+          }
+
+          var elementOrDataResult = _this.parseElementOrData(elementOrData);
+
+          // Second argument is Element; use passed in Element
+          if (elementOrDataResult.type === 'element') {
+            var _element = elementOrDataResult.element;
+
+            if (maybeData) {
+              return stripe.createPaymentMethod(paymentMethodType, _element, maybeData);
+            } else {
+              return stripe.createPaymentMethod(paymentMethodType, _element);
+            }
+          }
+
+          // Second argument is data or undefined; infer the Element
+          var data = elementOrDataResult.data;
+
+          var element = _this.findElement('impliedPaymentMethodType', paymentMethodType);
+
+          if (element) {
+            return data ? stripe.createPaymentMethod(paymentMethodType, element, data) : stripe.createPaymentMethod(paymentMethodType, element);
+          }
+
+          if (data && (typeof data === 'undefined' ? 'undefined' : _typeof(data)) === 'object') {
+            return stripe.createPaymentMethod(paymentMethodType, data);
+          } else if (!data) {
+            throw new Error('Could not find an Element that can be used to create a PaymentMethod of type: ' + paymentMethodType + '.');
+          } else {
+            // If a bad value was passed in for data, throw an error.
+            throw new Error('Invalid data passed to createPaymentMethod. Expected an object, got ' + (typeof data === 'undefined' ? 'undefined' : _typeof(data)) + '.');
+          }
+        };
+      };
+
+      _this.wrappedHandleCardX = function (stripe, method) {
+        return function (clientSecret, elementOrData, maybeData) {
+          if (!clientSecret || typeof clientSecret !== 'string') {
+            // If a bad value was passed in for clientSecret, throw an error.
+            throw new Error('Invalid PaymentIntent client secret passed to handleCardPayment. Expected string, got ' + (typeof clientSecret === 'undefined' ? 'undefined' : _typeof(clientSecret)) + '.');
+          }
+
+          var elementOrDataResult = _this.parseElementOrData(elementOrData);
+
+          // Second argument is Element; handle with element
+          if (elementOrDataResult.type === 'element') {
+            var _element2 = elementOrDataResult.element;
+
+            if (maybeData) {
+              return stripe[method](clientSecret, _element2, maybeData);
+            } else {
+              return stripe[method](clientSecret, _element2);
+            }
+          }
+
+          // Second argument is data or undefined; see if we can find a mounted Element
+          // that can create card PaymentMethods
+          var data = elementOrDataResult.data;
+
+          var element = _this.findElement('impliedPaymentMethodType', 'card');
+
+          if (element) {
+            // If an Element exists that can create card PaymentMethods use it. Otherwise
+            // assume that we must be calling with data only.
+            //
+            // NOTE: this prevents users from using handleCard* with an existing
+            // Source or PaymentMethod if an Element that can create card PaymentMethods
+            // exists in the current <Elements /> context.
+            if (data) {
+              return stripe[method](clientSecret, element, data);
+            } else {
+              return stripe[method](clientSecret, element);
+            }
+          } else if (data) {
+            // if no element exists call handleCard* directly (with data)
+            return stripe[method](clientSecret, data);
+          } else {
+            // if no element exists call handleCard* directly (with only the clientSecret)
+            return stripe[method](clientSecret);
+          }
+        };
+      };
+
+      if (_this.context.tag === 'sync') {
+        _this.state = {
+          stripe: _this.stripeProps(_this.context.stripe)
+        };
+      } else {
+        _this.state = {
+          stripe: null
+        };
+      }
+      return _this;
+    }
+
+    _class.prototype.componentDidMount = function componentDidMount() {
+      var _this2 = this;
+
+      if (this.context.tag === 'async') {
+        this.context.addStripeLoadListener(function (stripe) {
+          _this2.setState({
+            stripe: _this2.stripeProps(stripe)
+          });
+        });
+      } else {
+        // when 'sync', it's already set in the constructor.
+      }
+    };
+
+    _class.prototype.getWrappedInstance = function getWrappedInstance() {
+      if (!withRef) {
+        throw new Error('To access the wrapped instance, the `{withRef: true}` option must be set when calling `injectStripe()`');
+      }
+      return this.wrappedInstance;
+    };
+
+    _class.prototype.stripeProps = function stripeProps(stripe) {
+      return _extends({}, stripe, {
+        // These are the only functions that take elements.
+        createToken: this.wrappedCreateToken(stripe),
+        createSource: this.wrappedCreateSource(stripe),
+        createPaymentMethod: this.wrappedCreatePaymentMethod(stripe),
+        handleCardPayment: this.wrappedHandleCardX(stripe, 'handleCardPayment'),
+        handleCardSetup: this.wrappedHandleCardX(stripe, 'handleCardSetup')
+      });
+    };
+
+    // Finds an Element by the specified type, if one exists.
+    // Throws if multiple Elements match.
+
+
+    // Require that exactly one Element is found for the specified type.
+    // Throws if no Element is found.
+
+
+    // Wraps createToken in order to infer the Element that is being tokenized.
+
+
+    // Wraps createSource in order to infer the Element that is being used for
+    // source creation.
+
+
+    // Wraps createPaymentMethod in order to infer the Element that is being
+    // used for PaymentMethod creation.
+
+
+    _class.prototype.render = function render() {
+      var _this3 = this;
+
+      return _react2.default.createElement(WrappedComponent, _extends({}, this.props, {
+        stripe: this.state.stripe,
+        elements: this.context.elements,
+        ref: withRef ? function (c) {
+          _this3.wrappedInstance = c;
+        } : null
+      }));
+    };
+
+    return _class;
+  }(_react2.default.Component), _class.contextTypes = _extends({}, _Provider.providerContextTypes, _Elements.injectContextTypes), _class.displayName = 'InjectStripe(' + (WrappedComponent.displayName || WrappedComponent.name || 'Component') + ')', _temp;
+};
+
+exports.default = inject;
+
+/***/ }),
+
+/***/ "./node_modules/react-stripe-elements/es/index.js":
+/*!********************************************************!*\
+  !*** ./node_modules/react-stripe-elements/es/index.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.IdealBankElement = exports.IbanElement = exports.PaymentRequestButtonElement = exports.CardCVCElement = exports.CardCvcElement = exports.CardExpiryElement = exports.CardNumberElement = exports.CardElement = exports.Elements = exports.injectStripe = exports.StripeProvider = undefined;
+
+var _Provider = __webpack_require__(/*! ./components/Provider */ "./node_modules/react-stripe-elements/es/components/Provider.js");
+
+var _Provider2 = _interopRequireDefault(_Provider);
+
+var _inject = __webpack_require__(/*! ./components/inject */ "./node_modules/react-stripe-elements/es/components/inject.js");
+
+var _inject2 = _interopRequireDefault(_inject);
+
+var _Elements = __webpack_require__(/*! ./components/Elements */ "./node_modules/react-stripe-elements/es/components/Elements.js");
+
+var _Elements2 = _interopRequireDefault(_Elements);
+
+var _Element = __webpack_require__(/*! ./components/Element */ "./node_modules/react-stripe-elements/es/components/Element.js");
+
+var _Element2 = _interopRequireDefault(_Element);
+
+var _PaymentRequestButtonElement = __webpack_require__(/*! ./components/PaymentRequestButtonElement */ "./node_modules/react-stripe-elements/es/components/PaymentRequestButtonElement.js");
+
+var _PaymentRequestButtonElement2 = _interopRequireDefault(_PaymentRequestButtonElement);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// Define Elements, and register their implied token / source types for
+// automatic token / source creation.
+
+// Card
+var CardElement = (0, _Element2.default)('card', {
+  impliedTokenType: 'card',
+  impliedSourceType: 'card',
+  impliedPaymentMethodType: 'card'
+});
+
+// Split Fields
+// Note: we only register the CardNumberElement for split fields so that we have
+// a unique Element to infer when calling `wrappedCreateToken` or `wrappedCreateSource`.
+
+var CardNumberElement = (0, _Element2.default)('cardNumber', {
+  impliedTokenType: 'card',
+  impliedSourceType: 'card',
+  impliedPaymentMethodType: 'card'
+});
+var CardExpiryElement = (0, _Element2.default)('cardExpiry');
+var CardCvcElement = (0, _Element2.default)('cardCvc');
+var CardCVCElement = CardCvcElement; // deprecated in favor of CardCvcElement which better matches Elements API
+
+// IBAN
+var IbanElement = (0, _Element2.default)('iban', {
+  impliedTokenType: 'bank_account',
+  impliedSourceType: 'sepa_debit'
+});
+
+// iDEAL Bank
+var IdealBankElement = (0, _Element2.default)('idealBank', { impliedSourceType: 'ideal' });
+
+exports.StripeProvider = _Provider2.default;
+exports.injectStripe = _inject2.default;
+exports.Elements = _Elements2.default;
+exports.CardElement = CardElement;
+exports.CardNumberElement = CardNumberElement;
+exports.CardExpiryElement = CardExpiryElement;
+exports.CardCvcElement = CardCvcElement;
+exports.CardCVCElement = CardCVCElement;
+exports.PaymentRequestButtonElement = _PaymentRequestButtonElement2.default;
+exports.IbanElement = IbanElement;
+exports.IdealBankElement = IdealBankElement;
+
+/***/ }),
+
+/***/ "./node_modules/react-stripe-elements/es/utils/isEqual.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/react-stripe-elements/es/utils/isEqual.js ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+var PLAIN_OBJECT_STR = '[object Object]';
+
+var isEqual = function isEqual(left, right) {
+  if ((typeof left === 'undefined' ? 'undefined' : _typeof(left)) !== 'object' || (typeof right === 'undefined' ? 'undefined' : _typeof(right)) !== 'object') {
+    return left === right;
+  }
+
+  if (left === null || right === null) return left === right;
+
+  var leftArray = Array.isArray(left);
+  var rightArray = Array.isArray(right);
+
+  if (leftArray !== rightArray) return false;
+
+  var leftPlainObject = Object.prototype.toString.call(left) === PLAIN_OBJECT_STR;
+  var rightPlainObject = Object.prototype.toString.call(right) === PLAIN_OBJECT_STR;
+
+  if (leftPlainObject !== rightPlainObject) return false;
+
+  if (!leftPlainObject && !leftArray) return false;
+
+  var leftKeys = Object.keys(left);
+  var rightKeys = Object.keys(right);
+
+  if (leftKeys.length !== rightKeys.length) return false;
+
+  var keySet = {};
+  for (var i = 0; i < leftKeys.length; i += 1) {
+    keySet[leftKeys[i]] = true;
+  }
+  for (var _i = 0; _i < rightKeys.length; _i += 1) {
+    keySet[rightKeys[_i]] = true;
+  }
+  var allKeys = Object.keys(keySet);
+  if (allKeys.length !== leftKeys.length) {
+    return false;
+  }
+
+  var l = left;
+  var r = right;
+  var pred = function pred(key) {
+    return isEqual(l[key], r[key]);
+  };
+
+  return allKeys.every(pred);
+};
+
+exports.default = isEqual;
+
+/***/ }),
+
+/***/ "./node_modules/react-stripe-elements/es/utils/shallowEqual.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/react-stripe-elements/es/utils/shallowEqual.js ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var shallowEqual = function shallowEqual(a, b) {
+  var keysA = Object.keys(a);
+  var keysB = Object.keys(b);
+
+  return keysA.length === keysB.length && keysA.every(function (key) {
+    return b.hasOwnProperty(key) && b[key] === a[key];
+  });
+};
+
+exports.default = shallowEqual;
+
+/***/ }),
+
 /***/ "./node_modules/react/cjs/react.development.js":
 /*!*****************************************************!*\
   !*** ./node_modules/react/cjs/react.development.js ***!
@@ -41879,9 +43035,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _Items_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Items.jsx */ "./src/Items.jsx");
-/* harmony import */ var _OneItem_jsx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./OneItem.jsx */ "./src/OneItem.jsx");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _Items_jsx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Items.jsx */ "./src/Items.jsx");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var react_stripe_elements__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-stripe-elements */ "./node_modules/react-stripe-elements/es/index.js");
+/* harmony import */ var react_stripe_elements__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_stripe_elements__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _MyStoreCheckout_jsx__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./MyStoreCheckout.jsx */ "./src/MyStoreCheckout.jsx");
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -41889,55 +43048,55 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
+
+
 const Quantity = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].div`
-display:flex;
-align-items:center;
+  display: flex;
+  align-items: center;
 `;
 const QuantityButton = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].button`
-background-color: #007bff;
-border-radius: 3px;
-border:0;
-color:white;
-font-size:1.5em;
+  background-color: #007bff;
+  border-radius: 3px;
+  border: 0;
+  color: white;
+  font-size: 1.5em;
 `;
 const CartContainer = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].div`
-padding: 1em;
-width: 400px;
-background-color: #fafafa;
-box-shadow: 0 0 2px grey;
-margin-bottom:1em;
+  padding: 1em;
+  width: 400px;
+  background-color: #fafafa;
+  box-shadow: 0 0 2px grey;
+  margin-bottom: 1em;
 
-@media screen and (min-width: 968px) {
-width:750px
-}
+  @media screen and (min-width: 968px) {
+    width: 750px;
+  }
 `;
-const Title = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].h2`
-`;
+const Title = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].h2``;
 const CartItem = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].div`
-border-top: 1px solid #e9e9e9;
-padding-top: 1em;
-display:flex;
-padding-bottom: 1em;
+  border-top: 1px solid #e9e9e9;
+  padding-top: 1em;
+  display: flex;
+  padding-bottom: 1em;
 `;
 const ContentLeft = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].img`
-width:200px;
+  width: 200px;
 `;
 const ContentRight = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].div`
-margin-left:1em;
+  margin-left: 1em;
 `;
 const RemoveButton = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].div`
-position: relative;
-top: -90px;
-right:-164px;
-font-size: 1.5em;
+  position: relative;
+  top: -90px;
+  right: -164px;
+  font-size: 1.5em;
 
-    
-    &:hover {
-        cursor:pointer;
-    }
-    @media screen and (min-width: 968px) {
+  &:hover {
+    cursor: pointer;
+  }
+  @media screen and (min-width: 968px) {
     right: -515px;
-    }
+  }
 `;
 
 class Cart extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
@@ -41952,7 +43111,7 @@ class Cart extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       let parsed = JSON.parse(responseText);
 
       if (parsed.success) {
-        console.log("parsed: ", parsed);
+        console.log('parsed: ', parsed);
         parsed.cart.forEach(item => {
           let price = item.price * item.quantity;
           this.setState({
@@ -41967,7 +43126,7 @@ class Cart extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
       this.setState({
         cart: [{
-          item: "Error"
+          item: 'Error'
         }]
       });
     });
@@ -41976,7 +43135,7 @@ class Cart extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
     _defineProperty(this, "removeCartItem", async item => {
       let data = new FormData();
-      data.append("itemId", item._id);
+      data.append('itemId', item._id);
       let body = await fetch('/remove-cart-item', {
         method: 'POST',
         body: data
@@ -41985,8 +43144,8 @@ class Cart extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       let parsed = JSON.parse(response);
 
       if (parsed.success) {
-        console.log("parsed: ", parsed);
-        alert("Item Removed");
+        console.log('parsed: ', parsed);
+        alert('Item Removed');
         this.setState({
           cartTotal: this.state.cartTotal - parseFloat(item.price * item.quantity)
         });
@@ -41996,7 +43155,7 @@ class Cart extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         return;
       }
 
-      alert("Error");
+      alert('Error');
     });
 
     _defineProperty(this, "incrementCount", item => {
@@ -42023,6 +43182,8 @@ class Cart extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       });
     });
 
+    _defineProperty(this, "pay", total => {});
+
     _defineProperty(this, "decrementCount", item => {
       if (item.quantity > 1) {
         let newCart = this.state.cart.map(i => {
@@ -42048,17 +43209,17 @@ class Cart extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     });
 
     _defineProperty(this, "render", () => {
-      console.log("rendering cart page with: ", this.state.cart);
+      console.log('rendering cart page with: ', this.state.cart);
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         style: {
           backgroundColor: 'whitesmoke',
-          height: "100%"
+          height: '100%'
         }
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         style: {
           padding: '5em 0 0 0',
-          display: "flex",
-          justifyContent: "center"
+          display: 'flex',
+          justifyContent: 'center'
         }
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CartContainer, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Title, null, "Your Cart"), this.state.cart.map((item, index) => {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CartItem, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ContentLeft, {
@@ -42069,7 +43230,7 @@ class Cart extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
           }
         }, item.item), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
           style: {
-            marginTop: "1em"
+            marginTop: '1em'
           }
         }, "$", (item.price * item.quantity).toFixed(2)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Quantity, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(QuantityButton, {
           onClick: () => {
@@ -42084,7 +43245,9 @@ class Cart extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
             this.removeCartItem(item);
           }
         }, "\u2716")));
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Total: ", this.state.cartTotal ? this.state.cartTotal.toFixed(2) : 'Error'))));
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Total:", ' ', this.state.cartTotal ? this.state.cartTotal.toFixed(2) : 'Error'))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_stripe_elements__WEBPACK_IMPORTED_MODULE_5__["StripeProvider"], {
+        apiKey: "pk_test_N55KXUOXeQlzSfDPEmL9vMi000A4Q5Gef7"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_MyStoreCheckout_jsx__WEBPACK_IMPORTED_MODULE_6__["default"], null)));
     });
 
     this.state = {
@@ -42877,6 +44040,93 @@ class MainPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
 /***/ }),
 
+/***/ "./src/MyStoreCheckout.jsx":
+/*!*********************************!*\
+  !*** ./src/MyStoreCheckout.jsx ***!
+  \*********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_stripe_elements__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-stripe-elements */ "./node_modules/react-stripe-elements/es/index.js");
+/* harmony import */ var react_stripe_elements__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_stripe_elements__WEBPACK_IMPORTED_MODULE_1__);
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+class CheckoutForm extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  constructor(...args) {
+    super(...args);
+
+    _defineProperty(this, "removeCartItems", async item => {
+      let data = new FormData();
+      data.append('itemId', 'all');
+      let body = await fetch('/remove-cart-item', {
+        method: 'POST',
+        body: data
+      });
+      let response = await body.text();
+      let parsed = JSON.parse(response);
+
+      if (parsed.success) {
+        console.log('parsed: ', parsed);
+        return;
+      }
+
+      alert('Error');
+    });
+
+    _defineProperty(this, "handleSubmit", ev => {
+      ev.preventDefault();
+      const cardElement = this.props.elements.getElement('card');
+      this.props.stripe.createPaymentMethod({
+        type: 'card',
+        card: cardElement,
+        billing_details: {
+          name: 'Jenny Rosen'
+        }
+      }).then(({
+        paymentMethod
+      }) => {
+        alert('Payment received!');
+        this.removeCartItems();
+      });
+    });
+  }
+
+  render() {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "payment-container"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+      onSubmit: this.handleSubmit
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Card details"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_stripe_elements__WEBPACK_IMPORTED_MODULE_1__["CardElement"], {
+      style: {
+        base: {
+          fontSize: '18px'
+        }
+      }
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Confirm order")));
+  }
+
+}
+
+let InjectedCheckoutForm = Object(react_stripe_elements__WEBPACK_IMPORTED_MODULE_1__["injectStripe"])(CheckoutForm);
+
+class MyStoreCheckout extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  render() {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_stripe_elements__WEBPACK_IMPORTED_MODULE_1__["Elements"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(InjectedCheckoutForm, null));
+  }
+
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (MyStoreCheckout);
+
+/***/ }),
+
 /***/ "./src/Navigation.jsx":
 /*!****************************!*\
   !*** ./src/Navigation.jsx ***!
@@ -43037,17 +44287,22 @@ class Navigation extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "flex"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-        to: "/"
+        to: "/",
+        onClick: this.handleToggle
       }, "AliBay")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-        to: "/men"
+        to: "/men",
+        onClick: this.handleToggle
       }, "Men")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-        to: "/women"
+        to: "/women",
+        onClick: this.handleToggle
       }, "Women")), this.props.user ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Dropdown_jsx__WEBPACK_IMPORTED_MODULE_6__["default"], {
         name: "Seller"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(DropContent, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-        to: "/add-item"
+        to: "/add-item",
+        onClick: this.handleToggle
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Add new item")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-        to: "/seller-items"
+        to: "/seller-items",
+        onClick: this.handleToggle
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "All my items"))))) : '', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
         className: "display-if-not-mobile"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SearchBar_jsx__WEBPACK_IMPORTED_MODULE_4__["default"], null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -43066,7 +44321,8 @@ class Navigation extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(DropContent, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "hideDesktop"
       }, "Welcome back ", this.props.user), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-        to: "/cart"
+        to: "/cart",
+        onClick: this.handleToggle
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "View Cart")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
         onClick: this.logoutHandler,
         to: "/"
@@ -44390,7 +45646,9 @@ const store = Object(redux__WEBPACK_IMPORTED_MODULE_0__["createStore"])(reducer,
   username: undefined,
   items: [],
   searchTag: '',
-  cart: []
+  cart: [],
+  cartTotal: null,
+  totalPrice: ''
 }, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 /* harmony default export */ __webpack_exports__["default"] = (store);
 

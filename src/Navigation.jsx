@@ -123,22 +123,28 @@ class Navigation extends Component {
           <ul>
             <div className="flex">
               <li>
-                <Link to="/">AliBay</Link>
+                <Link to="/" onClick={this.handleToggle}>
+                  AliBay
+                </Link>
               </li>
               <li>
-                <Link to="/men">Men</Link>
+                <Link to="/men" onClick={this.handleToggle}>
+                  Men
+                </Link>
               </li>
               <li>
-                <Link to="/women">Women</Link>
+                <Link to="/women" onClick={this.handleToggle}>
+                  Women
+                </Link>
               </li>
               {this.props.user ? (
                 <li>
                   <Dropdown name="Seller">
                     <DropContent>
-                      <Link to="/add-item">
+                      <Link to="/add-item" onClick={this.handleToggle}>
                         <div>Add new item</div>
                       </Link>
-                      <Link to="/seller-items">
+                      <Link to="/seller-items" onClick={this.handleToggle}>
                         <div>All my items</div>
                       </Link>
                     </DropContent>
@@ -170,7 +176,7 @@ class Navigation extends Component {
                     <div className="hideDesktop">
                       Welcome back {this.props.user}
                     </div>
-                    <Link to="/cart">
+                    <Link to="/cart" onClick={this.handleToggle}>
                       <div>View Cart</div>
                     </Link>
                     <Link onClick={this.logoutHandler} to="/">

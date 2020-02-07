@@ -79,11 +79,13 @@ app.post('/register', upload.none(), (req, res) => {
   console.log('dbo response register');
   dbo.collection('users').findOne({ username: name }, (err, user) => {
     if (user === null) {
-      dbo
-        .collection('users')
-        .insertOne({ username: name, password: sha1(pwd), cart: cart.map(item => {
-          return {item: item, quantity: 1}
-        }) });
+      dbo.collection('users').insertOne({
+        username: name,
+        password: sha1(pwd),
+        cart: cart.map(item => {
+          return { item: item, quantity: 1 };
+        })
+      });
       res.send(JSON.stringify({ success: true }));
     } else {
       res.send(JSON.stringify({ success: false }));
@@ -243,21 +245,32 @@ app.post('/delete-item', upload.none(), (req, res) => {
   }
 });
 
-app.post('/add-to-cart', upload.none(), async(req, res) => {
+app.post('/add-to-cart', upload.none(), async (req, res) => {
   let itemId = req.body.itemId;
   let sessionId = req.cookies.sid;
   let username = sessions[sessionId];
 
   try {
-    let updated = false
+    let updated = false;
     let user = await dbo.collection('users').findOne({ username });
     user.cart.forEach(element => {
       if (element.item === itemId) {
-        updated = true
-        dbo.collection('users').updateOne({ username, "cart.item": itemId }, { $inc: { "cart.$.quantity": 1 }});
+        updated = true;
+        dbo
+          .collection('users')
+          .updateOne(
+            { username, 'cart.item': itemId },
+            { $inc: { 'cart.$.quantity': 1 } }
+          );
       }
     });
-    if (updated === false) dbo.collection('users').updateOne({ username }, { $push: { cart: {item: itemId, quantity: 1} }});
+    if (updated === false)
+      dbo
+        .collection('users')
+        .updateOne(
+          { username },
+          { $push: { cart: { item: itemId, quantity: 1 } } }
+        );
     res.send(JSON.stringify({ success: true }));
   } catch (err) {
     console.log('error', err);
@@ -277,14 +290,14 @@ app.post('/cart', upload.none(), async (req, res) => {
         _id: { $in: user.cart.map(item => ObjectID(item.item)) }
       })
       .toArray();
-    
-      cart.forEach(item => {
-        user.cart.forEach(i => {
-          if (item._id.toString() === i.item) {
-            item.quantity = i.quantity
-          }
-        })
-      })
+
+    cart.forEach(item => {
+      user.cart.forEach(i => {
+        if (item._id.toString() === i.item) {
+          item.quantity = i.quantity;
+        }
+      });
+    });
 
     res.send(JSON.stringify({ success: true, cart }));
   } catch (err) {
@@ -299,22 +312,31 @@ app.post('/remove-cart-item', upload.none(), async (req, res) => {
   let username = sessions[sessionId];
 
   try {
-    dbo.collection('users').updateOne({ username }, {$pull: {cart: { item: itemId}}});
-    
-    let user = await dbo.collection('users').findOne({ username })
-    let cart = await dbo.collection('items').find({
-      _id: { $in: user.cart.map(item => ObjectID(item.item)) }
-    }).toArray()
+    if (itemId === 'all') {
+      console.log('emptying cart');
+      dbo.collection('users').updateOne({ username }, { $pull: { cart: {} } });
+    }
+    dbo
+      .collection('users')
+      .updateOne({ username }, { $pull: { cart: { item: itemId } } });
+
+    let user = await dbo.collection('users').findOne({ username });
+    let cart = await dbo
+      .collection('items')
+      .find({
+        _id: { $in: user.cart.map(item => ObjectID(item.item)) }
+      })
+      .toArray();
 
     cart.forEach(item => {
       user.cart.forEach(i => {
         if (item._id.toString() === i.item) {
-          item.quantity = i.quantity
+          item.quantity = i.quantity;
         }
-      })
-    })
+      });
+    });
 
-    console.log(cart)
+    console.log(cart);
     res.send(JSON.stringify({ success: true, cart }));
   } catch (err) {
     console.log('error', err);
@@ -323,25 +345,29 @@ app.post('/remove-cart-item', upload.none(), async (req, res) => {
 });
 
 app.post('/update-cart-quantity', upload.none(), async (req, res) => {
-let value = req.body.value
-let itemId = req.body.itemId
-let sessionId = req.cookies.sid;
-let username = sessions[sessionId];
+  let value = req.body.value;
+  let itemId = req.body.itemId;
+  let sessionId = req.cookies.sid;
+  let username = sessions[sessionId];
 
-try {
-  let user = await dbo.collection('users').findOne({ username });
-  user.cart.forEach(element=> {
-    if (element.item === itemId) {
-      dbo.collection('users').updateOne({ username, "cart.item": itemId }, { $inc: { "cart.$.quantity": parseInt(value) }});
-    }
-  })
-  res.send(JSON.stringify({ success: true }));
-} catch(err) {
-  console.log('error', err);
-  res.send(JSON.stringify({ success: false }));
-}
-})
-
+  try {
+    let user = await dbo.collection('users').findOne({ username });
+    user.cart.forEach(element => {
+      if (element.item === itemId) {
+        dbo
+          .collection('users')
+          .updateOne(
+            { username, 'cart.item': itemId },
+            { $inc: { 'cart.$.quantity': parseInt(value) } }
+          );
+      }
+    });
+    res.send(JSON.stringify({ success: true }));
+  } catch (err) {
+    console.log('error', err);
+    res.send(JSON.stringify({ success: false }));
+  }
+});
 
 app.post('/all-items', upload.none(), (req, res) => {
   console.log('request to /all-items');
