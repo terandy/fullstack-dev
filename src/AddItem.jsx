@@ -4,7 +4,7 @@ import styled from 'styled-components';
 //---styles
 const Form = styled.form`
   display: grid;
-  max-width: 500px;
+  max-width: 800px;
   min-width: 300px;
   font-family: sans-serif;
   margin: auto;
@@ -13,14 +13,16 @@ const Form = styled.form`
 `;
 const DetailsContent = styled.div`
   font-family: 'sans-serif';
+  font-weight:600;
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: 1.5em 5em 1em;
   grid-column-gap: 0.5em;
   grid-row-gap: 1.5em;
   label {
+    font-family: 'Work Sans';
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     :after {
       content: ':';
     }
@@ -38,10 +40,9 @@ const Title = styled.h2`
 `;
 const Images = styled.div`
   display: grid;
-  justify-items: center;
 `;
 const Tags = styled.div`
-  font-family: 'sans-serif';
+  font-family: 'Work Sans';
   display: grid;
   justify-items: center;
   border: solid lightgrey 1px;
@@ -62,13 +63,14 @@ const Tags = styled.div`
   }
 `;
 const InputImages = styled.input`
-  font-family: 'sans-serif';
+  font-family: 'Work Sans';
+  font-weight:600;
   color: purple;
   border: solid lightgrey 1px;
   padding: 2em;
 `;
 const SubmitButton = styled.input`
-  background-color: purple;
+  background-color: #007bff;
   width: 50%;
   border-radius: 2em;
   font-size: 1em;
@@ -83,7 +85,7 @@ const SubmitButton = styled.input`
   }
   &:hover {
     cursor: pointer;
-    background-color: grey;
+    background-color: #0064cf;
   }
 `;
 const Button = styled.button`
@@ -172,7 +174,7 @@ class AddItem extends Component {
   };
   render = () => {
     return (
-      <div style={{ marginTop: '5em' }}>
+      <div style={{ margin: '5em 0 5em 0' }}>
         <h1 className="all-items-title">Selling</h1>
         <Form onSubmit={this.submitHandler}>
           <Title>

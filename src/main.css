@@ -14,9 +14,7 @@ body {
   display: flex;
 }
 .payment-container {
-  width: 100%;
   margin: auto;
-  border: solid lightgrey 1px;
   padding: 2em;
 }
 .payment-container > form {
@@ -32,18 +30,18 @@ body {
 }
 .payment-container > form > button {
   width: 50%;
-  border-radius: 2em;
+  border-radius: 3px;
   height: 3em;
   margin: 2em;
   margin-top: 5em;
-  background-color: purple;
+  background-color: #007bff;
   border: none;
   color: white;
   text-transform: uppercase;
 }
 .payment-container > form > button:hover {
   cursor: pointer;
-  background-color: grey;
+  background-color: #0064cf;
 }
 .toggle-nav-on {
   display: block;
@@ -206,7 +204,7 @@ h6 {
 .detail-container {
   display: grid;
   grid-column-gap: 50px;
-  width: 100vw;
+  width: 100%;
   margin-top: 5em;
 }
 

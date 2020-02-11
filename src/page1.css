@@ -26,9 +26,8 @@
   position: fixed;
   left: 0;
   height: 100%;
-  width: 33%;
+  width: 100%;
   min-width: 300px;
-  overflow: scroll;
   background-color: white;
   display: flex;
 }
@@ -63,8 +62,8 @@
 }
 /* form - submit button */
 .page1-botton {
-  background-color: #6a4caf;
-  border-radius: 25px;
+  background-color: #007bff;
+  border-radius: 3px;
   width: 90%;
   border: none;
   color: white;
@@ -77,11 +76,11 @@
   cursor: pointer;
 }
 .page1-botton:hover {
-  background-color: #8d76c2;
+  background-color: #0064cf;
 }
 .page1-botton:focus {
   outline: none;
-  background-color: #8d76c2;
+  background-color: #429dff;
 }
 /* form - links to other pages*/
 .page1-redirect {
@@ -94,4 +93,10 @@
 }
 .page1-redirect > span {
   text-decoration: underline;
+}
+
+@media screen and (min-width: 968px) {
+  .page1-form-container {
+    width:33%;
+  }
 }

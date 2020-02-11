@@ -4,11 +4,9 @@ import styled from 'styled-components';
 
 const Main = styled.div`
   width:100%;
-  
-  margin-top: 6em;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr;
   grid-template-areas:
     'woman man'
     'shop-all shop-all';
@@ -16,7 +14,6 @@ const Main = styled.div`
   padding: 0;
   @media screen and (min-width: 968px) {
     width:900px;
-    margin-top: 4em;
     grid-template-rows: 0.5fr 0.6fr;
   }
   @media screen and (min-width: 1200px) {
@@ -40,7 +37,8 @@ const ShopAll = styled.div`
     font-family: "Lato";
     font-weight: 900;
     font-size:2em;
-    text-shadow: 0px 0px 10px #222324;
+    text-transform: uppercase;
+    /* text-shadow: 0px 0px 10px #222324; */
     &:hover {
       color: #dedede;
     }
@@ -81,18 +79,87 @@ const Man = styled(ShopAll)`
   }
 `;
 
+const Hero = styled.div`
+  margin-top: 6em;
+  height:300px;
+  width:97vw;
+  .hero-container {
+    background-image: url('../uploads/GLP-desktop-mw-january-flashsale-1.jpg');
+    background-size:cover;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    height:100%;
+  }
+  h1, h4 {
+    font-family: 'Lato';
+    text-align:center;
+    color:white;
+    margin:0;
+    display:inline-block;
+  }
+  h1 {
+    font-size:4em;
+    font-weight:600;
+    letter-spacing:6px;
+    @media screen and (max-width: 968px) {
+    font-size:3em;
+  }
+  }
+  h4 {
+    font-weight:100;
+    letter-spacing:3px;
+  }
+  .shop-now {
+    padding:0.5em;
+    margin:1em;
+    border: 3px solid white;
+    color:black;
+    background-color:white;
+    font-size:1em;
+    font-weight:600;
+    width:84px;
+    display:flex;
+    align-items:center;
+    margin: 1em auto 0;
+    font-family: 'Work Sans';
+  }
+  @media screen and (min-width: 720px) {
+    width:97vw;
+  }
+  @media screen and (min-width: 968px) {
+    height:400px;
+    margin-top: 4.5em;
+    width: 891px;
+    margin-bottom:5px;
+  }
+  @media screen and (min-width: 1200px) {
+    height:500px;
+    width: 1191px;
+    }
+`
+
 class MainPage extends Component {
   render = () => {
     return (
-      <div style={{display: "flex", justifyContent: "center"}}>
+      <div style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
+      <Link to="/shop"><Hero>
+        <div class="hero-container">
+          <h1>NEW ARRIVALS</h1>
+          <h4>check out our latest styles</h4>
+          <div class="shop-now">SHOP NOW</div>
+        </div>
+        </Hero></Link>
       <Main>
+      
+
 
         <Woman>
-          <Link to="/women">Woman</Link>
+          <Link to="/women">Women</Link>
         </Woman>
 
         <Man>
-          <Link to="/men">Man</Link>
+          <Link to="/men">Men</Link>
         </Man>
 
         <ShopAll>

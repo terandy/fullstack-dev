@@ -6,9 +6,20 @@ import styled from 'styled-components';
 import { StripeProvider } from 'react-stripe-elements';
 import MyStoreCheckout from './MyStoreCheckout.jsx';
 
+const Container = styled.div`
+  padding: 6em 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow:hidden;
+`
+
 const Quantity = styled.div`
   display: flex;
   align-items: center;
+  font-family: 'Work Sans';
+  font-weight: 600;
 `;
 
 const QuantityButton = styled.button`
@@ -149,13 +160,7 @@ class Cart extends Component {
     console.log('rendering cart page with: ', this.state.cart);
     return (
       <div style={{ backgroundColor: 'whitesmoke', height: '100%' }}>
-        <div
-          style={{
-            padding: '5em 0 0 0',
-            display: 'flex',
-            justifyContent: 'center'
-          }}
-        >
+        <Container>
           <CartContainer>
             <Title>Your Cart</Title>
             {this.state.cart.map((item, index) => {
@@ -196,14 +201,15 @@ class Cart extends Component {
               );
             })}
             <h2>
-              Total:{' '}
-              {this.state.cartTotal ? this.state.cartTotal.toFixed(2) : 'Error'}
+              {this.state.cartTotal ? `Total: ` + this.state.cartTotal.toFixed(2) : 'Add some items to your cart!'}
             </h2>
           </CartContainer>
-        </div>
+        <CartContainer>
         <StripeProvider apiKey="pk_test_N55KXUOXeQlzSfDPEmL9vMi000A4Q5Gef7">
           <MyStoreCheckout emptyCart={() => this.setState(initialState)} />
         </StripeProvider>
+        </CartContainer>
+        </Container>
       </div>
     );
   };

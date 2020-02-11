@@ -13,7 +13,6 @@ const Form = styled.form`
   h1 {
     margin: 1.5em 0 -1em 0;
     padding: 0;
-    color: purple;
     font-size: 1.5em;
     text-align: center;
     text-transform: uppercase;
@@ -29,7 +28,9 @@ const DetailsContent = styled.div`
   grid-row-gap: 1.5em;
   label {
     display: flex;
-    justify-content: flex-end;
+    font-family: 'Work Sans';
+    font-weight:600;
+    justify-content: flex-start;
     :after {
       content: ':';
     }
@@ -95,15 +96,16 @@ const Tags = styled.div`
   }
 `;
 const InputImages = styled.input`
-  font-family: 'sans-serif';
-  color: purple;
+  font-family: 'Work Sans';
+  font-weight:600;
+  color: #007bff;
   border: solid lightgrey 1px;
   padding: 2em;
 `;
 const SubmitButton = styled.input`
-  background-color: purple;
+  background-color: #007bff;
   width: 50%;
-  border-radius: 2em;
+  border-radius: 3px;
   font-size: 1em;
   color: white;
   margin: 1em 25% 2em 25%;
@@ -115,13 +117,13 @@ const SubmitButton = styled.input`
   }
   &:hover {
     cursor: pointer;
-    background-color: grey;
+    background-color: #0064cf;
   }
 `;
 const DeleteButton = styled.button`
-  background-color: Teal;
+  background-color: red;
   width: 50%;
-  border-radius: 2em;
+  border-radius: 3px;
   font-size: 1em;
   color: white;
   margin: 1em 25% 2em 25%;
@@ -133,7 +135,7 @@ const DeleteButton = styled.button`
   }
   &:hover {
     cursor: pointer;
-    background-color: grey;
+    background-color: darkred;
   }
 `;
 const Button = styled.button`
@@ -141,7 +143,7 @@ const Button = styled.button`
   color: black;
   border: lightgrey solid 1px;
   font-size: 0.75em;
-  border-radius: 0.5em;
+  border-radius: 3px;
   font-family: times;
   font-weight: lighter;
   &:focus {
