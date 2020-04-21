@@ -4,7 +4,7 @@ https://youtu.be/rOVX4Cz6LMc
 ## Website
 http://chat-with-us.herokuapp.com
 
-link to the repository with build folder:
+Repository that heroku is linked to:
 https://github.com/terandy/heroku-chat-app
 
 ## Run Project
